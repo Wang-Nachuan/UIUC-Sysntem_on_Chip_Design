@@ -66,18 +66,12 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 5
-  set_param xicom.use_bs_reader 1
-  create_project -in_memory -part xc7z020clg400-1
-  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint D:/Code/UIUC-ECE527/mp1/mp1b/mp1b.runs/impl_1/mp1b_rtl.dcp
   set_property webtalk.parent_dir D:/Code/UIUC-ECE527/mp1/mp1b/mp1b.cache/wt [current_project]
   set_property parent.project_path D:/Code/UIUC-ECE527/mp1/mp1b/mp1b.xpr [current_project]
   set_property ip_output_repo D:/Code/UIUC-ECE527/mp1/mp1b/mp1b.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet D:/Code/UIUC-ECE527/mp1/mp1b/mp1b.runs/synth_1/mp1b_rtl.dcp
-  read_xdc D:/Code/UIUC-ECE527/mp1/mp1b/mp1b.srcs/constrs_1/new/mp1b_constraints.xdc
-  link_design -top mp1b_rtl -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
