@@ -21,9 +21,9 @@
 
 
 module mp1a_rtl(
-        input clk,              // PL clock (125MHz) - H16
-        input rst,              // BTN0 - D19
-        input sw0, sw1,         // SW0 - M20, SW1 - M19
+        input clk,                  // PL clock (125MHz) - H16
+        input rst,                  // BTN0 - D19
+        input sw0, sw1,             // SW0 - M20, SW1 - M19
         output reg ld4_b, ld5_b     // LD4 Blue - L15, LD5 Blue - G14
     );
     
