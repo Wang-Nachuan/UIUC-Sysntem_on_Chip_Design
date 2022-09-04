@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep  4 01:16:35 2022
+# Process ID: 17824
+# Current directory: D:/Code/UIUC-ECE527/mp1/mp1b/mp1b.runs/impl_1
+# Command line: vivado.exe -log mp1b_rtl.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mp1b_rtl.tcl -notrace
+# Log file: D:/Code/UIUC-ECE527/mp1/mp1b/mp1b.runs/impl_1/mp1b_rtl.vdi
+# Journal file: D:/Code/UIUC-ECE527/mp1/mp1b/mp1b.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source mp1b_rtl.tcl -notrace
