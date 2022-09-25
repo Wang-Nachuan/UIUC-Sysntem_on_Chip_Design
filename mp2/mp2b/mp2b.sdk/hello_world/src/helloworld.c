@@ -594,7 +594,8 @@ static int CheckData(void)
 
 
 	RxPacket = (u8 *) RX_BUFFER_BASE;
-	Value = TEST_START_VALUE;
+//	Value = TEST_START_VALUE;
+	Value = TEST_START_VALUE+10;	// Modified
 
 	/* Invalidate the DestBuffer before receiving the data, in case the
 	 * Data Cache is enabled
@@ -604,6 +605,7 @@ static int CheckData(void)
 #endif
 
 	for(Index = 0; Index < MAX_PKT_LEN; Index++) {
+		xil_printf("Data sent: %d; Data received: %d; Difference: %d\r\n", Value-10, RxPacket[Index], RxPacket[Index]-Value+10);
 		if (RxPacket[Index] != Value) {
 			xil_printf("Data error %d: %x/%x\r\n",
 			    Index, (unsigned int)RxPacket[Index],

@@ -19,7 +19,8 @@
       "rst_ps7_0_100M": "",
       "axi_smc": "",
       "axis_data_fifo_0": "",
-      "xlconcat_0": ""
+      "xlconcat_0": "",
+      "incre_by_10_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1966,6 +1967,27 @@
       "xlconcat_0": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "design_1_xlconcat_0_2"
+      },
+      "incre_by_10_0": {
+        "vlnv": "xilinx.com:module_ref:incre_by_10:1.0",
+        "xci_name": "design_1_incre_by_10_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "incre_by_10",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1985,12 +2007,6 @@
         "interface_ports": [
           "processing_system7_0/M_AXI_GP0",
           "ps7_0_axi_periph/S00_AXI"
-        ]
-      },
-      "axis_data_fifo_0_M_AXIS": {
-        "interface_ports": [
-          "axis_data_fifo_0/M_AXIS",
-          "axi_dma_0/S_AXIS_S2MM"
         ]
       },
       "ps7_0_axi_periph_M00_AXI": {
@@ -2027,6 +2043,12 @@
         "interface_ports": [
           "axi_dma_0/M_AXI_SG",
           "axi_smc/S01_AXI"
+        ]
+      },
+      "axis_data_fifo_0_M_AXIS": {
+        "interface_ports": [
+          "axis_data_fifo_0/M_AXIS",
+          "axi_dma_0/S_AXIS_S2MM"
         ]
       }
     },
@@ -2081,6 +2103,18 @@
         "ports": [
           "axi_dma_0/s2mm_introut",
           "xlconcat_0/In1"
+        ]
+      },
+      "axis_data_fifo_0_m_axis_tdata": {
+        "ports": [
+          "axis_data_fifo_0/m_axis_tdata",
+          "incre_by_10_0/data_in"
+        ]
+      },
+      "incre_by_10_0_data_out": {
+        "ports": [
+          "incre_by_10_0/data_out",
+          "axi_dma_0/s_axis_s2mm_tdata"
         ]
       }
     },
