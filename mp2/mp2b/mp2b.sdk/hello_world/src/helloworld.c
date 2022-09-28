@@ -82,6 +82,9 @@
 #include "xparameters.h"
 #include "xdebug.h"
 
+#include "xtime_l.h"
+#define COUNST_PRE_SECOND (XPAR_CPU_CORTEXA9_CORE_CLOCK_FREQ_HZ/ 2)
+
 #ifdef __aarch64__
 #include "xil_mmu.h"
 #endif
@@ -186,6 +189,9 @@ int main(void)
 	int Status;
 	XAxiDma_Config *Config;
 
+	XTime tEnd, tCur;
+	u32 tUsed;
+
 #if defined(XPAR_UARTNS550_0_BASEADDR)
 
 	Uart550_Setup();
@@ -230,7 +236,12 @@ int main(void)
 	}
 
 	/* Send a packet */
+	XTime_GetTime(&tCur);
 	Status = SendPacket(&AxiDma);
+	XTime_GetTime(&tEnd);
+	tUsed = ((tEnd - tCur)*1000000000)/(COUNST_PRE_SECOND);
+	printf("Time used to transfer packet = %d ns\r\n", tUsed);
+
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
