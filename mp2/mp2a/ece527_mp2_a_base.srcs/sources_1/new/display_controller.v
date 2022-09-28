@@ -62,7 +62,7 @@ wire [7:0] character;
 
 reg [7:0] character_start = 8'h20;
 reg [7:0] character_reg = 8'h20;
-reg [31:0] index = 31'b0;
+reg [31:0] index = 32'd40000000;
 // Character positions (in x & y coordinates) on the screen
 wire [(`X_WIDTH-1-`CHAR_WIDTH_BITWIDTH):0] char_pos_x = x[(`X_WIDTH-1):`CHAR_WIDTH_BITWIDTH];
 wire [(`Y_WIDTH-1-`CHAR_HEIGHT_BITWIDTH):0] char_pos_y = y[(`Y_WIDTH-1):`CHAR_HEIGHT_BITWIDTH];
@@ -112,9 +112,9 @@ assign bram_addr = bram_addr_r;
 // data_buffer
 reg [7 :0 ]data_reg;
 always@(posedge pixel_clk) begin 
-    data_reg <= bram_data[7:0]; 
+    data_reg <= (char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}) ? (bram_data[7:0]) : character_reg; 
 end
-assign character = data_reg;
+assign character = (data_reg!=0) ? data_reg: 8'h20;
 
 // Simple debouncer from https://zipcpu.com/blog/2017/08/04/debouncing.html
 reg push_button_debounced = 0;
