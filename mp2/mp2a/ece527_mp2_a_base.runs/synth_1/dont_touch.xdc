@@ -78,9 +78,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_sm
 # IP: bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rst_ps7_0_100M_0 || ORIG_REF_NAME==design_1_rst_ps7_0_100M_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] -quiet
-
 # XDC: bd/design_1/ip/design_1_processing_system7_0_1/design_1_processing_system7_0_1.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_1 || ORIG_REF_NAME==design_1_processing_system7_0_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
@@ -129,13 +126,5 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc
 #dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_rst_ps7_0_100M_0 || ORIG_REF_NAME==design_1_rst_ps7_0_100M_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila_impl.xdc
-set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc
-#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_ila_0_0 || ORIG_REF_NAME==design_1_ila_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc
 
 # XDC: bd/design_1/design_1_ooc.xdc

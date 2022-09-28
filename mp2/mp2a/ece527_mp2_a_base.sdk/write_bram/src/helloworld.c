@@ -63,7 +63,7 @@ int main()
 //			usleep(1000);
 		}
     }
-    int rev = Xil_In32(0x40000000+4*6);
+    int rev = Xil_In32(0x40000000+4*7);
     printf("%d\n", rev);
 
 

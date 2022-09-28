@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Sep 27 22:48:19 2022
+//Date        : Tue Sep 27 20:41:31 2022
 //Host        : LAPTOP-5UDM1U2M running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=11,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_bram_cntlr_cnt=1,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_bram_cntlr_cnt=1,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -69,6 +69,7 @@ module design_1
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
   wire axi_bram_ctrl_0_BRAM_PORTA_EN;
+  wire axi_bram_ctrl_0_BRAM_PORTA_RST;
   wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
   wire [12:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
@@ -192,6 +193,7 @@ module design_1
         .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
         .bram_en_a(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .bram_rddata_a(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+        .bram_rst_a(axi_bram_ctrl_0_BRAM_PORTA_RST),
         .bram_we_a(axi_bram_ctrl_0_BRAM_PORTA_WE),
         .bram_wrdata_a(axi_bram_ctrl_0_BRAM_PORTA_DIN),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
@@ -300,8 +302,8 @@ module design_1
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   design_1_blk_mem_gen_0_0 blk_mem_gen_0
-       (.addra(axi_bram_ctrl_0_BRAM_PORTA_ADDR[10:0]),
-        .addrb(display_controller_0_bram_addr[10:0]),
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
+        .addrb(display_controller_0_bram_addr),
         .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
         .clkb(processing_system7_0_FCLK_CLK1),
         .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
@@ -310,8 +312,10 @@ module design_1
         .doutb(blk_mem_gen_0_doutb),
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
         .enb(display_controller_0_bram_en),
-        .wea(axi_bram_ctrl_0_BRAM_PORTA_WE[0]),
-        .web(display_controller_0_bram_we[0]));
+        .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .rstb(processing_system7_0_FCLK_RESET0_N),
+        .wea(axi_bram_ctrl_0_BRAM_PORTA_WE),
+        .web(display_controller_0_bram_we));
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(processing_system7_0_FCLK_CLK0),
         .clk_out1(processing_system7_0_FCLK_CLK1),
@@ -327,10 +331,6 @@ module design_1
         .push_button_0(push_button_0_0_1),
         .rgb(display_controller_0_rgb),
         .vsync(display_controller_0_vsync));
-  design_1_ila_0_0 ila_0
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(display_controller_0_bram_addr),
-        .probe1(blk_mem_gen_0_doutb));
   (* BMM_INFO_PROCESSOR = "arm > design_1 axi_bram_ctrl_0" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   design_1_processing_system7_0_1 processing_system7_0
