@@ -62,7 +62,7 @@ wire [7:0] character;
 
 reg [7:0] character_start = 8'h20;
 reg [7:0] character_reg = 8'h20;
-reg [7:0] index = 8'b0;
+reg [31:0] index = 31'b0;
 // Character positions (in x & y coordinates) on the screen
 wire [(`X_WIDTH-1-`CHAR_WIDTH_BITWIDTH):0] char_pos_x = x[(`X_WIDTH-1):`CHAR_WIDTH_BITWIDTH];
 wire [(`Y_WIDTH-1-`CHAR_HEIGHT_BITWIDTH):0] char_pos_y = y[(`Y_WIDTH-1):`CHAR_HEIGHT_BITWIDTH];
@@ -85,27 +85,27 @@ wire [(`CHAR_HEIGHT_BITWIDTH-1):0] char_y = y[(`CHAR_HEIGHT_BITWIDTH-1):0];
 
 // en always =1
 assign bram_en = 1'b1;
-assign bram_we = 3'b1;
+assign bram_we = 4'b0;
 
 // when button is pressed, read next line. 
 always @(posedge pixel_clk) begin
     if (push_button_debounced)
-        index <= index + 96 *4; 
+        index <= index + 32'd96 * 'd4; 
 end
 
 // cnt the character number 
-reg [ 5:0 ] cnt;
+reg [ 31:0 ] cnt = 32'd0;
 always@(posedge pixel_clk) begin 
     if(cnt == 95)
-        cnt <= 6'b0;
+        cnt <= 32'b0;
     else 
-        cnt <= cnt +1'b1;
+        cnt <= cnt +32'd1;
 end
 
 // read data
 reg [31:0]bram_addr_r; 
 always@(posedge pixel_clk) begin 
-    bram_addr_r <= index + cnt; 
+    bram_addr_r <= index + cnt * 'd4; 
 end
 assign bram_addr = bram_addr_r; 
 

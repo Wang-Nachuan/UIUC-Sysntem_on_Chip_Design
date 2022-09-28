@@ -10,7 +10,6 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "rgb_to_rbg": "",
       "rgb2dvi_0": "",
       "clk_wiz_0": "",
       "xlconstant_0": "",
@@ -18,6 +17,7 @@
       "axi_bram_ctrl_0": "",
       "axi_smc": "",
       "rst_ps7_0_100M": "",
+      "rgb_to_rbg": "",
       "display_controller_0": ""
     },
     "interface_ports": {
@@ -1744,27 +1744,6 @@
           }
         }
       },
-      "rgb_to_rbg": {
-        "vlnv": "xilinx.com:module_ref:rgb_to_rbg:1.0",
-        "xci_name": "design_1_rgb_to_rbg_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rgb_to_rbg",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "rgb_in": {
-            "direction": "I",
-            "left": "23",
-            "right": "0"
-          },
-          "rbg_out": {
-            "direction": "O",
-            "left": "23",
-            "right": "0"
-          }
-        }
-      },
       "rgb2dvi_0": {
         "vlnv": "digilentinc.com:ip:rgb2dvi:1.4",
         "xci_name": "design_1_rgb2dvi_0_0",
@@ -1879,6 +1858,27 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_ps7_0_100M_0"
       },
+      "rgb_to_rbg": {
+        "vlnv": "xilinx.com:module_ref:rgb_to_rbg:1.0",
+        "xci_name": "design_1_rgb_to_rbg_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rgb_to_rbg",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rgb_in": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "rbg_out": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
       "display_controller_0": {
         "vlnv": "xilinx.com:module_ref:display_controller:1.0",
         "xci_name": "design_1_display_controller_0_0",
@@ -1945,16 +1945,16 @@
       }
     },
     "interface_nets": {
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
+        ]
+      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "axi_smc/S00_AXI"
         ]
       },
       "axi_smc_M00_AXI": {
@@ -1963,16 +1963,16 @@
           "axi_bram_ctrl_0/S_AXI"
         ]
       },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "axi_smc/S00_AXI"
+        ]
+      },
       "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
           "blk_mem_gen_0/BRAM_PORTA",
           "axi_bram_ctrl_0/BRAM_PORTA"
-        ]
-      },
-      "processing_system7_0_DDR": {
-        "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
         ]
       }
     },
@@ -1991,8 +1991,8 @@
         "ports": [
           "clk_wiz_0/clk_out1",
           "rgb2dvi_0/PixelClk",
-          "display_controller_0/pixel_clk",
-          "blk_mem_gen_0/clkb"
+          "blk_mem_gen_0/clkb",
+          "display_controller_0/pixel_clk"
         ]
       },
       "rgb_to_rbg_0_rbg_out": {

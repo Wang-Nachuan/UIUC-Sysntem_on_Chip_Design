@@ -59,10 +59,12 @@ int main()
     for(int j = 0 ; j < num_test_vectors; j ++ ){
 		for(int i = 0 ; i < 96; i ++ ){
 			int _byte =toascii(testvector[j][i]);
-			Xil_Out32(0x40000000 + i*4 + j *4*96, _byte);
-			usleep(1000);
+			Xil_Out32(0x40000000 + i*4 + j*4*96, _byte);
+//			usleep(1000);
 		}
     }
+    int rev = Xil_In32(0x40000000+4*7);
+    printf("%d\n", rev);
 
 
     cleanup_platform();

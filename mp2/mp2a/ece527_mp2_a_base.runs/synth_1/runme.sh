@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=E:/vivado2019.1/SDK/2019.1/bin;E:/vivado2019.1/Vivado/2019.1/ids_lite/ISE/bin/nt64;E:/vivado2019.1/Vivado/2019.1/ids_lite/ISE/lib/nt64:E:/vivado2019.1/Vivado/2019.1/bin
+  PATH=D:/Applications/Vivado/SDK/2019.1/bin;D:/Applications/Vivado/Vivado/2019.1/ids_lite/ISE/bin/nt64;D:/Applications/Vivado/Vivado/2019.1/ids_lite/ISE/lib/nt64:D:/Applications/Vivado/Vivado/2019.1/bin
 else
-  PATH=E:/vivado2019.1/SDK/2019.1/bin;E:/vivado2019.1/Vivado/2019.1/ids_lite/ISE/bin/nt64;E:/vivado2019.1/Vivado/2019.1/ids_lite/ISE/lib/nt64:E:/vivado2019.1/Vivado/2019.1/bin:$PATH
+  PATH=D:/Applications/Vivado/SDK/2019.1/bin;D:/Applications/Vivado/Vivado/2019.1/ids_lite/ISE/bin/nt64;D:/Applications/Vivado/Vivado/2019.1/ids_lite/ISE/lib/nt64:D:/Applications/Vivado/Vivado/2019.1/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.runs/synth_1'
+HD_PWD='D:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

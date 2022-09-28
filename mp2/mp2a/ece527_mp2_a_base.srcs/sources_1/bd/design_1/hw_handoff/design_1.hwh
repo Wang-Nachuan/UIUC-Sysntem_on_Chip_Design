@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Sep 27 02:18:46 2022" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Sep 27 20:41:33 2022" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -27,6 +27,36 @@
     <PORT DIR="I" NAME="push_button_0" SIGIS="undef" SIGNAME="External_Ports_push_button_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="display_controller_0" PORT="push_button_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -102,36 +132,6 @@
     <PORT DIR="IO" LEFT="3" NAME="DDR_dqs_p" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_DQS">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DQS"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -2178,8 +2178,8 @@
         <PORT CLKFREQUENCY="65000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rgb2dvi_0" PORT="PixelClk"/>
-            <CONNECTION INSTANCE="display_controller_0" PORT="pixel_clk"/>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
+            <CONNECTION INSTANCE="display_controller_0" PORT="pixel_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
@@ -3642,7 +3642,7 @@
     </MODULE>
     <MODULE COREREVISION="8" FULLNAME="/rgb2dvi_0" HWVERSION="1.4" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.4">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.ipdefs/vivado-library-master_0/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
+        <DOCUMENT SOURCE="d:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.ipdefs/vivado-library-master_0/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="true"/>

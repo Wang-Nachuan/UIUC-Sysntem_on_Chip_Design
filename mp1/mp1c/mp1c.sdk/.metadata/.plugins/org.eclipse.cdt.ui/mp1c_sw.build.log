@@ -1,0 +1,8 @@
+11:05:52 **** Incremental Build of configuration Debug for project mp1c_sw ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+11:05:53 Build Finished (took 410ms)
+

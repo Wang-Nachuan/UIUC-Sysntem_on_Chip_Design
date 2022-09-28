@@ -66,27 +66,28 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 5
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.cache/wt [current_project]
-  set_property parent.project_path C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.xpr [current_project]
+  set_property webtalk.parent_dir D:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.cache/wt [current_project]
+  set_property parent.project_path D:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Users/86186/Desktop/UIUC-ECE527-main/ip_repo/testip_zdx_1.0
-  C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.ipdefs/vivado-library-master_0
+  D:/Code/UIUC-ECE527/mp2/ip_repo/testip_zdx_1.0
+  D:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.ipdefs/vivado-library-master_0
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.cache/ip [current_project]
+  set_property ip_output_repo D:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet D:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.srcs/sources_1/bd/design_1/design_1.bd
+  add_files D:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.srcs/constrs_1/new/pynq_z2.xdc
+  read_xdc D:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.srcs/constrs_1/new/pynq_z2.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z020clg400-1
   set_param project.isImplRun false

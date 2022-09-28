@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.xpr">
+<Project Version="7" Minor="40" Path="D:/Code/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="aace7109b7264e18ba5d4cc72b95509a"/>
