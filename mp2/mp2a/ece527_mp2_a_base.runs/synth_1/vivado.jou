@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Sep 27 02:20:40 2022
-# Process ID: 194208
-# Current directory: C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.runs/synth_1
+# Start of session at: Wed Sep 28 00:28:22 2022
+# Process ID: 220924
+# Current directory: F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
-# Log file: C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.runs/synth_1/design_1_wrapper.vds
-# Journal file: C:/Users/86186/Desktop/UIUC-ECE527-main/ece527_mp2_a_base/ece527_mp2_a_base.runs/synth_1\vivado.jou
+# Log file: F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.runs/synth_1/design_1_wrapper.vds
+# Journal file: F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

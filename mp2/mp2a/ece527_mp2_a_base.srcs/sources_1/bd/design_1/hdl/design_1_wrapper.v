@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Sep 27 02:18:41 2022
+//Date        : Wed Sep 28 00:19:32 2022
 //Host        : DESKTOP-VC6STA9 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -35,7 +35,8 @@ module design_1_wrapper
     TMDS_Clk_p_0,
     TMDS_Data_n_0,
     TMDS_Data_p_0,
-    push_button_0);
+    push_button_0,
+    reset_rtl);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -62,6 +63,7 @@ module design_1_wrapper
   output [2:0]TMDS_Data_n_0;
   output [2:0]TMDS_Data_p_0;
   input push_button_0;
+  input reset_rtl;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -89,6 +91,7 @@ module design_1_wrapper
   wire [2:0]TMDS_Data_n_0;
   wire [2:0]TMDS_Data_p_0;
   wire push_button_0;
+  wire reset_rtl;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -116,5 +119,6 @@ module design_1_wrapper
         .TMDS_Clk_p_0(TMDS_Clk_p_0),
         .TMDS_Data_n_0(TMDS_Data_n_0),
         .TMDS_Data_p_0(TMDS_Data_p_0),
-        .push_button_0(push_button_0));
+        .push_button_0(push_button_0),
+        .reset_rtl(reset_rtl));
 endmodule

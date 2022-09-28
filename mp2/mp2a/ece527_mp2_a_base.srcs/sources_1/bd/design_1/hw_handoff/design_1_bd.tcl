@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# display_controller, rgb_to_rbg
+# rgb_to_rbg
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -174,6 +174,10 @@ proc create_root_design { parentCell } {
   set TMDS_Data_n_0 [ create_bd_port -dir O -from 2 -to 0 TMDS_Data_n_0 ]
   set TMDS_Data_p_0 [ create_bd_port -dir O -from 2 -to 0 TMDS_Data_p_0 ]
   set push_button_0 [ create_bd_port -dir I push_button_0 ]
+  set reset_rtl [ create_bd_port -dir I -type rst reset_rtl ]
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_LOW} \
+ ] $reset_rtl
 
   # Create instance: axi_bram_ctrl_0, and set properties
   set axi_bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0 ]
@@ -184,6 +188,7 @@ proc create_root_design { parentCell } {
   # Create instance: axi_smc, and set properties
   set axi_smc [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_smc ]
   set_property -dict [ list \
+   CONFIG.NUM_MI {2} \
    CONFIG.NUM_SI {1} \
  ] $axi_smc
 
@@ -210,17 +215,9 @@ proc create_root_design { parentCell } {
    CONFIG.MMCM_DIVCLK_DIVIDE {5} \
  ] $clk_wiz_0
 
-  # Create instance: display_controller_0, and set properties
-  set block_name display_controller
-  set block_cell_name display_controller_0
-  if { [catch {set display_controller_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $display_controller_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
+  # Create instance: pl_rd_bram_0, and set properties
+  set pl_rd_bram_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:pl_rd_bram:1.0 pl_rd_bram_0 ]
+
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
@@ -1023,33 +1020,32 @@ proc create_root_design { parentCell } {
   # Create interface connections
   connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_smc/M00_AXI]
+  connect_bd_intf_net -intf_net axi_smc_M01_AXI [get_bd_intf_pins axi_smc/M01_AXI] [get_bd_intf_pins pl_rd_bram_0/S00_AXI]
+  connect_bd_intf_net -intf_net pl_rd_bram_0_Bram_rtl [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTB] [get_bd_intf_pins pl_rd_bram_0/Bram_rtl]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
 
   # Create port connections
-  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins blk_mem_gen_0/doutb] [get_bd_pins display_controller_0/bram_data]
-  connect_bd_net -net display_controller_0_bram_addr [get_bd_pins blk_mem_gen_0/addrb] [get_bd_pins display_controller_0/bram_addr]
-  connect_bd_net -net display_controller_0_bram_en [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins display_controller_0/bram_en]
-  connect_bd_net -net display_controller_0_bram_we [get_bd_pins blk_mem_gen_0/web] [get_bd_pins display_controller_0/bram_we]
-  connect_bd_net -net display_controller_0_hsync [get_bd_pins display_controller_0/hsync] [get_bd_pins rgb2dvi_0/vid_pHSync]
-  connect_bd_net -net display_controller_0_is_display_active [get_bd_pins display_controller_0/is_display_active] [get_bd_pins rgb2dvi_0/vid_pVDE]
-  connect_bd_net -net display_controller_0_rgb [get_bd_pins display_controller_0/rgb] [get_bd_pins rgb_to_rbg/rgb_in]
-  connect_bd_net -net display_controller_0_vsync [get_bd_pins display_controller_0/vsync] [get_bd_pins rgb2dvi_0/vid_pVSync]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins display_controller_0/pixel_clk] [get_bd_pins rgb2dvi_0/PixelClk]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins blk_mem_gen_0/rstb] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
-  connect_bd_net -net push_button_0_0_1 [get_bd_ports push_button_0] [get_bd_pins display_controller_0/push_button_0]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins pl_rd_bram_0/pixel_clk] [get_bd_pins rgb2dvi_0/PixelClk]
+  connect_bd_net -net pl_rd_bram_0_hsync [get_bd_pins pl_rd_bram_0/hsync] [get_bd_pins rgb2dvi_0/vid_pHSync]
+  connect_bd_net -net pl_rd_bram_0_is_display_active [get_bd_pins pl_rd_bram_0/is_display_active] [get_bd_pins rgb2dvi_0/vid_pVDE]
+  connect_bd_net -net pl_rd_bram_0_rgb [get_bd_pins pl_rd_bram_0/rgb] [get_bd_pins rgb_to_rbg/rgb_in]
+  connect_bd_net -net pl_rd_bram_0_vsync [get_bd_pins pl_rd_bram_0/vsync] [get_bd_pins rgb2dvi_0/vid_pVSync]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins pl_rd_bram_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+  connect_bd_net -net push_button_0_0_1 [get_bd_ports push_button_0] [get_bd_pins pl_rd_bram_0/push_button_0]
+  connect_bd_net -net reset_rtl_1 [get_bd_ports reset_rtl] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rgb2dvi_0_TMDS_Clk_n [get_bd_ports TMDS_Clk_n_0] [get_bd_pins rgb2dvi_0/TMDS_Clk_n]
   connect_bd_net -net rgb2dvi_0_TMDS_Clk_p [get_bd_ports TMDS_Clk_p_0] [get_bd_pins rgb2dvi_0/TMDS_Clk_p]
   connect_bd_net -net rgb2dvi_0_TMDS_Data_n [get_bd_ports TMDS_Data_n_0] [get_bd_pins rgb2dvi_0/TMDS_Data_n]
   connect_bd_net -net rgb2dvi_0_TMDS_Data_p [get_bd_ports TMDS_Data_p_0] [get_bd_pins rgb2dvi_0/TMDS_Data_p]
   connect_bd_net -net rgb_to_rbg_0_rbg_out [get_bd_pins rgb2dvi_0/vid_pData] [get_bd_pins rgb_to_rbg/rbg_out]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins pl_rd_bram_0/s00_axi_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins clk_wiz_0/reset] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00002000 -offset 0x40000000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_0_Mem0
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs pl_rd_bram_0/S00_AXI/S00_AXI_reg] SEG_pl_rd_bram_0_S00_AXI_reg
 
 
   # Restore current instance
