@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Wed Sep 28 12:13:04 2022
+//Date        : Tue Sep 27 02:18:41 2022
 //Host        : DESKTOP-VC6STA9 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=11,numReposBlks=11,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_bram_cntlr_cnt=2,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_bram_cntlr_cnt=1,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -64,16 +64,6 @@ module design_1
   output [2:0]TMDS_Data_p_0;
   input push_button_0;
 
-  wire [31:0]PL2BRAM_0_BRAM_PORT_ADDR;
-  wire PL2BRAM_0_BRAM_PORT_CLK;
-  wire [31:0]PL2BRAM_0_BRAM_PORT_DIN;
-  wire PL2BRAM_0_BRAM_PORT_EN;
-  wire PL2BRAM_0_BRAM_PORT_RST;
-  wire [3:0]PL2BRAM_0_BRAM_PORT_WE;
-  wire PL2BRAM_0_hsync;
-  wire PL2BRAM_0_is_display_active;
-  wire [23:0]PL2BRAM_0_rgb;
-  wire PL2BRAM_0_vsync;
   wire [12:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
   wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
   wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
@@ -112,27 +102,14 @@ module design_1
   wire axi_smc_M00_AXI_WREADY;
   wire [3:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
-  wire [3:0]axi_smc_M01_AXI_ARADDR;
-  wire [2:0]axi_smc_M01_AXI_ARPROT;
-  wire axi_smc_M01_AXI_ARREADY;
-  wire axi_smc_M01_AXI_ARVALID;
-  wire [3:0]axi_smc_M01_AXI_AWADDR;
-  wire [2:0]axi_smc_M01_AXI_AWPROT;
-  wire axi_smc_M01_AXI_AWREADY;
-  wire axi_smc_M01_AXI_AWVALID;
-  wire axi_smc_M01_AXI_BREADY;
-  wire [1:0]axi_smc_M01_AXI_BRESP;
-  wire axi_smc_M01_AXI_BVALID;
-  wire [31:0]axi_smc_M01_AXI_RDATA;
-  wire axi_smc_M01_AXI_RREADY;
-  wire [1:0]axi_smc_M01_AXI_RRESP;
-  wire axi_smc_M01_AXI_RVALID;
-  wire [31:0]axi_smc_M01_AXI_WDATA;
-  wire axi_smc_M01_AXI_WREADY;
-  wire [3:0]axi_smc_M01_AXI_WSTRB;
-  wire axi_smc_M01_AXI_WVALID;
   wire [31:0]blk_mem_gen_0_doutb;
-  wire clk_wiz_0_clk_out1;
+  wire [31:0]display_controller_0_bram_addr;
+  wire display_controller_0_bram_en;
+  wire [3:0]display_controller_0_bram_we;
+  wire display_controller_0_hsync;
+  wire display_controller_0_is_display_active;
+  wire [23:0]display_controller_0_rgb;
+  wire display_controller_0_vsync;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -149,6 +126,7 @@ module design_1
   wire processing_system7_0_DDR_RESET_N;
   wire processing_system7_0_DDR_WE_N;
   wire processing_system7_0_FCLK_CLK0;
+  wire processing_system7_0_FCLK_CLK1;
   wire processing_system7_0_FCLK_RESET0_N;
   wire processing_system7_0_FIXED_IO_DDR_VRN;
   wire processing_system7_0_FIXED_IO_DDR_VRP;
@@ -194,7 +172,7 @@ module design_1
   wire processing_system7_0_M_AXI_GP0_WREADY;
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
-  wire push_button_0_1;
+  wire push_button_0_0_1;
   wire rgb2dvi_0_TMDS_Clk_n;
   wire rgb2dvi_0_TMDS_Clk_p;
   wire [2:0]rgb2dvi_0_TMDS_Data_n;
@@ -207,42 +185,7 @@ module design_1
   assign TMDS_Clk_p_0 = rgb2dvi_0_TMDS_Clk_p;
   assign TMDS_Data_n_0[2:0] = rgb2dvi_0_TMDS_Data_n;
   assign TMDS_Data_p_0[2:0] = rgb2dvi_0_TMDS_Data_p;
-  assign push_button_0_1 = push_button_0;
-  design_1_PL2BRAM_0_0 PL2BRAM_0
-       (.bram_addr(PL2BRAM_0_BRAM_PORT_ADDR),
-        .bram_clk(PL2BRAM_0_BRAM_PORT_CLK),
-        .bram_data({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
-        .bram_en(PL2BRAM_0_BRAM_PORT_EN),
-        .bram_rst(PL2BRAM_0_BRAM_PORT_RST),
-        .bram_we(PL2BRAM_0_BRAM_PORT_WE),
-        .bram_wr_data(PL2BRAM_0_BRAM_PORT_DIN),
-        .hsync(PL2BRAM_0_hsync),
-        .is_display_active(PL2BRAM_0_is_display_active),
-        .pixel_clk(clk_wiz_0_clk_out1),
-        .push_button_0(push_button_0_1),
-        .rgb(PL2BRAM_0_rgb),
-        .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s00_axi_araddr(axi_smc_M01_AXI_ARADDR),
-        .s00_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .s00_axi_arprot(axi_smc_M01_AXI_ARPROT),
-        .s00_axi_arready(axi_smc_M01_AXI_ARREADY),
-        .s00_axi_arvalid(axi_smc_M01_AXI_ARVALID),
-        .s00_axi_awaddr(axi_smc_M01_AXI_AWADDR),
-        .s00_axi_awprot(axi_smc_M01_AXI_AWPROT),
-        .s00_axi_awready(axi_smc_M01_AXI_AWREADY),
-        .s00_axi_awvalid(axi_smc_M01_AXI_AWVALID),
-        .s00_axi_bready(axi_smc_M01_AXI_BREADY),
-        .s00_axi_bresp(axi_smc_M01_AXI_BRESP),
-        .s00_axi_bvalid(axi_smc_M01_AXI_BVALID),
-        .s00_axi_rdata(axi_smc_M01_AXI_RDATA),
-        .s00_axi_rready(axi_smc_M01_AXI_RREADY),
-        .s00_axi_rresp(axi_smc_M01_AXI_RRESP),
-        .s00_axi_rvalid(axi_smc_M01_AXI_RVALID),
-        .s00_axi_wdata(axi_smc_M01_AXI_WDATA),
-        .s00_axi_wready(axi_smc_M01_AXI_WREADY),
-        .s00_axi_wstrb(axi_smc_M01_AXI_WSTRB),
-        .s00_axi_wvalid(axi_smc_M01_AXI_WVALID),
-        .vsync(PL2BRAM_0_vsync));
+  assign push_button_0_0_1 = push_button_0;
   (* BMM_INFO_ADDRESS_SPACE = "byte  0x40000000 32 > design_1 blk_mem_gen_0" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   design_1_axi_bram_ctrl_0_0 axi_bram_ctrl_0
@@ -318,25 +261,6 @@ module design_1
         .M00_AXI_wready(axi_smc_M00_AXI_WREADY),
         .M00_AXI_wstrb(axi_smc_M00_AXI_WSTRB),
         .M00_AXI_wvalid(axi_smc_M00_AXI_WVALID),
-        .M01_AXI_araddr(axi_smc_M01_AXI_ARADDR),
-        .M01_AXI_arprot(axi_smc_M01_AXI_ARPROT),
-        .M01_AXI_arready(axi_smc_M01_AXI_ARREADY),
-        .M01_AXI_arvalid(axi_smc_M01_AXI_ARVALID),
-        .M01_AXI_awaddr(axi_smc_M01_AXI_AWADDR),
-        .M01_AXI_awprot(axi_smc_M01_AXI_AWPROT),
-        .M01_AXI_awready(axi_smc_M01_AXI_AWREADY),
-        .M01_AXI_awvalid(axi_smc_M01_AXI_AWVALID),
-        .M01_AXI_bready(axi_smc_M01_AXI_BREADY),
-        .M01_AXI_bresp(axi_smc_M01_AXI_BRESP),
-        .M01_AXI_bvalid(axi_smc_M01_AXI_BVALID),
-        .M01_AXI_rdata(axi_smc_M01_AXI_RDATA),
-        .M01_AXI_rready(axi_smc_M01_AXI_RREADY),
-        .M01_AXI_rresp(axi_smc_M01_AXI_RRESP),
-        .M01_AXI_rvalid(axi_smc_M01_AXI_RVALID),
-        .M01_AXI_wdata(axi_smc_M01_AXI_WDATA),
-        .M01_AXI_wready(axi_smc_M01_AXI_WREADY),
-        .M01_AXI_wstrb(axi_smc_M01_AXI_WSTRB),
-        .M01_AXI_wvalid(axi_smc_M01_AXI_WVALID),
         .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
         .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),
@@ -379,26 +303,34 @@ module design_1
         .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   design_1_blk_mem_gen_0_0 blk_mem_gen_0
        (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
-        .addrb(PL2BRAM_0_BRAM_PORT_ADDR),
+        .addrb(display_controller_0_bram_addr),
         .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
-        .clkb(PL2BRAM_0_BRAM_PORT_CLK),
+        .clkb(processing_system7_0_FCLK_CLK1),
         .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
-        .dinb(PL2BRAM_0_BRAM_PORT_DIN),
+        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
         .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
         .doutb(blk_mem_gen_0_doutb),
         .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
-        .enb(PL2BRAM_0_BRAM_PORT_EN),
+        .enb(display_controller_0_bram_en),
         .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
-        .rstb(PL2BRAM_0_BRAM_PORT_RST),
+        .rstb(processing_system7_0_FCLK_RESET0_N),
         .wea(axi_bram_ctrl_0_BRAM_PORTA_WE),
-        .web(PL2BRAM_0_BRAM_PORT_WE));
+        .web(display_controller_0_bram_we));
   design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(processing_system7_0_FCLK_CLK0),
-        .clk_out1(clk_wiz_0_clk_out1),
+        .clk_out1(processing_system7_0_FCLK_CLK1),
         .reset(xlconstant_0_dout));
-  design_1_ila_0_0 ila_0
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(blk_mem_gen_0_doutb[0]));
+  design_1_display_controller_0_0 display_controller_0
+       (.bram_addr(display_controller_0_bram_addr),
+        .bram_data(blk_mem_gen_0_doutb),
+        .bram_en(display_controller_0_bram_en),
+        .bram_we(display_controller_0_bram_we),
+        .hsync(display_controller_0_hsync),
+        .is_display_active(display_controller_0_is_display_active),
+        .pixel_clk(processing_system7_0_FCLK_CLK1),
+        .push_button_0(push_button_0_0_1),
+        .rgb(display_controller_0_rgb),
+        .vsync(display_controller_0_vsync));
   (* BMM_INFO_PROCESSOR = "arm > design_1 axi_bram_ctrl_0" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   design_1_processing_system7_0_1 processing_system7_0
@@ -466,19 +398,19 @@ module design_1
         .PS_SRSTB(FIXED_IO_ps_srstb),
         .USB0_VBUS_PWRFAULT(1'b0));
   design_1_rgb2dvi_0_0 rgb2dvi_0
-       (.PixelClk(clk_wiz_0_clk_out1),
+       (.PixelClk(processing_system7_0_FCLK_CLK1),
         .TMDS_Clk_n(rgb2dvi_0_TMDS_Clk_n),
         .TMDS_Clk_p(rgb2dvi_0_TMDS_Clk_p),
         .TMDS_Data_n(rgb2dvi_0_TMDS_Data_n),
         .TMDS_Data_p(rgb2dvi_0_TMDS_Data_p),
         .aRst(1'b0),
         .vid_pData(rgb_to_rbg_0_rbg_out),
-        .vid_pHSync(PL2BRAM_0_hsync),
-        .vid_pVDE(PL2BRAM_0_is_display_active),
-        .vid_pVSync(PL2BRAM_0_vsync));
+        .vid_pHSync(display_controller_0_hsync),
+        .vid_pVDE(display_controller_0_is_display_active),
+        .vid_pVSync(display_controller_0_vsync));
   design_1_rgb_to_rbg_0_0 rgb_to_rbg
        (.rbg_out(rgb_to_rbg_0_rbg_out),
-        .rgb_in(PL2BRAM_0_rgb));
+        .rgb_in(display_controller_0_rgb));
   design_1_rst_ps7_0_100M_0 rst_ps7_0_100M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
