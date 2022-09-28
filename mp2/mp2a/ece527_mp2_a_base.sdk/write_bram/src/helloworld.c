@@ -57,16 +57,17 @@ int main()
 {
     init_platform();
     for(int j = 0 ; j < num_test_vectors; j ++ ){
-		for(int i = 0 ; i < 96; i ++ ){
-			int _byte =toascii(testvector[j][i]);
-			Xil_Out32(0x40000000 + i*4 + j*4*96, _byte);
+		for(int i = 0 ; i < 96; i = i+4 ){
+			int _byte1 =toascii(testvector[j][i]);
+			int _byte2 =toascii(testvector[j][i+1]);
+			int _byte3 =toascii(testvector[j][i+2]);
+			int _byte4 =toascii(testvector[j][i+3]);
+
+			Xil_Out32(0x40000000 + i + j*4*96, _byte4 | _byte3<<8 | _byte2<<16|_byte1<<24);
 //			usleep(1000);
 		}
     }
-    int rev = Xil_In32(0x40000000+4*6);
-    printf("%d\n", rev);
-
-
+    Xil_Out32(0x42000000,num_test_vectors);
     cleanup_platform();
     return 0;
 }

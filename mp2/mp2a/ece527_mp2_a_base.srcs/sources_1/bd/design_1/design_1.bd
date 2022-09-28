@@ -17,9 +17,13 @@
       "axi_bram_ctrl_0": "",
       "axi_smc": "",
       "rst_ps7_0_100M": "",
+      "ila_0": "",
       "rgb_to_rbg": "",
+      "blk_mem_gen_1": "",
+      "axi_bram_ctrl_1": "",
       "display_controller_0": "",
-      "ila_0": ""
+      "xlconstant_1": "",
+      "xlconstant_2": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1736,7 +1740,7 @@
         },
         "hdl_attributes": {
           "BMM_INFO_PROCESSOR": {
-            "value": "arm > design_1 axi_bram_ctrl_0",
+            "value": "arm > design_1 axi_bram_ctrl_0 design_1 axi_bram_ctrl_1",
             "value_src": "default"
           },
           "KEEP_HIERARCHY": {
@@ -1852,6 +1856,9 @@
         "vlnv": "xilinx.com:ip:smartconnect:1.0",
         "xci_name": "design_1_axi_smc_0",
         "parameters": {
+          "NUM_MI": {
+            "value": "2"
+          },
           "NUM_SI": {
             "value": "1"
           }
@@ -1861,10 +1868,15 @@
             "mode": "Slave",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "bridges": [
-              "M00_AXI"
+              "M00_AXI",
+              "M01_AXI"
             ]
           },
           "M00_AXI": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "M01_AXI": {
             "mode": "Master",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           }
@@ -1873,91 +1885,6 @@
       "rst_ps7_0_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_ps7_0_100M_0"
-      },
-      "rgb_to_rbg": {
-        "vlnv": "xilinx.com:module_ref:rgb_to_rbg:1.0",
-        "xci_name": "design_1_rgb_to_rbg_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "rgb_to_rbg",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "rgb_in": {
-            "direction": "I",
-            "left": "23",
-            "right": "0"
-          },
-          "rbg_out": {
-            "direction": "O",
-            "left": "23",
-            "right": "0"
-          }
-        }
-      },
-      "display_controller_0": {
-        "vlnv": "xilinx.com:module_ref:display_controller:1.0",
-        "xci_name": "design_1_display_controller_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "display_controller",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "pixel_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "65000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "push_button_0": {
-            "direction": "I"
-          },
-          "bram_data": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
-          "bram_addr": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "bram_en": {
-            "direction": "O"
-          },
-          "bram_we": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          },
-          "hsync": {
-            "direction": "O"
-          },
-          "vsync": {
-            "direction": "O"
-          },
-          "is_display_active": {
-            "direction": "O"
-          },
-          "rgb": {
-            "direction": "O",
-            "left": "23",
-            "right": "0"
-          }
-        }
       },
       "ila_0": {
         "vlnv": "xilinx.com:ip:ila:6.2",
@@ -2015,9 +1942,177 @@
             "value": "false"
           }
         }
+      },
+      "rgb_to_rbg": {
+        "vlnv": "xilinx.com:module_ref:rgb_to_rbg:1.0",
+        "xci_name": "design_1_rgb_to_rbg_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "rgb_to_rbg",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rgb_in": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "rbg_out": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "blk_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_1_blk_mem_gen_0_1",
+        "parameters": {
+          "EN_SAFETY_CKT": {
+            "value": "false"
+          },
+          "Enable_32bit_Address": {
+            "value": "true"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "true"
+          },
+          "Use_RSTB_Pin": {
+            "value": "true"
+          },
+          "use_bram_block": {
+            "value": "BRAM_Controller"
+          }
+        }
+      },
+      "axi_bram_ctrl_1": {
+        "vlnv": "xilinx.com:ip:axi_bram_ctrl:4.1",
+        "xci_name": "design_1_axi_bram_ctrl_1_0",
+        "parameters": {
+          "SINGLE_PORT_BRAM": {
+            "value": "1"
+          }
+        },
+        "hdl_attributes": {
+          "BMM_INFO_ADDRESS_SPACE": {
+            "value": "byte  0x42000000 32 > design_1 blk_mem_gen_1",
+            "value_src": "default"
+          },
+          "KEEP_HIERARCHY": {
+            "value": "yes",
+            "value_src": "default"
+          }
+        }
+      },
+      "display_controller_0": {
+        "vlnv": "xilinx.com:module_ref:display_controller:1.0",
+        "xci_name": "design_1_display_controller_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "display_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixel_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "65000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "push_button_0": {
+            "direction": "I"
+          },
+          "hsync": {
+            "direction": "O"
+          },
+          "vsync": {
+            "direction": "O"
+          },
+          "is_display_active": {
+            "direction": "O"
+          },
+          "rgb": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "addrb": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "doutb": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "addr_num": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "num": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_1_1"
+      },
+      "xlconstant_2": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_1_2"
       }
     },
     "interface_nets": {
+      "axi_smc_M01_AXI": {
+        "interface_ports": [
+          "axi_smc/M01_AXI",
+          "axi_bram_ctrl_1/S_AXI"
+        ]
+      },
+      "axi_bram_ctrl_1_BRAM_PORTA": {
+        "interface_ports": [
+          "blk_mem_gen_1/BRAM_PORTA",
+          "axi_bram_ctrl_1/BRAM_PORTA"
+        ]
+      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
@@ -2036,16 +2131,16 @@
           "processing_system7_0/DDR"
         ]
       },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_smc/M00_AXI",
-          "axi_bram_ctrl_0/S_AXI"
-        ]
-      },
       "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
           "blk_mem_gen_0/BRAM_PORTA",
           "axi_bram_ctrl_0/BRAM_PORTA"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "axi_bram_ctrl_0/S_AXI"
         ]
       }
     },
@@ -2058,7 +2153,8 @@
           "axi_smc/aclk",
           "axi_bram_ctrl_0/s_axi_aclk",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "ila_0/clk"
+          "ila_0/clk",
+          "axi_bram_ctrl_1/s_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {
@@ -2066,7 +2162,8 @@
           "clk_wiz_0/clk_out1",
           "rgb2dvi_0/PixelClk",
           "blk_mem_gen_0/clkb",
-          "display_controller_0/pixel_clk"
+          "display_controller_0/pixel_clk",
+          "blk_mem_gen_1/clkb"
         ]
       },
       "rgb_to_rbg_0_rbg_out": {
@@ -2145,24 +2242,19 @@
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
           "axi_bram_ctrl_0/s_axi_aresetn",
-          "axi_smc/aresetn"
+          "axi_smc/aresetn",
+          "axi_bram_ctrl_1/s_axi_aresetn"
         ]
       },
       "display_controller_0_bram_en": {
         "ports": [
-          "display_controller_0/bram_en",
+          "xlconstant_1/dout",
           "blk_mem_gen_0/enb"
-        ]
-      },
-      "display_controller_0_bram_we": {
-        "ports": [
-          "display_controller_0/bram_we",
-          "blk_mem_gen_0/web"
         ]
       },
       "display_controller_0_bram_addr": {
         "ports": [
-          "display_controller_0/bram_addr",
+          "display_controller_0/addrb",
           "blk_mem_gen_0/addrb",
           "ila_0/probe0"
         ]
@@ -2170,8 +2262,26 @@
       "blk_mem_gen_0_doutb": {
         "ports": [
           "blk_mem_gen_0/doutb",
-          "display_controller_0/bram_data",
-          "ila_0/probe1"
+          "ila_0/probe1",
+          "display_controller_0/doutb"
+        ]
+      },
+      "display_controller_0_addr_num": {
+        "ports": [
+          "display_controller_0/addr_num",
+          "blk_mem_gen_1/addrb"
+        ]
+      },
+      "blk_mem_gen_1_doutb": {
+        "ports": [
+          "blk_mem_gen_1/doutb",
+          "display_controller_0/num"
+        ]
+      },
+      "xlconstant_2_dout": {
+        "ports": [
+          "xlconstant_2/dout",
+          "blk_mem_gen_1/enb"
         ]
       }
     },
@@ -2185,6 +2295,11 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0x40000000",
+                "range": "8K"
+              },
+              "SEG_axi_bram_ctrl_1_Mem0": {
+                "address_block": "/axi_bram_ctrl_1/S_AXI/Mem0",
+                "offset": "0x42000000",
                 "range": "8K"
               }
             }

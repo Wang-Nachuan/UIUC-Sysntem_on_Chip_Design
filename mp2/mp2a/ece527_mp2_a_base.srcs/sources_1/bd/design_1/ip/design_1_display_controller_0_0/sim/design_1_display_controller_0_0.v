@@ -57,39 +57,39 @@
 module design_1_display_controller_0_0 (
   pixel_clk,
   push_button_0,
-  bram_data,
-  bram_addr,
-  bram_en,
-  bram_we,
   hsync,
   vsync,
   is_display_active,
-  rgb
+  rgb,
+  addrb,
+  doutb,
+  addr_num,
+  num
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_clk, FREQ_HZ 65000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 pixel_clk CLK" *)
 input wire pixel_clk;
 input wire push_button_0;
-input wire [31 : 0] bram_data;
-output wire [31 : 0] bram_addr;
-output wire bram_en;
-output wire [3 : 0] bram_we;
 output wire hsync;
 output wire vsync;
 output wire is_display_active;
 output wire [23 : 0] rgb;
+output wire [31 : 0] addrb;
+input wire [31 : 0] doutb;
+output wire [31 : 0] addr_num;
+input wire [31 : 0] num;
 
   display_controller inst (
     .pixel_clk(pixel_clk),
     .push_button_0(push_button_0),
-    .bram_data(bram_data),
-    .bram_addr(bram_addr),
-    .bram_en(bram_en),
-    .bram_we(bram_we),
     .hsync(hsync),
     .vsync(vsync),
     .is_display_active(is_display_active),
-    .rgb(rgb)
+    .rgb(rgb),
+    .addrb(addrb),
+    .doutb(doutb),
+    .addr_num(addr_num),
+    .num(num)
   );
 endmodule
