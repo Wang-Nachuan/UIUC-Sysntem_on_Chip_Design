@@ -1,0 +1,128 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                      design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][7]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][23]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][31]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][16]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][24]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][17]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][19]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][27]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][25]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[14]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][26]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][18]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][20]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][28]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][21]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][29]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][15]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[26]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                      design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][6]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[29]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[28]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[27]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][22]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][30]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                      design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][9]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                      design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][3]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[23]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[25]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[22]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][11]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[6]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[3]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[2]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[4]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[17]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[16]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                      design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][8]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                      design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][2]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][39]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[28]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[30]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[19]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][46]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][44]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][42]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][12]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[21]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[23]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][62]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][58]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][32]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[26]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][36]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][54]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[19]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][48]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[18]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][60]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][38]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][14]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][13]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[13]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[20]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][57]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                      design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][4]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[9]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[15]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[11]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                      design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][5]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                     design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[7][10]_srl8/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[12]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[12]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[8]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[4]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[22]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][34]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[5]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][49]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][55]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][33]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[11]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][37]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[2]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[9]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[17]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[27]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[25]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[20]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][52]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[29]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][45]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][35]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[16]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[7]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[1]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][51]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[13]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[6]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][43]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[7]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][61]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][50]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[24]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[24]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][59]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[3]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[10]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[10]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[15]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][63]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][47]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][53]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][40]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[31]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[31]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][56]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[18]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[21]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |                                          design_1_i/ila_0/inst/ila_core_inst/shifted_data_in_reg[0][41]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[30]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[0].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[8]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[5]/D|
+| clk_out1_design_1_clk_wiz_0_0 |               clk_fpga_0 |design_1_i/ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[14]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
