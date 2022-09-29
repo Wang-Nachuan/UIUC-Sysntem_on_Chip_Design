@@ -1930,3 +1930,67 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 1 0 2022-09-28 17:28:15.684
 !MESSAGE Executed Webtalk command
+!SESSION 2022-09-28 17:48:20.087 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.sdk
+
+!ENTRY org.eclipse.ui 2 0 2022-09-28 17:48:22.001
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2022-09-28 17:48:22.001
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2022-09-28 17:48:22.615
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2022-09-28 17:48:22.615
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.rse.core 2 0 2022-09-28 17:48:27.674
+!MESSAGE RSEDOMImporter: null attr "defaultPrivate" in MSI-7A69:local.files
+
+!ENTRY org.eclipse.rse.core 2 0 2022-09-28 17:48:27.681
+!MESSAGE RSEDOMImporter: null attr "defaultPrivate" in MSI-7A69:local.files
+
+!ENTRY org.eclipse.rse.core 2 0 2022-09-28 17:48:27.682
+!MESSAGE RSEDOMImporter: null attr "isActive" in MSI-7A69:local.files
+
+!ENTRY org.eclipse.rse.core 2 0 2022-09-28 17:48:27.682
+!MESSAGE RSEDOMImporter: null attr "isActive" in MSI-7A69:local.files
+
+!ENTRY org.eclipse.rse.core 2 0 2022-09-28 17:48:27.685
+!MESSAGE RSEDOMImporter: null attr "type" in MSI-7A69:local.files/My Home
+
+!ENTRY org.eclipse.rse.core 2 0 2022-09-28 17:48:27.686
+!MESSAGE RSEDOMImporter: null attr "type" in MSI-7A69:local.files/Drives
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:29.448
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:29.449
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:29.455
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:29.456
+!MESSAGE XSCT Command: [setws F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.sdk], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:29.724
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:29.724
+!MESSAGE XSCT command with result: [setws F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.sdk], Result: [null, ]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:29.738
+!MESSAGE XSCT Command: [::hsi::utils::openhw F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:33.084
+!MESSAGE XSCT command with result: [::hsi::utils::openhw F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:33.085
+!MESSAGE XSCT Command: [::hsi::utils::openhw F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.sdk/design_1_wrapper_hw_platform_1/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-09-28 17:48:34.683
+!MESSAGE XSCT command with result: [::hsi::utils::openhw F:/ece527/UIUC-ECE527/mp2/mp2a/ece527_mp2_a_base.sdk/design_1_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: main

@@ -88,7 +88,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7ad3c664</spirit:value>
+            <spirit:value>9:fc92c8a5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -99,7 +99,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7ad3c664</spirit:value>
+            <spirit:value>9:fc92c8a5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -115,11 +115,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 28 22:24:55 UTC 2022</spirit:value>
+            <spirit:value>Thu Sep 29 00:07:04 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7ad3c664</spirit:value>
+            <spirit:value>9:fc92c8a5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -131,7 +131,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3608ecdc</spirit:value>
+            <spirit:value>9:2820f958</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -147,11 +147,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Sep 28 22:24:55 UTC 2022</spirit:value>
+            <spirit:value>Thu Sep 29 00:07:04 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3608ecdc</spirit:value>
+            <spirit:value>9:2820f958</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -240,7 +240,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>addrb</spirit:name>
+        <spirit:name>bram_addr</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -257,7 +257,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>doutb</spirit:name>
+        <spirit:name>bram_data</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -274,7 +274,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>addr_num</spirit:name>
+        <spirit:name>bramNum_addr</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -291,7 +291,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>num</spirit:name>
+        <spirit:name>num_test_vectors</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>

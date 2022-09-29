@@ -17,13 +17,12 @@
       "axi_bram_ctrl_0": "",
       "axi_smc": "",
       "rst_ps7_0_100M": "",
-      "ila_0": "",
       "rgb_to_rbg": "",
       "blk_mem_gen_1": "",
       "axi_bram_ctrl_1": "",
-      "display_controller_0": "",
       "xlconstant_1": "",
-      "xlconstant_2": ""
+      "xlconstant_2": "",
+      "display_controller_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1886,63 +1885,6 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_ps7_0_100M_0"
       },
-      "ila_0": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_ila_0_0",
-        "parameters": {
-          "ALL_PROBE_SAME_MU_CNT": {
-            "value": "2"
-          },
-          "C_DATA_DEPTH": {
-            "value": "8192"
-          },
-          "C_ENABLE_ILA_AXI_MON": {
-            "value": "false"
-          },
-          "C_EN_STRG_QUAL": {
-            "value": "0"
-          },
-          "C_MONITOR_TYPE": {
-            "value": "Native"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "2"
-          },
-          "C_PROBE0_MU_CNT": {
-            "value": "2"
-          },
-          "C_PROBE0_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE1_MU_CNT": {
-            "value": "2"
-          },
-          "C_PROBE1_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE2_MU_CNT": {
-            "value": "2"
-          },
-          "C_PROBE2_WIDTH": {
-            "value": "1"
-          },
-          "C_PROBE3_MU_CNT": {
-            "value": "2"
-          },
-          "C_PROBE3_WIDTH": {
-            "value": "1"
-          },
-          "C_PROBE4_MU_CNT": {
-            "value": "2"
-          },
-          "C_TRIGIN_EN": {
-            "value": "false"
-          },
-          "C_TRIGOUT_EN": {
-            "value": "false"
-          }
-        }
-      },
       "rgb_to_rbg": {
         "vlnv": "xilinx.com:module_ref:rgb_to_rbg:1.0",
         "xci_name": "design_1_rgb_to_rbg_0_0",
@@ -2025,6 +1967,14 @@
           }
         }
       },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_1_1"
+      },
+      "xlconstant_2": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_1_2"
+      },
       "display_controller_0": {
         "vlnv": "xilinx.com:module_ref:display_controller:1.0",
         "xci_name": "design_1_display_controller_0_0",
@@ -2069,66 +2019,34 @@
             "left": "23",
             "right": "0"
           },
-          "addrb": {
+          "bram_addr": {
             "direction": "O",
             "left": "31",
             "right": "0"
           },
-          "doutb": {
+          "bram_data": {
             "direction": "I",
             "left": "31",
             "right": "0"
           },
-          "addr_num": {
+          "bramNum_addr": {
             "direction": "O",
             "left": "31",
             "right": "0"
           },
-          "num": {
+          "num_test_vectors": {
             "direction": "I",
             "left": "31",
             "right": "0"
           }
         }
-      },
-      "xlconstant_1": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_1_1"
-      },
-      "xlconstant_2": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_1_xlconstant_1_2"
       }
     },
     "interface_nets": {
-      "axi_smc_M01_AXI": {
+      "axi_smc_M00_AXI": {
         "interface_ports": [
-          "axi_smc/M01_AXI",
-          "axi_bram_ctrl_1/S_AXI"
-        ]
-      },
-      "axi_bram_ctrl_1_BRAM_PORTA": {
-        "interface_ports": [
-          "blk_mem_gen_1/BRAM_PORTA",
-          "axi_bram_ctrl_1/BRAM_PORTA"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "axi_smc/S00_AXI"
-        ]
-      },
-      "processing_system7_0_DDR": {
-        "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
+          "axi_smc/M00_AXI",
+          "axi_bram_ctrl_0/S_AXI"
         ]
       },
       "axi_bram_ctrl_0_BRAM_PORTA": {
@@ -2137,10 +2055,34 @@
           "axi_bram_ctrl_0/BRAM_PORTA"
         ]
       },
-      "axi_smc_M00_AXI": {
+      "axi_smc_M01_AXI": {
         "interface_ports": [
-          "axi_smc/M00_AXI",
-          "axi_bram_ctrl_0/S_AXI"
+          "axi_smc/M01_AXI",
+          "axi_bram_ctrl_1/S_AXI"
+        ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
+        ]
+      },
+      "axi_bram_ctrl_1_BRAM_PORTA": {
+        "interface_ports": [
+          "blk_mem_gen_1/BRAM_PORTA",
+          "axi_bram_ctrl_1/BRAM_PORTA"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "axi_smc/S00_AXI"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       }
     },
@@ -2153,7 +2095,6 @@
           "axi_smc/aclk",
           "axi_bram_ctrl_0/s_axi_aclk",
           "rst_ps7_0_100M/slowest_sync_clk",
-          "ila_0/clk",
           "axi_bram_ctrl_1/s_axi_aclk"
         ]
       },
@@ -2162,8 +2103,8 @@
           "clk_wiz_0/clk_out1",
           "rgb2dvi_0/PixelClk",
           "blk_mem_gen_0/clkb",
-          "display_controller_0/pixel_clk",
-          "blk_mem_gen_1/clkb"
+          "blk_mem_gen_1/clkb",
+          "display_controller_0/pixel_clk"
         ]
       },
       "rgb_to_rbg_0_rbg_out": {
@@ -2254,28 +2195,26 @@
       },
       "display_controller_0_bram_addr": {
         "ports": [
-          "display_controller_0/addrb",
-          "blk_mem_gen_0/addrb",
-          "ila_0/probe0"
+          "display_controller_0/bram_addr",
+          "blk_mem_gen_0/addrb"
         ]
       },
       "blk_mem_gen_0_doutb": {
         "ports": [
           "blk_mem_gen_0/doutb",
-          "ila_0/probe1",
-          "display_controller_0/doutb"
+          "display_controller_0/bram_data"
         ]
       },
       "display_controller_0_addr_num": {
         "ports": [
-          "display_controller_0/addr_num",
+          "display_controller_0/bramNum_addr",
           "blk_mem_gen_1/addrb"
         ]
       },
       "blk_mem_gen_1_doutb": {
         "ports": [
           "blk_mem_gen_1/doutb",
-          "display_controller_0/num"
+          "display_controller_0/num_test_vectors"
         ]
       },
       "xlconstant_2_dout": {

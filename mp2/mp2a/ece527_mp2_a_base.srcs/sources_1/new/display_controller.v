@@ -22,11 +22,10 @@ module display_controller(
     output is_display_active,
     output [23:0] rgb,
     
-    
-    output [31:0] addrb,
-    input [31:0] doutb,
-    output [31:0] addr_num,
-    input [31:0] num
+    output [31:0] bram_addr,
+    input [31:0] bram_data,
+    output [31:0] bramNum_addr,
+    input [31:0] num_test_vectors
 );
 
 // Pixel coordinates (y, x).
@@ -54,7 +53,6 @@ assign is_display_active = is_display_reg;
 
 // ASCII characters to display 
 wire [7:0] character;
-
 // TODO: implement your own logic to replace the example block below.
 // You need to read characters from an external BRAM instead of generating it internally.
 
@@ -62,13 +60,12 @@ wire [7:0] character;
 // Begin of example block
 // ** This block is an example to generate characters internally. You'll need to 
 // replace the block with your implemenation to read characters from BRAM. **
-reg [31:0] addr = 32'h40000000;
-reg [31:0] addr_old = 32'h40000000;
-reg [31:0] addr_kept = 32'h40000000;
-reg [31:0] addr_num1 = 32'h42000000;
-assign addr_num = addr_num1;
-assign addrb = addr;
-reg [1:0] Done = 1'b0;
+reg [31:0] bram_addr_r = 32'h40000000;
+reg [31:0] addr_start = 32'h40000000;
+reg [31:0] bramNum_addr_r = 32'h42000000;
+assign bramNum_addr = bramNum_addr_r;
+assign bram_addr = bram_addr_r;
+reg [1:0] sentence_comp = 1'b0;
 reg [7:0] character_start = 8'h20;
 reg [7:0] character_reg = 8'h20;
 reg [1:0] mods;
@@ -83,50 +80,33 @@ wire [(`CHAR_HEIGHT_BITWIDTH-1):0] char_y = y[(`CHAR_HEIGHT_BITWIDTH-1):0];
 always @(posedge pixel_clk) begin
     mods = char_pos_x%4;
     if (char_pos_x < `NUM_CHAR_PER_LINE && char_pos_y < `NUM_CHAR_LINES) begin
-        Done = 1'b0;
+        sentence_comp = 1'b0;
         case(mods)
-        2'b00: begin
-        if((char_x != {`CHAR_WIDTH_BITWIDTH{1'b1}})) begin//if((char_pos_x | char_pos_y)==0 & (char_x != {`CHAR_WIDTH_BITWIDTH{1'b1}})) begin
-            character_reg <=doutb[31:24];
-        end
-        else begin
-        character_reg <= (char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}) ? (doutb[23:16]) : character_reg;
-        end
-        end
-        2'b01: 
-        character_reg <= (char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}) ? (doutb[15:8]) : character_reg;
-        2'b10: begin
-        character_reg <= (char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}) ? (doutb[7:0]) : character_reg;
-        end
-        2'b11: begin
-        if( char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}-2'b10) begin
-        addr <= addr +32'h00000004;
-        end
-        character_reg <= (char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}) ? (doutb[31:24]) : character_reg;   
-        end   
+            2'b00: character_reg <= (char_x != {`CHAR_WIDTH_BITWIDTH{1'b1}}) ?  bram_data[31:24]: (char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}) ? (bram_data[23:16]) : character_reg;
+            
+            2'b01: character_reg <= (char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}) ? (bram_data[15:8]) : character_reg;
+            
+            2'b10: character_reg <= (char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}) ? (bram_data[7:0]) : character_reg;
+            
+            2'b11: begin
+                bram_addr_r <=( char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}-2)? bram_addr_r + 4 :bram_addr_r ;
+                character_reg <= (char_x == {`CHAR_WIDTH_BITWIDTH{1'b1}}) ? (bram_data[31:24]) : character_reg;   
+            end   
         endcase
     end
     else if (char_pos_y < `NUM_CHAR_LINES) begin
-        if (char_y == {`CHAR_HEIGHT_BITWIDTH{1'b1}}) begin       
-//            if (char_x <=   {`CHAR_HEIGHT_BITWIDTH{1'b1}}-5'b10000) begin
-//            addr <= addr_num;
-//            num <= doutb;
-//            end
-//            addr <= addr_kept;
-        end
-        else begin  // go back
-            if (~Done) begin
-                addr <= addr_old + `NUM_CHAR_PER_LINE * (char_pos_y + 8'h0);
-                Done <=1'b1;
+        if (char_y != {`CHAR_HEIGHT_BITWIDTH{1'b1}}) begin       
+            if (!sentence_comp) begin
+                bram_addr_r <= addr_start + `NUM_CHAR_PER_LINE * char_pos_y;
+                sentence_comp <=1'b1;
             end
-            else begin
-                character_reg[7:0] <= doutb[31:24];
-            end
+            else
+                character_reg[7:0] <= bram_data[31:24];
         end
     end
     else begin
-        addr <= addr_old;
-        character_reg[7:0] <= doutb[31:24];
+        bram_addr_r <= addr_start;
+        character_reg[7:0] <= bram_data[31:24];
     end
 end
 
@@ -149,22 +129,18 @@ always @(posedge pixel_clk) begin
     end
 end
 
-reg [31:0] temp = 1;
+reg [31:0] sentence_num = 1;
 always @(posedge pixel_clk) begin
-    // Display next screen of characters
     if (push_button_debounced) begin
-        if (temp != num) begin
-        addr_old <=  addr_old +`NUM_CHAR_PER_LINE * `NUM_CHAR_LINES;
-        temp <= temp +1;
+        if (sentence_num != num_test_vectors) begin
+        addr_start <=  addr_start +`NUM_CHAR_PER_LINE * `NUM_CHAR_LINES;
+        sentence_num <= sentence_num +1;
         end
         else begin
-            addr_old <= 32'h40000000;
-            temp <= 1;
+            addr_start <= 32'h40000000;
+            sentence_num <= 1;
         end
 end
-
-//        addr <= addr_old +`NUM_CHAR_PER_LINE * `NUM_CHAR_LINES;
-//        character_reg[7:0] <= doutb[31:24];
 end
 // End of example block
 //////////////////////////////////////////////////////////////////////////////////

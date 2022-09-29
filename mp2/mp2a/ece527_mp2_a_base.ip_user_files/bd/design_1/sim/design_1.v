@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Wed Sep 28 17:24:55 2022
+//Date        : Wed Sep 28 19:07:03 2022
 //Host        : DESKTOP-VC6STA9 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=15,numReposBlks=15,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_bram_cntlr_cnt=3,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=14,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_bram_cntlr_cnt=3,da_ps7_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -450,20 +450,16 @@ module design_1
         .clk_out1(processing_system7_0_FCLK_CLK1),
         .reset(xlconstant_0_dout));
   design_1_display_controller_0_0 display_controller_0
-       (.addr_num(display_controller_0_addr_num),
-        .addrb(display_controller_0_bram_addr),
-        .doutb(blk_mem_gen_0_doutb),
+       (.bramNum_addr(display_controller_0_addr_num),
+        .bram_addr(display_controller_0_bram_addr),
+        .bram_data(blk_mem_gen_0_doutb),
         .hsync(display_controller_0_hsync),
         .is_display_active(display_controller_0_is_display_active),
-        .num(blk_mem_gen_1_doutb),
+        .num_test_vectors(blk_mem_gen_1_doutb),
         .pixel_clk(processing_system7_0_FCLK_CLK1),
         .push_button_0(push_button_0_0_1),
         .rgb(display_controller_0_rgb),
         .vsync(display_controller_0_vsync));
-  design_1_ila_0_0 ila_0
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(display_controller_0_bram_addr),
-        .probe1(blk_mem_gen_0_doutb));
   (* BMM_INFO_PROCESSOR = "arm > design_1 axi_bram_ctrl_0 design_1 axi_bram_ctrl_1" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   design_1_processing_system7_0_1 processing_system7_0

@@ -61,10 +61,10 @@ module design_1_display_controller_0_0 (
   vsync,
   is_display_active,
   rgb,
-  addrb,
-  doutb,
-  addr_num,
-  num
+  bram_addr,
+  bram_data,
+  bramNum_addr,
+  num_test_vectors
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_clk, FREQ_HZ 65000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
@@ -75,10 +75,10 @@ output wire hsync;
 output wire vsync;
 output wire is_display_active;
 output wire [23 : 0] rgb;
-output wire [31 : 0] addrb;
-input wire [31 : 0] doutb;
-output wire [31 : 0] addr_num;
-input wire [31 : 0] num;
+output wire [31 : 0] bram_addr;
+input wire [31 : 0] bram_data;
+output wire [31 : 0] bramNum_addr;
+input wire [31 : 0] num_test_vectors;
 
   display_controller inst (
     .pixel_clk(pixel_clk),
@@ -87,9 +87,9 @@ input wire [31 : 0] num;
     .vsync(vsync),
     .is_display_active(is_display_active),
     .rgb(rgb),
-    .addrb(addrb),
-    .doutb(doutb),
-    .addr_num(addr_num),
-    .num(num)
+    .bram_addr(bram_addr),
+    .bram_data(bram_data),
+    .bramNum_addr(bramNum_addr),
+    .num_test_vectors(num_test_vectors)
   );
 endmodule

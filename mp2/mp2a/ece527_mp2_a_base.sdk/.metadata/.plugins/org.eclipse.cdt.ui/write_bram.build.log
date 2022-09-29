@@ -1,4 +1,4 @@
-17:18:29 **** Auto Build of configuration Debug for project write_bram ****
+19:07:58 **** Auto Build of configuration Debug for project write_bram ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -15,9 +15,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size write_bram.elf  |tee "write_bram.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19288	   1648	  22568	  43504	   a9f0	write_bram.elf
+  56900	   3088	  23328	  83316	  14574	write_bram.elf
 'Finished building: write_bram.elf.size'
 ' '
 
-17:18:31 Build Finished (took 1s.231ms)
+19:07:59 Build Finished (took 977ms)
 
