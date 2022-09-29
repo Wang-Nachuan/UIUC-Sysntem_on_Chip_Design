@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Sep 28 15:42:00 2022
-| Host         : DESKTOP-VC6STA9 running 64-bit major release  (build 9200)
+| Date         : Wed Sep 28 19:19:14 2022
+| Host         : LAPTOP-5UDM1U2M running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
 | Device       : 7z020clg400-1
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 3898 |     0 |     53200 |  7.33 |
-|   LUT as Logic             | 3224 |     0 |     53200 |  6.06 |
-|   LUT as Memory            |  674 |     0 |     17400 |  3.87 |
-|     LUT as Distributed RAM |  320 |     0 |           |       |
-|     LUT as Shift Register  |  354 |     0 |           |       |
-| Slice Registers            | 4520 |     0 |    106400 |  4.25 |
-|   Register as Flip Flop    | 4520 |     0 |    106400 |  4.25 |
+| Slice LUTs*                | 6268 |     0 |     53200 | 11.78 |
+|   LUT as Logic             | 4892 |     0 |     53200 |  9.20 |
+|   LUT as Memory            | 1376 |     0 |     17400 |  7.91 |
+|     LUT as Distributed RAM | 1024 |     0 |           |       |
+|     LUT as Shift Register  |  352 |     0 |           |       |
+| Slice Registers            | 6826 |     0 |    106400 |  6.42 |
+|   Register as Flip Flop    | 6826 |     0 |    106400 |  6.42 |
 |   Register as Latch        |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                   |   65 |     0 |     26600 |  0.24 |
-| F8 Muxes                   |   18 |     0 |     13300 |  0.14 |
+| F7 Muxes                   |  147 |     0 |     26600 |  0.55 |
+| F8 Muxes                   |   70 |     0 |     13300 |  0.53 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -58,8 +58,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 5     |          Yes |           - |          Set |
 | 3     |          Yes |           - |        Reset |
-| 116   |          Yes |         Set |            - |
-| 4396  |          Yes |       Reset |            - |
+| 251   |          Yes |         Set |            - |
+| 6567  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,11 +69,10 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    | 16.5 |     0 |       140 | 11.79 |
-|   RAMB36/FIFO*    |   16 |     0 |       140 | 11.43 |
-|     RAMB36E1 only |   16 |       |           |       |
-|   RAMB18          |    1 |     0 |       280 |  0.36 |
-|     RAMB18E1 only |    1 |       |           |       |
+| Block RAM Tile    |    4 |     0 |       140 |  2.86 |
+|   RAMB36/FIFO*    |    4 |     0 |       140 |  2.86 |
+|     RAMB36E1 only |    4 |       |           |       |
+|   RAMB18          |    0 |     0 |       280 |  0.00 |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -151,30 +150,28 @@ Table of Contents
 +------------+------+----------------------+
 |  Ref Name  | Used |  Functional Category |
 +------------+------+----------------------+
-| FDRE       | 4396 |         Flop & Latch |
-| LUT6       | 1287 |                  LUT |
-| LUT3       |  953 |                  LUT |
-| LUT5       |  890 |                  LUT |
-| LUT4       |  526 |                  LUT |
-| RAMD32     |  480 |   Distributed Memory |
-| LUT2       |  273 |                  LUT |
-| SRL16E     |  257 |   Distributed Memory |
-| LUT1       |  222 |                  LUT |
-| SRLC32E    |  187 |   Distributed Memory |
-| RAMS32     |  160 |   Distributed Memory |
+| FDRE       | 6567 |         Flop & Latch |
+| LUT6       | 2157 |                  LUT |
+| RAMD32     | 1528 |   Distributed Memory |
+| LUT3       | 1401 |                  LUT |
+| LUT4       |  914 |                  LUT |
+| LUT5       |  836 |                  LUT |
+| RAMS32     |  504 |   Distributed Memory |
+| LUT2       |  403 |                  LUT |
+| LUT1       |  318 |                  LUT |
+| FDSE       |  251 |         Flop & Latch |
+| SRLC32E    |  182 |   Distributed Memory |
+| SRL16E     |  170 |   Distributed Memory |
+| MUXF7      |  147 |                MuxFx |
 | BIBUF      |  130 |                   IO |
-| FDSE       |  116 |         Flop & Latch |
-| CARRY4     |   74 |           CarryLogic |
-| MUXF7      |   65 |                MuxFx |
-| MUXF8      |   18 |                MuxFx |
-| RAMB36E1   |   16 |         Block Memory |
+| MUXF8      |   70 |                MuxFx |
+| CARRY4     |   59 |           CarryLogic |
 | OSERDESE2  |    8 |                   IO |
 | FDPE       |    5 |         Flop & Latch |
+| RAMB36E1   |    4 |         Block Memory |
 | OBUFDS     |    4 |                   IO |
 | FDCE       |    3 |         Flop & Latch |
 | BUFG       |    3 |                Clock |
-| SRLC16E    |    2 |   Distributed Memory |
-| RAMB18E1   |    1 |         Block Memory |
 | PS7        |    1 | Specialized Resource |
 | PLLE2_ADV  |    1 |                Clock |
 | MMCME2_ADV |    1 |                Clock |
@@ -185,11 +182,9 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+------------+------+
-|  Ref Name  | Used |
-+------------+------+
-| dbg_hub_CV |    1 |
-+------------+------+
++----------+------+
+| Ref Name | Used |
++----------+------+
 
 
 9. Instantiated Netlists

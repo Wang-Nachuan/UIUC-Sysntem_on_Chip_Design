@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Sep 28 15:44:23 2022
-| Host             : DESKTOP-VC6STA9 running 64-bit major release  (build 9200)
+| Date             : Wed Sep 28 19:20:45 2022
+| Host             : LAPTOP-5UDM1U2M running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xc7z020clg400-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.848        |
+| Total On-Chip Power (W)  | 1.862        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.697        |
+| Dynamic (W)              | 1.712        |
 | Device Static (W)        | 0.150        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 63.7         |
-| Junction Temperature (C) | 46.3         |
+| Max Ambient (C)          | 63.5         |
+| Junction Temperature (C) | 46.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.024 |       10 |       --- |             --- |
-| Slice Logic              |     0.008 |    10022 |       --- |             --- |
-|   LUT as Logic           |     0.006 |     3341 |     53200 |            6.28 |
-|   Register               |    <0.001 |     4380 |    106400 |            4.12 |
-|   LUT as Shift Register  |    <0.001 |      299 |     17400 |            1.72 |
-|   LUT as Distributed RAM |    <0.001 |      124 |     17400 |            0.71 |
-|   CARRY4                 |    <0.001 |       86 |     13300 |            0.65 |
-|   F7/F8 Muxes            |    <0.001 |       83 |     53200 |            0.16 |
-|   Others                 |     0.000 |      612 |       --- |             --- |
-| Signals                  |     0.012 |     7210 |       --- |             --- |
-| Block RAM                |     0.015 |     16.5 |       140 |           11.79 |
+| Clocks                   |     0.024 |        9 |       --- |             --- |
+| Slice Logic              |     0.018 |    11805 |       --- |             --- |
+|   LUT as Logic           |     0.016 |     4420 |     53200 |            8.31 |
+|   LUT as Distributed RAM |     0.001 |      324 |     17400 |            1.86 |
+|   Register               |    <0.001 |     4710 |    106400 |            4.43 |
+|   LUT as Shift Register  |    <0.001 |      321 |     17400 |            1.84 |
+|   F7/F8 Muxes            |    <0.001 |      217 |     53200 |            0.41 |
+|   CARRY4                 |    <0.001 |       46 |     13300 |            0.35 |
+|   Others                 |     0.000 |      535 |       --- |             --- |
+| Signals                  |     0.020 |     7614 |       --- |             --- |
+| Block RAM                |     0.012 |        4 |       140 |            2.86 |
 | MMCM                     |     0.122 |        1 |         4 |           25.00 |
 | PLL                      |     0.124 |        1 |         4 |           25.00 |
 | I/O                      |     0.136 |        9 |       125 |            7.20 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.150 |          |           |                 |
-| Total                    |     1.848 |          |           |                 |
+| Total                    |     1.862 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.088 |       0.071 |      0.017 |
+| Vccint    |       1.000 |     0.103 |       0.087 |      0.016 |
 | Vccaux    |       1.800 |     0.146 |       0.130 |      0.016 |
 | Vcco33    |       3.300 |     0.042 |       0.041 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -87,7 +87,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.003 |       0.001 |      0.002 |
+| Vccbram   |       1.000 |     0.002 |       0.001 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -138,18 +138,17 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
-| Clock                                                                                      | Domain                                                               | Constraint (ns) |
-+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
-| CLKFBIN                                                                                    | design_1_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/CLKFBIN           |            15.4 |
-| PixelClkIO                                                                                 | design_1_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk          |            15.4 |
-| SerialClkIO                                                                                | design_1_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk         |             3.1 |
-| clk_fpga_0                                                                                 | design_1_i/processing_system7_0/inst/FCLK_CLK0                       |            10.0 |
-| clk_fpga_0                                                                                 | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]          |            10.0 |
-| clk_out1_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0              |            15.4 |
-| clkfbout_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0              |            50.0 |
-| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |            33.0 |
-+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
++-------------------------------+--------------------------------------------------------------+-----------------+
+| Clock                         | Domain                                                       | Constraint (ns) |
++-------------------------------+--------------------------------------------------------------+-----------------+
+| CLKFBIN                       | design_1_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/CLKFBIN   |            15.4 |
+| PixelClkIO                    | design_1_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/PixelClk  |            15.4 |
+| SerialClkIO                   | design_1_i/rgb2dvi_0/U0/ClockGenInternal.ClockGenX/SerialClk |             3.1 |
+| clk_fpga_0                    | design_1_i/processing_system7_0/inst/FCLK_CLK0               |            10.0 |
+| clk_fpga_0                    | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]  |            10.0 |
+| clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0      |            15.4 |
+| clkfbout_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0      |            50.0 |
++-------------------------------+--------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -161,27 +160,26 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.697 |
-|   dbg_hub                |     0.003 |
-|     inst                 |     0.003 |
-|       BSCANID.u_xsdbm_id |     0.003 |
-|   design_1_i             |     1.694 |
+| design_1_wrapper         |     1.712 |
+|   design_1_i             |     1.712 |
 |     axi_bram_ctrl_0      |     0.002 |
 |       U0                 |     0.002 |
-|     axi_smc              |     0.019 |
-|       inst               |     0.019 |
-|     blk_mem_gen_0        |     0.007 |
-|       U0                 |     0.007 |
+|     axi_bram_ctrl_1      |     0.002 |
+|       U0                 |     0.002 |
+|     axi_smc              |     0.046 |
+|       inst               |     0.046 |
+|     blk_mem_gen_0        |     0.006 |
+|       U0                 |     0.006 |
+|     blk_mem_gen_1        |     0.006 |
+|       U0                 |     0.006 |
 |     clk_wiz_0            |     0.122 |
 |       inst               |     0.122 |
-|     display_controller_0 |     0.002 |
-|       inst               |     0.002 |
-|     ila_0                |     0.020 |
-|       inst               |     0.020 |
+|     display_controller_0 |     0.005 |
+|       inst               |     0.005 |
 |     processing_system7_0 |     1.256 |
 |       inst               |     1.256 |
-|     rgb2dvi_0            |     0.265 |
-|       U0                 |     0.265 |
+|     rgb2dvi_0            |     0.267 |
+|       U0                 |     0.267 |
 +--------------------------+-----------+
 
 
