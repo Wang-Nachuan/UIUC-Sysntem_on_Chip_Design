@@ -254,28 +254,6 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: ila_0, and set properties
-  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
-  set_property -dict [ list \
-   CONFIG.ALL_PROBE_SAME_MU_CNT {2} \
-   CONFIG.C_DATA_DEPTH {8192} \
-   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
-   CONFIG.C_EN_STRG_QUAL {0} \
-   CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {2} \
-   CONFIG.C_PROBE0_MU_CNT {2} \
-   CONFIG.C_PROBE0_WIDTH {32} \
-   CONFIG.C_PROBE1_MU_CNT {2} \
-   CONFIG.C_PROBE1_WIDTH {32} \
-   CONFIG.C_PROBE2_MU_CNT {2} \
-   CONFIG.C_PROBE2_WIDTH {1} \
-   CONFIG.C_PROBE3_MU_CNT {2} \
-   CONFIG.C_PROBE3_WIDTH {1} \
-   CONFIG.C_PROBE4_MU_CNT {2} \
-   CONFIG.C_TRIGIN_EN {false} \
-   CONFIG.C_TRIGOUT_EN {false} \
- ] $ila_0
-
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
@@ -1091,16 +1069,16 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins processing_system7_0/M_AXI_GP0]
 
   # Create port connections
-  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins blk_mem_gen_0/doutb] [get_bd_pins display_controller_0/doutb] [get_bd_pins ila_0/probe1]
-  connect_bd_net -net blk_mem_gen_1_doutb [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins display_controller_0/num]
-  connect_bd_net -net display_controller_0_addr_num [get_bd_pins blk_mem_gen_1/addrb] [get_bd_pins display_controller_0/addr_num]
-  connect_bd_net -net display_controller_0_bram_addr [get_bd_pins blk_mem_gen_0/addrb] [get_bd_pins display_controller_0/addrb] [get_bd_pins ila_0/probe0]
+  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins blk_mem_gen_0/doutb] [get_bd_pins display_controller_0/bram_data]
+  connect_bd_net -net blk_mem_gen_1_doutb [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins display_controller_0/num_test_vectors]
+  connect_bd_net -net display_controller_0_addr_num [get_bd_pins blk_mem_gen_1/addrb] [get_bd_pins display_controller_0/bramNum_addr]
+  connect_bd_net -net display_controller_0_bram_addr [get_bd_pins blk_mem_gen_0/addrb] [get_bd_pins display_controller_0/bram_addr]
   connect_bd_net -net display_controller_0_bram_en [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net display_controller_0_hsync [get_bd_pins display_controller_0/hsync] [get_bd_pins rgb2dvi_0/vid_pHSync]
   connect_bd_net -net display_controller_0_is_display_active [get_bd_pins display_controller_0/is_display_active] [get_bd_pins rgb2dvi_0/vid_pVDE]
   connect_bd_net -net display_controller_0_rgb [get_bd_pins display_controller_0/rgb] [get_bd_pins rgb_to_rbg/rgb_in]
   connect_bd_net -net display_controller_0_vsync [get_bd_pins display_controller_0/vsync] [get_bd_pins rgb2dvi_0/vid_pVSync]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins ila_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins axi_bram_ctrl_1/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins blk_mem_gen_1/clkb] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins display_controller_0/pixel_clk] [get_bd_pins rgb2dvi_0/PixelClk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net push_button_0_0_1 [get_bd_ports push_button_0] [get_bd_pins display_controller_0/push_button_0]
