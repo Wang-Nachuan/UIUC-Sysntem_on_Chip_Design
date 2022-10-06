@@ -1,0 +1,201 @@
+Test 1.1 (memory-mapped, unoptimized): A[10][10], B[10][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][10], B[10][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][10], B[10][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][50], B[50][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][50], B[50][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][50], B[50][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][100], B[100][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][100], B[100][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][100], B[100][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][10], B[10][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][10], B[10][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][10], B[10][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][50], B[50][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][50], B[50][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][50], B[50][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][100], B[100][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][100], B[100][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][100], B[100][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][10], B[10][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][10], B[10][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][10], B[10][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][50], B[50][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][50], B[50][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][50], B[50][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][100], B[100][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][100], B[100][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][100], B[100][100]
+Test passed
+
+D:\Code\UIUC-ECE527\mp3\mp3a\solution1\sim\verilog>set PATH= 
+
+D:\Code\UIUC-ECE527\mp3\mp3a\solution1\sim\verilog>call D:/Applications/Vivado/Vivado/2019.1/bin/xelab xil_defaultlib.apatb_multiply_top glbl -prj multiply.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Applications/Vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s multiply  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Applications/Vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_multiply_top glbl -prj multiply.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Applications/Vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s multiply 
+Multi-threading is on. Using 18 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/AESL_automem_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/AESL_automem_B.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_B
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/AESL_automem_C.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_C
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_multiply_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiply
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.multiply
+Compiling module xil_defaultlib.AESL_automem_A
+Compiling module xil_defaultlib.AESL_automem_B
+Compiling module xil_defaultlib.AESL_automem_C
+Compiling module xil_defaultlib.apatb_multiply_top
+Compiling module work.glbl
+Built simulation snapshot multiply
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/xsim.dir/multiply/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/xsim.dir/multiply/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct  6 00:47:08 2022. For additional details about this file, please refer to the WebTalk help file at D:/Applications/Vivado/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct  6 00:47:08 2022...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/multiply/xsim_script.tcl
+# xsim {multiply} -autoloadwcfg -tclbatch {multiply.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source multiply.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 27 [0.00%] @ "125000"
+// RTL Simulation : 1 / 27 [100.00%] @ "20222155000"
+// RTL Simulation : 2 / 27 [100.00%] @ "40524175000"
+// RTL Simulation : 3 / 27 [100.00%] @ "60926195000"
+// RTL Simulation : 4 / 27 [100.00%] @ "81228215000"
+// RTL Simulation : 5 / 27 [100.00%] @ "101930235000"
+// RTL Simulation : 6 / 27 [100.00%] @ "123132255000"
+// RTL Simulation : 7 / 27 [100.00%] @ "143534275000"
+// RTL Simulation : 8 / 27 [100.00%] @ "164736295000"
+// RTL Simulation : 9 / 27 [100.00%] @ "186938315000"
+// RTL Simulation : 10 / 27 [100.00%] @ "207240335000"
+// RTL Simulation : 11 / 27 [100.00%] @ "227942355000"
+// RTL Simulation : 12 / 27 [100.00%] @ "249144375000"
+// RTL Simulation : 13 / 27 [100.00%] @ "269846395000"
+// RTL Simulation : 14 / 27 [100.00%] @ "292548415000"
+// RTL Simulation : 15 / 27 [100.00%] @ "317750435000"
+// RTL Simulation : 16 / 27 [100.00%] @ "338952455000"
+// RTL Simulation : 17 / 27 [100.00%] @ "364154475000"
+// RTL Simulation : 18 / 27 [100.00%] @ "394356495000"
+// RTL Simulation : 19 / 27 [100.00%] @ "414758515000"
+// RTL Simulation : 20 / 27 [100.00%] @ "435960535000"
+// RTL Simulation : 21 / 27 [100.00%] @ "458162555000"
+// RTL Simulation : 22 / 27 [100.00%] @ "479364575000"
+// RTL Simulation : 23 / 27 [100.00%] @ "504566595000"
+// RTL Simulation : 24 / 27 [100.00%] @ "534768615000"
+// RTL Simulation : 25 / 27 [100.00%] @ "556970635000"
+// RTL Simulation : 26 / 27 [100.00%] @ "587172655000"
+// RTL Simulation : 27 / 27 [100.00%] @ "627374675000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 627374715 ns : File "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply.autotb.v" Line 520
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:03:53 . Memory (MB): peak = 221.109 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Oct  6 00:51:06 2022...
+Test 1.1 (memory-mapped, unoptimized): A[10][10], B[10][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][10], B[10][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][10], B[10][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][50], B[50][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][50], B[50][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][50], B[50][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][100], B[100][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][100], B[100][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[10][100], B[100][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][10], B[10][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][10], B[10][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][10], B[10][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][50], B[50][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][50], B[50][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][50], B[50][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][100], B[100][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][100], B[100][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[50][100], B[100][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][10], B[10][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][10], B[10][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][10], B[10][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][50], B[50][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][50], B[50][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][50], B[50][100]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][100], B[100][10]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][100], B[100][50]
+Test passed
+Test 1.1 (memory-mapped, unoptimized): A[100][100], B[100][100]
+Test passed
