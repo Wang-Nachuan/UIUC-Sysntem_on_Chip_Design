@@ -24,4 +24,4 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("mC", 32, hls_in, 7, "ap_none", "in_data", 1),
 	Port_Property("nC", 32, hls_in, 8, "ap_none", "in_data", 1),
 };
-const char* HLS_Design_Meta::dut_name = "multiply";
+const char* HLS_Design_Meta::dut_name = "multiply_a23";

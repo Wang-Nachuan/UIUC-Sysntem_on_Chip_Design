@@ -135,15 +135,15 @@ float fmodf(float, float);
 long double fmodl(long double, long double);
 void multiply_key(signed int (*llvm_cbe_A)[100], signed int (*llvm_cbe_B)[100], signed int (*llvm_cbe_C)[100], signed int llvm_cbe_mA, signed int llvm_cbe_nA, signed int llvm_cbe_mB, signed int llvm_cbe_nB, signed int llvm_cbe_mC, signed int llvm_cbe_nC);
 signed int main(void);
-void AESL_WRAP_multiply(signed int (*)[100], signed int (*)[100], signed int (*)[100], signed int , signed int , signed int , signed int , signed int , signed int );
+void AESL_WRAP_multiply_a23(signed int (*)[100], signed int (*)[100], signed int (*)[100], signed int , signed int , signed int , signed int , signed int , signed int );
 
 
 /* Global Variable Definitions and Initialization */
-static  char aesl_internal__OC_str[61] = "Test 1.1 (memory-mapped, unoptimized): A[%d][%d], B[%d][%d]\n";
 static signed int aesl_internal_main_OC_size[3] = { 10u, 50u, 100u };
-static  char aesl_internal_str1[12] = "Test failed";
+static  char aesl_internal__OC_str[64] = "Test 2.3 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n";
 static  char aesl_internal__OC_str1[40] = "Mismatch at C(%d, %d), test=%d, key=%d\n";
 static  char aesl_internal_str[12] = "Test passed";
+static  char aesl_internal_str1[12] = "Test failed";
 
 
 /* Function Bodies */
@@ -1366,10 +1366,10 @@ printf("\n = 0x%X\n", ((unsigned int )(llvm_cbe_tmp__62&4294967295ull)));
   } while (1); /* end of syntactic loop '.lr.ph.us' */
 llvm_cbe__2e_preheader_2e_lr_2e_ph_2e_split_2e_us:
 if (AESL_DEBUG_TRACE)
-printf("\n  %%43 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([61 x i8]* @aesl_internal_.str, i64 0, i64 0), i32 %%7, i32 %%10, i32 %%10, i32 %%13) nounwind, !dbg !8 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_355_count);
+printf("\n  %%43 = call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([64 x i8]* @aesl_internal_.str, i64 0, i64 0), i32 %%7, i32 %%10, i32 %%10, i32 %%13) nounwind, !dbg !8 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_355_count);
   printf(( char *)((&aesl_internal__OC_str[(((signed long long )0ull))
 #ifdef AESL_BC_SIM
- % 61
+ % 64
 #endif
 ])), llvm_cbe_tmp__24, llvm_cbe_tmp__27, llvm_cbe_tmp__27, llvm_cbe_tmp__30);
 if (AESL_DEBUG_TRACE) {
@@ -1380,8 +1380,8 @@ printf("\nArgument  = 0x%X",llvm_cbe_tmp__30);
 printf("\nReturn  = 0x%X",llvm_cbe_tmp__51);
 }
 if (AESL_DEBUG_TRACE)
-printf("\n  call void @AESL_WRAP_multiply([100 x i32]* %%1, [100 x i32]* %%2, [100 x i32]* %%3, i32 %%7, i32 %%10, i32 %%10, i32 %%13, i32 %%7, i32 %%13) nounwind, !dbg !6 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_356_count);
-  AESL_WRAP_multiply(llvm_cbe_tmp__18, llvm_cbe_tmp__19, llvm_cbe_tmp__20, llvm_cbe_tmp__24, llvm_cbe_tmp__27, llvm_cbe_tmp__27, llvm_cbe_tmp__30, llvm_cbe_tmp__24, llvm_cbe_tmp__30);
+printf("\n  call void @AESL_WRAP_multiply_a23([100 x i32]* %%1, [100 x i32]* %%2, [100 x i32]* %%3, i32 %%7, i32 %%10, i32 %%10, i32 %%13, i32 %%7, i32 %%13) nounwind, !dbg !6 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_356_count);
+  AESL_WRAP_multiply_a23(llvm_cbe_tmp__18, llvm_cbe_tmp__19, llvm_cbe_tmp__20, llvm_cbe_tmp__24, llvm_cbe_tmp__27, llvm_cbe_tmp__27, llvm_cbe_tmp__30, llvm_cbe_tmp__24, llvm_cbe_tmp__30);
 if (AESL_DEBUG_TRACE) {
 printf("\nArgument  = 0x%X",llvm_cbe_tmp__24);
 printf("\nArgument  = 0x%X",llvm_cbe_tmp__27);

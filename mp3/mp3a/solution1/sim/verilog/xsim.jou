@@ -2,12 +2,12 @@
 # xsim v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Oct  6 00:47:08 2022
-# Process ID: 15308
+# Start of session at: Thu Oct  6 17:37:41 2022
+# Process ID: 21388
 # Current directory: D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog
-# Command line: xsim.exe -mode tcl -source {xsim.dir/multiply/xsim_script.tcl}
+# Command line: xsim.exe -mode tcl -source {xsim.dir/multiply_a23/xsim_script.tcl}
 # Log file: D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/xsim.log
 # Journal file: D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog\xsim.jou
 #-----------------------------------------------------------
-source xsim.dir/multiply/xsim_script.tcl
-source multiply.tcl
+source xsim.dir/multiply_a23/xsim_script.tcl
+source multiply_a23.tcl

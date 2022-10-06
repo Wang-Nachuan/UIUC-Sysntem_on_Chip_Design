@@ -80,13 +80,13 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "c.multiply.autotvin_A.dat"
-         "c.multiply.autotvin_B.dat"
-         "c.multiply.autotvin_C.dat"
-         "c.multiply.autotvin_nA.dat"
-         "c.multiply.autotvin_mC.dat"
-         "c.multiply.autotvin_nC.dat"
-         "c.multiply.autotvout_C.dat"
+         "c.multiply_a23.autotvin_A.dat"
+         "c.multiply_a23.autotvin_B.dat"
+         "c.multiply_a23.autotvin_C.dat"
+         "c.multiply_a23.autotvin_nA.dat"
+         "c.multiply_a23.autotvin_mC.dat"
+         "c.multiply_a23.autotvin_nC.dat"
+         "c.multiply_a23.autotvout_C.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {
@@ -111,7 +111,7 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.multiply.autotvout_C.dat"
+         "rtl.multiply_a23.autotvout_C.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {

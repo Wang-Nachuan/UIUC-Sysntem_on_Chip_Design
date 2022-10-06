@@ -42,14 +42,39 @@
 			<location>D:/Code/UIUC-ECE527/mp3/mp3a/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/multiply.c</name>
-			<type>1</type>
-			<location>D:/Code/UIUC-ECE527/mp3/mp3a/multiply.c</location>
-		</link>
-		<link>
 			<name>source/multiply.h</name>
 			<type>1</type>
 			<location>D:/Code/UIUC-ECE527/mp3/mp3a/multiply.h</location>
+		</link>
+		<link>
+			<name>source/multiply_partA1-1.c</name>
+			<type>1</type>
+			<location>D:/Code/UIUC-ECE527/mp3/mp3a/multiply_partA1-1.c</location>
+		</link>
+		<link>
+			<name>source/multiply_partA1-2.c</name>
+			<type>1</type>
+			<location>D:/Code/UIUC-ECE527/mp3/mp3a/multiply_partA1-2.c</location>
+		</link>
+		<link>
+			<name>source/multiply_partA1-3.c</name>
+			<type>1</type>
+			<location>D:/Code/UIUC-ECE527/mp3/mp3a/multiply_partA1-3.c</location>
+		</link>
+		<link>
+			<name>source/multiply_partA2-1.c</name>
+			<type>1</type>
+			<location>D:/Code/UIUC-ECE527/mp3/mp3a/multiply_partA2-1.c</location>
+		</link>
+		<link>
+			<name>source/multiply_partA2-2.c</name>
+			<type>1</type>
+			<location>D:/Code/UIUC-ECE527/mp3/mp3a/multiply_partA2-2.c</location>
+		</link>
+		<link>
+			<name>source/multiply_partA2-3.c</name>
+			<type>1</type>
+			<location>D:/Code/UIUC-ECE527/mp3/mp3a/multiply_partA2-3.c</location>
 		</link>
 		<link>
 			<name>testbench/multiply_tb.c</name>

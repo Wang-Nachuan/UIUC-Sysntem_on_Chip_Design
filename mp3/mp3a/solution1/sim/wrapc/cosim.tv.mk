@@ -64,6 +64,26 @@ $(ObjDir)/multiply_tb.c_pre.c.tb.o : multiply_tb.c_pre.c.tb.c $(ObjDir)/.dir
 	$(Echo) "   Compiling (apcc) multiply_tb.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
 
-$(ObjDir)/multiply.c_pre.c.tb.o : multiply.c_pre.c.tb.c $(ObjDir)/.dir
-	$(Echo) "   Compiling (apcc) multiply.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+$(ObjDir)/multiply_partA1-1.c_pre.c.tb.o : multiply_partA1-1.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) multiply_partA1-1.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/multiply_partA1-2.c_pre.c.tb.o : multiply_partA1-2.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) multiply_partA1-2.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/multiply_partA1-3.c_pre.c.tb.o : multiply_partA1-3.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) multiply_partA1-3.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/multiply_partA2-1.c_pre.c.tb.o : multiply_partA2-1.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) multiply_partA2-1.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/multiply_partA2-2.c_pre.c.tb.o : multiply_partA2-2.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) multiply_partA2-2.c_pre.c.tb.c" $(AVE_DIR_DLOG)
+	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \
+
+$(ObjDir)/multiply_partA2-3.c_pre.c.tb.o : multiply_partA2-3.c_pre.c.tb.c $(ObjDir)/.dir
+	$(Echo) "   Compiling (apcc) multiply_partA2-3.c_pre.c.tb.c" $(AVE_DIR_DLOG)
 	$(Verb) $(AUTOCC) -fno-builtin-isinf -fno-builtin-isnan -c $(IFLAG) $(DFLAG) $< -o $@; \

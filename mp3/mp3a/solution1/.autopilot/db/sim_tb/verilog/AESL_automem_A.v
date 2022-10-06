@@ -23,8 +23,8 @@ module AESL_automem_A (
 
 //------------------------Parameter----------------------
 localparam
-    TV_IN  = "c.multiply.autotvin_A.dat", 
-    TV_OUT = "impl_rtl.multiply.autotvout_A.dat"; 
+    TV_IN  = "c.multiply_a23.autotvin_A.dat", 
+    TV_OUT = "impl_rtl.multiply_a23.autotvout_A.dat"; 
 //------------------------Local signal-------------------
 parameter DATA_WIDTH = 32'd 32;
 parameter ADDR_WIDTH = 32'd 14;

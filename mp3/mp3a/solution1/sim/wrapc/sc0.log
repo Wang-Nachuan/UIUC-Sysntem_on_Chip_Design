@@ -1,8 +1,48 @@
    Build using "D:/Applications/Vivado/Vivado/2019.1/msys64/mingw64/bin/g++"
-   Compiling apatb_multiply.cpp
-   Compiling (apcc) multiply.c_pre.c.tb.c
+   Compiling apatb_multiply_a23.cpp
+   Compiling (apcc) multiply_partA1-2.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 00:46:58 -0500 2022
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:19 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA2-2.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:22 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA1-1.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:24 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA2-1.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:26 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA1-3.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:28 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA2-3.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:31 -0500 2022
 INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'
@@ -10,7 +50,7 @@ INFO: [APCC 202-3] Tmp directory is apcc_db
 INFO: [APCC 202-1] APCC is done.
    Compiling (apcc) multiply_tb.c_pre.c.tb.c
 INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
-INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 00:47:00 -0500 2022
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:33 -0500 2022
 INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
 clang: warning: argument unused during compilation: '-fno-builtin-isinf'
 clang: warning: argument unused during compilation: '-fno-builtin-isnan'

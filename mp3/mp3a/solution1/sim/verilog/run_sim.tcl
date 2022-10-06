@@ -31,12 +31,12 @@ if {$ret == 1} {
 	return -code error -errorcode $::errorCode
 }
 
-if {[file isfile multiply.autotvin.dat]} {
-	file delete -force multiply.autotvin.dat
+if {[file isfile multiply_a23.autotvin.dat]} {
+	file delete -force multiply_a23.autotvin.dat
 }
 
-if {[file isfile multiply.autotvout.dat]} {
-	file delete -force multiply.autotvout.dat
+if {[file isfile multiply_a23.autotvout.dat]} {
+	file delete -force multiply_a23.autotvout.dat
 }
 
 sc_sim_check $ret $err "temp0.log"

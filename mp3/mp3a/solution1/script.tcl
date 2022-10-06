@@ -4,12 +4,17 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project mp3a
-set_top multiply
-add_files mp3a/multiply.c
+set_top multiply_a23
 add_files mp3a/multiply.h
+add_files mp3a/multiply_partA1-1.c
+add_files mp3a/multiply_partA1-2.c
+add_files mp3a/multiply_partA1-3.c
+add_files mp3a/multiply_partA2-1.c
+add_files mp3a/multiply_partA2-2.c
+add_files mp3a/multiply_partA2-3.c
 add_files -tb mp3a/multiply_tb.c
 open_solution "solution1"
-set_part {xc7z020clg400-1} -tool vivado
+set_part {xc7z020-clg400-1} -tool vivado
 create_clock -period 10 -name default
 #source "./mp3a/solution1/directives.tcl"
 csim_design

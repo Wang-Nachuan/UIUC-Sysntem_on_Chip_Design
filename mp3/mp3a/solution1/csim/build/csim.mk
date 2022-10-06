@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../multiply_tb.c ../../../multiply.c
+HLS_SOURCES = ../../../multiply_tb.c ../../../multiply_partA1-1.c ../../../multiply_partA1-2.c ../../../multiply_partA1-3.c ../../../multiply_partA2-1.c ../../../multiply_partA2-2.c ../../../multiply_partA2-3.c
 
 TARGET := csim.exe
 
@@ -79,8 +79,38 @@ $(ObjDir)/multiply_tb.o: ../../../multiply_tb.c $(ObjDir)/.dir
 
 -include $(ObjDir)/multiply_tb.d
 
-$(ObjDir)/multiply.o: ../../../multiply.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../multiply.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/multiply_partA1-1.o: ../../../multiply_partA1-1.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multiply_partA1-1.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/multiply.d
+-include $(ObjDir)/multiply_partA1-1.d
+
+$(ObjDir)/multiply_partA1-2.o: ../../../multiply_partA1-2.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multiply_partA1-2.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multiply_partA1-2.d
+
+$(ObjDir)/multiply_partA1-3.o: ../../../multiply_partA1-3.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multiply_partA1-3.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multiply_partA1-3.d
+
+$(ObjDir)/multiply_partA2-1.o: ../../../multiply_partA2-1.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multiply_partA2-1.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multiply_partA2-1.d
+
+$(ObjDir)/multiply_partA2-2.o: ../../../multiply_partA2-2.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multiply_partA2-2.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multiply_partA2-2.d
+
+$(ObjDir)/multiply_partA2-3.o: ../../../multiply_partA2-3.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multiply_partA2-3.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multiply_partA2-3.d

@@ -1,0 +1,275 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "D:/Applications/Vivado/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_multiply_a23.cpp
+   Compiling (apcc) multiply_partA1-2.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:19 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA2-2.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:22 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA1-1.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:24 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA2-1.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:26 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA1-3.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:28 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_partA2-3.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:31 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) multiply_tb.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:33 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Test 2.3 (memory-mapped, loop unrolling): A[10][10], B[10][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][10], B[10][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][10], B[10][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][50], B[50][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][50], B[50][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][50], B[50][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][100], B[100][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][100], B[100][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][100], B[100][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][10], B[10][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][10], B[10][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][10], B[10][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][50], B[50][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][50], B[50][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][50], B[50][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][100], B[100][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][100], B[100][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][100], B[100][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][10], B[10][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][10], B[10][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][10], B[10][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][50], B[50][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][50], B[50][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][50], B[50][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][100], B[100][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][100], B[100][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][100], B[100][100]
+Test passed
+
+D:\Code\UIUC-ECE527\mp3\mp3a\solution1\sim\verilog>set PATH= 
+
+D:\Code\UIUC-ECE527\mp3\mp3a\solution1\sim\verilog>call D:/Applications/Vivado/Vivado/2019.1/bin/xelab xil_defaultlib.apatb_multiply_a23_top glbl -prj multiply_a23.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/Applications/Vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s multiply_a23  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Applications/Vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_multiply_a23_top glbl -prj multiply_a23.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/Applications/Vivado/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s multiply_a23 
+Multi-threading is on. Using 18 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/AESL_automem_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_A
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/AESL_automem_B.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_B
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/AESL_automem_C.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_C
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply_a23.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_multiply_a23_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply_a23.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiply_a23
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply_a23_mac_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiply_a23_mac_bkb_DSP48_0
+INFO: [VRFC 10-311] analyzing module multiply_a23_mac_bkb
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.multiply_a23_mac_bkb_DSP48_0
+Compiling module xil_defaultlib.multiply_a23_mac_bkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.multiply_a23
+Compiling module xil_defaultlib.AESL_automem_A
+Compiling module xil_defaultlib.AESL_automem_B
+Compiling module xil_defaultlib.AESL_automem_C
+Compiling module xil_defaultlib.apatb_multiply_a23_top
+Compiling module work.glbl
+Built simulation snapshot multiply_a23
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/xsim.dir/multiply_a23/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/xsim.dir/multiply_a23/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Oct  6 17:37:40 2022. For additional details about this file, please refer to the WebTalk help file at D:/Applications/Vivado/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct  6 17:37:40 2022...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/multiply_a23/xsim_script.tcl
+# xsim {multiply_a23} -autoloadwcfg -tclbatch {multiply_a23.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source multiply_a23.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 27 [0.00%] @ "125000"
+// RTL Simulation : 1 / 27 [100.00%] @ "12722155000"
+// RTL Simulation : 2 / 27 [100.00%] @ "25524175000"
+// RTL Simulation : 3 / 27 [100.00%] @ "38426195000"
+// RTL Simulation : 4 / 27 [100.00%] @ "51228215000"
+// RTL Simulation : 5 / 27 [100.00%] @ "64430235000"
+// RTL Simulation : 6 / 27 [100.00%] @ "78132255000"
+// RTL Simulation : 7 / 27 [100.00%] @ "91034275000"
+// RTL Simulation : 8 / 27 [100.00%] @ "104736295000"
+// RTL Simulation : 9 / 27 [100.00%] @ "119438315000"
+// RTL Simulation : 10 / 27 [100.00%] @ "132240335000"
+// RTL Simulation : 11 / 27 [100.00%] @ "145442355000"
+// RTL Simulation : 12 / 27 [100.00%] @ "159144375000"
+// RTL Simulation : 13 / 27 [100.00%] @ "172346395000"
+// RTL Simulation : 14 / 27 [100.00%] @ "187548415000"
+// RTL Simulation : 15 / 27 [100.00%] @ "205250435000"
+// RTL Simulation : 16 / 27 [100.00%] @ "218952455000"
+// RTL Simulation : 17 / 27 [100.00%] @ "236654475000"
+// RTL Simulation : 18 / 27 [100.00%] @ "259356495000"
+// RTL Simulation : 19 / 27 [100.00%] @ "272258515000"
+// RTL Simulation : 20 / 27 [100.00%] @ "285960535000"
+// RTL Simulation : 21 / 27 [100.00%] @ "300662555000"
+// RTL Simulation : 22 / 27 [100.00%] @ "314364575000"
+// RTL Simulation : 23 / 27 [100.00%] @ "332066595000"
+// RTL Simulation : 24 / 27 [100.00%] @ "354768615000"
+// RTL Simulation : 25 / 27 [100.00%] @ "369470635000"
+// RTL Simulation : 26 / 27 [100.00%] @ "392172655000"
+// RTL Simulation : 27 / 27 [100.00%] @ "424874675000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 424874715 ns : File "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply_a23.autotb.v" Line 520
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:04:00 . Memory (MB): peak = 234.410 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Thu Oct  6 17:41:46 2022...
+Test 2.3 (memory-mapped, loop unrolling): A[10][10], B[10][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][10], B[10][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][10], B[10][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][50], B[50][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][50], B[50][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][50], B[50][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][100], B[100][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][100], B[100][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[10][100], B[100][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][10], B[10][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][10], B[10][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][10], B[10][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][50], B[50][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][50], B[50][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][50], B[50][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][100], B[100][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][100], B[100][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[50][100], B[100][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][10], B[10][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][10], B[10][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][10], B[10][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][50], B[50][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][50], B[50][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][50], B[50][100]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][100], B[100][10]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][100], B[100][50]
+Test passed
+Test 2.3 (memory-mapped, loop unrolling): A[100][100], B[100][100]
+Test passed
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

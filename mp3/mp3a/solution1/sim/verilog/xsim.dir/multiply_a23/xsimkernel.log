@@ -1,0 +1,7 @@
+Running: xsim.dir/multiply_a23/xsimk.exe -simmode gui -wdb multiply_a23.wdb -simrunnum 0 -socket 56671
+Design successfully loaded
+Design Loading Memory Usage: 7376 KB (Peak: 7376 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 8892 KB (Peak: 8892 KB)
+Simulation CPU Usage: 239343 ms

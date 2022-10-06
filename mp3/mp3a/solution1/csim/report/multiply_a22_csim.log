@@ -1,0 +1,95 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../multiply_tb.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:29:27 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../multiply_partA1-1.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:29:30 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../multiply_partA1-2.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:29:33 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../multiply_partA1-3.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:29:36 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../multiply_partA2-1.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:29:39 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling(apcc) ../../../multiply_partA2-2.c in debug mode
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Thu Oct 06 17:29:41 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp3/mp3a/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Test 2.2 (memory-mapped, loop unrolling): A[10][10], B[10][10]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[10][10], B[10][50]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[10][10], B[10][100]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[10][50], B[50][10]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[10][50], B[50][50]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[10][50], B[50][100]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[10][100], B[100][10]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[10][100], B[100][50]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[10][100], B[100][100]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[50][10], B[10][10]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[50][10], B[10][50]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[50][10], B[10][100]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[50][50], B[50][10]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[50][50], B[50][50]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[50][50], B[50][100]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[50][100], B[100][10]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[50][100], B[100][50]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[50][100], B[100][100]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[100][10], B[10][10]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[100][10], B[10][50]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[100][10], B[10][100]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[100][50], B[50][10]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[100][50], B[50][50]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[100][50], B[50][100]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[100][100], B[100][10]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[100][100], B[100][50]
+Test passed
+Test 2.2 (memory-mapped, loop unrolling): A[100][100], B[100][100]
+Test passed
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

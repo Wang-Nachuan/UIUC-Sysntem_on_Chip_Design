@@ -14,7 +14,17 @@
 
 
 
-void multiply(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+void multiply_a11(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a12(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a13(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a21(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a22(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a23(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
 
 
 
@@ -1074,7 +1084,7 @@ void multiply_key(int A[100][100], int B[100][100], int C[100][100], int mA, int
 
 #ifndef HLS_FASTSIM
 #ifndef HLS_FASTSIM
-#include "apatb_multiply.h"
+#include "apatb_multiply_a23.h"
 #endif
 # 15 "D:/Code/UIUC-ECE527/mp3/mp3a/multiply_tb.c"
 int main() {
@@ -1118,19 +1128,16 @@ int main() {
       C_key[m][n] = 0;
      }
     }
-
-
-
-
-    printf("Test 1.1 (memory-mapped, unoptimized): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
+# 75 "D:/Code/UIUC-ECE527/mp3/mp3a/multiply_tb.c"
+    printf("Test 2.3 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
     
 #ifndef HLS_FASTSIM
-#define multiply AESL_WRAP_multiply
+#define multiply_a23 AESL_WRAP_multiply_a23
 #endif
-# 61 "D:/Code/UIUC-ECE527/mp3/mp3a/multiply_tb.c"
-multiply(A, B, C_test, mA, nA, mB, nB, mC, nC);
-#undef multiply
-# 61 "D:/Code/UIUC-ECE527/mp3/mp3a/multiply_tb.c"
+# 76 "D:/Code/UIUC-ECE527/mp3/mp3a/multiply_tb.c"
+multiply_a23(A, B, C_test, mA, nA, mB, nB, mC, nC);
+#undef multiply_a23
+# 76 "D:/Code/UIUC-ECE527/mp3/mp3a/multiply_tb.c"
 
 
 
@@ -1158,5 +1165,5 @@ multiply(A, B, C_test, mA, nA, mB, nB, mC, nC);
  }
 }
 #endif
-# 86 "D:/Code/UIUC-ECE527/mp3/mp3a/multiply_tb.c"
+# 101 "D:/Code/UIUC-ECE527/mp3/mp3a/multiply_tb.c"
 

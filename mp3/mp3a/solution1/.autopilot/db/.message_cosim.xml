@@ -3,12 +3,37 @@
 	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation."/>
 	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Wang&apos; on host &apos;laptop-5udm1u2m&apos; (Windows NT_amd64 version 6.2) on Thu Oct 06 00:46:58 -0500 2022"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Wang&apos; on host &apos;laptop-5udm1u2m&apos; (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:19 -0500 2022"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe&apos;"/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Wang&apos; on host &apos;laptop-5udm1u2m&apos; (Windows NT_amd64 version 6.2) on Thu Oct 06 00:47:00 -0500 2022"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Wang&apos; on host &apos;laptop-5udm1u2m&apos; (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:22 -0500 2022"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Wang&apos; on host &apos;laptop-5udm1u2m&apos; (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:24 -0500 2022"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Wang&apos; on host &apos;laptop-5udm1u2m&apos; (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:26 -0500 2022"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Wang&apos; on host &apos;laptop-5udm1u2m&apos; (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:28 -0500 2022"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Wang&apos; on host &apos;laptop-5udm1u2m&apos; (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:31 -0500 2022"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;Wang&apos; on host &apos;laptop-5udm1u2m&apos; (Windows NT_amd64 version 6.2) on Thu Oct 06 17:37:33 -0500 2022"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/wrapc&apos;"/>
 	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is apcc_db"/>
 	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>

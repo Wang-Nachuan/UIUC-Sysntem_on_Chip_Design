@@ -57,8 +57,23 @@ int main() {
 
 				/*------------------------------Run DUT------------------------------*/
 
-				printf("Test 1.1 (memory-mapped, unoptimized): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
-				multiply(A, B, C_test, mA, nA, mB, nB, mC, nC);
+//				printf("Test 1.1 (memory-mapped, unoptimized): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
+//				multiply_a11(A, B, C_test, mA, nA, mB, nB, mC, nC);
+
+//				printf("Test 1.2 (memory-mapped, loop pipelining): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
+//				multiply_a12(A, B, C_test, mA, nA, mB, nB, mC, nC);
+
+//				printf("Test 1.3 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
+//				multiply_a13(A, B, C_test, mA, nA, mB, nB, mC, nC);
+
+//				printf("Test 2.1 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
+//				multiply_a21(A, B, C_test, mA, nA, mB, nB, mC, nC);
+
+//				printf("Test 2.2 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
+//				multiply_a22(A, B, C_test, mA, nA, mB, nB, mC, nC);
+
+				printf("Test 2.3 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
+				multiply_a23(A, B, C_test, mA, nA, mB, nB, mC, nC);
 
 				/*-------------------------------------------------------------------*/
 

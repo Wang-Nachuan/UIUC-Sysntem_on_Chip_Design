@@ -752,3 +752,853 @@ INFO: [COSIM 212-323] Starting verilog simulation.
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 184.383 ; gain = 92.723
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 184.383 ; gain = 92.723
+INFO: [HLS 200-10] Starting code transformations ...
+ERROR: [SYNCHK 200-79] Cannot find the top function 'multiply' in the design. Possible causes are: (1) the top function name is misspelled; (2) the top function is nonexistent or declared as static.
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 184.039 ; gain = 92.406
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 184.039 ; gain = 92.406
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 184.039 ; gain = 92.406
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 184.039 ; gain = 92.406
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 184.039 ; gain = 92.406
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 184.039 ; gain = 92.406
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a11' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.009 seconds; current allocated memory: 101.100 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.047 seconds; current allocated memory: 101.471 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a11' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'multiply_a11/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a11/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a11/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a11'.
+INFO: [HLS 200-111]  Elapsed time: 0.092 seconds; current allocated memory: 101.831 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 184.039 ; gain = 92.406
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a11.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a11.
+INFO: [HLS 200-112] Total elapsed time: 4.806 seconds; peak allocated memory: 101.831 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.078 ; gain = 93.426
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.078 ; gain = 93.426
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.078 ; gain = 93.426
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.078 ; gain = 93.426
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.078 ; gain = 93.426
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 185.078 ; gain = 93.426
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a11' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.152 seconds; current allocated memory: 101.147 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.042 seconds; current allocated memory: 101.534 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a11' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'multiply_a11/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a11/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a11/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a11'.
+INFO: [HLS 200-111]  Elapsed time: 0.088 seconds; current allocated memory: 101.946 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 185.078 ; gain = 93.426
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a11.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a11.
+INFO: [HLS 200-112] Total elapsed time: 6.842 seconds; peak allocated memory: 101.946 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.410 ; gain = 92.844
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.410 ; gain = 92.844
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.410 ; gain = 92.844
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.410 ; gain = 92.844
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.410 ; gain = 92.844
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (mp3a/multiply_partA1-2.c:5:17) in function 'multiply_a12'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (mp3a/multiply_partA1-2.c:4:16) in function 'multiply_a12'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 184.410 ; gain = 92.844
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a12' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_a12' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('C_addr_write_ln11', mp3a/multiply_partA1-2.c:11) of variable 'add_ln11', mp3a/multiply_partA1-2.c:11 on array 'C' and 'load' operation ('C_load', mp3a/multiply_partA1-2.c:11) on array 'C'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_a12' consists of the following:
+	'mul' operation of DSP[78] ('mul_ln11_2', mp3a/multiply_partA1-2.c:11) [77]  (3.36 ns)
+	'add' operation of DSP[78] ('add_ln11_3', mp3a/multiply_partA1-2.c:11) [78]  (3.02 ns)
+	'getelementptr' operation ('B_addr', mp3a/multiply_partA1-2.c:11) [80]  (0 ns)
+	'load' operation ('B_load', mp3a/multiply_partA1-2.c:11) on array 'B' [82]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.14 seconds; current allocated memory: 101.363 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.042 seconds; current allocated memory: 101.697 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a12/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a12/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a12/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a12/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a12/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a12/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a12/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a12/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a12/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a12' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_a12_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_a12_mac_bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_a12/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a12/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a12/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_a12_mac_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a12'.
+INFO: [HLS 200-111]  Elapsed time: 0.119 seconds; current allocated memory: 102.288 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 184.410 ; gain = 92.844
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a12.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a12.
+INFO: [HLS 200-112] Total elapsed time: 6.961 seconds; peak allocated memory: 102.288 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.379 ; gain = 93.465
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.379 ; gain = 93.465
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.379 ; gain = 93.465
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.379 ; gain = 93.465
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (mp3a/multiply_partA1-3.c:6) in function 'multiply_a13' partially with a factor of 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.379 ; gain = 93.465
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 184.379 ; gain = 93.465
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a13' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_a13' consists of the following:
+	'phi' operation ('k_0_0', mp3a/multiply_partA1-3.c:6) with incoming values : ('add_ln6', mp3a/multiply_partA1-3.c:6) [52]  (0 ns)
+	'mul' operation of DSP[68] ('mul_ln11_4', mp3a/multiply_partA1-3.c:11) [67]  (3.36 ns)
+	'add' operation of DSP[68] ('add_ln11_6', mp3a/multiply_partA1-3.c:11) [68]  (3.02 ns)
+	'getelementptr' operation ('B_addr', mp3a/multiply_partA1-3.c:11) [70]  (0 ns)
+	'load' operation ('B_load', mp3a/multiply_partA1-3.c:11) on array 'B' [72]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 8.068 seconds; current allocated memory: 101.803 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.057 seconds; current allocated memory: 102.385 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a13' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_a13_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_a13_mac_bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_a13/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a13/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a13/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_a13_mac_bkb': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a13'.
+INFO: [HLS 200-111]  Elapsed time: 0.124 seconds; current allocated memory: 103.096 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 184.379 ; gain = 93.465
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a13.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a13.
+INFO: [HLS 200-112] Total elapsed time: 8.947 seconds; peak allocated memory: 103.096 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.543 ; gain = 92.871
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.543 ; gain = 92.871
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.543 ; gain = 92.871
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.543 ; gain = 92.871
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (mp3a/multiply_partA1-3.c:6) in function 'multiply_a13' partially with a factor of 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.543 ; gain = 92.871
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.543 ; gain = 92.871
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a13' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_a13' consists of the following:
+	'phi' operation ('k_0_0', mp3a/multiply_partA1-3.c:6) with incoming values : ('add_ln6', mp3a/multiply_partA1-3.c:6) [52]  (0 ns)
+	'mul' operation of DSP[68] ('mul_ln11_4', mp3a/multiply_partA1-3.c:11) [67]  (3.36 ns)
+	'add' operation of DSP[68] ('add_ln11_6', mp3a/multiply_partA1-3.c:11) [68]  (3.02 ns)
+	'getelementptr' operation ('B_addr', mp3a/multiply_partA1-3.c:11) [70]  (0 ns)
+	'load' operation ('B_load', mp3a/multiply_partA1-3.c:11) on array 'B' [72]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.019 seconds; current allocated memory: 101.956 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.063 seconds; current allocated memory: 102.538 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a13/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a13' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_a13_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_a13_mac_bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_a13/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a13/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a13/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_a13_mac_bkb': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a13'.
+INFO: [HLS 200-111]  Elapsed time: 0.118 seconds; current allocated memory: 103.296 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 184.543 ; gain = 92.871
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a13.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a13.
+INFO: [HLS 200-112] Total elapsed time: 10.875 seconds; peak allocated memory: 103.296 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.363 ; gain = 92.691
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.363 ; gain = 92.691
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.363 ; gain = 92.691
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-91] Port 'C' (mp3a/multiply_partA2-1.c:3) of function 'multiply_a21' cannot be set to a FIFO 
+ERROR: [SYNCHK 200-91] as it has both write (mp3a/multiply_partA2-1.c:13:6) and read (mp3a/multiply_partA2-1.c:13:6) operations.
+INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.723 ; gain = 93.105
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 184.723 ; gain = 93.105
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.723 ; gain = 93.105
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.723 ; gain = 93.105
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.723 ; gain = 93.105
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.723 ; gain = 93.105
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a21' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.993 seconds; current allocated memory: 101.550 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.042 seconds; current allocated memory: 101.966 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a21' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'multiply_a21/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a21/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a21/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a21'.
+INFO: [HLS 200-111]  Elapsed time: 0.088 seconds; current allocated memory: 102.390 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 184.723 ; gain = 93.105
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a21.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a21.
+INFO: [HLS 200-112] Total elapsed time: 10.694 seconds; peak allocated memory: 102.390 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.613 ; gain = 92.969
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.613 ; gain = 92.969
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.613 ; gain = 92.969
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 184.613 ; gain = 92.969
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 184.613 ; gain = 92.969
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 184.613 ; gain = 92.969
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a21' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.178 seconds; current allocated memory: 101.480 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 101.896 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a21' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'multiply_a21/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a21/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a21/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a21'.
+INFO: [HLS 200-111]  Elapsed time: 0.104 seconds; current allocated memory: 102.351 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 184.613 ; gain = 92.969
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a21.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a21.
+INFO: [HLS 200-112] Total elapsed time: 10.907 seconds; peak allocated memory: 102.351 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 184.684 ; gain = 93.035
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 184.684 ; gain = 93.035
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.684 ; gain = 93.035
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.684 ; gain = 93.035
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.684 ; gain = 93.035
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.684 ; gain = 93.035
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a21' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.981 seconds; current allocated memory: 101.503 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 101.934 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a21/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a21' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'multiply_a21/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a21/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a21/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a21'.
+INFO: [HLS 200-111]  Elapsed time: 0.085 seconds; current allocated memory: 102.389 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.684 ; gain = 93.035
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a21.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a21.
+INFO: [HLS 200-112] Total elapsed time: 12.675 seconds; peak allocated memory: 102.389 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.695 ; gain = 93.059
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.695 ; gain = 93.059
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.695 ; gain = 93.059
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.695 ; gain = 93.059
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.695 ; gain = 93.059
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (mp3a/multiply_partA2-2.c:8:16) in function 'multiply_a22' : 
+
+the outer loop is not a perfect loop.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (mp3a/multiply_partA2-2.c:4:16) in function 'multiply_a22' : 
+
+the outer loop is not a perfect loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.695 ; gain = 93.059
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a22' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1.1'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_a22' (Loop: Loop 1.1.1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('C_addr_1_write_ln18', mp3a/multiply_partA2-2.c:18) of variable 'add_ln18', mp3a/multiply_partA2-2.c:18 on array 'C' and 'load' operation ('C_load', mp3a/multiply_partA2-2.c:18) on array 'C'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (9.06ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_a22' consists of the following:
+	'load' operation ('C_load', mp3a/multiply_partA2-2.c:18) on array 'C' [89]  (3.25 ns)
+	'add' operation ('add_ln18', mp3a/multiply_partA2-2.c:18) [90]  (2.55 ns)
+	'store' operation ('C_addr_1_write_ln18', mp3a/multiply_partA2-2.c:18) of variable 'add_ln18', mp3a/multiply_partA2-2.c:18 on array 'C' [91]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.1 seconds; current allocated memory: 101.621 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.045 seconds; current allocated memory: 102.048 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a22/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a22/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a22/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a22/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a22/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a22/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a22/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a22/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a22/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a22' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'multiply_a22/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a22/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a22/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a22'.
+INFO: [HLS 200-111]  Elapsed time: 0.094 seconds; current allocated memory: 102.538 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.695 ; gain = 93.059
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a22.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a22.
+INFO: [HLS 200-112] Total elapsed time: 12.829 seconds; peak allocated memory: 102.538 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.133 ; gain = 93.465
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.133 ; gain = 93.465
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 185.133 ; gain = 93.465
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 185.133 ; gain = 93.465
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (mp3a/multiply_partA2-3.c:13) in function 'multiply_a23' partially with a factor of 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 185.133 ; gain = 93.465
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 185.133 ; gain = 93.465
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a23' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_a23' consists of the following:
+	'phi' operation ('k_0_0', mp3a/multiply_partA2-3.c:13) with incoming values : ('add_ln13', mp3a/multiply_partA2-3.c:13) [64]  (0 ns)
+	'mul' operation of DSP[80] ('mul_ln18_4', mp3a/multiply_partA2-3.c:18) [79]  (3.36 ns)
+	'add' operation of DSP[80] ('add_ln18_6', mp3a/multiply_partA2-3.c:18) [80]  (3.02 ns)
+	'getelementptr' operation ('B_addr_1', mp3a/multiply_partA2-3.c:18) [82]  (0 ns)
+	'load' operation ('B_load', mp3a/multiply_partA2-3.c:18) on array 'B' [84]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.072 seconds; current allocated memory: 102.186 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 102.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a23/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a23/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a23/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a23/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a23/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a23/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a23/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a23/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a23/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a23' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_a23_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_a23_mac_bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_a23/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a23/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a23/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_a23_mac_bkb': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a23'.
+INFO: [HLS 200-111]  Elapsed time: 0.126 seconds; current allocated memory: 103.537 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 185.133 ; gain = 93.465
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a23.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a23.
+INFO: [HLS 200-112] Total elapsed time: 14.948 seconds; peak allocated memory: 103.537 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***

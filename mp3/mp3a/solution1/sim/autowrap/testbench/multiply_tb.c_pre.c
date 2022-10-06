@@ -10,7 +10,17 @@
 
 
 
-void multiply(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+void multiply_a11(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a12(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a13(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a21(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a22(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
+
+void multiply_a23(int A[100][100], int B[100][100], int C[100][100], int mA, int nA, int mB, int nB, int mC, int nC);
 
 
 
@@ -1109,12 +1119,9 @@ int main() {
       C_key[m][n] = 0;
      }
     }
-
-
-
-
-    printf("Test 1.1 (memory-mapped, unoptimized): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
-    multiply(A, B, C_test, mA, nA, mB, nB, mC, nC);
+# 75 "D:/Code/UIUC-ECE527/mp3/mp3a/multiply_tb.c"
+    printf("Test 2.3 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n", mA, nA, mB, nB);
+    multiply_a23(A, B, C_test, mA, nA, mB, nB, mC, nC);
 
 
 

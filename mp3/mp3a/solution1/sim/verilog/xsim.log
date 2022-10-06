@@ -2,18 +2,18 @@
 # xsim v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Oct  6 00:47:08 2022
-# Process ID: 15308
+# Start of session at: Thu Oct  6 17:37:41 2022
+# Process ID: 21388
 # Current directory: D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog
-# Command line: xsim.exe -mode tcl -source {xsim.dir/multiply/xsim_script.tcl}
+# Command line: xsim.exe -mode tcl -source {xsim.dir/multiply_a23/xsim_script.tcl}
 # Log file: D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/xsim.log
 # Journal file: D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog\xsim.jou
 #-----------------------------------------------------------
-source xsim.dir/multiply/xsim_script.tcl
-# xsim {multiply} -autoloadwcfg -tclbatch {multiply.tcl}
+source xsim.dir/multiply_a23/xsim_script.tcl
+# xsim {multiply_a23} -autoloadwcfg -tclbatch {multiply_a23.tcl}
 Vivado Simulator 2019.1
 Time resolution is 1 ps
-source multiply.tcl
+source multiply_a23.tcl
 ## run all
 ////////////////////////////////////////////////////////////////////////////////////
 // Inter-Transaction Progress: Completed Transaction / Total Transaction
@@ -22,35 +22,35 @@ source multiply.tcl
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
 // RTL Simulation : 0 / 27 [0.00%] @ "125000"
-// RTL Simulation : 1 / 27 [100.00%] @ "20222155000"
-// RTL Simulation : 2 / 27 [100.00%] @ "40524175000"
-// RTL Simulation : 3 / 27 [100.00%] @ "60926195000"
-// RTL Simulation : 4 / 27 [100.00%] @ "81228215000"
-// RTL Simulation : 5 / 27 [100.00%] @ "101930235000"
-// RTL Simulation : 6 / 27 [100.00%] @ "123132255000"
-// RTL Simulation : 7 / 27 [100.00%] @ "143534275000"
-// RTL Simulation : 8 / 27 [100.00%] @ "164736295000"
-// RTL Simulation : 9 / 27 [100.00%] @ "186938315000"
-// RTL Simulation : 10 / 27 [100.00%] @ "207240335000"
-// RTL Simulation : 11 / 27 [100.00%] @ "227942355000"
-// RTL Simulation : 12 / 27 [100.00%] @ "249144375000"
-// RTL Simulation : 13 / 27 [100.00%] @ "269846395000"
-// RTL Simulation : 14 / 27 [100.00%] @ "292548415000"
-// RTL Simulation : 15 / 27 [100.00%] @ "317750435000"
-// RTL Simulation : 16 / 27 [100.00%] @ "338952455000"
-// RTL Simulation : 17 / 27 [100.00%] @ "364154475000"
-// RTL Simulation : 18 / 27 [100.00%] @ "394356495000"
-// RTL Simulation : 19 / 27 [100.00%] @ "414758515000"
-// RTL Simulation : 20 / 27 [100.00%] @ "435960535000"
-// RTL Simulation : 21 / 27 [100.00%] @ "458162555000"
-// RTL Simulation : 22 / 27 [100.00%] @ "479364575000"
-// RTL Simulation : 23 / 27 [100.00%] @ "504566595000"
-// RTL Simulation : 24 / 27 [100.00%] @ "534768615000"
-// RTL Simulation : 25 / 27 [100.00%] @ "556970635000"
-// RTL Simulation : 26 / 27 [100.00%] @ "587172655000"
-// RTL Simulation : 27 / 27 [100.00%] @ "627374675000"
+// RTL Simulation : 1 / 27 [100.00%] @ "12722155000"
+// RTL Simulation : 2 / 27 [100.00%] @ "25524175000"
+// RTL Simulation : 3 / 27 [100.00%] @ "38426195000"
+// RTL Simulation : 4 / 27 [100.00%] @ "51228215000"
+// RTL Simulation : 5 / 27 [100.00%] @ "64430235000"
+// RTL Simulation : 6 / 27 [100.00%] @ "78132255000"
+// RTL Simulation : 7 / 27 [100.00%] @ "91034275000"
+// RTL Simulation : 8 / 27 [100.00%] @ "104736295000"
+// RTL Simulation : 9 / 27 [100.00%] @ "119438315000"
+// RTL Simulation : 10 / 27 [100.00%] @ "132240335000"
+// RTL Simulation : 11 / 27 [100.00%] @ "145442355000"
+// RTL Simulation : 12 / 27 [100.00%] @ "159144375000"
+// RTL Simulation : 13 / 27 [100.00%] @ "172346395000"
+// RTL Simulation : 14 / 27 [100.00%] @ "187548415000"
+// RTL Simulation : 15 / 27 [100.00%] @ "205250435000"
+// RTL Simulation : 16 / 27 [100.00%] @ "218952455000"
+// RTL Simulation : 17 / 27 [100.00%] @ "236654475000"
+// RTL Simulation : 18 / 27 [100.00%] @ "259356495000"
+// RTL Simulation : 19 / 27 [100.00%] @ "272258515000"
+// RTL Simulation : 20 / 27 [100.00%] @ "285960535000"
+// RTL Simulation : 21 / 27 [100.00%] @ "300662555000"
+// RTL Simulation : 22 / 27 [100.00%] @ "314364575000"
+// RTL Simulation : 23 / 27 [100.00%] @ "332066595000"
+// RTL Simulation : 24 / 27 [100.00%] @ "354768615000"
+// RTL Simulation : 25 / 27 [100.00%] @ "369470635000"
+// RTL Simulation : 26 / 27 [100.00%] @ "392172655000"
+// RTL Simulation : 27 / 27 [100.00%] @ "424874675000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 627374715 ns : File "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply.autotb.v" Line 520
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:03:53 . Memory (MB): peak = 221.109 ; gain = 0.000
+$finish called at time : 424874715 ns : File "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply_a23.autotb.v" Line 520
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:04:00 . Memory (MB): peak = 234.410 ; gain = 0.000
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Oct  6 00:51:06 2022...
+INFO: [Common 17-206] Exiting xsim at Thu Oct  6 17:41:46 2022...
