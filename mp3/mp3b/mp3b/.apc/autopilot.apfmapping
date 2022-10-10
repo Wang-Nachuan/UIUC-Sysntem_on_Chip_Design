@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="multiply.h" path="F:\ece527\UIUC-ECE527\mp3\mp3b\mp3b\multiply.h"/>
+    <originFiles name="mp3b1.c" path="F:\ece527\UIUC-ECE527\mp3\mp3b\mp3b\mp3b1.c"/>
+    <originFiles name="mp3b2.c" path="F:\ece527\UIUC-ECE527\mp3\mp3b\mp3b\mp3b2.c"/>
+  </source>
+  <testbench>
+    <originFiles name="multiply_tb.c" path="F:\ece527\UIUC-ECE527\mp3\mp3b\mp3b\multiply_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

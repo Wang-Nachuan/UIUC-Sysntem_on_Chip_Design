@@ -1,0 +1,77 @@
+INFO: [HLS 200-10] Running 'E:/vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user '86186' on host 'desktop-vc6sta9' (Windows NT_amd64 version 6.2) on Sun Oct 09 17:51:30 -0500 2022
+INFO: [HLS 200-10] In directory 'F:/ece527/UIUC-ECE527/mp3/mp3b'
+Sourcing Tcl script 'F:/ece527/UIUC-ECE527/mp3/mp3b/mp3b/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project 'F:/ece527/UIUC-ECE527/mp3/mp3b/mp3b'.
+INFO: [HLS 200-10] Adding design file 'mp3b/mp3b1.c' to the project
+INFO: [HLS 200-10] Adding design file 'mp3b/mp3b2.c' to the project
+INFO: [HLS 200-10] Adding design file 'mp3b/multiply.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'mp3b/multiply_tb.c' to the project
+INFO: [HLS 200-10] Opening solution 'F:/ece527/UIUC-ECE527/mp3/mp3b/mp3b/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:31) in function 'multiply_partB_2' partially with a factor of 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'phi' operation ('k_0_0', mp3b/mp3b2.c:31) with incoming values : ('add_ln31', mp3b/mp3b2.c:31) [105]  (0 ns)
+	'mul' operation of DSP[121] ('mul_ln36_4', mp3b/mp3b2.c:36) [120]  (3.36 ns)
+	'add' operation of DSP[121] ('add_ln36_6', mp3b/mp3b2.c:36) [121]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_1', mp3b/mp3b2.c:36) [123]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [125]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.717 seconds; current allocated memory: 102.976 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.112 seconds; current allocated memory: 103.736 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.158 seconds; current allocated memory: 104.850 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 15.031 seconds; peak allocated memory: 104.850 MB.

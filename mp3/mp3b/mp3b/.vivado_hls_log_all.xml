@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="mp3b" solutionName="solution1" date="2022-10-09T17:51:43.991-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="mp3b" solutionName="solution1" date="2022-10-09T17:51:43.981-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="mp3b" solutionName="solution1" date="2022-10-09T17:51:43.979-0500" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:&#xD;&#xA;&#x9;'phi' operation ('k_0_0', mp3b/mp3b2.c:31) with incoming values : ('add_ln31', mp3b/mp3b2.c:31) [105]  (0 ns)&#xD;&#xA;&#x9;'mul' operation of DSP[121] ('mul_ln36_4', mp3b/mp3b2.c:36) [120]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[121] ('add_ln36_6', mp3b/mp3b2.c:36) [121]  (3.02 ns)&#xD;&#xA;&#x9;'getelementptr' operation ('arrayB_addr_1', mp3b/mp3b2.c:36) [123]  (0 ns)&#xD;&#xA;&#x9;'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [125]  (3.25 ns)" projectName="mp3b" solutionName="solution1" date="2022-10-09T17:51:43.715-0500" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="mp3b" solutionName="solution1" date="2022-10-09T17:51:43.712-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

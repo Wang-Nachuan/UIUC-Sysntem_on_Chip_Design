@@ -1,0 +1,1788 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 185.277 ; gain = 93.645
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 185.277 ; gain = 93.645
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.277 ; gain = 93.645
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.277 ; gain = 93.645
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.277 ; gain = 93.645
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 185.277 ; gain = 93.645
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.636 seconds; current allocated memory: 101.826 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 102.323 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_1' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayA' to 'multiply_partB_1_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayB' to 'multiply_partB_1_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayC' to 'multiply_partB_1_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.101 seconds; current allocated memory: 103.036 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_1_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 185.277 ; gain = 93.645
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_1.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_1.
+INFO: [HLS 200-112] Total elapsed time: 15.655 seconds; peak allocated memory: 103.036 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.160 ; gain = 93.617
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.160 ; gain = 93.617
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.160 ; gain = 93.617
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.160 ; gain = 93.617
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.160 ; gain = 93.617
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.160 ; gain = 93.617
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.534 seconds; current allocated memory: 102.096 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.066 seconds; current allocated memory: 102.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_1' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayA' to 'multiply_partB_1_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayB' to 'multiply_partB_1_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayC' to 'multiply_partB_1_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 103.398 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_1_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 185.160 ; gain = 93.617
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_1.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_1.
+INFO: [HLS 200-112] Total elapsed time: 14.536 seconds; peak allocated memory: 103.398 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 184.816 ; gain = 93.070
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 184.816 ; gain = 93.070
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 184.816 ; gain = 93.070
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.816 ; gain = 93.070
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.816 ; gain = 93.070
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.816 ; gain = 93.070
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.355 seconds; current allocated memory: 102.074 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.071 seconds; current allocated memory: 102.709 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_1' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayA' to 'multiply_partB_1_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayB' to 'multiply_partB_1_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayC' to 'multiply_partB_1_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.102 seconds; current allocated memory: 103.449 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_1_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 184.816 ; gain = 93.070
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_1.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_1.
+INFO: [HLS 200-112] Total elapsed time: 14.38 seconds; peak allocated memory: 103.449 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.246 ; gain = 92.637
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.246 ; gain = 92.637
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.246 ; gain = 92.637
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.246 ; gain = 92.637
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.246 ; gain = 92.637
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.246 ; gain = 92.637
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.903 seconds; current allocated memory: 102.090 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 102.725 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_1' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayA' to 'multiply_partB_1_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayB' to 'multiply_partB_1_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayC' to 'multiply_partB_1_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.102 seconds; current allocated memory: 103.464 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_1_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 184.246 ; gain = 92.637
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_1.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_1.
+INFO: [HLS 200-112] Total elapsed time: 13.935 seconds; peak allocated memory: 103.464 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.359 ; gain = 92.848
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.359 ; gain = 92.848
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.359 ; gain = 92.848
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.359 ; gain = 92.848
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.359 ; gain = 92.848
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.359 ; gain = 92.848
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.418 seconds; current allocated memory: 101.966 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.078 seconds; current allocated memory: 102.569 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_1' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayA' to 'multiply_partB_1_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayB' to 'multiply_partB_1_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayC' to 'multiply_partB_1_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.104 seconds; current allocated memory: 103.301 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_1_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 184.359 ; gain = 92.848
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_1.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_1.
+INFO: [HLS 200-112] Total elapsed time: 14.437 seconds; peak allocated memory: 103.301 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.730 ; gain = 93.152
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.730 ; gain = 93.152
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.730 ; gain = 93.152
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.730 ; gain = 93.152
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.730 ; gain = 93.152
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.730 ; gain = 93.152
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_1' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.315 seconds; current allocated memory: 102.236 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 102.842 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_1/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_1' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayA' to 'multiply_partB_1_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayB' to 'multiply_partB_1_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_1_arrayC' to 'multiply_partB_1_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_1/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.106 seconds; current allocated memory: 103.606 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_1_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 184.730 ; gain = 93.152
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_1.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_1.
+INFO: [HLS 200-112] Total elapsed time: 14.306 seconds; peak allocated memory: 103.606 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 183.785 ; gain = 92.191
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 183.785 ; gain = 92.191
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 183.785 ; gain = 92.191
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 183.785 ; gain = 92.191
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (mp3b/mp3b2.c:11) in function 'multiply_partB_2' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (mp3b/mp3b2.c:15) in function 'multiply_partB_2' completely with a factor of 100.
+WARNING: [XFORM 203-124] Array  'A': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'B': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 183.785 ; gain = 92.191
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 183.785 ; gain = 92.191
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 99, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 100, Depth = 101.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.937 seconds; current allocated memory: 133.548 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.94 seconds; current allocated memory: 137.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 1.14 seconds; current allocated memory: 148.188 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_dEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:31 . Memory (MB): peak = 254.473 ; gain = 162.879
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 30.761 seconds; peak allocated memory: 148.188 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.453 ; gain = 92.859
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.453 ; gain = 92.859
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.453 ; gain = 92.859
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.453 ; gain = 92.859
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_read' (mp3b/mp3b2.c:12) in function 'multiply_partB_2' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (mp3b/mp3b2.c:14) in function 'multiply_partB_2' completely with a factor of 100.
+WARNING: [XFORM 203-124] Array  'A': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'B': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 184.453 ; gain = 92.859
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 184.453 ; gain = 92.859
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 99, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 100, Depth = 101.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 27.372 seconds; current allocated memory: 133.619 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.147 seconds; current allocated memory: 137.991 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 1.342 seconds; current allocated memory: 148.300 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_dEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:20 ; elapsed = 00:00:34 . Memory (MB): peak = 255.328 ; gain = 163.734
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 34.044 seconds; peak allocated memory: 148.300 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.309 ; gain = 92.730
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.309 ; gain = 92.730
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 184.309 ; gain = 92.730
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 184.309 ; gain = 92.730
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 184.309 ; gain = 92.730
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 184.309 ; gain = 92.730
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.974 seconds; current allocated memory: 102.321 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.076 seconds; current allocated memory: 102.939 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.103 seconds; current allocated memory: 103.703 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 184.309 ; gain = 92.730
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 14.957 seconds; peak allocated memory: 103.703 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_read' (mp3b/mp3b2.c:12) in function 'multiply_partB_2' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_write' (mp3b/mp3b2.c:43) in function 'multiply_partB_2' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (mp3b/mp3b2.c:14) in function 'multiply_partB_2' completely with a factor of 100.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:31) in function 'multiply_partB_2' partially with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (mp3b/mp3b2.c:45) in function 'multiply_partB_2' completely with a factor of 100.
+WARNING: [XFORM 203-124] Array  'A': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'B': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'C': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 184.281 ; gain = 92.711
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (mp3b/mp3b2.c:29:7) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_add' (mp3b/mp3b2.c:28:3) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 190.723 ; gain = 99.152
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 99, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:17) and fifo read on port 'A' (mp3b/mp3b2.c:17).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 100, Depth = 101.
+INFO: [SCHED 204-61] Pipelining loop 'loop_add_L'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln36', mp3b/mp3b2.c:36) of variable 'add_ln36', mp3b/mp3b2.c:36 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:36) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln36', mp3b/mp3b2.c:36) of variable 'add_ln36', mp3b/mp3b2.c:36 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:36) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln36', mp3b/mp3b2.c:36) of variable 'add_ln36_1', mp3b/mp3b2.c:36 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:36) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln36', mp3b/mp3b2.c:36) of variable 'add_ln36_1', mp3b/mp3b2.c:36 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:36) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln36', mp3b/mp3b2.c:36) of variable 'add_ln36_3', mp3b/mp3b2.c:36 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:36) on array 'arrayC', mp3b/mp3b2.c:7.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 12, Depth = 14.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:48) and fifo write on port 'C' (mp3b/mp3b2.c:48).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:48) and fifo write on port 'C' (mp3b/mp3b2.c:48).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:48) and fifo write on port 'C' (mp3b/mp3b2.c:48).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:48) and fifo write on port 'C' (mp3b/mp3b2.c:48).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:48) and fifo write on port 'C' (mp3b/mp3b2.c:48).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:48) and fifo write on port 'C' (mp3b/mp3b2.c:48).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 99, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:48) and fifo write on port 'C' (mp3b/mp3b2.c:48).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 100, Depth = 101.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'mul' operation of DSP[1709] ('mul_ln36_5', mp3b/mp3b2.c:36) [1708]  (3.36 ns)
+	'add' operation of DSP[1709] ('add_ln36_6', mp3b/mp3b2.c:36) [1709]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_100', mp3b/mp3b2.c:36) [1711]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [1713]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 43.979 seconds; current allocated memory: 158.157 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.442 seconds; current allocated memory: 173.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 2.128 seconds; current allocated memory: 191.838 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_cud_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_dEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 334.883 ; gain = 243.312
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 54.767 seconds; peak allocated memory: 191.838 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.570 ; gain = 92.961
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.570 ; gain = 92.961
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.570 ; gain = 92.961
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.570 ; gain = 92.961
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_read' (mp3b/mp3b2.c:12) in function 'multiply_partB_2' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-1.1' (mp3b/mp3b2.c:14) because its parent loop or function is pipelined.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_write' (mp3b/mp3b2.c:44) in function 'multiply_partB_2' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'Loop-3.1' (mp3b/mp3b2.c:46) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (mp3b/mp3b2.c:14) in function 'multiply_partB_2' completely with a factor of 100.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:32) in function 'multiply_partB_2' partially with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (mp3b/mp3b2.c:46) in function 'multiply_partB_2' completely with a factor of 100.
+WARNING: [XFORM 203-124] Array  'A': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'B': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'C': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 184.570 ; gain = 92.961
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (mp3b/mp3b2.c:30:7) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_add' (mp3b/mp3b2.c:29:3) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:31 . Memory (MB): peak = 189.629 ; gain = 98.020
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 99, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 100, Depth = 101.
+INFO: [SCHED 204-61] Pipelining loop 'loop_add_L'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln37', mp3b/mp3b2.c:37) of variable 'add_ln37', mp3b/mp3b2.c:37 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:37) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln37', mp3b/mp3b2.c:37) of variable 'add_ln37', mp3b/mp3b2.c:37 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:37) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln37', mp3b/mp3b2.c:37) of variable 'add_ln37_1', mp3b/mp3b2.c:37 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:37) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln37', mp3b/mp3b2.c:37) of variable 'add_ln37_1', mp3b/mp3b2.c:37 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:37) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln37', mp3b/mp3b2.c:37) of variable 'add_ln37_3', mp3b/mp3b2.c:37 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_100', mp3b/mp3b2.c:37) on array 'arrayC', mp3b/mp3b2.c:7.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 12, Depth = 14.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 99, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 100, Depth = 101.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'mul' operation of DSP[1709] ('mul_ln37_5', mp3b/mp3b2.c:37) [1708]  (3.36 ns)
+	'add' operation of DSP[1709] ('add_ln37_6', mp3b/mp3b2.c:37) [1709]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_100', mp3b/mp3b2.c:37) [1711]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:37) on array 'arrayB', mp3b/mp3b2.c:6 [1713]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 45.22 seconds; current allocated memory: 158.165 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.314 seconds; current allocated memory: 173.883 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 2.295 seconds; current allocated memory: 191.847 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_cud_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_dEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:41 ; elapsed = 00:00:56 . Memory (MB): peak = 333.852 ; gain = 242.242
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 56.242 seconds; peak allocated memory: 191.847 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 184.945 ; gain = 93.375
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 184.945 ; gain = 93.375
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 184.945 ; gain = 93.375
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.945 ; gain = 93.375
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_read' (mp3b/mp3b2.c:12) in function 'multiply_partB_2' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'loop_write' (mp3b/mp3b2.c:44) in function 'multiply_partB_2' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (mp3b/mp3b2.c:14) in function 'multiply_partB_2' completely with a factor of 100.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:32) in function 'multiply_partB_2' completely with a factor of 100.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'Loop-2.1.1' (mp3b/mp3b2.c:32) in function 'multiply_partB_2' has been removed because the loop is unrolled completely.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (mp3b/mp3b2.c:46) in function 'multiply_partB_2' completely with a factor of 100.
+WARNING: [XFORM 203-124] Array  'A': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'B': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'C': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 184.945 ; gain = 93.375
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:24 ; elapsed = 00:01:37 . Memory (MB): peak = 224.250 ; gain = 132.680
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_read): Unable to enforce a carried dependence constraint (II = 99, distance = 1, offset = 1)
+   between fifo read on port 'A' (mp3b/mp3b2.c:18) and fifo read on port 'A' (mp3b/mp3b2.c:18).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 100, Depth = 101.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 98, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_write): Unable to enforce a carried dependence constraint (II = 99, distance = 1, offset = 1)
+   between fifo write on port 'C' (mp3b/mp3b2.c:50) and fifo write on port 'C' (mp3b/mp3b2.c:50).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 100, Depth = 101.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 114.82 seconds; current allocated memory: 201.843 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 4 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 5.449 seconds; current allocated memory: 225.236 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 4.3 seconds; current allocated memory: 255.773 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_cud_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_dEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:56 ; elapsed = 00:02:15 . Memory (MB): peak = 458.375 ; gain = 366.805
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 134.788 seconds; peak allocated memory: 255.773 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.203 ; gain = 92.645
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.203 ; gain = 92.645
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 184.203 ; gain = 92.645
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 184.203 ; gain = 92.645
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 184.203 ; gain = 92.645
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_read' (mp3b/mp3b2.c:12:4) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (mp3b/mp3b2.c:29:7) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_add' (mp3b/mp3b2.c:28:3) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_write' (mp3b/mp3b2.c:43:3) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 184.203 ; gain = 92.645
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_add_L'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_1_write_ln36', mp3b/mp3b2.c:36) of variable 'add_ln36', mp3b/mp3b2.c:36 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_1', mp3b/mp3b2.c:36) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_1_write_ln36', mp3b/mp3b2.c:36) of variable 'add_ln36', mp3b/mp3b2.c:36 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_1', mp3b/mp3b2.c:36) on array 'arrayC', mp3b/mp3b2.c:7.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'mul' operation of DSP[131] ('mul_ln36_2', mp3b/mp3b2.c:36) [130]  (3.36 ns)
+	'add' operation of DSP[131] ('add_ln36_3', mp3b/mp3b2.c:36) [131]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_1', mp3b/mp3b2.c:36) [133]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [135]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.209 seconds; current allocated memory: 102.645 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.106 seconds; current allocated memory: 103.233 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 104.413 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 184.203 ; gain = 92.645
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 15.602 seconds; peak allocated memory: 104.413 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 185.359 ; gain = 93.812
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 185.359 ; gain = 93.812
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.359 ; gain = 93.812
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.359 ; gain = 93.812
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (mp3b/mp3b2.c:13) in function 'multiply_partB_2' completely with a factor of 100.
+WARNING: [XFORM 203-124] Array  'A': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'B': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.359 ; gain = 93.812
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2.1' (mp3b/mp3b2.c:29:7) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_add' (mp3b/mp3b2.c:28:3) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_write' (mp3b/mp3b2.c:43:3) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 185.359 ; gain = 93.812
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_add_L'.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln36', mp3b/mp3b2.c:36) of variable 'add_ln36', mp3b/mp3b2.c:36 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_1', mp3b/mp3b2.c:36) on array 'arrayC', mp3b/mp3b2.c:7.
+WARNING: [SCHED 204-68] The II Violation in module 'multiply_partB_2' (Loop: loop_add_L): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('arrayC_addr_101_write_ln36', mp3b/mp3b2.c:36) of variable 'add_ln36', mp3b/mp3b2.c:36 on array 'arrayC', mp3b/mp3b2.c:7 and 'load' operation ('arrayC_load_1', mp3b/mp3b2.c:36) on array 'arrayC', mp3b/mp3b2.c:7.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'mul' operation of DSP[1704] ('mul_ln36_2', mp3b/mp3b2.c:36) [1703]  (3.36 ns)
+	'add' operation of DSP[1704] ('add_ln36_3', mp3b/mp3b2.c:36) [1704]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_1', mp3b/mp3b2.c:36) [1706]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [1708]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 21.561 seconds; current allocated memory: 131.972 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.056 seconds; current allocated memory: 136.687 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 1.227 seconds; current allocated memory: 145.548 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_dEe_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 249.148 ; gain = 157.602
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 27.46 seconds; peak allocated memory: 145.548 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.016 ; gain = 93.465
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.016 ; gain = 93.465
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.016 ; gain = 93.465
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.016 ; gain = 93.465
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:31) in function 'multiply_partB_2' completely with a factor of 100.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 185.016 ; gain = 93.465
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_read' (mp3b/mp3b2.c:12:4) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_write' (mp3b/mp3b2.c:43:3) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 185.016 ; gain = 93.465
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.509 seconds; current allocated memory: 140.121 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 4 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.619 seconds; current allocated memory: 147.097 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 1.704 seconds; current allocated memory: 160.868 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_cud_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:27 . Memory (MB): peak = 274.660 ; gain = 183.109
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 27.444 seconds; peak allocated memory: 160.868 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.383 ; gain = 92.863
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 184.383 ; gain = 92.863
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.383 ; gain = 92.863
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.383 ; gain = 92.863
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:31) in function 'multiply_partB_2' partially with a factor of 2.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.383 ; gain = 92.863
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_read' (mp3b/mp3b2.c:12:4) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_write' (mp3b/mp3b2.c:43:3) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.383 ; gain = 92.863
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'phi' operation ('k_0_0', mp3b/mp3b2.c:31) with incoming values : ('add_ln31', mp3b/mp3b2.c:31) [106]  (0 ns)
+	'mul' operation of DSP[122] ('mul_ln36_2', mp3b/mp3b2.c:36) [121]  (3.36 ns)
+	'add' operation of DSP[122] ('add_ln36_4', mp3b/mp3b2.c:36) [122]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_1', mp3b/mp3b2.c:36) [124]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [126]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.188 seconds; current allocated memory: 102.714 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 5 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.093 seconds; current allocated memory: 103.443 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.136 seconds; current allocated memory: 104.524 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 184.383 ; gain = 92.863
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 14.365 seconds; peak allocated memory: 104.524 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 185.102 ; gain = 93.582
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 185.102 ; gain = 93.582
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.102 ; gain = 93.582
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.102 ; gain = 93.582
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:31) in function 'multiply_partB_2' partially with a factor of 2.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.102 ; gain = 93.582
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.102 ; gain = 93.582
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'phi' operation ('k_0_0', mp3b/mp3b2.c:31) with incoming values : ('add_ln31', mp3b/mp3b2.c:31) [105]  (0 ns)
+	'mul' operation of DSP[121] ('mul_ln36_2', mp3b/mp3b2.c:36) [120]  (3.36 ns)
+	'add' operation of DSP[121] ('add_ln36_4', mp3b/mp3b2.c:36) [121]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_1', mp3b/mp3b2.c:36) [123]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [125]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.065 seconds; current allocated memory: 102.592 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.086 seconds; current allocated memory: 103.209 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.115 seconds; current allocated memory: 104.092 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 185.102 ; gain = 93.582
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 14.126 seconds; peak allocated memory: 104.092 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.133 ; gain = 93.523
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.133 ; gain = 93.523
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.133 ; gain = 93.523
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.133 ; gain = 93.523
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 185.133 ; gain = 93.523
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_read' (mp3b/mp3b2.c:12:4) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 185.133 ; gain = 93.523
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.808 seconds; current allocated memory: 102.469 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.091 seconds; current allocated memory: 103.077 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.111 seconds; current allocated memory: 103.917 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 185.133 ; gain = 93.523
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 14.897 seconds; peak allocated memory: 103.917 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 185.352 ; gain = 93.590
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 185.352 ; gain = 93.590
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.352 ; gain = 93.590
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.352 ; gain = 93.590
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.352 ; gain = 93.590
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_read' (mp3b/mp3b2.c:12:4) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_write' (mp3b/mp3b2.c:43:3) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 185.352 ; gain = 93.590
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.107 seconds; current allocated memory: 102.513 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 5 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.094 seconds; current allocated memory: 103.137 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.123 seconds; current allocated memory: 104.118 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 185.352 ; gain = 93.590
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 14.157 seconds; peak allocated memory: 104.118 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.789 ; gain = 93.273
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.789 ; gain = 93.273
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.789 ; gain = 93.273
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.789 ; gain = 93.273
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:31) in function 'multiply_partB_2' partially with a factor of 2.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.789 ; gain = 93.273
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_read' (mp3b/mp3b2.c:12:4) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_write' (mp3b/mp3b2.c:43:3) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 184.789 ; gain = 93.273
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'phi' operation ('k_0_0', mp3b/mp3b2.c:31) with incoming values : ('add_ln31', mp3b/mp3b2.c:31) [106]  (0 ns)
+	'mul' operation of DSP[122] ('mul_ln36_2', mp3b/mp3b2.c:36) [121]  (3.36 ns)
+	'add' operation of DSP[122] ('add_ln36_4', mp3b/mp3b2.c:36) [122]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_1', mp3b/mp3b2.c:36) [124]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [126]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.442 seconds; current allocated memory: 102.714 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 5 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.114 seconds; current allocated memory: 103.443 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.136 seconds; current allocated memory: 104.524 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 184.789 ; gain = 93.273
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 14.61 seconds; peak allocated memory: 104.524 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.461 ; gain = 92.906
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.461 ; gain = 92.906
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.461 ; gain = 92.906
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.461 ; gain = 92.906
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:31) in function 'multiply_partB_2' partially with a factor of 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.461 ; gain = 92.906
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_read' (mp3b/mp3b2.c:12:4) in function 'multiply_partB_2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_write' (mp3b/mp3b2.c:43:3) in function 'multiply_partB_2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 184.461 ; gain = 92.906
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_read_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'loop_write_L'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'phi' operation ('k_0_0', mp3b/mp3b2.c:31) with incoming values : ('add_ln31', mp3b/mp3b2.c:31) [106]  (0 ns)
+	'mul' operation of DSP[122] ('mul_ln36_4', mp3b/mp3b2.c:36) [121]  (3.36 ns)
+	'add' operation of DSP[122] ('add_ln36_6', mp3b/mp3b2.c:36) [122]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_1', mp3b/mp3b2.c:36) [124]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [126]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.655 seconds; current allocated memory: 103.132 MB.
+INFO: [HLS 200-434] Only 2 loops out of a total 5 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.127 seconds; current allocated memory: 103.973 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 105.310 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 184.461 ; gain = 92.906
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 14.958 seconds; peak allocated memory: 105.310 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3b/mp3b1.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (mp3b/mp3b2.c:31) in function 'multiply_partB_2' partially with a factor of 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_partB_2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'multiply_partB_2' consists of the following:
+	'phi' operation ('k_0_0', mp3b/mp3b2.c:31) with incoming values : ('add_ln31', mp3b/mp3b2.c:31) [105]  (0 ns)
+	'mul' operation of DSP[121] ('mul_ln36_4', mp3b/mp3b2.c:36) [120]  (3.36 ns)
+	'add' operation of DSP[121] ('add_ln36_6', mp3b/mp3b2.c:36) [121]  (3.02 ns)
+	'getelementptr' operation ('arrayB_addr_1', mp3b/mp3b2.c:36) [123]  (0 ns)
+	'load' operation ('arrayB_load', mp3b/mp3b2.c:36) on array 'arrayB', mp3b/mp3b2.c:6 [125]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 13.717 seconds; current allocated memory: 102.976 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 7 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.112 seconds; current allocated memory: 103.736 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_partB_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/A' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/B' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/C' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_partB_2/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_partB_2' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayA' to 'multiply_partB_2_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayB' to 'multiply_partB_2_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_arrayC' to 'multiply_partB_2_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'multiply_partB_2_mac_muladd_7ns_8ns_7ns_14_1_1' to 'multiply_partB_2_eOg' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_partB_2/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'multiply_partB_2_eOg': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_partB_2'.
+INFO: [HLS 200-111]  Elapsed time: 0.158 seconds; current allocated memory: 104.850 MB.
+INFO: [RTMG 210-278] Implementing memory 'multiply_partB_2_bkb_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 185.105 ; gain = 93.484
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_partB_2.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_partB_2.
+INFO: [HLS 200-112] Total elapsed time: 15.031 seconds; peak allocated memory: 104.850 MB.

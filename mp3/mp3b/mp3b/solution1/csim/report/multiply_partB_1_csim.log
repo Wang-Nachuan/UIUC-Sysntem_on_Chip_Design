@@ -1,0 +1,20 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../mp3b1.c in debug mode
+INFO: [HLS 200-10] Running 'E:/vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user '86186' on host 'desktop-vc6sta9' (Windows NT_amd64 version 6.2) on Sun Oct 09 16:35:27 -0500 2022
+INFO: [HLS 200-10] In directory 'F:/ece527/UIUC-ECE527/mp3/mp3b/mp3b/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating csim.exe
+Test origin (internal buffer): A[10][10], B[10][10]
+Test optimized (internal buffer): A[10][10], B[10][10]
+Test passed
+Test origin (internal buffer): A[50][50], B[50][50]
+Test optimized (internal buffer): A[50][50], B[50][50]
+Test passed
+Test origin (internal buffer): A[100][100], B[100][100]
+Test optimized (internal buffer): A[100][100], B[100][100]
+Test passed
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
