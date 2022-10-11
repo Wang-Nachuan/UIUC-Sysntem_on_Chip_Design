@@ -164,11 +164,7 @@ void multiply_a21(int A[100][100], int B[100][100], int C[100][100], int mA, int
 _ssdm_op_SpecInterface(C[i], "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 
  for (int j = 0; j < 100; j++) {
-
-_ssdm_op_SpecInterface(A[i], "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
-_ssdm_op_SpecInterface(B[j], "ap_fifo", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
-
- for (int k = 0; k < 100; k++) {
+   for (int k = 0; k < 100; k++) {
     if (i < mC && j < nC && k < nA) {
      C[i][j] += A[i][k] * B[k][j];
     }

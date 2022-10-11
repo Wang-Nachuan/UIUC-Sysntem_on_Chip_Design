@@ -135,12 +135,12 @@ float fmodf(float, float);
 long double fmodl(long double, long double);
 void multiply_key(signed int (*llvm_cbe_A)[100], signed int (*llvm_cbe_B)[100], signed int (*llvm_cbe_C)[100], signed int llvm_cbe_mA, signed int llvm_cbe_nA, signed int llvm_cbe_mB, signed int llvm_cbe_nB, signed int llvm_cbe_mC, signed int llvm_cbe_nC);
 signed int main(void);
-void multiply_a23(signed int (*)[100], signed int (*)[100], signed int (*)[100], signed int , signed int , signed int , signed int , signed int , signed int );
+void multiply_a21(signed int (*)[100], signed int (*)[100], signed int (*)[100], signed int , signed int , signed int , signed int , signed int , signed int );
 
 
 /* Global Variable Definitions and Initialization */
 static signed int aesl_internal_main_OC_size[3] = { 10u, 50u, 100u };
-static  char aesl_internal__OC_str[64] = "Test 2.3 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n";
+static  char aesl_internal__OC_str[64] = "Test 2.1 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n";
 static  char aesl_internal__OC_str1[40] = "Mismatch at C(%d, %d), test=%d, key=%d\n";
 static  char aesl_internal_str[12] = "Test passed";
 static  char aesl_internal_str1[12] = "Test failed";
@@ -1380,8 +1380,8 @@ printf("\nArgument  = 0x%X",llvm_cbe_tmp__30);
 printf("\nReturn  = 0x%X",llvm_cbe_tmp__51);
 }
 if (AESL_DEBUG_TRACE)
-printf("\n  call void @multiply_a23([100 x i32]* %%1, [100 x i32]* %%2, [100 x i32]* %%3, i32 %%7, i32 %%10, i32 %%10, i32 %%13, i32 %%7, i32 %%13) nounwind, !dbg !6 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_356_count);
-  multiply_a23(llvm_cbe_tmp__18, llvm_cbe_tmp__19, llvm_cbe_tmp__20, llvm_cbe_tmp__24, llvm_cbe_tmp__27, llvm_cbe_tmp__27, llvm_cbe_tmp__30, llvm_cbe_tmp__24, llvm_cbe_tmp__30);
+printf("\n  call void @multiply_a21([100 x i32]* %%1, [100 x i32]* %%2, [100 x i32]* %%3, i32 %%7, i32 %%10, i32 %%10, i32 %%13, i32 %%7, i32 %%13) nounwind, !dbg !6 for 0x%I64xth hint within @main  --> \n", ++aesl_llvm_cbe_356_count);
+  multiply_a21(llvm_cbe_tmp__18, llvm_cbe_tmp__19, llvm_cbe_tmp__20, llvm_cbe_tmp__24, llvm_cbe_tmp__27, llvm_cbe_tmp__27, llvm_cbe_tmp__30, llvm_cbe_tmp__24, llvm_cbe_tmp__30);
 if (AESL_DEBUG_TRACE) {
 printf("\nArgument  = 0x%X",llvm_cbe_tmp__24);
 printf("\nArgument  = 0x%X",llvm_cbe_tmp__27);

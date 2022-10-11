@@ -142,8 +142,8 @@ void AESL_WRAP_multiply_a23(signed int (*)[100], signed int (*)[100], signed int
 static signed int aesl_internal_main_OC_size[3] = { 10u, 50u, 100u };
 static  char aesl_internal__OC_str[64] = "Test 2.3 (memory-mapped, loop unrolling): A[%d][%d], B[%d][%d]\n";
 static  char aesl_internal__OC_str1[40] = "Mismatch at C(%d, %d), test=%d, key=%d\n";
-static  char aesl_internal_str[12] = "Test passed";
 static  char aesl_internal_str1[12] = "Test failed";
+static  char aesl_internal_str[12] = "Test passed";
 
 
 /* Function Bodies */

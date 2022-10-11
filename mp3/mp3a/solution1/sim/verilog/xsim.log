@@ -2,8 +2,8 @@
 # xsim v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Oct  6 17:37:41 2022
-# Process ID: 21388
+# Start of session at: Tue Oct 11 02:41:44 2022
+# Process ID: 18196
 # Current directory: D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/multiply_a23/xsim_script.tcl}
 # Log file: D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/xsim.log
@@ -51,6 +51,6 @@ source multiply_a23.tcl
 // RTL Simulation : 27 / 27 [100.00%] @ "424874675000"
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 424874715 ns : File "D:/Code/UIUC-ECE527/mp3/mp3a/solution1/sim/verilog/multiply_a23.autotb.v" Line 520
-run: Time (s): cpu = 00:00:00 ; elapsed = 00:04:00 . Memory (MB): peak = 234.410 ; gain = 0.000
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:04:17 . Memory (MB): peak = 221.031 ; gain = 0.000
 ## quit
-INFO: [Common 17-206] Exiting xsim at Thu Oct  6 17:41:46 2022...
+INFO: [Common 17-206] Exiting xsim at Tue Oct 11 02:46:05 2022...
