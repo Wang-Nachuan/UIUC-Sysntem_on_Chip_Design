@@ -2940,3 +2940,64 @@ INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 
 INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a23.
 INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a23.
 INFO: [HLS 200-112] Total elapsed time: 14.689 seconds; peak allocated memory: 103.395 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA1-3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mp3a/multiply_partA2-3.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.227 ; gain = 93.492
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.227 ; gain = 93.492
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.227 ; gain = 93.492
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.227 ; gain = 93.492
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.227 ; gain = 93.492
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 185.227 ; gain = 93.492
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'multiply_a11' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multiply_a11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.118 seconds; current allocated memory: 101.471 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.041 seconds; current allocated memory: 101.842 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multiply_a11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/mA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/nA' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/mB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/nB' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/mC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multiply_a11/nC' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multiply_a11' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'multiply_a11/mA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a11/mB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'multiply_a11/nB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multiply_a11'.
+INFO: [HLS 200-111]  Elapsed time: 0.088 seconds; current allocated memory: 102.239 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 185.227 ; gain = 93.492
+INFO: [VHDL 208-304] Generating VHDL RTL for multiply_a11.
+INFO: [VLOG 209-307] Generating Verilog RTL for multiply_a11.
+INFO: [HLS 200-112] Total elapsed time: 14.828 seconds; peak allocated memory: 102.239 MB.

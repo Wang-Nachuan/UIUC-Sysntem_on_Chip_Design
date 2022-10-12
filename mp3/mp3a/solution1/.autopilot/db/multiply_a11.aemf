@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1665474952172">
+  <ports id="1" name="A" type="PortType" originalName="A" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="10000">
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="2" name="B" type="PortType" originalName="B" coreName="RAM" bitwidth="32" iftype="IfTypeRegister" arraysize="10000">
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="3" name="C" type="PortType" originalName="C" coreName="RAM" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="10000">
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+  </ports>
+  <ports id="4" name="mA" type="PortType" originalName="mA" bitwidth="32"/>
+  <ports id="5" name="nA" type="PortType" originalName="nA" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="mB" type="PortType" originalName="mB" bitwidth="32"/>
+  <ports id="7" name="nB" type="PortType" originalName="nB" bitwidth="32"/>
+  <ports id="8" name="mC" type="PortType" originalName="mC" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="9" name="nC" type="PortType" originalName="nC" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="90" source_obj="//@ports.8" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="92" source_obj="//@ports.7" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="94" source_obj="//@ports.4" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="95" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="96" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.10/@node_objs.0"/>
+  <edges id="99" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="100" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="101" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="104" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="105" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="106" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="107" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="111" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="114" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="117" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="118" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="119" edge_type="CtrlEdge" source_obj="//@blocks.11" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="121" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="122" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.9/@node_objs.0"/>
+  <edges id="125" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="126" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.0" is_back_edge="1"/>
+  <edges id="127" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.3/@node_objs.0" is_back_edge="1"/>
+  <edges id="129" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="131" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="133" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="134" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="135" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="137" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="139" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="146" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.2"/>
+  <edges id="147" source_obj="//@blocks.5/@node_objs.3" sink_obj="//@blocks.5/@node_objs.0" is_back_edge="1"/>
+  <edges id="148" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.5/@node_objs.0" is_back_edge="1"/>
+  <edges id="150" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="151" source_obj="//@blocks.6/@node_objs.3" sink_obj="//@blocks.5/@node_objs.1" is_back_edge="1"/>
+  <edges id="152" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.5/@node_objs.1" is_back_edge="1"/>
+  <edges id="154" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="156" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="158" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="160" source_obj="//@blocks.5/@node_objs.2" sink_obj="//@blocks.5/@node_objs.4"/>
+  <edges id="161" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.4"/>
+  <edges id="162" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.5/@node_objs.4"/>
+  <edges id="164" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="165" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="166" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="167" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="168" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="169" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="171" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="172" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="173" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="175" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="181" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="189" source_obj="//@blocks.7/@node_objs.3" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="190" source_obj="//@blocks.7/@node_objs.2" sink_obj="//@blocks.7/@node_objs.4"/>
+  <edges id="192" source_obj="//@blocks.7/@node_objs.4" sink_obj="//@blocks.7/@node_objs.6"/>
+  <edges id="193" source_obj="//@blocks.7/@node_objs.5" sink_obj="//@blocks.7/@node_objs.6"/>
+  <edges id="194" source_obj="//@blocks.7/@node_objs.6" sink_obj="//@blocks.7/@node_objs.7"/>
+  <edges id="196" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.7/@node_objs.8"/>
+  <edges id="197" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="235" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="236" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.11"/>
+  <edges id="237" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="238" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="239" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.10"/>
+  <edges id="240" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="241" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <edges id="242" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.9"/>
+  <edges id="243" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="244" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.7"/>
+  <edges id="245" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.8"/>
+  <edges id="246" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.8"/>
+  <edges id="247" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.5" is_back_edge="1"/>
+  <edges id="248" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.3" is_back_edge="1"/>
+  <edges id="249" edge_type="CtrlEdge" source_obj="//@blocks.10" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.7/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.7/@node_objs.5"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.1" sink_obj="//@blocks.7/@node_objs.7"/>
+  <edges id="-1" source_obj="//@ports.2" sink_obj="//@blocks.7/@node_objs.5"/>
+  <edges id="-1" source_obj="//@ports.2" sink_obj="//@blocks.7/@node_objs.7"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.0" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@blocks.7/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.1" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@blocks.7/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.5" sink_obj="//@ports.2"/>
+  <edges id="-1" source_obj="//@blocks.7/@node_objs.7" sink_obj="//@ports.2"/>
+  <blocks id="24" name="block_24" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="nC_read" lineNumber="3" originalName="nC" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="3" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>nC</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="mC_read" lineNumber="3" originalName="mC" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="3" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>mC</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="nA_read" lineNumber="3" originalName="nA" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="3" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>nA</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="_ln4" lineNumber="4" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="br" m_display="0" m_delay="1.76" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="4" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <controlInputObjs>.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>3</validLinenumbers>
+      <validLinenumbers>4</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="33" name=".loopexit" type="BlockType">
+    <controlInputObjs>block_24</controlInputObjs>
+    <controlInputObjs>.loopexit.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_87</controlOutputObjs>
+    <controlOutputObjs>.preheader2.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i_0" originalName="i" bitwidth="7" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <controlInputObjs>block_24</controlInputObjs>
+      <controlInputObjs>.loopexit.loopexit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="phi_mul1" lineNumber="4" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" bitwidth="14" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="4" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>block_24</controlInputObjs>
+      <controlInputObjs>.loopexit.loopexit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="add_ln4" lineNumber="4" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="add_ln4_fu_154_p2" contextFuncName="multiply_a11" bitwidth="14" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.81" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="4" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="icmp_ln4" lineNumber="4" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="icmp_ln4_fu_164_p2" contextFuncName="multiply_a11" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.48" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="4" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="i" lineNumber="4" originalName="i" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="i_fu_170_p2" contextFuncName="multiply_a11" bitwidth="7" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.87" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="4" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="_ln4" lineNumber="4" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="4" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.preheader2.preheader</controlInputObjs>
+      <controlInputObjs>block_87</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>4</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="36" name=".preheader2.preheader" type="BlockType">
+    <controlInputObjs>.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader2</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="icmp_ln7" lineNumber="7" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="icmp_ln7_fu_176_p2" contextFuncName="multiply_a11" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="2.47" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="7" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="_ln5" lineNumber="5" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="br" nodeLabel="1.0" m_display="0" m_delay="1.76" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="5" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <controlInputObjs>.preheader2</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>5</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="43" name=".preheader2" type="BlockType">
+    <controlInputObjs>.preheader2.preheader</controlInputObjs>
+    <controlInputObjs>.preheader2.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.loopexit.loopexit</controlOutputObjs>
+    <controlOutputObjs>.preheader.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="j_0" originalName="j" bitwidth="7" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>.preheader2.preheader</controlInputObjs>
+      <controlInputObjs>.preheader2.loopexit</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="icmp_ln5" lineNumber="5" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="icmp_ln5_fu_185_p2" contextFuncName="multiply_a11" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="1.48" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="5" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="j" lineNumber="5" originalName="j" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="j_fu_191_p2" contextFuncName="multiply_a11" bitwidth="7" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.87" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="5" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="_ln5" lineNumber="5" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="5" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>.loopexit.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>5</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="50" name=".preheader.preheader" type="BlockType">
+    <controlInputObjs>.preheader2</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="icmp_ln7_1" lineNumber="7" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="icmp_ln7_1_fu_197_p2" contextFuncName="multiply_a11" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="2.47" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="7" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="add_ln8_1" lineNumber="8" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="add_ln8_1_fu_206_p2" contextFuncName="multiply_a11" bitwidth="14" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.81" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="8" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="_ln6" lineNumber="6" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="br" nodeLabel="2.0" m_display="0" m_delay="1.76" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="6" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>6</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="58" name=".preheader" type="BlockType">
+    <controlInputObjs>.preheader.preheader</controlInputObjs>
+    <controlInputObjs>._crit_edge</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader2.loopexit</controlOutputObjs>
+    <controlOutputObjs>block_64</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="k_0" originalName="k" bitwidth="7" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="phi_mul" lineNumber="7" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" bitwidth="14" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="7" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="icmp_ln6" lineNumber="6" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="icmp_ln6_fu_221_p2" contextFuncName="multiply_a11" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="1.48" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="6" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="k" lineNumber="6" originalName="k" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="k_fu_227_p2" contextFuncName="multiply_a11" bitwidth="7" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.87" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="6" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="_ln6" lineNumber="6" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="6" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_64</controlInputObjs>
+      <controlInputObjs>.preheader2.loopexit</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>6</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="64" name="block_64" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_79</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="icmp_ln7_2" lineNumber="7" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="icmp_ln7_2_fu_233_p2" contextFuncName="multiply_a11" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="2.47" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="7" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="60" name="and_ln7" lineNumber="7" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="and_ln7_fu_238_p2" contextFuncName="multiply_a11" bitwidth="1" opcode="and" nodeLabel="3.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="7" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>and</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="and_ln7_1" lineNumber="7" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="and_ln7_1_fu_243_p2" contextFuncName="multiply_a11" bitwidth="1" opcode="and" nodeLabel="3.0" m_display="0" m_delay="0.97" m_topoIndex="35" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="7" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>and</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="add_ln7" lineNumber="7" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="add_ln7_fu_248_p2" contextFuncName="multiply_a11" bitwidth="14" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.81" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="7" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln7" lineNumber="7" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="7" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>and</dataInputObjs>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+      <controlInputObjs>block_79</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="79" name="block_79" type="BlockType">
+    <controlInputObjs>block_64</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>._crit_edge</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="add_ln8_2" lineNumber="8" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="add_ln8_2_fu_258_p2" contextFuncName="multiply_a11" bitwidth="14" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.81" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="8" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="add_ln8_3" lineNumber="8" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="add_ln8_3_fu_269_p2" contextFuncName="multiply_a11" bitwidth="14" opcode="add" nodeLabel="3.0" m_display="0" m_delay="1.81" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="8" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="A_load" lineNumber="8" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="8" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>A</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="B_load" lineNumber="8" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="8" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>B</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="74" name="mul_ln8" lineNumber="8" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="mul_ln8_fu_279_p2" contextFuncName="multiply_a11" bitwidth="32" opcode="mul" nodeLabel="5.0" m_display="0" m_delay="8.51" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="8" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="75" name="C_load" lineNumber="8" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="8" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>C</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>C</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="76" name="add_ln8" lineNumber="8" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." rtlName="C_d0" contextFuncName="multiply_a11" bitwidth="32" opcode="add" nodeLabel="6.0" m_display="0" m_delay="2.55" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="8" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="77" name="C_addr_write_ln8" lineNumber="8" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="store" nodeLabel="6.0" m_display="0" m_delay="3.25" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="8" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>C</dataInputObjs>
+      <dataOutputObjs>C</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="78" name="_ln9" lineNumber="9" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="9" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <controlInputObjs>._crit_edge</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>8</validLinenumbers>
+      <validLinenumbers>9</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="81" name="._crit_edge" type="BlockType">
+    <controlInputObjs>block_64</controlInputObjs>
+    <controlInputObjs>block_79</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="80" name="_ln6" lineNumber="6" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="br" nodeLabel="6.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="6" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>6</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="83" name=".preheader2.loopexit" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.preheader2</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="82" name="_ln0" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+      <controlInputObjs>.preheader2</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="85" name=".loopexit.loopexit" type="BlockType">
+    <controlInputObjs>.preheader2</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>.loopexit</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="84" name="_ln0" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <controlInputObjs>.loopexit</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="87" name="block_87" type="BlockType">
+    <controlInputObjs>.loopexit</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="86" name="_ln13" lineNumber="13" fileName="mp3a/multiply_partA1-1.c" fileDirectory=".." contextFuncName="multiply_a11" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="mp3a/multiply_partA1-1.c" linenumber="13" fileDirectory="D:\Code\UIUC-ECE527\mp3" functionName="multiply_a11"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="mp3a/multiply_partA1-1.c">
+      <validLinenumbers>13</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <regnodes realName="icmp_ln7_reg_316">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="mC_read_reg_293">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln7_reg_356">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="phi_mul_reg_143">
+    <nodeIds>52</nodeIds>
+  </regnodes>
+  <regnodes realName="A_load_reg_371">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln7_1_reg_352">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_324">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_311">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="nA_read_reg_298">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="j_0_reg_121">
+    <nodeIds>37</nodeIds>
+  </regnodes>
+  <regnodes realName="k_0_reg_132">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="B_addr_reg_366">
+    <nodeIds>71</nodeIds>
+  </regnodes>
+  <regnodes realName="B_load_reg_376">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="C_load_reg_386">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="A_addr_reg_361">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="k_reg_347">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="nC_read_reg_288">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln8_reg_334">
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln4_reg_303">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln7_1_reg_329">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln8_reg_381">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_98">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="phi_mul1_reg_109">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="C_addr_reg_339">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <expressionNodes realName="A_addr_gep_fu_67">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln8_1_fu_206">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="phi_mul1_phi_fu_113">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_170">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mul_ln8_fu_279">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln5_fu_185">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln6_fu_221">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="k_0_phi_fu_136">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln8_3_fu_264">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln4_fu_160">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_fu_191">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln8_fu_202">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln4_fu_154">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="phi_mul_phi_fu_147">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln7_fu_238">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="k_fu_227">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln8_2_fu_258">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln7_1_fu_243">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln5_fu_181">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="B_addr_gep_fu_74">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln8_1_fu_212">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln7_fu_176">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln4_fu_164">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_0_phi_fu_125">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="C_addr_gep_fu_60">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln8_2_fu_254">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln8_4_fu_274">
+    <nodeIds>70</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln7_fu_248">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln8_3_fu_269">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln7_1_fu_197">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln7_2_fu_233">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln6_fu_217">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln8_fu_283">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_102">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="nA_read_read_fu_54">
+    <nodeIds>22</nodeIds>
+  </ioNodes>
+  <ioNodes realName="mC_read_read_fu_48">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="nC_read_read_fu_42">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="A">
+    <nodeIds>72</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="B">
+    <nodeIds>73</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="C">
+    <nodeIds>75</nodeIds>
+    <nodeIds>77</nodeIds>
+  </memoryPorts>
+  <ioPorts name="A(p0)">
+    <contents name="load">
+      <nodeIds>72</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="B(p0)">
+    <contents name="load">
+      <nodeIds>73</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="C(p0)">
+    <contents name="load">
+      <nodeIds>75</nodeIds>
+    </contents>
+    <contents name="store">
+      <nodeIds>77</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="mA"/>
+  <ioPorts name="mB"/>
+  <ioPorts name="mC">
+    <contents name="read">
+      <nodeIds>21</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="nA">
+    <contents name="read">
+      <nodeIds>22</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="nB"/>
+  <ioPorts name="nC">
+    <contents name="read">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="2" latency="2"/>
+      <operations id="73" stage="2" latency="2"/>
+      <operations id="82" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="72" stage="1" latency="2"/>
+      <operations id="73" stage="1" latency="2"/>
+      <operations id="75" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="multiply_a11" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="2020201" mMaxLatency="4020201">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>10</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>24</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop 1" mII="-1" mDepth="-1" mMinTripCount="100" mMaxTripCount="100" mMinLatency="2020200" mMaxLatency="4020200" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>9</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>33</basicBlocks>
+      <basicBlocks>36</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Loop 1.1" mII="-1" mDepth="-1" mMinTripCount="100" mMaxTripCount="100" mMinLatency="20200" mMaxLatency="40200" mType="1">
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>43</basicBlocks>
+      <basicBlocks>50</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Loop 1.1.1" mII="-1" mDepth="-1" mMinTripCount="100" mMaxTripCount="100" mMinLatency="200" mMaxLatency="400" mType="1">
+      <basicBlocks>58</basicBlocks>
+      <basicBlocks>64</basicBlocks>
+      <basicBlocks>79</basicBlocks>
+      <basicBlocks>81</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>83</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="9" mTag="Region 4" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>85</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="10" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>87</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
