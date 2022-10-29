@@ -1,0 +1,2876 @@
+!SESSION 2020-10-21 18:18:50.319 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk
+
+This is a continuation of log file C:\Users\g1003\OneDrive\Desktop\Tutorial_Files\accelerator_demo\accelerator_demo.sdk\.metadata\.bak_0.log
+Created Time: 2020-10-21 18:51:22.576
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-10-21 18:51:22.581
+!MESSAGE Indexed 'lenet_cnn_demo' (2 sources, 201 headers) in 2.39 sec: 20,761 declarations; 35,014 references; 0 unresolved inclusions; 11 syntax errors; 32 unresolved names (0.057%)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:22.959
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:22.966
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:22.969
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:22.974
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:22.977
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:22.981
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:25.867
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:25.904
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:25.909
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:25.950
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:25.956
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:25.992
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:25.998
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.035
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.040
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.089
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.098
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.141
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.150
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.204
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.210
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.255
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.261
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.305
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.313
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.353
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.361
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.399
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.405
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.448
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.455
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.495
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.500
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.665
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.671
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.719
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.726
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.770
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.777
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.830
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.835
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.873
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.879
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.924
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.931
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.981
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:26.989
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.013
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.203
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.209
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.233
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.253
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.258
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.283
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.316
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.321
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:27.347
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:28.111
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:28.117
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:28.141
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:28.960
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:28.966
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:28.991
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:30.142
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:30.147
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:30.173
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:31.150
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:31.155
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:31.182
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:32.092
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:32.097
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:32.122
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:32.926
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:32.931
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:32.976
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:33.435
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:33.440
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:33.465
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:33.904
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:33.909
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:33.934
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:34.979
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:34.985
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:35.033
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:35.080
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:35.085
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:35.089
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:35.093
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:36.888
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:36.893
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:36.897
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:36.902
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:37.169
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:37.187
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:37.191
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:37.195
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:37.718
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:37.722
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:37.726
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:37.730
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:38.605
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:38.610
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:38.634
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:39.507
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:39.512
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:39.537
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:40.491
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:40.496
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:40.521
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:41.516
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:41.522
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:41.545
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:42.062
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:42.068
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:42.096
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:43.044
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:43.050
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:43.077
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:44.577
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:51:44.590
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:52.670
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:52.677
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:52.681
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:52.686
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:52.689
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:52.693
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:57.127
+!MESSAGE XSCT Command: [disconnect tcfchan#14], Thread: Thread-836
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:57.133
+!MESSAGE XSCT command with result: [disconnect tcfchan#14], Result: [null, ]. Thread: Thread-836
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-21 18:51:58.140
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.145
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.152
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#15]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.156
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.167
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.170
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.178
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.181
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.197
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.200
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.223
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.227
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.269
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.273
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.277
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#15]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.280
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.288
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.292
+!MESSAGE XSCT Command: [version -server], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.303
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.306
+!MESSAGE XSCT Command: [version], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.310
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.313
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.320
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.323
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.339
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.343
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.351
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.354
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.370
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.374
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.382
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.385
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.400
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.404
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.412
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.416
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.432
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.435
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.442
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.446
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.461
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.464
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.472
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.476
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.491
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.495
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.511
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.515
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.518
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.522
+!MESSAGE XSCT Command: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.526
+!MESSAGE XSCT command with result: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.529
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.549
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.553
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.561
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, accelerator_bd_wrapper_2]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.564
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.568
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.571
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.592
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.596
+!MESSAGE XSCT Command: [stop], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.599
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.603
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.829
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.833
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.864
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.869
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.892
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.896
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.961
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.965
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.985
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:51:58.989
+!MESSAGE XSCT Command: [dow C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/lenet_cnn_demo/Debug/lenet_cnn_demo.elf], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:52:00.003
+!MESSAGE XSCT command with result: [dow C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/lenet_cnn_demo/Debug/lenet_cnn_demo.elf], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:52:00.008
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:52:00.013
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:52:00.094
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:52:00.161
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:52:00.166
+!MESSAGE XSCT Command: [con], Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:52:00.173
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:01.826
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:01.835
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:01.838
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:01.843
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:01.847
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:01.851
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:07.752
+!MESSAGE XSCT Command: [disconnect tcfchan#15], Thread: Thread-890
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:07.758
+!MESSAGE XSCT command with result: [disconnect tcfchan#15], Result: [null, ]. Thread: Thread-890
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-21 18:53:08.766
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.770
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.776
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#16]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.780
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.791
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.795
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.802
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.806
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.822
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.825
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.848
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.851
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.895
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.899
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.903
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#16]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.906
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.914
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.918
+!MESSAGE XSCT Command: [version -server], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.922
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.926
+!MESSAGE XSCT Command: [version], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.929
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.932
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.940
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.944
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.960
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.964
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.972
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.975
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.990
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:08.994
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.002
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.006
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.022
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.026
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.034
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.038
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.054
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.058
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.073
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.077
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.081
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.085
+!MESSAGE XSCT Command: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.089
+!MESSAGE XSCT command with result: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.093
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.114
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.118
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.152
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, accelerator_bd_wrapper_2]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.156
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.159
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.162
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.183
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.187
+!MESSAGE XSCT Command: [stop], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.236
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.240
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.500
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.504
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.530
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.534
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:09.538
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:19.804
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:19.811
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:19.815
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:19.820
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:19.823
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:19.827
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:26.949
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:26.954
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#16]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:26.957
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:26.966
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:26.971
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:26.978
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:26.982
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:26.999
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.003
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.020
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.023
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.032
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.036
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.040
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#16]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.043
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.052
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.055
+!MESSAGE XSCT Command: [version -server], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.059
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.063
+!MESSAGE XSCT Command: [version], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.066
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.070
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.078
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.081
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.098
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.101
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.110
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.113
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.129
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.132
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.140
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.144
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.159
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.163
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.171
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.175
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.191
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.195
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.202
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.206
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.222
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.226
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.233
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.237
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.253
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.256
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.272
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.276
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.288
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.292
+!MESSAGE XSCT Command: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.297
+!MESSAGE XSCT command with result: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.300
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.321
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.324
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.329
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, accelerator_bd_wrapper_2]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.333
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.352
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.356
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.375
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.379
+!MESSAGE XSCT Command: [stop], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.383
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.386
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.731
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.735
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.742
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.746
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.779
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.782
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.829
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.833
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.853
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.858
+!MESSAGE XSCT Command: [dow C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_demo/Debug/accelerator_demo.elf], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.984
+!MESSAGE XSCT command with result: [dow C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_demo/Debug/accelerator_demo.elf], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.988
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:27.992
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:28.010
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:28.031
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:28.035
+!MESSAGE XSCT Command: [con], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:28.056
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:28.076
+!MESSAGE XSCT Command: [disconnect tcfchan#16], Thread: Thread-973
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:28.083
+!MESSAGE XSCT command with result: [disconnect tcfchan#16], Result: [null, ]. Thread: Thread-973
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:31.201
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:31.208
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:31.212
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:31.216
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:31.220
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:31.223
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:32.988
+!MESSAGE XSCT Command: [disconnect tcfchan#16], Thread: Thread-978
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:32.993
+!MESSAGE XSCT command with result: [disconnect tcfchan#16], Result: [{Format=channel "tcfchan#16" closed, Time=1603320812993, Code=1}, ]. Thread: Thread-978
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-21 18:53:34.004
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.008
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.014
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#17]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.018
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.043
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.047
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.068
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.072
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.088
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.091
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.121
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.125
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.149
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.153
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.157
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#17]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.160
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.168
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.172
+!MESSAGE XSCT Command: [version -server], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.183
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.187
+!MESSAGE XSCT Command: [version], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.190
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.194
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.202
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.206
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.221
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.224
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.232
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.236
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.251
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.255
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.263
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.267
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.282
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.286
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.293
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.297
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.312
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.316
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.332
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.336
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.340
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.343
+!MESSAGE XSCT Command: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.348
+!MESSAGE XSCT command with result: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.351
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.370
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.374
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.383
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, accelerator_bd_wrapper_2]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.387
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.391
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.395
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.436
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.440
+!MESSAGE XSCT Command: [stop], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.456
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.460
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.707
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.712
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.729
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.732
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:34.736
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:38.883
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:38.890
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:38.895
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:38.900
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:38.903
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:53:38.907
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:04.187
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:04.194
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:04.198
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:04.203
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:04.207
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:04.210
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:06.837
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:06.874
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:06.880
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:06.915
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:06.922
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:06.960
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:06.965
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.002
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.008
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.052
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.058
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.124
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.131
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.193
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.202
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.245
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.253
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.298
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.304
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.348
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.355
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.394
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.399
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.444
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.452
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.494
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.500
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.671
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.677
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.722
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.728
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.773
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.781
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.829
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.835
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.874
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.880
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.926
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.933
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.982
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:07.989
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.014
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.205
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.210
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.233
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.252
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.257
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.281
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.315
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.320
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:08.347
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:09.114
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:09.119
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:09.143
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:09.969
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:09.974
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:09.998
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:11.155
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:11.161
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:11.186
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:12.172
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:12.177
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:12.203
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:13.120
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:13.125
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:13.149
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:13.968
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:13.974
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:14.018
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:14.476
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:14.482
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:14.506
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:14.962
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:14.968
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:14.996
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:16.012
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:16.017
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:16.064
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:16.112
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:16.118
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:16.122
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:16.125
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:17.932
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:17.936
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:17.941
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:17.947
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:18.226
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:18.231
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:18.234
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:18.237
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:18.781
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:18.786
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:18.790
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:18.793
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:19.665
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:19.671
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:19.695
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:20.560
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:20.565
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:20.591
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:21.544
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:21.550
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:21.575
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:22.567
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:22.573
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:22.595
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:23.103
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:23.109
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:23.137
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:24.087
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:24.092
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:24.116
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:25.598
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-10-21 18:54:25.617
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:46.835
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:46.843
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:46.848
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:46.853
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:46.856
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:46.860
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-21 18:54:49.094
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.099
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.104
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#17]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.108
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.116
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.120
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.128
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.133
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.149
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.153
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.172
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.176
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.180
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.184
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.188
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#17]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.191
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.198
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.202
+!MESSAGE XSCT Command: [version -server], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.205
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.208
+!MESSAGE XSCT Command: [version], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.212
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.215
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.223
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.227
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.243
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.247
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.255
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.259
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.275
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.278
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.285
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.289
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.304
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.308
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.315
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.319
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.337
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.340
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.349
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.352
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.368
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.371
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.379
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.382
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.398
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.402
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.419
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.424
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.427
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.433
+!MESSAGE XSCT Command: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.439
+!MESSAGE XSCT command with result: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.444
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.466
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.470
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.476
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, accelerator_bd_wrapper_2]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.481
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.486
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.490
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.511
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.515
+!MESSAGE XSCT Command: [stop], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.520
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.524
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.839
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.843
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.850
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.854
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.874
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.879
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.945
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.949
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.969
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:49.972
+!MESSAGE XSCT Command: [dow C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_demo/Debug/accelerator_demo.elf], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:50.099
+!MESSAGE XSCT command with result: [dow C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_demo/Debug/accelerator_demo.elf], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:50.103
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:50.107
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:50.201
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:50.268
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:50.273
+!MESSAGE XSCT Command: [con], Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:50.281
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:59.650
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:59.657
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:59.660
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:59.666
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:59.669
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:54:59.673
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:17.391
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:17.398
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:17.402
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:17.407
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:17.410
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:17.414
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/standalone_bsp_0/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:21.287
+!MESSAGE XSCT Command: [disconnect tcfchan#17], Thread: Thread-1086
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:21.293
+!MESSAGE XSCT command with result: [disconnect tcfchan#17], Result: [null, ]. Thread: Thread-1086
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-21 18:55:22.290
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.294
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.300
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#18]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.304
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.314
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.317
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.338
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.341
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.356
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.359
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.381
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.385
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.403
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.407
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.410
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#18]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.413
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.420
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.424
+!MESSAGE XSCT Command: [version -server], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.428
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.431
+!MESSAGE XSCT Command: [version], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.434
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.437
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.444
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.448
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.463
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.467
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.475
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.478
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.493
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.497
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.505
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.508
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.523
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.527
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.535
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.538
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.554
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.557
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.566
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.569
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.584
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.588
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.595
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.599
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.614
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.617
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.633
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.637
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.642
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.645
+!MESSAGE XSCT Command: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.650
+!MESSAGE XSCT command with result: [source C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.653
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.673
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.677
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.685
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, accelerator_bd_wrapper_2]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.688
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.691
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.695
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.715
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.719
+!MESSAGE XSCT Command: [stop], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.758
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:22.761
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.041
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.045
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.052
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.056
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.083
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.087
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.167
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.171
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.192
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:23.196
+!MESSAGE XSCT Command: [dow C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/lenet_cnn_demo/Debug/lenet_cnn_demo.elf], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:24.239
+!MESSAGE XSCT command with result: [dow C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/lenet_cnn_demo/Debug/lenet_cnn_demo.elf], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:24.244
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:24.248
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:24.354
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:24.425
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:24.430
+!MESSAGE XSCT Command: [con], Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 18:55:24.450
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-15
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-21 19:04:27.276
+!MESSAGE Executed Webtalk command
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:04:27.305
+!MESSAGE XSCT Command: [disconnect tcfchan#17], Thread: Thread-1138
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:04:27.337
+!MESSAGE XSCT Command: [disconnect tcfchan#18], Thread: Thread-1140
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:04:27.342
+!MESSAGE XSCT command with result: [disconnect tcfchan#17], Result: [{Format=channel "tcfchan#17" closed, Time=1603321467338, Code=1}, ]. Thread: Thread-1138
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:04:27.349
+!MESSAGE XSCT command with result: [disconnect tcfchan#18], Result: [null, ]. Thread: Thread-1140
+!SESSION 2020-10-21 19:09:45.246 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk
+
+!ENTRY org.eclipse.ui 2 0 2020-10-21 19:09:46.498
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-10-21 19:09:46.498
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2020-10-21 19:09:46.909
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-10-21 19:09:46.909
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:09:52.062
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:09:52.067
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:09:52.078
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:09:52.095
+!MESSAGE XSCT Command: [setws C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:09:52.236
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:09:52.240
+!MESSAGE XSCT command with result: [setws C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:09:52.255
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:09:55.013
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-7
+!SESSION 2020-10-21 19:18:42.833 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk
+
+!ENTRY org.eclipse.ui 2 0 2020-10-21 19:18:44.094
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-10-21 19:18:44.094
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2020-10-21 19:18:44.517
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2020-10-21 19:18:44.517
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:18:49.686
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:18:49.690
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-4
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:18:49.700
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:18:49.705
+!MESSAGE XSCT Command: [setws C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:18:49.853
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-4
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:18:49.857
+!MESSAGE XSCT command with result: [setws C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:18:49.879
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-21 19:18:52.700
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/accelerator_bd_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-3

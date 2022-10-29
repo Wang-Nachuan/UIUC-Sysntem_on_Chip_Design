@@ -1,0 +1,7 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="37" filename="accelerator_hls/accelerator.cpp" linenumber="7" name="icmp_ln7" contextFuncName="vector_multiplier" moduleName="vector_multiplier" rtlName="icmp_ln7_fu_225_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\g1003\OneDrive\Desktop\Tutorial_Files"><\/item>
+<item  id="39" filename="accelerator_hls/accelerator.cpp" linenumber="7" name="i" contextFuncName="vector_multiplier" moduleName="vector_multiplier" rtlName="i_fu_231_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\g1003\OneDrive\Desktop\Tutorial_Files"><\/item>
+<item  id="46" filename="accelerator_hls/accelerator.cpp" linenumber="9" name="mul_ln9" contextFuncName="vector_multiplier" moduleName="vector_multiplier" rtlName="mul_ln9_fu_237_p2" latency="0" BRAM="-1" DSP="3" FF="0" LUT="20" fileDirectory="C:\Users\g1003\OneDrive\Desktop\Tutorial_Files"><\/item>
+<\/annotationInfo>
+</annotationInfo>
