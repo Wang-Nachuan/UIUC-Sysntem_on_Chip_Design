@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'lenet_top/output' to 'lenet_top/output_r' to avoid the conflict with HDL keywords or other object names." projectName="lenet" solutionName="solution1" date="2022-10-30T00:20:22.191-0500" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'lenet_top/input' to 'lenet_top/input_r' to avoid the conflict with HDL keywords or other object names." projectName="lenet" solutionName="solution1" date="2022-10-30T00:20:22.187-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

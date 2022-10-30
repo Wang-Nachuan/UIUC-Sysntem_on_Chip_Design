@@ -1,0 +1,274 @@
+
+
+================================================================
+== Vivado HLS Report for 'i_max_pooling4'
+================================================================
+* Date:           Sun Oct 30 00:20:23 2022
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        lenet
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.685|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  7393|  7393|  7393|  7393|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------+------+------+----------+-----------+-----------+------+----------+
+        |                         |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name        |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1                 |  7392|  7392|       462|          -|          -|    16|    no    |
+        | + Loop 1.1              |   460|   460|        92|          -|          -|     5|    no    |
+        |  ++ Loop 1.1.1          |    90|    90|        18|          -|          -|     5|    no    |
+        |   +++ Loop 1.1.1.1      |    16|    16|         8|          -|          -|     2|    no    |
+        |    ++++ Loop 1.1.1.1.1  |     6|     6|         3|          -|          -|     2|    no    |
+        +-------------------------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 5 3 
+5 --> 6 4 
+6 --> 7 5 
+7 --> 8 
+8 --> 6 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 9 [1/1] (1.76ns)   --->   "br label %.loopexit" [lenet/lenet_hls.cpp:96]   --->   Operation 9 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.91>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%c_0 = phi i5 [ 0, %0 ], [ %c, %.loopexit.loopexit ]"   --->   Operation 10 'phi' 'c_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (1.36ns)   --->   "%icmp_ln96 = icmp eq i5 %c_0, -16" [lenet/lenet_hls.cpp:96]   --->   Operation 11 'icmp' 'icmp_ln96' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 12 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.78ns)   --->   "%c = add i5 %c_0, 1" [lenet/lenet_hls.cpp:96]   --->   Operation 13 'add' 'c' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %icmp_ln96, label %2, label %.preheader3.preheader" [lenet/lenet_hls.cpp:96]   --->   Operation 14 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln104 = zext i5 %c_0 to i8" [lenet/lenet_hls.cpp:104]   --->   Operation 15 'zext' 'zext_ln104' <Predicate = (!icmp_ln96)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_s = call i8 @_ssdm_op_BitConcatenate.i8.i5.i3(i5 %c_0, i3 0)" [lenet/lenet_hls.cpp:104]   --->   Operation 16 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln96)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln104_1 = zext i8 %tmp_s to i9" [lenet/lenet_hls.cpp:104]   --->   Operation 17 'zext' 'zext_ln104_1' <Predicate = (!icmp_ln96)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_4 = call i6 @_ssdm_op_BitConcatenate.i6.i5.i1(i5 %c_0, i1 false)" [lenet/lenet_hls.cpp:104]   --->   Operation 18 'bitconcatenate' 'tmp_4' <Predicate = (!icmp_ln96)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln104_2 = zext i6 %tmp_4 to i9" [lenet/lenet_hls.cpp:104]   --->   Operation 19 'zext' 'zext_ln104_2' <Predicate = (!icmp_ln96)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (1.91ns)   --->   "%add_ln104_2 = add i9 %zext_ln104_2, %zext_ln104_1" [lenet/lenet_hls.cpp:104]   --->   Operation 20 'add' 'add_ln104_2' <Predicate = (!icmp_ln96)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_5 = call i7 @_ssdm_op_BitConcatenate.i7.i5.i2(i5 %c_0, i2 0)" [lenet/lenet_hls.cpp:106]   --->   Operation 21 'bitconcatenate' 'tmp_5' <Predicate = (!icmp_ln96)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln106 = zext i7 %tmp_5 to i8" [lenet/lenet_hls.cpp:106]   --->   Operation 22 'zext' 'zext_ln106' <Predicate = (!icmp_ln96)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (1.87ns)   --->   "%add_ln106 = add i8 %zext_ln104, %zext_ln106" [lenet/lenet_hls.cpp:106]   --->   Operation 23 'add' 'add_ln106' <Predicate = (!icmp_ln96)> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (1.76ns)   --->   "br label %.preheader3" [lenet/lenet_hls.cpp:97]   --->   Operation 24 'br' <Predicate = (!icmp_ln96)> <Delay = 1.76>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "ret void" [lenet/lenet_hls.cpp:108]   --->   Operation 25 'ret' <Predicate = (icmp_ln96)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.64>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%h_0 = phi i3 [ 0, %.preheader3.preheader ], [ %h, %.preheader3.loopexit ]"   --->   Operation 26 'phi' 'h_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (1.13ns)   --->   "%icmp_ln97 = icmp eq i3 %h_0, -3" [lenet/lenet_hls.cpp:97]   --->   Operation 27 'icmp' 'icmp_ln97' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%empty_34 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)"   --->   Operation 28 'speclooptripcount' 'empty_34' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (1.65ns)   --->   "%h = add i3 %h_0, 1" [lenet/lenet_hls.cpp:97]   --->   Operation 29 'add' 'h' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "br i1 %icmp_ln97, label %.loopexit.loopexit, label %.preheader2.preheader" [lenet/lenet_hls.cpp:97]   --->   Operation 30 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%shl_ln = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %h_0, i1 false)" [lenet/lenet_hls.cpp:104]   --->   Operation 31 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln97)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln106_1 = zext i3 %h_0 to i8" [lenet/lenet_hls.cpp:106]   --->   Operation 32 'zext' 'zext_ln106_1' <Predicate = (!icmp_ln97)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (1.91ns)   --->   "%add_ln106_1 = add i8 %zext_ln106_1, %add_ln106" [lenet/lenet_hls.cpp:106]   --->   Operation 33 'add' 'add_ln106_1' <Predicate = (!icmp_ln97)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln106_2 = zext i8 %add_ln106_1 to i10" [lenet/lenet_hls.cpp:106]   --->   Operation 34 'zext' 'zext_ln106_2' <Predicate = (!icmp_ln97)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%p_shl3_cast = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %add_ln106_1, i2 0)" [lenet/lenet_hls.cpp:106]   --->   Operation 35 'bitconcatenate' 'p_shl3_cast' <Predicate = (!icmp_ln97)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (1.73ns)   --->   "%add_ln106_2 = add i10 %p_shl3_cast, %zext_ln106_2" [lenet/lenet_hls.cpp:106]   --->   Operation 36 'add' 'add_ln106_2' <Predicate = (!icmp_ln97)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (1.76ns)   --->   "br label %.preheader2" [lenet/lenet_hls.cpp:98]   --->   Operation 37 'br' <Predicate = (!icmp_ln97)> <Delay = 1.76>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 38 'br' <Predicate = (icmp_ln97)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.76>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%w_0 = phi i3 [ %w, %1 ], [ 0, %.preheader2.preheader ]"   --->   Operation 39 'phi' 'w_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (1.13ns)   --->   "%icmp_ln98 = icmp eq i3 %w_0, -3" [lenet/lenet_hls.cpp:98]   --->   Operation 40 'icmp' 'icmp_ln98' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%empty_35 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 5, i64 5, i64 5)"   --->   Operation 41 'speclooptripcount' 'empty_35' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (1.65ns)   --->   "%w = add i3 %w_0, 1" [lenet/lenet_hls.cpp:98]   --->   Operation 42 'add' 'w' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "br i1 %icmp_ln98, label %.preheader3.loopexit, label %.preheader1.preheader" [lenet/lenet_hls.cpp:98]   --->   Operation 43 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%shl_ln104_1 = call i4 @_ssdm_op_BitConcatenate.i4.i3.i1(i3 %w_0, i1 false)" [lenet/lenet_hls.cpp:104]   --->   Operation 44 'bitconcatenate' 'shl_ln104_1' <Predicate = (!icmp_ln98)> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (1.76ns)   --->   "br label %.preheader1" [lenet/lenet_hls.cpp:101]   --->   Operation 45 'br' <Predicate = (!icmp_ln98)> <Delay = 1.76>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "br label %.preheader3"   --->   Operation 46 'br' <Predicate = (icmp_ln98)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 5.10>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%max_value_0 = phi float [ 0xC26D1A94A0000000, %.preheader1.preheader ], [ %max_value_1, %.preheader1.loopexit ]" [lenet/lenet_hls.cpp:104]   --->   Operation 47 'phi' 'max_value_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%i_0 = phi i2 [ 0, %.preheader1.preheader ], [ %i, %.preheader1.loopexit ]"   --->   Operation 48 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln101 = zext i2 %i_0 to i4" [lenet/lenet_hls.cpp:101]   --->   Operation 49 'zext' 'zext_ln101' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (0.95ns)   --->   "%icmp_ln101 = icmp eq i2 %i_0, -2" [lenet/lenet_hls.cpp:101]   --->   Operation 50 'icmp' 'icmp_ln101' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)"   --->   Operation 51 'speclooptripcount' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (1.56ns)   --->   "%i = add i2 %i_0, 1" [lenet/lenet_hls.cpp:101]   --->   Operation 52 'add' 'i' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "br i1 %icmp_ln101, label %1, label %.preheader.preheader" [lenet/lenet_hls.cpp:101]   --->   Operation 53 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (1.73ns)   --->   "%add_ln104 = add i4 %shl_ln, %zext_ln101" [lenet/lenet_hls.cpp:104]   --->   Operation 54 'add' 'add_ln104' <Predicate = (!icmp_ln101)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln104_3 = zext i4 %add_ln104 to i9" [lenet/lenet_hls.cpp:104]   --->   Operation 55 'zext' 'zext_ln104_3' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (1.82ns)   --->   "%add_ln104_3 = add i9 %zext_ln104_3, %add_ln104_2" [lenet/lenet_hls.cpp:104]   --->   Operation 56 'add' 'add_ln104_3' <Predicate = (!icmp_ln101)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%p_shl4_cast = call i12 @_ssdm_op_BitConcatenate.i12.i9.i3(i9 %add_ln104_3, i3 0)" [lenet/lenet_hls.cpp:104]   --->   Operation 57 'bitconcatenate' 'p_shl4_cast' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_7 = call i10 @_ssdm_op_BitConcatenate.i10.i9.i1(i9 %add_ln104_3, i1 false)" [lenet/lenet_hls.cpp:104]   --->   Operation 58 'bitconcatenate' 'tmp_7' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln104_4 = zext i10 %tmp_7 to i12" [lenet/lenet_hls.cpp:104]   --->   Operation 59 'zext' 'zext_ln104_4' <Predicate = (!icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 60 [1/1] (1.54ns)   --->   "%add_ln104_4 = add i12 %p_shl4_cast, %zext_ln104_4" [lenet/lenet_hls.cpp:104]   --->   Operation 60 'add' 'add_ln104_4' <Predicate = (!icmp_ln101)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 61 [1/1] (1.76ns)   --->   "br label %.preheader" [lenet/lenet_hls.cpp:103]   --->   Operation 61 'br' <Predicate = (!icmp_ln101)> <Delay = 1.76>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln106_3 = zext i3 %w_0 to i10" [lenet/lenet_hls.cpp:106]   --->   Operation 62 'zext' 'zext_ln106_3' <Predicate = (icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 63 [1/1] (1.73ns)   --->   "%add_ln106_3 = add i10 %add_ln106_2, %zext_ln106_3" [lenet/lenet_hls.cpp:106]   --->   Operation 63 'add' 'add_ln106_3' <Predicate = (icmp_ln101)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln106_4 = zext i10 %add_ln106_3 to i64" [lenet/lenet_hls.cpp:106]   --->   Operation 64 'zext' 'zext_ln106_4' <Predicate = (icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 65 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [400 x float]* %output_r, i64 0, i64 %zext_ln106_4" [lenet/lenet_hls.cpp:106]   --->   Operation 65 'getelementptr' 'output_addr' <Predicate = (icmp_ln101)> <Delay = 0.00>
+ST_5 : Operation 66 [1/1] (3.25ns)   --->   "store float %max_value_0, float* %output_addr, align 4" [lenet/lenet_hls.cpp:106]   --->   Operation 66 'store' <Predicate = (icmp_ln101)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 400> <RAM>
+ST_5 : Operation 67 [1/1] (0.00ns)   --->   "br label %.preheader2" [lenet/lenet_hls.cpp:98]   --->   Operation 67 'br' <Predicate = (icmp_ln101)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 6.53>
+ST_6 : Operation 68 [1/1] (0.00ns)   --->   "%max_value_1 = phi float [ %max_value, %._crit_edge ], [ %max_value_0, %.preheader.preheader ]"   --->   Operation 68 'phi' 'max_value_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 69 [1/1] (0.00ns)   --->   "%j_0 = phi i2 [ %j, %._crit_edge ], [ 0, %.preheader.preheader ]"   --->   Operation 69 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln103 = zext i2 %j_0 to i4" [lenet/lenet_hls.cpp:103]   --->   Operation 70 'zext' 'zext_ln103' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 71 [1/1] (0.95ns)   --->   "%icmp_ln103 = icmp eq i2 %j_0, -2" [lenet/lenet_hls.cpp:103]   --->   Operation 71 'icmp' 'icmp_ln103' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 72 [1/1] (0.00ns)   --->   "%empty_37 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 2, i64 2, i64 2)"   --->   Operation 72 'speclooptripcount' 'empty_37' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 73 [1/1] (1.56ns)   --->   "%j = add i2 %j_0, 1" [lenet/lenet_hls.cpp:103]   --->   Operation 73 'add' 'j' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "br i1 %icmp_ln103, label %.preheader1.loopexit, label %._crit_edge" [lenet/lenet_hls.cpp:103]   --->   Operation 74 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (1.73ns)   --->   "%add_ln104_1 = add i4 %zext_ln103, %shl_ln104_1" [lenet/lenet_hls.cpp:104]   --->   Operation 75 'add' 'add_ln104_1' <Predicate = (!icmp_ln103)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%zext_ln104_5 = zext i4 %add_ln104_1 to i12" [lenet/lenet_hls.cpp:104]   --->   Operation 76 'zext' 'zext_ln104_5' <Predicate = (!icmp_ln103)> <Delay = 0.00>
+ST_6 : Operation 77 [1/1] (1.54ns)   --->   "%add_ln104_5 = add i12 %add_ln104_4, %zext_ln104_5" [lenet/lenet_hls.cpp:104]   --->   Operation 77 'add' 'add_ln104_5' <Predicate = (!icmp_ln103)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%zext_ln104_6 = zext i12 %add_ln104_5 to i64" [lenet/lenet_hls.cpp:104]   --->   Operation 78 'zext' 'zext_ln104_6' <Predicate = (!icmp_ln103)> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (0.00ns)   --->   "%input_addr = getelementptr [1600 x float]* %input_r, i64 0, i64 %zext_ln104_6" [lenet/lenet_hls.cpp:104]   --->   Operation 79 'getelementptr' 'input_addr' <Predicate = (!icmp_ln103)> <Delay = 0.00>
+ST_6 : Operation 80 [2/2] (3.25ns)   --->   "%input_load = load float* %input_addr, align 4" [lenet/lenet_hls.cpp:104]   --->   Operation 80 'load' 'input_load' <Predicate = (!icmp_ln103)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 400> <RAM>
+ST_6 : Operation 81 [1/1] (0.00ns)   --->   "br label %.preheader1"   --->   Operation 81 'br' <Predicate = (icmp_ln103)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 8.68>
+ST_7 : Operation 82 [1/2] (3.25ns)   --->   "%input_load = load float* %input_addr, align 4" [lenet/lenet_hls.cpp:104]   --->   Operation 82 'load' 'input_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 400> <RAM>
+ST_7 : Operation 83 [2/2] (5.43ns)   --->   "%tmp_9 = fcmp ogt float %max_value_1, %input_load" [lenet/lenet_hls.cpp:104]   --->   Operation 83 'fcmp' 'tmp_9' <Predicate = true> <Delay = 5.43> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.10>
+ST_8 : Operation 84 [1/1] (0.00ns)   --->   "%bitcast_ln104 = bitcast float %max_value_1 to i32" [lenet/lenet_hls.cpp:104]   --->   Operation 84 'bitcast' 'bitcast_ln104' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 85 [1/1] (0.00ns)   --->   "%tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %bitcast_ln104, i32 23, i32 30)" [lenet/lenet_hls.cpp:104]   --->   Operation 85 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 86 [1/1] (0.00ns)   --->   "%trunc_ln104 = trunc i32 %bitcast_ln104 to i23" [lenet/lenet_hls.cpp:104]   --->   Operation 86 'trunc' 'trunc_ln104' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%bitcast_ln104_1 = bitcast float %input_load to i32" [lenet/lenet_hls.cpp:104]   --->   Operation 87 'bitcast' 'bitcast_ln104_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%tmp_8 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %bitcast_ln104_1, i32 23, i32 30)" [lenet/lenet_hls.cpp:104]   --->   Operation 88 'partselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%trunc_ln104_1 = trunc i32 %bitcast_ln104_1 to i23" [lenet/lenet_hls.cpp:104]   --->   Operation 89 'trunc' 'trunc_ln104_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (1.55ns)   --->   "%icmp_ln104 = icmp ne i8 %tmp, -1" [lenet/lenet_hls.cpp:104]   --->   Operation 90 'icmp' 'icmp_ln104' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 91 [1/1] (2.44ns)   --->   "%icmp_ln104_1 = icmp eq i23 %trunc_ln104, 0" [lenet/lenet_hls.cpp:104]   --->   Operation 91 'icmp' 'icmp_ln104_1' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node and_ln104_1)   --->   "%or_ln104 = or i1 %icmp_ln104_1, %icmp_ln104" [lenet/lenet_hls.cpp:104]   --->   Operation 92 'or' 'or_ln104' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 93 [1/1] (1.55ns)   --->   "%icmp_ln104_2 = icmp ne i8 %tmp_8, -1" [lenet/lenet_hls.cpp:104]   --->   Operation 93 'icmp' 'icmp_ln104_2' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 94 [1/1] (2.44ns)   --->   "%icmp_ln104_3 = icmp eq i23 %trunc_ln104_1, 0" [lenet/lenet_hls.cpp:104]   --->   Operation 94 'icmp' 'icmp_ln104_3' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 95 [1/1] (0.00ns) (grouped into LUT with out node and_ln104_1)   --->   "%or_ln104_1 = or i1 %icmp_ln104_3, %icmp_ln104_2" [lenet/lenet_hls.cpp:104]   --->   Operation 95 'or' 'or_ln104_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node and_ln104_1)   --->   "%and_ln104 = and i1 %or_ln104, %or_ln104_1" [lenet/lenet_hls.cpp:104]   --->   Operation 96 'and' 'and_ln104' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 97 [1/2] (5.43ns)   --->   "%tmp_9 = fcmp ogt float %max_value_1, %input_load" [lenet/lenet_hls.cpp:104]   --->   Operation 97 'fcmp' 'tmp_9' <Predicate = true> <Delay = 5.43> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 98 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln104_1 = and i1 %and_ln104, %tmp_9" [lenet/lenet_hls.cpp:104]   --->   Operation 98 'and' 'and_ln104_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 99 [1/1] (0.69ns) (out node of the LUT)   --->   "%max_value = select i1 %and_ln104_1, float %max_value_1, float %input_load" [lenet/lenet_hls.cpp:104]   --->   Operation 99 'select' 'max_value' <Predicate = true> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 100 [1/1] (0.00ns)   --->   "br label %.preheader" [lenet/lenet_hls.cpp:103]   --->   Operation 100 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('c') with incoming values : ('c', lenet/lenet_hls.cpp:96) [5]  (1.77 ns)
+
+ <State 2>: 1.92ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', lenet/lenet_hls.cpp:96) [5]  (0 ns)
+	'add' operation ('add_ln104_2', lenet/lenet_hls.cpp:104) [16]  (1.92 ns)
+
+ <State 3>: 3.65ns
+The critical path consists of the following:
+	'phi' operation ('h') with incoming values : ('h', lenet/lenet_hls.cpp:97) [22]  (0 ns)
+	'add' operation ('add_ln106_1', lenet/lenet_hls.cpp:106) [30]  (1.92 ns)
+	'add' operation ('add_ln106_2', lenet/lenet_hls.cpp:106) [33]  (1.73 ns)
+
+ <State 4>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('max_value_0', lenet/lenet_hls.cpp:104) with incoming values : ('max_value', lenet/lenet_hls.cpp:104) [45]  (1.77 ns)
+
+ <State 5>: 5.1ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', lenet/lenet_hls.cpp:101) [46]  (0 ns)
+	'add' operation ('add_ln104', lenet/lenet_hls.cpp:104) [53]  (1.74 ns)
+	'add' operation ('add_ln104_3', lenet/lenet_hls.cpp:104) [55]  (1.82 ns)
+	'add' operation ('add_ln104_4', lenet/lenet_hls.cpp:104) [59]  (1.55 ns)
+
+ <State 6>: 6.54ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', lenet/lenet_hls.cpp:103) [63]  (0 ns)
+	'add' operation ('add_ln104_1', lenet/lenet_hls.cpp:104) [70]  (1.74 ns)
+	'add' operation ('add_ln104_5', lenet/lenet_hls.cpp:104) [72]  (1.55 ns)
+	'getelementptr' operation ('input_addr', lenet/lenet_hls.cpp:104) [74]  (0 ns)
+	'load' operation ('input_load', lenet/lenet_hls.cpp:104) on array 'input_r' [75]  (3.25 ns)
+
+ <State 7>: 8.69ns
+The critical path consists of the following:
+	'load' operation ('input_load', lenet/lenet_hls.cpp:104) on array 'input_r' [75]  (3.25 ns)
+	'fcmp' operation ('tmp_9', lenet/lenet_hls.cpp:104) [89]  (5.43 ns)
+
+ <State 8>: 7.11ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_9', lenet/lenet_hls.cpp:104) [89]  (5.43 ns)
+	'and' operation ('and_ln104_1', lenet/lenet_hls.cpp:104) [90]  (0.978 ns)
+	'select' operation ('max_value', lenet/lenet_hls.cpp:104) [91]  (0.698 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,4 +1,4 @@
-18:54:25 **** Auto Build of configuration Debug for project sd_card_demo ****
+15:50:00 **** Build of configuration Debug for project sd_card_demo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -24,5 +24,5 @@ arm-none-eabi-size sd_card_demo.elf  |tee "sd_card_demo.elf.size"
 'Finished building: sd_card_demo.elf.size'
 ' '
 
-18:54:26 Build Finished (took 667ms)
+15:50:01 Build Finished (took 1s.5ms)
 

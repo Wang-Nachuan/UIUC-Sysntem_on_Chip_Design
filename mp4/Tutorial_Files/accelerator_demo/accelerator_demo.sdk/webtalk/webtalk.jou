@@ -2,11 +2,11 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # 
-# Start of session at: Wed Oct 21 19:04:28 2020
-# Process ID: 7796
-# Current directory: C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/webtalk
+# Start of session at: Sun Oct 30 00:24:32 2022
+# Process ID: 7620
+# Current directory: D:/Code/UIUC-ECE527/mp4/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
-# Log file: C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/webtalk/webtalk.log
-# Journal file: C:/Users/g1003/OneDrive/Desktop/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/webtalk\webtalk.jou
+# Log file: D:/Code/UIUC-ECE527/mp4/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/webtalk/webtalk.log
+# Journal file: D:/Code/UIUC-ECE527/mp4/Tutorial_Files/accelerator_demo/accelerator_demo.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

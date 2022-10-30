@@ -1,0 +1,70 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'lenet_top'" level="0">
+<item name = "Date">Sun Oct 30 00:20:24 2022
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">lenet</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.685, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">5149662, 5149662, 5149662, 5149662, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_i_convolution3_fu_561">i_convolution3, 2990753, 2990753, 2990753, 2990753, none</column>
+<column name="grp_i_convolution5_fu_569">i_convolution5, 584281, 584281, 584281, 584281, none</column>
+<column name="grp_i_convolution1_fu_577">i_convolution1, 1383325, 1383325, 1383325, 1383325, none</column>
+<column name="grp_i_max_pooling2_fu_585">i_max_pooling2, 21349, 21349, 21349, 21349, none</column>
+<column name="grp_i_max_pooling4_fu_591">i_max_pooling4, 7393, 7393, 7393, 7393, none</column>
+<column name="grp_i_relu1_fu_597">i_relu1, 14461, 14461, 14461, 14461, none</column>
+<column name="grp_i_relu3_fu_602">i_relu3, 5153, 5153, 5153, 5153, none</column>
+<column name="grp_i_relu4_fu_607">i_relu4, 1393, 1393, 1393, 1393, none</column>
+<column name="grp_i_relu2_fu_612">i_relu2, 3709, 3709, 3709, 3709, none</column>
+<column name="grp_ld_weights5_fu_617">ld_weights5, 119281, 119281, 119281, 119281, none</column>
+<column name="grp_ld_weights3_fu_624">ld_weights3, 5985, 5985, 5985, 5985, none</column>
+<column name="grp_ld_weights1_fu_631">ld_weights1, 373, 373, 373, 373, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">2112, 2112, 66, -, -, 32, no</column>
+<column name=" + Loop 1.1">64, 64, 2, -, -, 32, no</column>
+<column name="- Loop 2">2420, 2420, 242, -, -, 10, no</column>
+<column name=" + Loop 2.1">240, 240, 2, -, -, 120, no</column>
+<column name="- Loop 3">12, 12, 2, -, -, 6, no</column>
+<column name="- Loop 4">32, 32, 2, -, -, 16, no</column>
+<column name="- Loop 5">240, 240, 2, -, -, 120, no</column>
+<column name="- Loop 6">20, 20, 2, -, -, 10, no</column>
+<column name="- Loop 7">360, 360, 3, -, -, 120, no</column>
+<column name="- Loop 8">13290, 13290, 1329, -, -, 10, no</column>
+<column name=" + Loop 8.1">1320, 1320, 11, -, -, 120, no</column>
+<column name="- Loop 9">30, 30, 3, -, -, 10, no</column>
+<column name="- Loop 10">20, 20, 2, -, -, 10, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,1389 @@
+INFO-FLOW: Workspace D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1 opened at Sun Oct 30 00:20:11 -0500 2022
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.427 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.504 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.639 sec.
+Execute   set_part xc7z020clg400-1 -tool vivado 
+Execute     ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'lenet/lenet_hls.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling lenet/lenet_hls.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted lenet/lenet_hls.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Applications/Vivado/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "lenet/lenet_hls.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot" -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp" 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Applications/Vivado/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E lenet/lenet_hls.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp
+Command       clang done; 0.654 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.103 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Applications/Vivado/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot" -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp"  -o "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Applications/Vivado/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/useless.bc
+Command       clang done; 0.628 sec.
+INFO-FLOW: Done: GCC PP time: 1.4 seconds per iteration
+Execute       source D:/Applications/Vivado/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp std=gnu++98 -directive=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp std=gnu++98 -directive=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenet_hls.pp.0.cpp.diag.yml D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenet_hls.pp.0.cpp.out.log 2> D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenet_hls.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/tidy-3.1.lenet_hls.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/tidy-3.1.lenet_hls.pp.0.cpp.out.log 2> D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/tidy-3.1.lenet_hls.pp.0.cpp.err.log 
+Command         ap_eval done; 0.253 sec.
+Execute         source D:/Applications/Vivado/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-legacy-rewriter.lenet_hls.pp.0.cpp.out.log 2> D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-legacy-rewriter.lenet_hls.pp.0.cpp.err.log 
+Command       tidy_31 done; 0.423 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.6 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.108 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Applications/Vivado/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot" -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.bc" 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Applications/Vivado/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.bc
+Command       clang done; 0.645 sec.
+INFO: [HLS 200-10] Analyzing design file 'lenet/lenet_gold.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling lenet/lenet_gold.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       is_encrypted lenet/lenet_gold.cpp 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Applications/Vivado/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "lenet/lenet_gold.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot" -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp" 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Applications/Vivado/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E lenet/lenet_gold.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp
+Command       clang done; 0.615 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Applications/Vivado/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot" -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp"  -o "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Applications/Vivado/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/useless.bc
+Command       clang done; 0.615 sec.
+INFO-FLOW: Done: GCC PP time: 1.3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 -directive=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 -directive=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenet_gold.pp.0.cpp.diag.yml D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenet_gold.pp.0.cpp.out.log 2> D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenet_gold.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/tidy-3.1.lenet_gold.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/tidy-3.1.lenet_gold.pp.0.cpp.out.log 2> D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/tidy-3.1.lenet_gold.pp.0.cpp.err.log 
+Command         ap_eval done; 0.224 sec.
+Execute         ap_eval exec -ignorestderr D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-legacy-rewriter.lenet_gold.pp.0.cpp.out.log 2> D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/xilinx-legacy-rewriter.lenet_gold.pp.0.cpp.err.log 
+Command       tidy_31 done; 0.348 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.5 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Applications/Vivado/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot" -I "D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.bc" 
+INFO-FLOW: exec D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Applications/Vivado/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot -I D:/Applications/Vivado/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.bc
+Command       clang done; 0.655 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_hls.g.bc D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_gold.g.bc -hls-opt -except-internalize lenet_top -LD:/Applications/Vivado/Vivado/2019.1/win64/lib -lhlsm -lhlsmc++ -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.771 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 185.188 ; gain = 93.508
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 185.188 ; gain = 93.508
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.pp.bc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Applications/Vivado/Vivado/2019.1/win64/lib -lfloatconversion -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.365 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top lenet_top -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.g.0.bc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 185.188 ; gain = 93.508
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.g.1.bc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'ld_input' into 'lenet_top' (lenet/lenet_hls.cpp:281) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_weights6' into 'lenet_top' (lenet/lenet_hls.cpp:285) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias1' into 'lenet_top' (lenet/lenet_hls.cpp:286) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias3' into 'lenet_top' (lenet/lenet_hls.cpp:287) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias5' into 'lenet_top' (lenet/lenet_hls.cpp:288) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias6' into 'lenet_top' (lenet/lenet_hls.cpp:289) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_relu5' into 'lenet_top' (lenet/lenet_hls.cpp:305) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_fc6' into 'lenet_top' (lenet/lenet_hls.cpp:307) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_relu6' into 'lenet_top' (lenet/lenet_hls.cpp:308) automatically.
+INFO: [XFORM 203-602] Inlining function 'st_output' into 'lenet_top' (lenet/lenet_hls.cpp:311) automatically.
+Command         transform done; 0.143 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 185.188 ; gain = 93.508
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.g.1.bc to D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.o.1.bc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-102] Partitioning array 'weights6_buf.0' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'output.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights.0' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input_buf' (lenet/lenet_hls.cpp:262) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights1_buf' (lenet/lenet_hls.cpp:263) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights6_buf' (lenet/lenet_hls.cpp:266) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input6_inter' (lenet/lenet_hls.cpp:278) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights6_buf.0' (lenet/lenet_hls.cpp:266) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input6_inter.0' (lenet/lenet_hls.cpp:278) in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_input' into 'lenet_top' (lenet/lenet_hls.cpp:281) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_weights6' into 'lenet_top' (lenet/lenet_hls.cpp:285) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias1' into 'lenet_top' (lenet/lenet_hls.cpp:286) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias3' into 'lenet_top' (lenet/lenet_hls.cpp:287) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias5' into 'lenet_top' (lenet/lenet_hls.cpp:288) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias6' into 'lenet_top' (lenet/lenet_hls.cpp:289) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_relu5' into 'lenet_top' (lenet/lenet_hls.cpp:305) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_fc6' into 'lenet_top' (lenet/lenet_hls.cpp:307) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_relu6' into 'lenet_top' (lenet/lenet_hls.cpp:308) automatically.
+INFO: [XFORM 203-602] Inlining function 'st_output' into 'lenet_top' (lenet/lenet_hls.cpp:311) automatically.
+Command         transform done; 0.445 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.249 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 185.188 ; gain = 93.508
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.o.2.bc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 1.59 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 295.559 ; gain = 203.879
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 2.952 sec.
+Command     elaborate done; 9.465 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'lenet_top' ...
+Execute       ap_set_top_model lenet_top 
+Execute       get_model_list lenet_top -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model lenet_top 
+Execute       preproc_iomode -model i_convolution5 
+Execute       preproc_iomode -model i_relu4 
+Execute       preproc_iomode -model i_max_pooling4 
+Execute       preproc_iomode -model i_relu3 
+Execute       preproc_iomode -model i_convolution3 
+Execute       preproc_iomode -model i_relu2 
+Execute       preproc_iomode -model i_max_pooling2 
+Execute       preproc_iomode -model i_relu1 
+Execute       preproc_iomode -model i_convolution1 
+Execute       preproc_iomode -model ld_weights5 
+Execute       preproc_iomode -model ld_weights3 
+Execute       preproc_iomode -model ld_weights1 
+Execute       get_model_list lenet_top -filter all-wo-channel 
+INFO-FLOW: Model list for configure: ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top
+INFO-FLOW: Configuring Module : ld_weights1 ...
+Execute       set_default_model ld_weights1 
+Execute       apply_spec_resource_limit ld_weights1 
+INFO-FLOW: Configuring Module : ld_weights3 ...
+Execute       set_default_model ld_weights3 
+Execute       apply_spec_resource_limit ld_weights3 
+INFO-FLOW: Configuring Module : ld_weights5 ...
+Execute       set_default_model ld_weights5 
+Execute       apply_spec_resource_limit ld_weights5 
+INFO-FLOW: Configuring Module : i_convolution1 ...
+Execute       set_default_model i_convolution1 
+Execute       apply_spec_resource_limit i_convolution1 
+INFO-FLOW: Configuring Module : i_relu1 ...
+Execute       set_default_model i_relu1 
+Execute       apply_spec_resource_limit i_relu1 
+INFO-FLOW: Configuring Module : i_max_pooling2 ...
+Execute       set_default_model i_max_pooling2 
+Execute       apply_spec_resource_limit i_max_pooling2 
+INFO-FLOW: Configuring Module : i_relu2 ...
+Execute       set_default_model i_relu2 
+Execute       apply_spec_resource_limit i_relu2 
+INFO-FLOW: Configuring Module : i_convolution3 ...
+Execute       set_default_model i_convolution3 
+Execute       apply_spec_resource_limit i_convolution3 
+INFO-FLOW: Configuring Module : i_relu3 ...
+Execute       set_default_model i_relu3 
+Execute       apply_spec_resource_limit i_relu3 
+INFO-FLOW: Configuring Module : i_max_pooling4 ...
+Execute       set_default_model i_max_pooling4 
+Execute       apply_spec_resource_limit i_max_pooling4 
+INFO-FLOW: Configuring Module : i_relu4 ...
+Execute       set_default_model i_relu4 
+Execute       apply_spec_resource_limit i_relu4 
+INFO-FLOW: Configuring Module : i_convolution5 ...
+Execute       set_default_model i_convolution5 
+Execute       apply_spec_resource_limit i_convolution5 
+INFO-FLOW: Configuring Module : lenet_top ...
+Execute       set_default_model lenet_top 
+Execute       apply_spec_resource_limit lenet_top 
+INFO-FLOW: Model list for preprocess: ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top
+INFO-FLOW: Preprocessing Module: ld_weights1 ...
+Execute       set_default_model ld_weights1 
+Execute       cdfg_preprocess -model ld_weights1 
+Execute       rtl_gen_preprocess ld_weights1 
+INFO-FLOW: Preprocessing Module: ld_weights3 ...
+Execute       set_default_model ld_weights3 
+Execute       cdfg_preprocess -model ld_weights3 
+Execute       rtl_gen_preprocess ld_weights3 
+INFO-FLOW: Preprocessing Module: ld_weights5 ...
+Execute       set_default_model ld_weights5 
+Execute       cdfg_preprocess -model ld_weights5 
+Execute       rtl_gen_preprocess ld_weights5 
+INFO-FLOW: Preprocessing Module: i_convolution1 ...
+Execute       set_default_model i_convolution1 
+Execute       cdfg_preprocess -model i_convolution1 
+Execute       rtl_gen_preprocess i_convolution1 
+INFO-FLOW: Preprocessing Module: i_relu1 ...
+Execute       set_default_model i_relu1 
+Execute       cdfg_preprocess -model i_relu1 
+Execute       rtl_gen_preprocess i_relu1 
+INFO-FLOW: Preprocessing Module: i_max_pooling2 ...
+Execute       set_default_model i_max_pooling2 
+Execute       cdfg_preprocess -model i_max_pooling2 
+Execute       rtl_gen_preprocess i_max_pooling2 
+INFO-FLOW: Preprocessing Module: i_relu2 ...
+Execute       set_default_model i_relu2 
+Execute       cdfg_preprocess -model i_relu2 
+Execute       rtl_gen_preprocess i_relu2 
+INFO-FLOW: Preprocessing Module: i_convolution3 ...
+Execute       set_default_model i_convolution3 
+Execute       cdfg_preprocess -model i_convolution3 
+Execute       rtl_gen_preprocess i_convolution3 
+INFO-FLOW: Preprocessing Module: i_relu3 ...
+Execute       set_default_model i_relu3 
+Execute       cdfg_preprocess -model i_relu3 
+Execute       rtl_gen_preprocess i_relu3 
+INFO-FLOW: Preprocessing Module: i_max_pooling4 ...
+Execute       set_default_model i_max_pooling4 
+Execute       cdfg_preprocess -model i_max_pooling4 
+Execute       rtl_gen_preprocess i_max_pooling4 
+INFO-FLOW: Preprocessing Module: i_relu4 ...
+Execute       set_default_model i_relu4 
+Execute       cdfg_preprocess -model i_relu4 
+Execute       rtl_gen_preprocess i_relu4 
+INFO-FLOW: Preprocessing Module: i_convolution5 ...
+Execute       set_default_model i_convolution5 
+Execute       cdfg_preprocess -model i_convolution5 
+Execute       rtl_gen_preprocess i_convolution5 
+INFO-FLOW: Preprocessing Module: lenet_top ...
+Execute       set_default_model lenet_top 
+Execute       cdfg_preprocess -model lenet_top 
+Execute       rtl_gen_preprocess lenet_top 
+WARNING: [SYN 201-107] Renaming port name 'lenet_top/input' to 'lenet_top/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'lenet_top/output' to 'lenet_top/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO-FLOW: Model list for synthesis: ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ld_weights1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ld_weights1 
+Execute       schedule -model ld_weights1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.511 seconds; current allocated memory: 241.849 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.verbose.sched.rpt 
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.sched.adb -f 
+INFO-FLOW: Finish scheduling ld_weights1.
+Execute       set_default_model ld_weights1 
+Execute       bind -model ld_weights1 
+BIND OPTION: model=ld_weights1
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.051 seconds; current allocated memory: 242.115 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.bind.adb -f 
+INFO-FLOW: Finish binding ld_weights1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ld_weights3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ld_weights3 
+Execute       schedule -model ld_weights3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 242.267 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.sched.adb -f 
+INFO-FLOW: Finish scheduling ld_weights3.
+Execute       set_default_model ld_weights3 
+Execute       bind -model ld_weights3 
+BIND OPTION: model=ld_weights3
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 242.436 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.bind.adb -f 
+INFO-FLOW: Finish binding ld_weights3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ld_weights5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model ld_weights5 
+Execute       schedule -model ld_weights5 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.064 seconds; current allocated memory: 242.566 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.sched.adb -f 
+INFO-FLOW: Finish scheduling ld_weights5.
+Execute       set_default_model ld_weights5 
+Execute       bind -model ld_weights5 
+BIND OPTION: model=ld_weights5
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 242.764 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.bind.adb -f 
+INFO-FLOW: Finish binding ld_weights5.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_convolution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model i_convolution1 
+Execute       schedule -model i_convolution1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 243.000 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.sched.adb -f 
+INFO-FLOW: Finish scheduling i_convolution1.
+Execute       set_default_model i_convolution1 
+Execute       bind -model i_convolution1 
+BIND OPTION: model=i_convolution1
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.066 seconds; current allocated memory: 243.293 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.bind.adb -f 
+INFO-FLOW: Finish binding i_convolution1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_relu1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model i_relu1 
+Execute       schedule -model i_relu1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.087 seconds; current allocated memory: 243.477 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.sched.adb -f 
+INFO-FLOW: Finish scheduling i_relu1.
+Execute       set_default_model i_relu1 
+Execute       bind -model i_relu1 
+BIND OPTION: model=i_relu1
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 243.643 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.bind.adb -f 
+INFO-FLOW: Finish binding i_relu1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_max_pooling2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model i_max_pooling2 
+Execute       schedule -model i_max_pooling2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.088 seconds; current allocated memory: 243.863 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.sched.adb -f 
+INFO-FLOW: Finish scheduling i_max_pooling2.
+Execute       set_default_model i_max_pooling2 
+Execute       bind -model i_max_pooling2 
+BIND OPTION: model=i_max_pooling2
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 244.154 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.bind.adb -f 
+INFO-FLOW: Finish binding i_max_pooling2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_relu2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model i_relu2 
+Execute       schedule -model i_relu2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.089 seconds; current allocated memory: 244.339 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.sched.adb -f 
+INFO-FLOW: Finish scheduling i_relu2.
+Execute       set_default_model i_relu2 
+Execute       bind -model i_relu2 
+BIND OPTION: model=i_relu2
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.053 seconds; current allocated memory: 244.504 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.bind.adb -f 
+INFO-FLOW: Finish binding i_relu2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model i_convolution3 
+Execute       schedule -model i_convolution3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.084 seconds; current allocated memory: 244.778 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.sched.adb -f 
+INFO-FLOW: Finish scheduling i_convolution3.
+Execute       set_default_model i_convolution3 
+Execute       bind -model i_convolution3 
+BIND OPTION: model=i_convolution3
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 245.175 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.bind.adb -f 
+INFO-FLOW: Finish binding i_convolution3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_relu3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model i_relu3 
+Execute       schedule -model i_relu3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 245.304 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.sched.adb -f 
+INFO-FLOW: Finish scheduling i_relu3.
+Execute       set_default_model i_relu3 
+Execute       bind -model i_relu3 
+BIND OPTION: model=i_relu3
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.075 seconds; current allocated memory: 245.467 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.bind.adb -f 
+INFO-FLOW: Finish binding i_relu3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_max_pooling4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model i_max_pooling4 
+Execute       schedule -model i_max_pooling4 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 245.713 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.sched.adb -f 
+INFO-FLOW: Finish scheduling i_max_pooling4.
+Execute       set_default_model i_max_pooling4 
+Execute       bind -model i_max_pooling4 
+BIND OPTION: model=i_max_pooling4
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.071 seconds; current allocated memory: 245.984 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.bind.adb -f 
+INFO-FLOW: Finish binding i_max_pooling4.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_relu4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model i_relu4 
+Execute       schedule -model i_relu4 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.091 seconds; current allocated memory: 246.124 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.sched.adb -f 
+INFO-FLOW: Finish scheduling i_relu4.
+Execute       set_default_model i_relu4 
+Execute       bind -model i_relu4 
+BIND OPTION: model=i_relu4
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 246.316 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.bind.adb -f 
+INFO-FLOW: Finish binding i_relu4.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_convolution5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model i_convolution5 
+Execute       schedule -model i_convolution5 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.084 seconds; current allocated memory: 246.519 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.sched.adb -f 
+INFO-FLOW: Finish scheduling i_convolution5.
+Execute       set_default_model i_convolution5 
+Execute       bind -model i_convolution5 
+BIND OPTION: model=i_convolution5
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.074 seconds; current allocated memory: 246.787 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.verbose.bind.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.bind.adb -f 
+INFO-FLOW: Finish binding i_convolution5.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model lenet_top 
+Execute       schedule -model lenet_top 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.131 seconds; current allocated memory: 247.350 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.verbose.sched.rpt 
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.sched.adb -f 
+INFO-FLOW: Finish scheduling lenet_top.
+Execute       set_default_model lenet_top 
+Execute       bind -model lenet_top 
+BIND OPTION: model=lenet_top
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.424 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.509 seconds; current allocated memory: 248.620 MB.
+Execute       syn_report -verbosereport -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.verbose.bind.rpt 
+Command       syn_report done; 0.174 sec.
+Execute       db_write -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.bind.adb -f 
+INFO-FLOW: Finish binding lenet_top.
+Execute       get_model_list lenet_top -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess ld_weights1 
+Execute       rtl_gen_preprocess ld_weights3 
+Execute       rtl_gen_preprocess ld_weights5 
+Execute       rtl_gen_preprocess i_convolution1 
+Execute       rtl_gen_preprocess i_relu1 
+Execute       rtl_gen_preprocess i_max_pooling2 
+Execute       rtl_gen_preprocess i_relu2 
+Execute       rtl_gen_preprocess i_convolution3 
+Execute       rtl_gen_preprocess i_relu3 
+Execute       rtl_gen_preprocess i_max_pooling4 
+Execute       rtl_gen_preprocess i_relu4 
+Execute       rtl_gen_preprocess i_convolution5 
+Execute       rtl_gen_preprocess lenet_top 
+INFO-FLOW: Model list for RTL generation: ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ld_weights1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model ld_weights1 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ld_weights1'.
+INFO: [HLS 200-111]  Elapsed time: 0.255 seconds; current allocated memory: 249.110 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ld_weights1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/ld_weights1 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl ld_weights1 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/ld_weights1 
+Execute       gen_rtl ld_weights1 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/ld_weights1 
+Execute       syn_report -csynth -model ld_weights1 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/ld_weights1_csynth.rpt 
+Execute       syn_report -rtlxml -model ld_weights1 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/ld_weights1_csynth.xml 
+Execute       syn_report -verbosereport -model ld_weights1 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.verbose.rpt 
+Execute       db_write -model ld_weights1 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.adb 
+Execute       gen_tb_info ld_weights1 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ld_weights3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model ld_weights3 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ld_weights3'.
+INFO: [HLS 200-111]  Elapsed time: 0.106 seconds; current allocated memory: 249.492 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ld_weights3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/ld_weights3 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl ld_weights3 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/ld_weights3 
+Execute       gen_rtl ld_weights3 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/ld_weights3 
+Execute       syn_report -csynth -model ld_weights3 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/ld_weights3_csynth.rpt 
+Execute       syn_report -rtlxml -model ld_weights3 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/ld_weights3_csynth.xml 
+Execute       syn_report -verbosereport -model ld_weights3 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.verbose.rpt 
+Execute       db_write -model ld_weights3 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.adb 
+Execute       gen_tb_info ld_weights3 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ld_weights5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model ld_weights5 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ld_weights5'.
+INFO: [HLS 200-111]  Elapsed time: 0.131 seconds; current allocated memory: 249.809 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl ld_weights5 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/ld_weights5 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl ld_weights5 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/ld_weights5 
+Execute       gen_rtl ld_weights5 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/ld_weights5 
+Execute       syn_report -csynth -model ld_weights5 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/ld_weights5_csynth.rpt 
+Execute       syn_report -rtlxml -model ld_weights5 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/ld_weights5_csynth.xml 
+Execute       syn_report -verbosereport -model ld_weights5 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.verbose.rpt 
+Execute       db_write -model ld_weights5 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.adb 
+Execute       gen_tb_info ld_weights5 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_convolution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model i_convolution1 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'lenet_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'lenet_top_fadd_32bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'lenet_top_fmul_32cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_convolution1'.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 250.444 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl i_convolution1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/i_convolution1 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl i_convolution1 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/i_convolution1 
+Execute       gen_rtl i_convolution1 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/i_convolution1 
+Execute       syn_report -csynth -model i_convolution1 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_convolution1_csynth.rpt 
+Execute       syn_report -rtlxml -model i_convolution1 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_convolution1_csynth.xml 
+Execute       syn_report -verbosereport -model i_convolution1 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.verbose.rpt 
+Execute       db_write -model i_convolution1 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.adb 
+Execute       gen_tb_info i_convolution1 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_relu1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model i_relu1 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'lenet_top_fcmp_32ns_32ns_1_2_1' to 'lenet_top_fcmp_32dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_relu1'.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 250.860 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl i_relu1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/i_relu1 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl i_relu1 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/i_relu1 
+Execute       gen_rtl i_relu1 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/i_relu1 
+Execute       syn_report -csynth -model i_relu1 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_relu1_csynth.rpt 
+Execute       syn_report -rtlxml -model i_relu1 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_relu1_csynth.xml 
+Execute       syn_report -verbosereport -model i_relu1 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.verbose.rpt 
+Execute       db_write -model i_relu1 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.adb 
+Execute       gen_tb_info i_relu1 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_max_pooling2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model i_max_pooling2 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_max_pooling2'.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 251.420 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl i_max_pooling2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/i_max_pooling2 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl i_max_pooling2 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/i_max_pooling2 
+Execute       gen_rtl i_max_pooling2 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/i_max_pooling2 
+Execute       syn_report -csynth -model i_max_pooling2 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_max_pooling2_csynth.rpt 
+Execute       syn_report -rtlxml -model i_max_pooling2 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_max_pooling2_csynth.xml 
+Execute       syn_report -verbosereport -model i_max_pooling2 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.verbose.rpt 
+Execute       db_write -model i_max_pooling2 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.adb 
+Execute       gen_tb_info i_max_pooling2 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_relu2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model i_relu2 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_relu2'.
+INFO: [HLS 200-111]  Elapsed time: 0.186 seconds; current allocated memory: 251.888 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl i_relu2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/i_relu2 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl i_relu2 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/i_relu2 
+Execute       gen_rtl i_relu2 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/i_relu2 
+Execute       syn_report -csynth -model i_relu2 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_relu2_csynth.rpt 
+Execute       syn_report -rtlxml -model i_relu2 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_relu2_csynth.xml 
+Execute       syn_report -verbosereport -model i_relu2 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.verbose.rpt 
+Execute       db_write -model i_relu2 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.adb 
+Execute       gen_tb_info i_relu2 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model i_convolution3 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_convolution3'.
+INFO: [HLS 200-111]  Elapsed time: 0.156 seconds; current allocated memory: 252.602 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl i_convolution3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/i_convolution3 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl i_convolution3 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/i_convolution3 
+Execute       gen_rtl i_convolution3 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/i_convolution3 
+Execute       syn_report -csynth -model i_convolution3 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_convolution3_csynth.rpt 
+Execute       syn_report -rtlxml -model i_convolution3 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_convolution3_csynth.xml 
+Execute       syn_report -verbosereport -model i_convolution3 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.verbose.rpt 
+Execute       db_write -model i_convolution3 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.adb 
+Execute       gen_tb_info i_convolution3 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_relu3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model i_relu3 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_relu3'.
+INFO: [HLS 200-111]  Elapsed time: 0.213 seconds; current allocated memory: 253.018 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl i_relu3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/i_relu3 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl i_relu3 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/i_relu3 
+Execute       gen_rtl i_relu3 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/i_relu3 
+Execute       syn_report -csynth -model i_relu3 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_relu3_csynth.rpt 
+Execute       syn_report -rtlxml -model i_relu3 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_relu3_csynth.xml 
+Execute       syn_report -verbosereport -model i_relu3 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.verbose.rpt 
+Execute       db_write -model i_relu3 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.adb 
+Execute       gen_tb_info i_relu3 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_max_pooling4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model i_max_pooling4 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_max_pooling4'.
+INFO: [HLS 200-111]  Elapsed time: 0.149 seconds; current allocated memory: 253.585 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl i_max_pooling4 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/i_max_pooling4 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl i_max_pooling4 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/i_max_pooling4 
+Execute       gen_rtl i_max_pooling4 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/i_max_pooling4 
+Execute       syn_report -csynth -model i_max_pooling4 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_max_pooling4_csynth.rpt 
+Execute       syn_report -rtlxml -model i_max_pooling4 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_max_pooling4_csynth.xml 
+Execute       syn_report -verbosereport -model i_max_pooling4 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.verbose.rpt 
+Execute       db_write -model i_max_pooling4 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.adb 
+Execute       gen_tb_info i_max_pooling4 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_relu4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model i_relu4 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_relu4'.
+INFO: [HLS 200-111]  Elapsed time: 0.187 seconds; current allocated memory: 253.988 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl i_relu4 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/i_relu4 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl i_relu4 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/i_relu4 
+Execute       gen_rtl i_relu4 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/i_relu4 
+Execute       syn_report -csynth -model i_relu4 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_relu4_csynth.rpt 
+Execute       syn_report -rtlxml -model i_relu4 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_relu4_csynth.xml 
+Execute       syn_report -verbosereport -model i_relu4 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.verbose.rpt 
+Execute       db_write -model i_relu4 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.adb 
+Execute       gen_tb_info i_relu4 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_convolution5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model i_convolution5 -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_convolution5'.
+INFO: [HLS 200-111]  Elapsed time: 0.191 seconds; current allocated memory: 254.596 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl i_convolution5 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/i_convolution5 -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl i_convolution5 -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/i_convolution5 
+Execute       gen_rtl i_convolution5 -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/i_convolution5 
+Execute       syn_report -csynth -model i_convolution5 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_convolution5_csynth.rpt 
+Execute       syn_report -rtlxml -model i_convolution5 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/i_convolution5_csynth.xml 
+Execute       syn_report -verbosereport -model i_convolution5 -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.verbose.rpt 
+Execute       db_write -model i_convolution5 -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.adb 
+Execute       gen_tb_info i_convolution5 -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model lenet_top -vendor xilinx -mg_file D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/weights1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/bias1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/weights3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/bias3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/weights5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/bias5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/weights6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/bias6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input_buf_0' to 'lenet_top_input_beOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_weights1_buf_0' to 'lenet_top_weightsfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_weights3_buf' to 'lenet_top_weightsg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_weights5_buf' to 'lenet_top_weightshbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_weights6_buf_0_0' to 'lenet_top_weightsibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_output_buf' to 'lenet_top_output_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input2_inter' to 'lenet_top_input2_kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input3_inter' to 'lenet_top_input3_lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input4_inter' to 'lenet_top_input4_mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input5_inter' to 'lenet_top_input5_ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input6_inter_0_0' to 'lenet_top_input6_ocq' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_top'.
+Command       create_rtl_model done; 0.269 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.493 seconds; current allocated memory: 256.622 MB.
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl lenet_top -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/systemc/lenet_top -synmodules ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top 
+Execute       gen_rtl lenet_top -istop -style xilinx -f -lang vhdl -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/vhdl/lenet_top 
+Execute       gen_rtl lenet_top -istop -style xilinx -f -lang vlog -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/verilog/lenet_top 
+Execute       syn_report -csynth -model lenet_top -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/lenet_top_csynth.rpt 
+Execute       syn_report -rtlxml -model lenet_top -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/syn/report/lenet_top_csynth.xml 
+Execute       syn_report -verbosereport -model lenet_top -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.verbose.rpt 
+Command       syn_report done; 0.22 sec.
+Execute       db_write -model lenet_top -f -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.adb 
+Execute       gen_tb_info lenet_top -p D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top 
+Execute       export_constraint_db -f -tool general -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.constraint.tcl 
+Execute       syn_report -designview -model lenet_top -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.design.xml 
+Command       syn_report done; 0.161 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model lenet_top -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model lenet_top -o D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks lenet_top 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain lenet_top 
+INFO-FLOW: Model list for RTL component generation: ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top
+INFO-FLOW: Handling components in module [ld_weights1] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.compgen.tcl 
+INFO-FLOW: Handling components in module [ld_weights3] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.compgen.tcl 
+INFO-FLOW: Handling components in module [ld_weights5] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.compgen.tcl 
+INFO-FLOW: Handling components in module [i_convolution1] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.compgen.tcl 
+INFO-FLOW: Found component lenet_top_fadd_32bkb.
+INFO-FLOW: Append model lenet_top_fadd_32bkb
+INFO-FLOW: Found component lenet_top_fmul_32cud.
+INFO-FLOW: Append model lenet_top_fmul_32cud
+INFO-FLOW: Handling components in module [i_relu1] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.compgen.tcl 
+INFO-FLOW: Found component lenet_top_fcmp_32dEe.
+INFO-FLOW: Append model lenet_top_fcmp_32dEe
+INFO-FLOW: Handling components in module [i_max_pooling2] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.compgen.tcl 
+INFO-FLOW: Handling components in module [i_relu2] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.compgen.tcl 
+INFO-FLOW: Handling components in module [i_convolution3] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.compgen.tcl 
+INFO-FLOW: Handling components in module [i_relu3] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.compgen.tcl 
+INFO-FLOW: Handling components in module [i_max_pooling4] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.compgen.tcl 
+INFO-FLOW: Handling components in module [i_relu4] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.compgen.tcl 
+INFO-FLOW: Handling components in module [i_convolution5] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.compgen.tcl 
+INFO-FLOW: Handling components in module [lenet_top] ... 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.compgen.tcl 
+INFO-FLOW: Found component lenet_top_input_beOg.
+INFO-FLOW: Append model lenet_top_input_beOg
+INFO-FLOW: Found component lenet_top_weightsfYi.
+INFO-FLOW: Append model lenet_top_weightsfYi
+INFO-FLOW: Found component lenet_top_weightsg8j.
+INFO-FLOW: Append model lenet_top_weightsg8j
+INFO-FLOW: Found component lenet_top_weightshbi.
+INFO-FLOW: Append model lenet_top_weightshbi
+INFO-FLOW: Found component lenet_top_weightsibs.
+INFO-FLOW: Append model lenet_top_weightsibs
+INFO-FLOW: Found component lenet_top_bias1_buf.
+INFO-FLOW: Append model lenet_top_bias1_buf
+INFO-FLOW: Found component lenet_top_bias3_buf.
+INFO-FLOW: Append model lenet_top_bias3_buf
+INFO-FLOW: Found component lenet_top_bias5_buf.
+INFO-FLOW: Append model lenet_top_bias5_buf
+INFO-FLOW: Found component lenet_top_bias6_buf.
+INFO-FLOW: Append model lenet_top_bias6_buf
+INFO-FLOW: Found component lenet_top_input2_kbM.
+INFO-FLOW: Append model lenet_top_input2_kbM
+INFO-FLOW: Found component lenet_top_input3_lbW.
+INFO-FLOW: Append model lenet_top_input3_lbW
+INFO-FLOW: Found component lenet_top_input4_mb6.
+INFO-FLOW: Append model lenet_top_input4_mb6
+INFO-FLOW: Found component lenet_top_input5_ncg.
+INFO-FLOW: Append model lenet_top_input5_ncg
+INFO-FLOW: Append model ld_weights1
+INFO-FLOW: Append model ld_weights3
+INFO-FLOW: Append model ld_weights5
+INFO-FLOW: Append model i_convolution1
+INFO-FLOW: Append model i_relu1
+INFO-FLOW: Append model i_max_pooling2
+INFO-FLOW: Append model i_relu2
+INFO-FLOW: Append model i_convolution3
+INFO-FLOW: Append model i_relu3
+INFO-FLOW: Append model i_max_pooling4
+INFO-FLOW: Append model i_relu4
+INFO-FLOW: Append model i_convolution5
+INFO-FLOW: Append model lenet_top
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: lenet_top_fadd_32bkb lenet_top_fmul_32cud lenet_top_fcmp_32dEe lenet_top_input_beOg lenet_top_weightsfYi lenet_top_weightsg8j lenet_top_weightshbi lenet_top_weightsibs lenet_top_bias1_buf lenet_top_bias3_buf lenet_top_bias5_buf lenet_top_bias6_buf lenet_top_input2_kbM lenet_top_input3_lbW lenet_top_input4_mb6 lenet_top_input5_ncg ld_weights1 ld_weights3 ld_weights5 i_convolution1 i_relu1 i_max_pooling2 i_relu2 i_convolution3 i_relu3 i_max_pooling4 i_relu4 i_convolution5 lenet_top
+INFO-FLOW: To file: write model lenet_top_fadd_32bkb
+INFO-FLOW: To file: write model lenet_top_fmul_32cud
+INFO-FLOW: To file: write model lenet_top_fcmp_32dEe
+INFO-FLOW: To file: write model lenet_top_input_beOg
+INFO-FLOW: To file: write model lenet_top_weightsfYi
+INFO-FLOW: To file: write model lenet_top_weightsg8j
+INFO-FLOW: To file: write model lenet_top_weightshbi
+INFO-FLOW: To file: write model lenet_top_weightsibs
+INFO-FLOW: To file: write model lenet_top_bias1_buf
+INFO-FLOW: To file: write model lenet_top_bias3_buf
+INFO-FLOW: To file: write model lenet_top_bias5_buf
+INFO-FLOW: To file: write model lenet_top_bias6_buf
+INFO-FLOW: To file: write model lenet_top_input2_kbM
+INFO-FLOW: To file: write model lenet_top_input3_lbW
+INFO-FLOW: To file: write model lenet_top_input4_mb6
+INFO-FLOW: To file: write model lenet_top_input5_ncg
+INFO-FLOW: To file: write model ld_weights1
+INFO-FLOW: To file: write model ld_weights3
+INFO-FLOW: To file: write model ld_weights5
+INFO-FLOW: To file: write model i_convolution1
+INFO-FLOW: To file: write model i_relu1
+INFO-FLOW: To file: write model i_max_pooling2
+INFO-FLOW: To file: write model i_relu2
+INFO-FLOW: To file: write model i_convolution3
+INFO-FLOW: To file: write model i_relu3
+INFO-FLOW: To file: write model i_max_pooling4
+INFO-FLOW: To file: write model i_relu4
+INFO-FLOW: To file: write model i_convolution5
+INFO-FLOW: To file: write model lenet_top
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input_beOg_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_weightsfYi_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_weightsg8j_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_weightshbi_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_weightsibs_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_bias1_buf_ram (RAM)' using distributed RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_bias3_buf_ram (RAM)' using distributed RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_bias5_buf_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_bias6_buf_ram (RAM)' using distributed RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input2_kbM_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input3_lbW_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input4_mb6_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input5_ncg_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.239 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.101 sec.
+Command       ap_source done; 0.101 sec.
+Execute       source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/Applications/Vivado/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=lenet_top xml_exists=0
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.compgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.constraint.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=24
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=11
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=29 #gSsdmPorts=24
+Execute       source D:/Applications/Vivado/Vivado/2019.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.rtl_wrap.cfg.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.compgen.dataonly.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.constraint.tcl 
+Execute       sc_get_clocks lenet_top 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/impl/misc/lenet_top_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/impl/misc/lenet_top_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/impl/misc/lenet_top_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights1.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights3.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/ld_weights5.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution1.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu1.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling2.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu2.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution3.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu3.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_max_pooling4.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_relu4.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/i_convolution5.tbgen.tcl 
+Execute       source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/lenet_top.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 339.426 ; gain = 247.746
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_top.
+Command     autosyn done; 8.37 sec.
+Command   csynth_design done; 17.845 sec.
+Command ap_source done; 18.579 sec.
+Execute cleanup_all 

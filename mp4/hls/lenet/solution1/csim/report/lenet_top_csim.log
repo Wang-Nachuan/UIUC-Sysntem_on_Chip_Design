@@ -1,0 +1,67 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../lenet_hls.cpp in debug mode
+   Generating csim.exe
+Starting LeNet
+
+Mounting SD
+
+Parsing MNIST images
+
+Opened mnist images data file
+
+Read header from file
+
+Read images from file
+
+Closed images file
+
+Returning...
+
+Back from image load
+
+Parsing MNIST labels
+
+Opened mnist labels data file
+
+Read header from file
+
+Read labels from file
+
+Closed labels file
+
+Parsing parameters
+
+Opened parameter file
+
+Read conv1_weights from file
+
+Read conv1_bias from file
+
+Read conv3_weights from file
+
+Read conv3_bias from file
+
+Read conv5_weights from file
+
+Read conv5_bias from file
+
+Read fc6_weights from file
+
+Read fc6_bias from file
+
+Closed labels file
+
+Starting inference
+
+
+
+Test Image: 
+
+Accuracy (golden model) = 98.390001 %
+
+
+Accuracy (hls) = 98.390001 %
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

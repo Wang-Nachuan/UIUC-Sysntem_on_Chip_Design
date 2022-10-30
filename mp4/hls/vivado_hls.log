@@ -1,0 +1,341 @@
+INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Sun Oct 30 00:20:11 -0500 2022
+INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp4/hls'
+Sourcing Tcl script 'D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project 'D:/Code/UIUC-ECE527/mp4/hls/lenet'.
+INFO: [HLS 200-10] Adding design file 'lenet/lenet.h' to the project
+INFO: [HLS 200-10] Adding design file 'lenet/lenet_gold.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'lenet/lenet_hls.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'lenet/images.bin' to the project
+INFO: [HLS 200-10] Adding test bench file 'lenet/labels.bin' to the project
+INFO: [HLS 200-10] Adding test bench file 'lenet/lenet_tb.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'lenet/params.bin' to the project
+INFO: [HLS 200-10] Opening solution 'D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lenet/lenet_hls.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'lenet/lenet_gold.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 185.188 ; gain = 93.508
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 185.188 ; gain = 93.508
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 185.188 ; gain = 93.508
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'ld_input' into 'lenet_top' (lenet/lenet_hls.cpp:281) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_weights6' into 'lenet_top' (lenet/lenet_hls.cpp:285) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias1' into 'lenet_top' (lenet/lenet_hls.cpp:286) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias3' into 'lenet_top' (lenet/lenet_hls.cpp:287) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias5' into 'lenet_top' (lenet/lenet_hls.cpp:288) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias6' into 'lenet_top' (lenet/lenet_hls.cpp:289) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_relu5' into 'lenet_top' (lenet/lenet_hls.cpp:305) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_fc6' into 'lenet_top' (lenet/lenet_hls.cpp:307) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_relu6' into 'lenet_top' (lenet/lenet_hls.cpp:308) automatically.
+INFO: [XFORM 203-602] Inlining function 'st_output' into 'lenet_top' (lenet/lenet_hls.cpp:311) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 185.188 ; gain = 93.508
+INFO: [XFORM 203-102] Partitioning array 'weights6_buf.0' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'output.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights.0' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input_buf' (lenet/lenet_hls.cpp:262) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights1_buf' (lenet/lenet_hls.cpp:263) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights6_buf' (lenet/lenet_hls.cpp:266) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input6_inter' (lenet/lenet_hls.cpp:278) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights6_buf.0' (lenet/lenet_hls.cpp:266) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input6_inter.0' (lenet/lenet_hls.cpp:278) in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_input' into 'lenet_top' (lenet/lenet_hls.cpp:281) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_weights6' into 'lenet_top' (lenet/lenet_hls.cpp:285) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias1' into 'lenet_top' (lenet/lenet_hls.cpp:286) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias3' into 'lenet_top' (lenet/lenet_hls.cpp:287) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias5' into 'lenet_top' (lenet/lenet_hls.cpp:288) automatically.
+INFO: [XFORM 203-602] Inlining function 'ld_bias6' into 'lenet_top' (lenet/lenet_hls.cpp:289) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_relu5' into 'lenet_top' (lenet/lenet_hls.cpp:305) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_fc6' into 'lenet_top' (lenet/lenet_hls.cpp:307) automatically.
+INFO: [XFORM 203-602] Inlining function 'i_relu6' into 'lenet_top' (lenet/lenet_hls.cpp:308) automatically.
+INFO: [XFORM 203-602] Inlining function 'st_output' into 'lenet_top' (lenet/lenet_hls.cpp:311) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 185.188 ; gain = 93.508
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 295.559 ; gain = 203.879
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet_top' ...
+WARNING: [SYN 201-107] Renaming port name 'lenet_top/input' to 'lenet_top/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'lenet_top/output' to 'lenet_top/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ld_weights1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.511 seconds; current allocated memory: 241.849 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.051 seconds; current allocated memory: 242.115 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ld_weights3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 242.267 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 242.436 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ld_weights5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.064 seconds; current allocated memory: 242.566 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 242.764 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_convolution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 243.000 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.066 seconds; current allocated memory: 243.293 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_relu1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.087 seconds; current allocated memory: 243.477 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 243.643 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_max_pooling2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.088 seconds; current allocated memory: 243.863 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 244.154 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_relu2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.089 seconds; current allocated memory: 244.339 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.053 seconds; current allocated memory: 244.504 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.084 seconds; current allocated memory: 244.778 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 245.175 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_relu3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 245.304 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.075 seconds; current allocated memory: 245.467 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_max_pooling4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 245.713 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.071 seconds; current allocated memory: 245.984 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_relu4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.091 seconds; current allocated memory: 246.124 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 246.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'i_convolution5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.084 seconds; current allocated memory: 246.519 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.074 seconds; current allocated memory: 246.787 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.131 seconds; current allocated memory: 247.350 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.509 seconds; current allocated memory: 248.620 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ld_weights1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ld_weights1'.
+INFO: [HLS 200-111]  Elapsed time: 0.255 seconds; current allocated memory: 249.110 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ld_weights3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ld_weights3'.
+INFO: [HLS 200-111]  Elapsed time: 0.106 seconds; current allocated memory: 249.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ld_weights5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ld_weights5'.
+INFO: [HLS 200-111]  Elapsed time: 0.131 seconds; current allocated memory: 249.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_convolution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'lenet_top_fadd_32ns_32ns_32_5_full_dsp_1' to 'lenet_top_fadd_32bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_fmul_32ns_32ns_32_4_max_dsp_1' to 'lenet_top_fmul_32cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_convolution1'.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 250.444 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_relu1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'lenet_top_fcmp_32ns_32ns_1_2_1' to 'lenet_top_fcmp_32dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_relu1'.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 250.860 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_max_pooling2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_max_pooling2'.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 251.420 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_relu2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_relu2'.
+INFO: [HLS 200-111]  Elapsed time: 0.186 seconds; current allocated memory: 251.888 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_convolution3'.
+INFO: [HLS 200-111]  Elapsed time: 0.156 seconds; current allocated memory: 252.602 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_relu3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_relu3'.
+INFO: [HLS 200-111]  Elapsed time: 0.213 seconds; current allocated memory: 253.018 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_max_pooling4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_max_pooling4'.
+INFO: [HLS 200-111]  Elapsed time: 0.149 seconds; current allocated memory: 253.585 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_relu4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_relu4'.
+INFO: [HLS 200-111]  Elapsed time: 0.187 seconds; current allocated memory: 253.988 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'i_convolution5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'i_convolution5'.
+INFO: [HLS 200-111]  Elapsed time: 0.191 seconds; current allocated memory: 254.596 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/weights1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/bias1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/weights3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/bias3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/weights5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/bias5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/weights6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/bias6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_top/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input_buf_0' to 'lenet_top_input_beOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_weights1_buf_0' to 'lenet_top_weightsfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_weights3_buf' to 'lenet_top_weightsg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_weights5_buf' to 'lenet_top_weightshbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_weights6_buf_0_0' to 'lenet_top_weightsibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_output_buf' to 'lenet_top_output_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input2_inter' to 'lenet_top_input2_kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input3_inter' to 'lenet_top_input3_lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input4_inter' to 'lenet_top_input4_mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input5_inter' to 'lenet_top_input5_ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_top_input6_inter_0_0' to 'lenet_top_input6_ocq' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_top_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.493 seconds; current allocated memory: 256.622 MB.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input_beOg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_weightsfYi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_weightsg8j_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_weightshbi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_weightsibs_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_bias1_buf_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_bias3_buf_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_bias5_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_bias6_buf_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input2_kbM_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input3_lbW_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input4_mb6_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_top_input5_ncg_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 339.426 ; gain = 247.746
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_top.
+INFO: [HLS 200-112] Total elapsed time: 18.869 seconds; peak allocated memory: 256.622 MB.

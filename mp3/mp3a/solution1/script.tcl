@@ -5,13 +5,13 @@
 ############################################################
 open_project mp3a
 set_top multiply_a11
-add_files mp3a/multiply_partA2-3.c
-add_files mp3a/multiply_partA2-2.c
-add_files mp3a/multiply_partA2-1.c
-add_files mp3a/multiply_partA1-3.c
-add_files mp3a/multiply_partA1-2.c
-add_files mp3a/multiply_partA1-1.c
 add_files mp3a/multiply.h
+add_files mp3a/multiply_partA1-1.c
+add_files mp3a/multiply_partA1-2.c
+add_files mp3a/multiply_partA1-3.c
+add_files mp3a/multiply_partA2-1.c
+add_files mp3a/multiply_partA2-2.c
+add_files mp3a/multiply_partA2-3.c
 add_files -tb mp3a/multiply_tb.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020-clg400-1} -tool vivado
