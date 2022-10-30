@@ -486,16 +486,16 @@ set RtlHierarchyInfo {[
 					{"ID" : "55", "SubInstance" : "grp_ld_input_fu_338", "Port" : "input_r"}]},
 			{"Name" : "DATA_WEIGHT", "Type" : "MAXI", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "54", "SubInstance" : "grp_ld_weights1_fu_330", "Port" : "weights1"},
-					{"ID" : "52", "SubInstance" : "grp_ld_weights5_fu_314", "Port" : "weights5"},
+					{"ID" : "53", "SubInstance" : "grp_ld_weights3_fu_322", "Port" : "weights3"},
 					{"ID" : "44", "SubInstance" : "grp_i_fc6_fu_290", "Port" : "weights"},
-					{"ID" : "53", "SubInstance" : "grp_ld_weights3_fu_322", "Port" : "weights3"}]},
+					{"ID" : "54", "SubInstance" : "grp_ld_weights1_fu_330", "Port" : "weights1"},
+					{"ID" : "52", "SubInstance" : "grp_ld_weights5_fu_314", "Port" : "weights5"}]},
 			{"Name" : "DATA_BIAS", "Type" : "MAXI", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "57", "SubInstance" : "grp_ld_bias3_fu_354", "Port" : "bias3"},
+					{"ID" : "56", "SubInstance" : "grp_ld_bias5_fu_346", "Port" : "bias5"},
 					{"ID" : "59", "SubInstance" : "grp_ld_bias1_fu_370", "Port" : "bias1"},
-					{"ID" : "44", "SubInstance" : "grp_i_fc6_fu_290", "Port" : "bias"},
-					{"ID" : "56", "SubInstance" : "grp_ld_bias5_fu_346", "Port" : "bias5"}]},
+					{"ID" : "44", "SubInstance" : "grp_i_fc6_fu_290", "Port" : "bias"}]},
 			{"Name" : "DATA_OUTPUT", "Type" : "MAXI", "Direction" : "O",
 				"SubConnect" : [
 					{"ID" : "58", "SubInstance" : "grp_st_output_fu_362", "Port" : "output_r"}]},

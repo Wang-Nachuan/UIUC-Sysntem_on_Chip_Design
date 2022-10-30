@@ -9,7 +9,7 @@ add_files lenet/lenet.h
 add_files lenet/lenet_hls.cpp
 add_files -tb lenet/images.bin -cflags "-Wno-unknown-pragmas"
 add_files -tb lenet/labels.bin -cflags "-Wno-unknown-pragmas"
-add_files -tb lenet/lenet_gold.cpp
+add_files -tb lenet/lenet_gold.cpp -cflags "-Wno-unknown-pragmas"
 add_files -tb lenet/lenet_tb.cpp -cflags "-Wno-unknown-pragmas"
 add_files -tb lenet/params.bin -cflags "-Wno-unknown-pragmas"
 open_solution "solution1"

@@ -1,5 +1,6 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running 'D:/Applications/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
-INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Sun Oct 30 16:24:06 -0500 2022
+INFO: [HLS 200-10] For user 'Wang' on host 'laptop-5udm1u2m' (Windows NT_amd64 version 6.2) on Sun Oct 30 17:26:43 -0500 2022
 INFO: [HLS 200-10] In directory 'D:/Code/UIUC-ECE527/mp4/hls'
 Sourcing Tcl script 'D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/export.tcl'
 INFO: [HLS 200-10] Opening project 'D:/Code/UIUC-ECE527/mp4/hls/lenet'.
@@ -26,22 +27,7 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet_top_ap_fcmp
 WARNING: [IP_Flow 19-4832] The IP name 'lenet_top_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet_top_ap_fmul_2_max_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet_top_ap_fmul_2_max_dsp_32'...
-bad lexical cast: source type value could not be interpreted as target
-    while executing
-"rdi::set_property core_revision 2210301624 {component component_1}"
-    invoked from within
-"set_property core_revision $Revision $core"
-    (file "run_ippack.tcl" line 1840)
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 30 16:24:19 2022...
-ERROR: [IMPL 213-28] Failed to generate IP.
-command 'ap_source' returned error code
-    while executing
-"source D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/export.tcl"
-    invoked from within
-"hls::main D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/export.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$args"
-    (procedure "hls_proc" line 5)
-    invoked from within
-"hls_proc $argv"
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Applications/Vivado/Vivado/2019.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 30 17:26:57 2022...

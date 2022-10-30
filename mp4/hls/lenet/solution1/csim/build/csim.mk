@@ -73,7 +73,7 @@ all: $(TARGET)
 
 $(ObjDir)/lenet_gold.o: ../../../lenet_gold.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../lenet_gold.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/lenet_gold.d
 
