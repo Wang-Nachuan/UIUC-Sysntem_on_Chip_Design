@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="lenet_top" name="lenet">
+<project xmlns="com.autoesl.autopilot.project" name="lenet" top="lenet_top">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -7,10 +7,10 @@
     <files xmlns="">
         <file name="../params.bin" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
         <file name="../lenet_tb.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
+        <file name="../lenet_gold.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
         <file name="../labels.bin" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
         <file name="../images.bin" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
         <file name="lenet/lenet_hls.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
-        <file name="lenet/lenet_gold.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="lenet/lenet.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">

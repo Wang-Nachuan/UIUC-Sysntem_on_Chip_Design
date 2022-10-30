@@ -7,7 +7,7 @@ use ieee.std_logic_1164.all;
 
 entity lenet_top_fcmp_32dEe is
     generic (
-        ID         : integer := 15;
+        ID         : integer := 30;
         NUM_STAGE  : integer := 2;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;

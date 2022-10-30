@@ -12,9 +12,10 @@
     "Package": "-clg400",
     "Speed": "-1"
   },
-  "HlsSolution": {
-    
-  },
+  "HlsSolution": {"Config": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog"
+    ]},
   "Args": {
     "input": {
       "index": "0",
@@ -27,10 +28,7 @@
           "32",
           "32"
         ],
-        "multiInterfaceRef": [
-          "input_r_address0",
-          "input_r_q0"
-        ]
+        "interfaceRef": "m_axi_DATA_INPUT"
       }
     },
     "weights1": {
@@ -45,10 +43,7 @@
           "5",
           "5"
         ],
-        "multiInterfaceRef": [
-          "weights1_address0",
-          "weights1_q0"
-        ]
+        "interfaceRef": "m_axi_DATA_WEIGHT"
       }
     },
     "bias1": {
@@ -58,10 +53,7 @@
         "dataType": "float",
         "dataWidth": "32",
         "arraySizes": ["6"],
-        "multiInterfaceRef": [
-          "bias1_address0",
-          "bias1_q0"
-        ]
+        "interfaceRef": "m_axi_DATA_BIAS"
       }
     },
     "weights3": {
@@ -76,10 +68,7 @@
           "5",
           "5"
         ],
-        "multiInterfaceRef": [
-          "weights3_address0",
-          "weights3_q0"
-        ]
+        "interfaceRef": "m_axi_DATA_WEIGHT"
       }
     },
     "bias3": {
@@ -89,10 +78,7 @@
         "dataType": "float",
         "dataWidth": "32",
         "arraySizes": ["16"],
-        "multiInterfaceRef": [
-          "bias3_address0",
-          "bias3_q0"
-        ]
+        "interfaceRef": "m_axi_DATA_BIAS"
       }
     },
     "weights5": {
@@ -107,10 +93,7 @@
           "5",
           "5"
         ],
-        "multiInterfaceRef": [
-          "weights5_address0",
-          "weights5_q0"
-        ]
+        "interfaceRef": "m_axi_DATA_WEIGHT"
       }
     },
     "bias5": {
@@ -120,10 +103,7 @@
         "dataType": "float",
         "dataWidth": "32",
         "arraySizes": ["120"],
-        "multiInterfaceRef": [
-          "bias5_address0",
-          "bias5_q0"
-        ]
+        "interfaceRef": "m_axi_DATA_BIAS"
       }
     },
     "weights6": {
@@ -138,10 +118,7 @@
           "1",
           "1"
         ],
-        "multiInterfaceRef": [
-          "weights6_address0",
-          "weights6_q0"
-        ]
+        "interfaceRef": "m_axi_DATA_WEIGHT"
       }
     },
     "bias6": {
@@ -151,10 +128,7 @@
         "dataType": "float",
         "dataWidth": "32",
         "arraySizes": ["10"],
-        "multiInterfaceRef": [
-          "bias6_address0",
-          "bias6_q0"
-        ]
+        "interfaceRef": "m_axi_DATA_BIAS"
       }
     },
     "output": {
@@ -164,24 +138,22 @@
         "dataType": "float",
         "dataWidth": "32",
         "arraySizes": ["10"],
-        "multiInterfaceRef": [
-          "output_r_address0",
-          "output_r_d0"
-        ]
+        "interfaceRef": "m_axi_DATA_OUTPUT"
       }
     }
   },
   "Return": {
     "dataType": "int",
     "dataWidth": "32",
-    "interfaceRef": "ap_return"
+    "interfaceRef": "s_axi_CTL",
+    "registerRefs": ["ap_return"]
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "5149662",
+    "Latency": "551271",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -197,71 +169,92 @@
     "AutoFamilySupport": ""
   },
   "Files": {
-    "CSource": [
-      "..\/lenet_hls.cpp",
-      "..\/lenet_gold.cpp"
-    ],
+    "CSource": ["..\/lenet_hls.cpp"],
     "Vhdl": [
       "impl\/vhdl\/i_convolution1.vhd",
       "impl\/vhdl\/i_convolution3.vhd",
       "impl\/vhdl\/i_convolution5.vhd",
+      "impl\/vhdl\/i_fc6.vhd",
       "impl\/vhdl\/i_max_pooling2.vhd",
       "impl\/vhdl\/i_max_pooling4.vhd",
-      "impl\/vhdl\/i_relu1.vhd",
-      "impl\/vhdl\/i_relu2.vhd",
-      "impl\/vhdl\/i_relu3.vhd",
-      "impl\/vhdl\/i_relu4.vhd",
+      "impl\/vhdl\/ld_bias1.vhd",
+      "impl\/vhdl\/ld_bias3.vhd",
+      "impl\/vhdl\/ld_bias5.vhd",
+      "impl\/vhdl\/ld_input.vhd",
       "impl\/vhdl\/ld_weights1.vhd",
       "impl\/vhdl\/ld_weights3.vhd",
       "impl\/vhdl\/ld_weights5.vhd",
       "impl\/vhdl\/lenet_top_bias1_buf.vhd",
       "impl\/vhdl\/lenet_top_bias3_buf.vhd",
       "impl\/vhdl\/lenet_top_bias5_buf.vhd",
-      "impl\/vhdl\/lenet_top_bias6_buf.vhd",
+      "impl\/vhdl\/lenet_top_CTL_s_axi.vhd",
+      "impl\/vhdl\/lenet_top_DATA_BIAS_m_axi.vhd",
+      "impl\/vhdl\/lenet_top_DATA_INPUT_m_axi.vhd",
+      "impl\/vhdl\/lenet_top_DATA_OUTPUT_m_axi.vhd",
+      "impl\/vhdl\/lenet_top_DATA_WEIGHT_m_axi.vhd",
       "impl\/vhdl\/lenet_top_fadd_32bkb.vhd",
       "impl\/vhdl\/lenet_top_fcmp_32dEe.vhd",
       "impl\/vhdl\/lenet_top_fmul_32cud.vhd",
-      "impl\/vhdl\/lenet_top_input2_kbM.vhd",
-      "impl\/vhdl\/lenet_top_input3_lbW.vhd",
-      "impl\/vhdl\/lenet_top_input4_mb6.vhd",
-      "impl\/vhdl\/lenet_top_input5_ncg.vhd",
-      "impl\/vhdl\/lenet_top_input_beOg.vhd",
-      "impl\/vhdl\/lenet_top_weightsfYi.vhd",
+      "impl\/vhdl\/lenet_top_input2_jbC.vhd",
+      "impl\/vhdl\/lenet_top_input3_kbM.vhd",
+      "impl\/vhdl\/lenet_top_input4_lbW.vhd",
+      "impl\/vhdl\/lenet_top_input5_mb6.vhd",
+      "impl\/vhdl\/lenet_top_input_bfYi.vhd",
+      "impl\/vhdl\/lenet_top_mul_muleOg.vhd",
+      "impl\/vhdl\/lenet_top_output_ocq.vhd",
       "impl\/vhdl\/lenet_top_weightsg8j.vhd",
       "impl\/vhdl\/lenet_top_weightshbi.vhd",
       "impl\/vhdl\/lenet_top_weightsibs.vhd",
+      "impl\/vhdl\/st_output.vhd",
       "impl\/vhdl\/lenet_top.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/i_convolution1.v",
       "impl\/verilog\/i_convolution3.v",
       "impl\/verilog\/i_convolution5.v",
+      "impl\/verilog\/i_fc6.v",
       "impl\/verilog\/i_max_pooling2.v",
       "impl\/verilog\/i_max_pooling4.v",
-      "impl\/verilog\/i_relu1.v",
-      "impl\/verilog\/i_relu2.v",
-      "impl\/verilog\/i_relu3.v",
-      "impl\/verilog\/i_relu4.v",
+      "impl\/verilog\/ld_bias1.v",
+      "impl\/verilog\/ld_bias3.v",
+      "impl\/verilog\/ld_bias5.v",
+      "impl\/verilog\/ld_input.v",
       "impl\/verilog\/ld_weights1.v",
       "impl\/verilog\/ld_weights3.v",
       "impl\/verilog\/ld_weights5.v",
       "impl\/verilog\/lenet_top_bias1_buf.v",
       "impl\/verilog\/lenet_top_bias3_buf.v",
       "impl\/verilog\/lenet_top_bias5_buf.v",
-      "impl\/verilog\/lenet_top_bias6_buf.v",
+      "impl\/verilog\/lenet_top_CTL_s_axi.v",
+      "impl\/verilog\/lenet_top_DATA_BIAS_m_axi.v",
+      "impl\/verilog\/lenet_top_DATA_INPUT_m_axi.v",
+      "impl\/verilog\/lenet_top_DATA_OUTPUT_m_axi.v",
+      "impl\/verilog\/lenet_top_DATA_WEIGHT_m_axi.v",
       "impl\/verilog\/lenet_top_fadd_32bkb.v",
       "impl\/verilog\/lenet_top_fcmp_32dEe.v",
       "impl\/verilog\/lenet_top_fmul_32cud.v",
-      "impl\/verilog\/lenet_top_input2_kbM.v",
-      "impl\/verilog\/lenet_top_input3_lbW.v",
-      "impl\/verilog\/lenet_top_input4_mb6.v",
-      "impl\/verilog\/lenet_top_input5_ncg.v",
-      "impl\/verilog\/lenet_top_input_beOg.v",
-      "impl\/verilog\/lenet_top_weightsfYi.v",
+      "impl\/verilog\/lenet_top_input2_jbC.v",
+      "impl\/verilog\/lenet_top_input3_kbM.v",
+      "impl\/verilog\/lenet_top_input4_lbW.v",
+      "impl\/verilog\/lenet_top_input5_mb6.v",
+      "impl\/verilog\/lenet_top_input_bfYi.v",
+      "impl\/verilog\/lenet_top_mul_muleOg.v",
+      "impl\/verilog\/lenet_top_output_ocq.v",
       "impl\/verilog\/lenet_top_weightsg8j.v",
       "impl\/verilog\/lenet_top_weightshbi.v",
       "impl\/verilog\/lenet_top_weightsibs.v",
+      "impl\/verilog\/st_output.v",
       "impl\/verilog\/lenet_top.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/lenet_top_v1_0\/data\/lenet_top.mdd",
+      "impl\/misc\/drivers\/lenet_top_v1_0\/data\/lenet_top.tcl",
+      "impl\/misc\/drivers\/lenet_top_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/lenet_top_v1_0\/src\/xlenet_top.c",
+      "impl\/misc\/drivers\/lenet_top_v1_0\/src\/xlenet_top.h",
+      "impl\/misc\/drivers\/lenet_top_v1_0\/src\/xlenet_top_hw.h",
+      "impl\/misc\/drivers\/lenet_top_v1_0\/src\/xlenet_top_linux.c",
+      "impl\/misc\/drivers\/lenet_top_v1_0\/src\/xlenet_top_sinit.c"
     ],
     "Misc": ["impl\/misc\/logo.png"],
     "Subcore": [
@@ -300,409 +293,1959 @@
       "ctype": {"CLK": {"Type": "bool"}},
       "bundle_name": "ap_clk",
       "bundle_role": "default",
-      "reset": "ap_rst"
+      "buses": "s_axi_CTL m_axi_DATA_INPUT m_axi_DATA_WEIGHT m_axi_DATA_BIAS m_axi_DATA_OUTPUT",
+      "reset": "ap_rst_n"
     },
-    "ap_ctrl": {
-      "type": "ap_ctrl",
-      "ctrl_ports": "ap_start ap_done ap_idle ap_ready",
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "interrupt": {
+      "type": "interrupt",
+      "ctype": {"INTERRUPT": {"Type": "bool"}},
+      "bundle_name": "CTL",
+      "bundle_role": "interrupt"
+    },
+    "m_axi_DATA_BIAS": {
+      "type": "native_axim",
+      "is_adaptor": "true",
+      "mode": "master",
+      "port_prefix": "m_axi_DATA_BIAS",
+      "data_width": "32",
+      "param_prefix": "C_M_AXI_DATA_BIAS",
       "ctype": {
-        "start": {"Type": "bool"},
-        "done": {"Type": "bool"},
-        "idle": {"Type": "bool"},
-        "ready": {"Type": "bool"}
+        "AWLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "AWSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WLAST": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "ARSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RLAST": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "AWID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "AWUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WDATA": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "WID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "ARID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RDATA": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "RID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "HasOffset": "1",
+      "preferred_usage_value": "MEMORY",
+      "has_dependant_on": "1",
+      "NUM_READ_OUTSTANDING": "16",
+      "NUM_WRITE_OUTSTANDING": "16",
+      "MAX_READ_BURST_LENGTH": "16",
+      "MAX_WRITE_BURST_LENGTH": "16",
+      "offset_slave_name": "s_axi_CTL",
+      "port_width": {
+        "ARADDR": "32",
+        "ARID": "1",
+        "ARUSER": "1",
+        "AWADDR": "32",
+        "AWID": "1",
+        "AWUSER": "1",
+        "BID": "1",
+        "BUSER": "1",
+        "RDATA": "32",
+        "RID": "1",
+        "RUSER": "1",
+        "WDATA": "32",
+        "WID": "1",
+        "WSTRB": "4",
+        "WUSER": "1"
       }
     },
-    "ap_return": {
-      "type": "data",
-      "dir": "out",
-      "width": "32",
-      "ctype": {"DATA": {
+    "m_axi_DATA_INPUT": {
+      "type": "native_axim",
+      "is_adaptor": "true",
+      "mode": "master",
+      "port_prefix": "m_axi_DATA_INPUT",
+      "data_width": "32",
+      "param_prefix": "C_M_AXI_DATA_INPUT",
+      "ctype": {
+        "AWLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "AWSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WLAST": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "ARSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RLAST": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "AWID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "AWUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WDATA": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "WID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "ARID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RDATA": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "RID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "HasOffset": "1",
+      "preferred_usage_value": "MEMORY",
+      "has_dependant_on": "1",
+      "NUM_READ_OUTSTANDING": "16",
+      "NUM_WRITE_OUTSTANDING": "16",
+      "MAX_READ_BURST_LENGTH": "16",
+      "MAX_WRITE_BURST_LENGTH": "16",
+      "offset_slave_name": "s_axi_CTL",
+      "port_width": {
+        "ARADDR": "32",
+        "ARID": "1",
+        "ARUSER": "1",
+        "AWADDR": "32",
+        "AWID": "1",
+        "AWUSER": "1",
+        "BID": "1",
+        "BUSER": "1",
+        "RDATA": "32",
+        "RID": "1",
+        "RUSER": "1",
+        "WDATA": "32",
+        "WID": "1",
+        "WSTRB": "4",
+        "WUSER": "1"
+      }
+    },
+    "m_axi_DATA_OUTPUT": {
+      "type": "native_axim",
+      "is_adaptor": "true",
+      "mode": "master",
+      "port_prefix": "m_axi_DATA_OUTPUT",
+      "data_width": "32",
+      "param_prefix": "C_M_AXI_DATA_OUTPUT",
+      "ctype": {
+        "AWLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "AWSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WLAST": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "ARSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RLAST": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "AWID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "AWUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WDATA": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "WID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "ARID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RDATA": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "RID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "HasOffset": "1",
+      "preferred_usage_value": "MEMORY",
+      "has_dependant_on": "1",
+      "NUM_READ_OUTSTANDING": "16",
+      "NUM_WRITE_OUTSTANDING": "16",
+      "MAX_READ_BURST_LENGTH": "16",
+      "MAX_WRITE_BURST_LENGTH": "16",
+      "offset_slave_name": "s_axi_CTL",
+      "port_width": {
+        "ARADDR": "32",
+        "ARID": "1",
+        "ARUSER": "1",
+        "AWADDR": "32",
+        "AWID": "1",
+        "AWUSER": "1",
+        "BID": "1",
+        "BUSER": "1",
+        "RDATA": "32",
+        "RID": "1",
+        "RUSER": "1",
+        "WDATA": "32",
+        "WID": "1",
+        "WSTRB": "4",
+        "WUSER": "1"
+      }
+    },
+    "m_axi_DATA_WEIGHT": {
+      "type": "native_axim",
+      "is_adaptor": "true",
+      "mode": "master",
+      "port_prefix": "m_axi_DATA_WEIGHT",
+      "data_width": "32",
+      "param_prefix": "C_M_AXI_DATA_WEIGHT",
+      "ctype": {
+        "AWLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "AWSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WLAST": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "ARSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RLAST": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "AWID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "AWUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WDATA": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "WID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "ARID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RDATA": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "RID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "HasOffset": "1",
+      "preferred_usage_value": "MEMORY",
+      "has_dependant_on": "1",
+      "NUM_READ_OUTSTANDING": "16",
+      "NUM_WRITE_OUTSTANDING": "16",
+      "MAX_READ_BURST_LENGTH": "16",
+      "MAX_WRITE_BURST_LENGTH": "16",
+      "offset_slave_name": "s_axi_CTL",
+      "port_width": {
+        "ARADDR": "32",
+        "ARID": "1",
+        "ARUSER": "1",
+        "AWADDR": "32",
+        "AWID": "1",
+        "AWUSER": "1",
+        "BID": "1",
+        "BUSER": "1",
+        "RDATA": "32",
+        "RID": "1",
+        "RUSER": "1",
+        "WDATA": "32",
+        "WID": "1",
+        "WSTRB": "4",
+        "WUSER": "1"
+      }
+    },
+    "s_axi_CTL": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_CTL",
+      "param_prefix": "C_S_AXI_CTL",
+      "addr_bits": "7",
+      "registers": [
+        {
+          "offset": "0x00",
+          "name": "CTRL",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Control signals",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "AP_START",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_start'."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "AP_DONE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_done'."
+            },
+            {
+              "offset": "2",
+              "width": "1",
+              "name": "AP_IDLE",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_idle'."
+            },
+            {
+              "offset": "3",
+              "width": "1",
+              "name": "AP_READY",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Control signal Register for 'ap_ready'."
+            },
+            {
+              "offset": "4",
+              "width": "3",
+              "name": "RESERVED_1",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            },
+            {
+              "offset": "7",
+              "width": "1",
+              "name": "AUTO_RESTART",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Control signal Register for 'auto_restart'."
+            },
+            {
+              "offset": "8",
+              "width": "24",
+              "name": "RESERVED_2",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x04",
+          "name": "GIER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "Global Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "Enable",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"
+            },
+            {
+              "offset": "1",
+              "width": "31",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x08",
+          "name": "IP_IER",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Enable Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_EN",
+              "access": "RW",
+              "reset_value": "0",
+              "description": "Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x0c",
+          "name": "IP_ISR",
+          "access": "RW",
+          "reset_value": "0x0",
+          "description": "IP Interrupt Status Register",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "1",
+              "name": "CHAN0_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 input interrupt, 1 = Channel 0 input interrup"
+            },
+            {
+              "offset": "1",
+              "width": "1",
+              "name": "CHAN1_INT_ST",
+              "access": "RTOW",
+              "reset_value": "0",
+              "description": "Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 input interrupt, 1 = Channel 1 input interrup"
+            },
+            {
+              "offset": "2",
+              "width": "30",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
+        },
+        {
+          "offset": "0x10",
+          "name": "ap_return",
+          "access": "R",
+          "reset_value": "0x0",
+          "description": "Data signal of ap_return",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "ap_return",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of ap_return"
+            }]
+        },
+        {
+          "offset": "0x18",
+          "name": "input_r",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of input_r",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "input_r",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of input_r"
+            }]
+        },
+        {
+          "offset": "0x20",
+          "name": "weights1",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of weights1",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "weights1",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of weights1"
+            }]
+        },
+        {
+          "offset": "0x28",
+          "name": "bias1",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias1",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "bias1",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of bias1"
+            }]
+        },
+        {
+          "offset": "0x30",
+          "name": "weights3",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of weights3",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "weights3",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of weights3"
+            }]
+        },
+        {
+          "offset": "0x38",
+          "name": "bias3",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias3",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "bias3",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of bias3"
+            }]
+        },
+        {
+          "offset": "0x40",
+          "name": "weights5",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of weights5",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "weights5",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of weights5"
+            }]
+        },
+        {
+          "offset": "0x48",
+          "name": "bias5",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias5",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "bias5",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of bias5"
+            }]
+        },
+        {
+          "offset": "0x50",
+          "name": "weights6",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of weights6",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "weights6",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of weights6"
+            }]
+        },
+        {
+          "offset": "0x58",
+          "name": "bias6",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of bias6",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "bias6",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of bias6"
+            }]
+        },
+        {
+          "offset": "0x60",
+          "name": "output_r",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of output_r",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "output_r",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of output_r"
+            }]
+        }
+      ],
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "7"
+        },
+        "WDATA": {
           "Type": "integer signed",
           "Width": "32"
-        }},
-      "bundle_name": "ap_return",
-      "bundle_role": "default"
-    },
-    "ap_rst": {
-      "type": "reset",
-      "polarity": "ACTIVE_HIGH",
-      "ctype": {"RST": {"Type": "bool"}},
-      "bundle_name": "ap_rst",
-      "bundle_role": "default"
-    },
-    "bias1_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "3",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "3"
-        }},
-      "bundle_name": "bias1",
-      "bundle_role": "address0"
-    },
-    "bias1_q0": {
-      "type": "data",
-      "dir": "in",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
-          "Width": "32"
-        }},
-      "bundle_name": "bias1",
-      "bundle_role": "q0"
-    },
-    "bias3_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "4",
-      "ctype": {"DATA": {
-          "Type": "null",
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
           "Width": "4"
-        }},
-      "bundle_name": "bias3",
-      "bundle_role": "address0"
-    },
-    "bias3_q0": {
-      "type": "data",
-      "dir": "in",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
-          "Width": "32"
-        }},
-      "bundle_name": "bias3",
-      "bundle_role": "q0"
-    },
-    "bias5_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "7",
-      "ctype": {"DATA": {
-          "Type": "null",
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
           "Width": "7"
-        }},
-      "bundle_name": "bias5",
-      "bundle_role": "address0"
-    },
-    "bias5_q0": {
-      "type": "data",
-      "dir": "in",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
+        },
+        "RDATA": {
+          "Type": "integer signed",
           "Width": "32"
-        }},
-      "bundle_name": "bias5",
-      "bundle_role": "q0"
-    },
-    "bias6_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "4",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "4"
-        }},
-      "bundle_name": "bias6",
-      "bundle_role": "address0"
-    },
-    "bias6_q0": {
-      "type": "data",
-      "dir": "in",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
-          "Width": "32"
-        }},
-      "bundle_name": "bias6",
-      "bundle_role": "q0"
-    },
-    "input_r_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "10",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "10"
-        }},
-      "bundle_name": "input_r",
-      "bundle_role": "address0"
-    },
-    "input_r_q0": {
-      "type": "data",
-      "dir": "in",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
-          "Width": "32"
-        }},
-      "bundle_name": "input_r",
-      "bundle_role": "q0"
-    },
-    "output_r_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "4",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "4"
-        }},
-      "bundle_name": "output_r",
-      "bundle_role": "address0"
-    },
-    "output_r_d0": {
-      "type": "data",
-      "dir": "out",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
-          "Width": "32"
-        }},
-      "bundle_name": "output_r",
-      "bundle_role": "d0"
-    },
-    "weights1_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "8",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "8"
-        }},
-      "bundle_name": "weights1",
-      "bundle_role": "address0"
-    },
-    "weights1_q0": {
-      "type": "data",
-      "dir": "in",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
-          "Width": "32"
-        }},
-      "bundle_name": "weights1",
-      "bundle_role": "q0"
-    },
-    "weights3_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "12",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "12"
-        }},
-      "bundle_name": "weights3",
-      "bundle_role": "address0"
-    },
-    "weights3_q0": {
-      "type": "data",
-      "dir": "in",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
-          "Width": "32"
-        }},
-      "bundle_name": "weights3",
-      "bundle_role": "q0"
-    },
-    "weights5_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "16",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "16"
-        }},
-      "bundle_name": "weights5",
-      "bundle_role": "address0"
-    },
-    "weights5_q0": {
-      "type": "data",
-      "dir": "in",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
-          "Width": "32"
-        }},
-      "bundle_name": "weights5",
-      "bundle_role": "q0"
-    },
-    "weights6_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "11",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "11"
-        }},
-      "bundle_name": "weights6",
-      "bundle_role": "address0"
-    },
-    "weights6_q0": {
-      "type": "data",
-      "dir": "in",
-      "width": "32",
-      "ctype": {"DATA": {
-          "Type": "real float",
-          "Width": "32"
-        }},
-      "bundle_name": "weights6",
-      "bundle_role": "q0"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "7",
+        "AWADDR": "7",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
     }
   },
   "RtlPorts": {
+    "s_axi_CTL_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTL_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTL_AWADDR": {
+      "dir": "in",
+      "width": "7"
+    },
+    "s_axi_CTL_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTL_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTL_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_CTL_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_CTL_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTL_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTL_ARADDR": {
+      "dir": "in",
+      "width": "7"
+    },
+    "s_axi_CTL_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTL_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTL_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_CTL_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_CTL_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_CTL_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_CTL_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
     "ap_clk": {
       "dir": "in",
       "width": "1"
     },
-    "ap_rst": {
+    "ap_rst_n": {
       "dir": "in",
       "width": "1"
     },
-    "ap_start": {
+    "interrupt": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_INPUT_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_INPUT_AWREADY": {
       "dir": "in",
       "width": "1"
     },
-    "ap_done": {
-      "dir": "out",
-      "width": "1"
-    },
-    "ap_idle": {
-      "dir": "out",
-      "width": "1"
-    },
-    "ap_ready": {
-      "dir": "out",
-      "width": "1"
-    },
-    "ap_return": {
+    "m_axi_DATA_INPUT_AWADDR": {
       "dir": "out",
       "width": "32"
     },
-    "input_r_address0": {
+    "m_axi_DATA_INPUT_AWID": {
       "dir": "out",
-      "width": "10"
+      "width": "1",
+      "isVector": "true"
     },
-    "input_r_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "input_r_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "weights1_address0": {
+    "m_axi_DATA_INPUT_AWLEN": {
       "dir": "out",
       "width": "8"
     },
-    "weights1_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "weights1_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "bias1_address0": {
+    "m_axi_DATA_INPUT_AWSIZE": {
       "dir": "out",
       "width": "3"
     },
-    "bias1_ce0": {
+    "m_axi_DATA_INPUT_AWBURST": {
       "dir": "out",
-      "width": "1"
+      "width": "2"
     },
-    "bias1_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "weights3_address0": {
+    "m_axi_DATA_INPUT_AWLOCK": {
       "dir": "out",
-      "width": "12"
+      "width": "2"
     },
-    "weights3_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "weights3_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "bias3_address0": {
+    "m_axi_DATA_INPUT_AWCACHE": {
       "dir": "out",
       "width": "4"
     },
-    "bias3_ce0": {
+    "m_axi_DATA_INPUT_AWPROT": {
       "dir": "out",
-      "width": "1"
+      "width": "3"
     },
-    "bias3_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "weights5_address0": {
-      "dir": "out",
-      "width": "16"
-    },
-    "weights5_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "weights5_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "bias5_address0": {
-      "dir": "out",
-      "width": "7"
-    },
-    "bias5_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "bias5_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "weights6_address0": {
-      "dir": "out",
-      "width": "11"
-    },
-    "weights6_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "weights6_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "bias6_address0": {
+    "m_axi_DATA_INPUT_AWQOS": {
       "dir": "out",
       "width": "4"
     },
-    "bias6_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "bias6_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "output_r_address0": {
+    "m_axi_DATA_INPUT_AWREGION": {
       "dir": "out",
       "width": "4"
     },
-    "output_r_ce0": {
+    "m_axi_DATA_INPUT_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_INPUT_WVALID": {
       "dir": "out",
       "width": "1"
     },
-    "output_r_we0": {
-      "dir": "out",
+    "m_axi_DATA_INPUT_WREADY": {
+      "dir": "in",
       "width": "1"
     },
-    "output_r_d0": {
+    "m_axi_DATA_INPUT_WDATA": {
       "dir": "out",
       "width": "32"
+    },
+    "m_axi_DATA_INPUT_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_INPUT_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_INPUT_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_INPUT_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_INPUT_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_INPUT_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_INPUT_ARADDR": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_INPUT_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_INPUT_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_DATA_INPUT_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_INPUT_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_INPUT_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_INPUT_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_INPUT_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_INPUT_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_INPUT_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_INPUT_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_INPUT_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_INPUT_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_INPUT_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_DATA_INPUT_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_INPUT_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_INPUT_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_INPUT_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_DATA_INPUT_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_INPUT_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_INPUT_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_DATA_INPUT_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_INPUT_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_AWADDR": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_WEIGHT_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_DATA_WEIGHT_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_WEIGHT_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_WEIGHT_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_WEIGHT_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_WEIGHT_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_WEIGHT_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_WEIGHT_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_WEIGHT_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_WEIGHT_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_WEIGHT_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_ARADDR": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_WEIGHT_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_DATA_WEIGHT_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_WEIGHT_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_WEIGHT_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_WEIGHT_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_WEIGHT_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_WEIGHT_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_WEIGHT_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_WEIGHT_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_DATA_WEIGHT_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_DATA_WEIGHT_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_WEIGHT_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_DATA_WEIGHT_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_WEIGHT_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_AWADDR": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_BIAS_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_DATA_BIAS_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_BIAS_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_BIAS_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_BIAS_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_BIAS_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_BIAS_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_BIAS_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_BIAS_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_BIAS_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_BIAS_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_ARADDR": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_BIAS_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_DATA_BIAS_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_BIAS_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_BIAS_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_BIAS_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_BIAS_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_BIAS_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_BIAS_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_BIAS_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_DATA_BIAS_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_DATA_BIAS_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_BIAS_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_DATA_BIAS_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_BIAS_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_AWADDR": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_OUTPUT_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_DATA_OUTPUT_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_OUTPUT_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_OUTPUT_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_OUTPUT_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_OUTPUT_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_OUTPUT_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_OUTPUT_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_OUTPUT_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_OUTPUT_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_OUTPUT_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_ARADDR": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_DATA_OUTPUT_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_DATA_OUTPUT_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_OUTPUT_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_OUTPUT_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_DATA_OUTPUT_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_OUTPUT_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_DATA_OUTPUT_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_OUTPUT_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_DATA_OUTPUT_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_DATA_OUTPUT_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_DATA_OUTPUT_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_DATA_OUTPUT_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_DATA_OUTPUT_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_DATA_OUTPUT_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
     }
   },
   "ModuleInfo": {
@@ -711,55 +2254,70 @@
       "Instances": [
         {
           "ModuleName": "i_convolution3",
-          "InstanceName": "grp_i_convolution3_fu_561"
-        },
-        {
-          "ModuleName": "i_convolution5",
-          "InstanceName": "grp_i_convolution5_fu_569"
+          "InstanceName": "grp_i_convolution3_fu_266"
         },
         {
           "ModuleName": "i_convolution1",
-          "InstanceName": "grp_i_convolution1_fu_577"
+          "InstanceName": "grp_i_convolution1_fu_274"
+        },
+        {
+          "ModuleName": "i_convolution5",
+          "InstanceName": "grp_i_convolution5_fu_282"
+        },
+        {
+          "ModuleName": "i_fc6",
+          "InstanceName": "grp_i_fc6_fu_290"
         },
         {
           "ModuleName": "i_max_pooling2",
-          "InstanceName": "grp_i_max_pooling2_fu_585"
+          "InstanceName": "grp_i_max_pooling2_fu_302"
         },
         {
           "ModuleName": "i_max_pooling4",
-          "InstanceName": "grp_i_max_pooling4_fu_591"
-        },
-        {
-          "ModuleName": "i_relu1",
-          "InstanceName": "grp_i_relu1_fu_597"
-        },
-        {
-          "ModuleName": "i_relu3",
-          "InstanceName": "grp_i_relu3_fu_602"
-        },
-        {
-          "ModuleName": "i_relu4",
-          "InstanceName": "grp_i_relu4_fu_607"
-        },
-        {
-          "ModuleName": "i_relu2",
-          "InstanceName": "grp_i_relu2_fu_612"
+          "InstanceName": "grp_i_max_pooling4_fu_308"
         },
         {
           "ModuleName": "ld_weights5",
-          "InstanceName": "grp_ld_weights5_fu_617"
+          "InstanceName": "grp_ld_weights5_fu_314"
         },
         {
           "ModuleName": "ld_weights3",
-          "InstanceName": "grp_ld_weights3_fu_624"
+          "InstanceName": "grp_ld_weights3_fu_322"
         },
         {
           "ModuleName": "ld_weights1",
-          "InstanceName": "grp_ld_weights1_fu_631"
+          "InstanceName": "grp_ld_weights1_fu_330"
+        },
+        {
+          "ModuleName": "ld_input",
+          "InstanceName": "grp_ld_input_fu_338"
+        },
+        {
+          "ModuleName": "ld_bias5",
+          "InstanceName": "grp_ld_bias5_fu_346"
+        },
+        {
+          "ModuleName": "ld_bias3",
+          "InstanceName": "grp_ld_bias3_fu_354"
+        },
+        {
+          "ModuleName": "st_output",
+          "InstanceName": "grp_st_output_fu_362"
+        },
+        {
+          "ModuleName": "ld_bias1",
+          "InstanceName": "grp_ld_bias1_fu_370"
         }
       ]
     },
     "Info": {
+      "ld_input": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
       "ld_weights1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
@@ -781,14 +2339,28 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "i_convolution1": {
+      "ld_bias1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "i_relu1": {
+      "ld_bias3": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "ld_bias5": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "i_convolution1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -802,21 +2374,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "i_relu2": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "1",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
       "i_convolution3": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "1",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
-      "i_relu3": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -830,14 +2388,21 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "i_relu4": {
+      "i_convolution5": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "i_convolution5": {
+      "i_fc6": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "st_output": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -853,32 +2418,68 @@
       }
     },
     "Metrics": {
-      "ld_weights1": {
+      "ld_input": {
         "Latency": {
-          "LatencyBest": "373",
-          "LatencyAvg": "373",
-          "LatencyWorst": "373",
-          "PipelineII": "373",
+          "LatencyBest": "2337",
+          "LatencyAvg": "2337",
+          "LatencyWorst": "2337",
+          "PipelineII": "2337",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "6.508"
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "32",
+            "Latency": "2336",
+            "PipelineII": "",
+            "PipelineDepth": "73",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "32",
+                "Latency": "64",
+                "PipelineII": "",
+                "PipelineDepth": "2"
+              }]
+          }],
+        "Area": {
+          "FF": "152",
+          "LUT": "193",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "ld_weights1": {
+        "Latency": {
+          "LatencyBest": "583",
+          "LatencyAvg": "583",
+          "LatencyWorst": "583",
+          "PipelineII": "583",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "6",
-            "Latency": "372",
+            "Latency": "582",
             "PipelineII": "",
-            "PipelineDepth": "62",
+            "PipelineDepth": "97",
             "Loops": [{
                 "Name": "Loop 1.1",
                 "TripCount": "5",
-                "Latency": "60",
+                "Latency": "95",
                 "PipelineII": "",
-                "PipelineDepth": "12",
+                "PipelineDepth": "19",
                 "Loops": [{
                     "Name": "Loop 1.1.1",
                     "TripCount": "5",
@@ -889,8 +2490,8 @@
               }]
           }],
         "Area": {
-          "FF": "47",
-          "LUT": "183",
+          "FF": "258",
+          "LUT": "409",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -898,36 +2499,36 @@
       },
       "ld_weights3": {
         "Latency": {
-          "LatencyBest": "5985",
-          "LatencyAvg": "5985",
-          "LatencyWorst": "5985",
-          "PipelineII": "5985",
+          "LatencyBest": "9345",
+          "LatencyAvg": "9345",
+          "LatencyWorst": "9345",
+          "PipelineII": "9345",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "6.508"
+          "Estimate": "8.750"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "16",
-            "Latency": "5984",
+            "Latency": "9344",
             "PipelineII": "",
-            "PipelineDepth": "374",
+            "PipelineDepth": "584",
             "Loops": [{
                 "Name": "Loop 1.1",
                 "TripCount": "6",
-                "Latency": "372",
+                "Latency": "582",
                 "PipelineII": "",
-                "PipelineDepth": "62",
+                "PipelineDepth": "97",
                 "Loops": [{
                     "Name": "Loop 1.1.1",
                     "TripCount": "5",
-                    "Latency": "60",
+                    "Latency": "95",
                     "PipelineII": "",
-                    "PipelineDepth": "12",
+                    "PipelineDepth": "19",
                     "Loops": [{
                         "Name": "Loop 1.1.1.1",
                         "TripCount": "5",
@@ -939,8 +2540,8 @@
               }]
           }],
         "Area": {
-          "FF": "133",
-          "LUT": "368",
+          "FF": "336",
+          "LUT": "588",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -948,36 +2549,36 @@
       },
       "ld_weights5": {
         "Latency": {
-          "LatencyBest": "119281",
-          "LatencyAvg": "119281",
-          "LatencyWorst": "119281",
-          "PipelineII": "119281",
+          "LatencyBest": "186481",
+          "LatencyAvg": "186481",
+          "LatencyWorst": "186481",
+          "PipelineII": "186481",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "6.508"
+          "Estimate": "8.750"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "120",
-            "Latency": "119280",
+            "Latency": "186480",
             "PipelineII": "",
-            "PipelineDepth": "994",
+            "PipelineDepth": "1554",
             "Loops": [{
                 "Name": "Loop 1.1",
                 "TripCount": "16",
-                "Latency": "992",
+                "Latency": "1552",
                 "PipelineII": "",
-                "PipelineDepth": "62",
+                "PipelineDepth": "97",
                 "Loops": [{
                     "Name": "Loop 1.1.1",
                     "TripCount": "5",
-                    "Latency": "60",
+                    "Latency": "95",
                     "PipelineII": "",
-                    "PipelineDepth": "12",
+                    "PipelineDepth": "19",
                     "Loops": [{
                         "Name": "Loop 1.1.1.1",
                         "TripCount": "5",
@@ -989,8 +2590,95 @@
               }]
           }],
         "Area": {
-          "FF": "147",
-          "LUT": "370",
+          "FF": "342",
+          "LUT": "576",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "ld_bias1": {
+        "Latency": {
+          "LatencyBest": "19",
+          "LatencyAvg": "19",
+          "LatencyWorst": "19",
+          "PipelineII": "19",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "6",
+            "Latency": "12",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "47",
+          "LUT": "97",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "ld_bias3": {
+        "Latency": {
+          "LatencyBest": "39",
+          "LatencyAvg": "39",
+          "LatencyWorst": "39",
+          "PipelineII": "39",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "16",
+            "Latency": "32",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "51",
+          "LUT": "102",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "ld_bias5": {
+        "Latency": {
+          "LatencyBest": "247",
+          "LatencyAvg": "247",
+          "LatencyWorst": "247",
+          "PipelineII": "247",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "120",
+            "Latency": "240",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "55",
+          "LUT": "102",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -998,110 +2686,39 @@
       },
       "i_convolution1": {
         "Latency": {
-          "LatencyBest": "1383325",
-          "LatencyAvg": "1383325",
-          "LatencyWorst": "1383325",
-          "PipelineII": "1383325",
+          "LatencyBest": "35411",
+          "LatencyAvg": "35411",
+          "LatencyWorst": "35411",
+          "PipelineII": "35411",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "7.256"
+          "Estimate": "8.427"
         },
         "Loops": [{
             "Name": "Loop 1",
-            "TripCount": "6",
-            "Latency": "1383324",
-            "PipelineII": "",
-            "PipelineDepth": "230554",
-            "Loops": [{
-                "Name": "Loop 1.1",
-                "TripCount": "28",
-                "Latency": "230552",
-                "PipelineII": "",
-                "PipelineDepth": "8234",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "28",
-                    "Latency": "8232",
-                    "PipelineII": "",
-                    "PipelineDepth": "294",
-                    "Loops": [{
-                        "Name": "Loop 1.1.1.1",
-                        "TripCount": "5",
-                        "Latency": "285",
-                        "PipelineII": "",
-                        "PipelineDepth": "57",
-                        "Loops": [{
-                            "Name": "Loop 1.1.1.1.1",
-                            "TripCount": "5",
-                            "Latency": "55",
-                            "PipelineII": "",
-                            "PipelineDepth": "11"
-                          }]
-                      }]
-                  }]
-              }]
+            "TripCount": "2352",
+            "Latency": "35409",
+            "PipelineII": "15",
+            "PipelineDepth": "145"
           }],
         "Area": {
-          "DSP48E": "5",
-          "FF": "690",
-          "LUT": "1189",
           "BRAM_18K": "0",
-          "URAM": "0"
-        }
-      },
-      "i_relu1": {
-        "Latency": {
-          "LatencyBest": "14461",
-          "LatencyAvg": "14461",
-          "LatencyWorst": "14461",
-          "PipelineII": "14461",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "8.685"
-        },
-        "Loops": [{
-            "Name": "Loop 1",
-            "TripCount": "6",
-            "Latency": "14460",
-            "PipelineII": "",
-            "PipelineDepth": "2410",
-            "Loops": [{
-                "Name": "Loop 1.1",
-                "TripCount": "28",
-                "Latency": "2408",
-                "PipelineII": "",
-                "PipelineDepth": "86",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "28",
-                    "Latency": "84",
-                    "PipelineII": "",
-                    "PipelineDepth": "3"
-                  }]
-              }]
-          }],
-        "Area": {
-          "DSP48E": "0",
-          "FF": "133",
-          "LUT": "492",
-          "BRAM_18K": "0",
+          "DSP48E": "20",
+          "FF": "7899",
+          "LUT": "6782",
           "URAM": "0"
         }
       },
       "i_max_pooling2": {
         "Latency": {
-          "LatencyBest": "21349",
-          "LatencyAvg": "21349",
-          "LatencyWorst": "21349",
-          "PipelineII": "21349",
+          "LatencyBest": "17641",
+          "LatencyAvg": "17641",
+          "LatencyWorst": "17641",
+          "PipelineII": "17641",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1112,203 +2729,61 @@
         },
         "Loops": [{
             "Name": "Loop 1",
-            "TripCount": "6",
-            "Latency": "21348",
+            "TripCount": "1176",
+            "Latency": "17640",
             "PipelineII": "",
-            "PipelineDepth": "3558",
+            "PipelineDepth": "15",
             "Loops": [{
                 "Name": "Loop 1.1",
-                "TripCount": "14",
-                "Latency": "3556",
-                "PipelineII": "",
-                "PipelineDepth": "254",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "14",
-                    "Latency": "252",
-                    "PipelineII": "",
-                    "PipelineDepth": "18",
-                    "Loops": [{
-                        "Name": "Loop 1.1.1.1",
-                        "TripCount": "2",
-                        "Latency": "16",
-                        "PipelineII": "",
-                        "PipelineDepth": "8",
-                        "Loops": [{
-                            "Name": "Loop 1.1.1.1.1",
-                            "TripCount": "2",
-                            "Latency": "6",
-                            "PipelineII": "",
-                            "PipelineDepth": "3"
-                          }]
-                      }]
-                  }]
+                "TripCount": "4",
+                "Latency": "9",
+                "PipelineII": "2",
+                "PipelineDepth": "4"
               }]
           }],
         "Area": {
           "DSP48E": "0",
-          "FF": "247",
-          "LUT": "698",
-          "BRAM_18K": "0",
-          "URAM": "0"
-        }
-      },
-      "i_relu2": {
-        "Latency": {
-          "LatencyBest": "3709",
-          "LatencyAvg": "3709",
-          "LatencyWorst": "3709",
-          "PipelineII": "3709",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "8.685"
-        },
-        "Loops": [{
-            "Name": "Loop 1",
-            "TripCount": "6",
-            "Latency": "3708",
-            "PipelineII": "",
-            "PipelineDepth": "618",
-            "Loops": [{
-                "Name": "Loop 1.1",
-                "TripCount": "14",
-                "Latency": "616",
-                "PipelineII": "",
-                "PipelineDepth": "44",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "14",
-                    "Latency": "42",
-                    "PipelineII": "",
-                    "PipelineDepth": "3"
-                  }]
-              }]
-          }],
-        "Area": {
-          "DSP48E": "0",
-          "FF": "126",
-          "LUT": "471",
+          "FF": "289",
+          "LUT": "934",
           "BRAM_18K": "0",
           "URAM": "0"
         }
       },
       "i_convolution3": {
         "Latency": {
-          "LatencyBest": "2990753",
-          "LatencyAvg": "2990753",
-          "LatencyWorst": "2990753",
-          "PipelineII": "2990753",
+          "LatencyBest": "72681",
+          "LatencyAvg": "72681",
+          "LatencyWorst": "72681",
+          "PipelineII": "72681",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "7.571"
+          "Estimate": "9.658"
         },
         "Loops": [{
             "Name": "Loop 1",
-            "TripCount": "16",
-            "Latency": "2990752",
-            "PipelineII": "",
-            "PipelineDepth": "186922",
-            "Loops": [{
-                "Name": "Loop 1.1",
-                "TripCount": "10",
-                "Latency": "186920",
-                "PipelineII": "",
-                "PipelineDepth": "18692",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "10",
-                    "Latency": "18690",
-                    "PipelineII": "",
-                    "PipelineDepth": "1869",
-                    "Loops": [{
-                        "Name": "Loop 1.1.1.1",
-                        "TripCount": "5",
-                        "Latency": "1860",
-                        "PipelineII": "",
-                        "PipelineDepth": "372",
-                        "Loops": [{
-                            "Name": "Loop 1.1.1.1.1",
-                            "TripCount": "5",
-                            "Latency": "370",
-                            "PipelineII": "",
-                            "PipelineDepth": "74",
-                            "Loops": [{
-                                "Name": "Loop 1.1.1.1.1.1",
-                                "TripCount": "6",
-                                "Latency": "72",
-                                "PipelineII": "",
-                                "PipelineDepth": "12"
-                              }]
-                          }]
-                      }]
-                  }]
-              }]
+            "TripCount": "800",
+            "Latency": "72679",
+            "PipelineII": "90",
+            "PipelineDepth": "770"
           }],
         "Area": {
-          "DSP48E": "5",
-          "FF": "767",
-          "LUT": "1317",
           "BRAM_18K": "0",
-          "URAM": "0"
-        }
-      },
-      "i_relu3": {
-        "Latency": {
-          "LatencyBest": "5153",
-          "LatencyAvg": "5153",
-          "LatencyWorst": "5153",
-          "PipelineII": "5153",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "8.685"
-        },
-        "Loops": [{
-            "Name": "Loop 1",
-            "TripCount": "16",
-            "Latency": "5152",
-            "PipelineII": "",
-            "PipelineDepth": "322",
-            "Loops": [{
-                "Name": "Loop 1.1",
-                "TripCount": "10",
-                "Latency": "320",
-                "PipelineII": "",
-                "PipelineDepth": "32",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "10",
-                    "Latency": "30",
-                    "PipelineII": "",
-                    "PipelineDepth": "3"
-                  }]
-              }]
-          }],
-        "Area": {
-          "DSP48E": "0",
-          "FF": "130",
-          "LUT": "476",
-          "BRAM_18K": "0",
+          "DSP48E": "21",
+          "FF": "29449",
+          "LUT": "20219",
           "URAM": "0"
         }
       },
       "i_max_pooling4": {
         "Latency": {
-          "LatencyBest": "7393",
-          "LatencyAvg": "7393",
-          "LatencyWorst": "7393",
-          "PipelineII": "7393",
+          "LatencyBest": "6001",
+          "LatencyAvg": "6001",
+          "LatencyWorst": "6001",
+          "PipelineII": "6001",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1319,252 +2794,139 @@
         },
         "Loops": [{
             "Name": "Loop 1",
-            "TripCount": "16",
-            "Latency": "7392",
+            "TripCount": "400",
+            "Latency": "6000",
             "PipelineII": "",
-            "PipelineDepth": "462",
+            "PipelineDepth": "15",
             "Loops": [{
                 "Name": "Loop 1.1",
-                "TripCount": "5",
-                "Latency": "460",
-                "PipelineII": "",
-                "PipelineDepth": "92",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "5",
-                    "Latency": "90",
-                    "PipelineII": "",
-                    "PipelineDepth": "18",
-                    "Loops": [{
-                        "Name": "Loop 1.1.1.1",
-                        "TripCount": "2",
-                        "Latency": "16",
-                        "PipelineII": "",
-                        "PipelineDepth": "8",
-                        "Loops": [{
-                            "Name": "Loop 1.1.1.1.1",
-                            "TripCount": "2",
-                            "Latency": "6",
-                            "PipelineII": "",
-                            "PipelineDepth": "3"
-                          }]
-                      }]
-                  }]
+                "TripCount": "4",
+                "Latency": "9",
+                "PipelineII": "2",
+                "PipelineDepth": "4"
               }]
           }],
         "Area": {
           "DSP48E": "0",
-          "FF": "243",
-          "LUT": "688",
-          "BRAM_18K": "0",
-          "URAM": "0"
-        }
-      },
-      "i_relu4": {
-        "Latency": {
-          "LatencyBest": "1393",
-          "LatencyAvg": "1393",
-          "LatencyWorst": "1393",
-          "PipelineII": "1393",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "1.25",
-          "Estimate": "8.685"
-        },
-        "Loops": [{
-            "Name": "Loop 1",
-            "TripCount": "16",
-            "Latency": "1392",
-            "PipelineII": "",
-            "PipelineDepth": "87",
-            "Loops": [{
-                "Name": "Loop 1.1",
-                "TripCount": "5",
-                "Latency": "85",
-                "PipelineII": "",
-                "PipelineDepth": "17",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "5",
-                    "Latency": "15",
-                    "PipelineII": "",
-                    "PipelineDepth": "3"
-                  }]
-              }]
-          }],
-        "Area": {
-          "DSP48E": "0",
-          "FF": "123",
-          "LUT": "478",
+          "FF": "267",
+          "LUT": "937",
           "BRAM_18K": "0",
           "URAM": "0"
         }
       },
       "i_convolution5": {
         "Latency": {
-          "LatencyBest": "584281",
-          "LatencyAvg": "584281",
-          "LatencyWorst": "584281",
-          "PipelineII": "584281",
+          "LatencyBest": "242281",
+          "LatencyAvg": "242281",
+          "LatencyWorst": "242281",
+          "PipelineII": "242281",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "7.396"
+          "Estimate": "7.806"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "120",
-            "Latency": "584280",
+            "Latency": "242280",
             "PipelineII": "",
-            "PipelineDepth": "4869",
+            "PipelineDepth": "2019",
             "Loops": [{
                 "Name": "Loop 1.1",
-                "TripCount": "5",
-                "Latency": "4860",
-                "PipelineII": "",
-                "PipelineDepth": "972",
-                "Loops": [{
-                    "Name": "Loop 1.1.1",
-                    "TripCount": "5",
-                    "Latency": "970",
-                    "PipelineII": "",
-                    "PipelineDepth": "194",
-                    "Loops": [{
-                        "Name": "Loop 1.1.1.1",
-                        "TripCount": "16",
-                        "Latency": "192",
-                        "PipelineII": "",
-                        "PipelineDepth": "12"
-                      }]
-                  }]
+                "TripCount": "400",
+                "Latency": "2007",
+                "PipelineII": "5",
+                "PipelineDepth": "13"
               }]
           }],
         "Area": {
-          "DSP48E": "5",
-          "FF": "731",
-          "LUT": "1159",
           "BRAM_18K": "0",
+          "DSP48E": "5",
+          "FF": "853",
+          "LUT": "1591",
+          "URAM": "0"
+        }
+      },
+      "i_fc6": {
+        "Latency": {
+          "LatencyBest": "6028",
+          "LatencyAvg": "6028",
+          "LatencyWorst": "6028",
+          "PipelineII": "6028",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "1200",
+            "Latency": "6020",
+            "PipelineII": "5",
+            "PipelineDepth": "26"
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "5",
+          "FF": "1036",
+          "LUT": "1548",
+          "URAM": "0"
+        }
+      },
+      "st_output": {
+        "Latency": {
+          "LatencyBest": "35",
+          "LatencyAvg": "35",
+          "LatencyWorst": "35",
+          "PipelineII": "35",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.750"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "10",
+            "Latency": "30",
+            "PipelineII": "",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "FF": "48",
+          "LUT": "102",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
           "URAM": "0"
         }
       },
       "lenet_top": {
         "Latency": {
-          "LatencyBest": "5149662",
-          "LatencyAvg": "5149662",
-          "LatencyWorst": "5149662",
-          "PipelineII": "5149663",
+          "LatencyBest": "551271",
+          "LatencyAvg": "551271",
+          "LatencyWorst": "551271",
+          "PipelineII": "551272",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.685"
+          "Estimate": "9.658"
         },
-        "Loops": [
-          {
-            "Name": "Loop 1",
-            "TripCount": "32",
-            "Latency": "2112",
-            "PipelineII": "",
-            "PipelineDepth": "66",
-            "Loops": [{
-                "Name": "Loop 1.1",
-                "TripCount": "32",
-                "Latency": "64",
-                "PipelineII": "",
-                "PipelineDepth": "2"
-              }]
-          },
-          {
-            "Name": "Loop 2",
-            "TripCount": "10",
-            "Latency": "2420",
-            "PipelineII": "",
-            "PipelineDepth": "242",
-            "Loops": [{
-                "Name": "Loop 2.1",
-                "TripCount": "120",
-                "Latency": "240",
-                "PipelineII": "",
-                "PipelineDepth": "2"
-              }]
-          },
-          {
-            "Name": "Loop 3",
-            "TripCount": "6",
-            "Latency": "12",
-            "PipelineII": "",
-            "PipelineDepth": "2"
-          },
-          {
-            "Name": "Loop 4",
-            "TripCount": "16",
-            "Latency": "32",
-            "PipelineII": "",
-            "PipelineDepth": "2"
-          },
-          {
-            "Name": "Loop 5",
-            "TripCount": "120",
-            "Latency": "240",
-            "PipelineII": "",
-            "PipelineDepth": "2"
-          },
-          {
-            "Name": "Loop 6",
-            "TripCount": "10",
-            "Latency": "20",
-            "PipelineII": "",
-            "PipelineDepth": "2"
-          },
-          {
-            "Name": "Loop 7",
-            "TripCount": "120",
-            "Latency": "360",
-            "PipelineII": "",
-            "PipelineDepth": "3"
-          },
-          {
-            "Name": "Loop 8",
-            "TripCount": "10",
-            "Latency": "13290",
-            "PipelineII": "",
-            "PipelineDepth": "1329",
-            "Loops": [{
-                "Name": "Loop 8.1",
-                "TripCount": "120",
-                "Latency": "1320",
-                "PipelineII": "",
-                "PipelineDepth": "11"
-              }]
-          },
-          {
-            "Name": "Loop 9",
-            "TripCount": "10",
-            "Latency": "30",
-            "PipelineII": "",
-            "PipelineDepth": "3"
-          },
-          {
-            "Name": "Loop 10",
-            "TripCount": "10",
-            "Latency": "20",
-            "PipelineII": "",
-            "PipelineDepth": "2"
-          }
-        ],
         "Area": {
-          "BRAM_18K": "170",
-          "DSP48E": "20",
-          "FF": "4733",
-          "LUT": "10387",
+          "BRAM_18K": "175",
+          "DSP48E": "51",
+          "FF": "44101",
+          "LUT": "38645",
           "URAM": "0"
         }
       }
@@ -1580,7 +2942,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-10-30 00:20:30 -0500",
+    "Time": "2022-10-30 16:23:47 -0500",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.1"
   }

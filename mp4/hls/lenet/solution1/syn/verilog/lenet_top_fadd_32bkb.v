@@ -7,7 +7,7 @@
 
 module lenet_top_fadd_32bkb
 #(parameter
-    ID         = 7,
+    ID         = 22,
     NUM_STAGE  = 5,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

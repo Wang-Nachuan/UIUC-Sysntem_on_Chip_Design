@@ -7,7 +7,7 @@
 
 module lenet_top_fmul_32cud
 #(parameter
-    ID         = 8,
+    ID         = 26,
     NUM_STAGE  = 4,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

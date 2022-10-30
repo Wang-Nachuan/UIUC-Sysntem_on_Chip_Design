@@ -7,7 +7,7 @@ use ieee.std_logic_1164.all;
 
 entity lenet_top_fadd_32bkb is
     generic (
-        ID         : integer := 7;
+        ID         : integer := 22;
         NUM_STAGE  : integer := 5;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;

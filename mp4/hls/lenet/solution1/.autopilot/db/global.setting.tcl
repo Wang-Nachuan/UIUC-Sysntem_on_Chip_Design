@@ -13,8 +13,8 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 0
-set ResetLevelFlag 1
+set HasDSPModule 1
+set ResetLevelFlag 0
 set ResetStyle control
 set ResetSyncFlag 1
 set ResetRegisterFlag 0
@@ -40,15 +40,15 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
-set SourceFiles {sc {} c {../lenet_hls.cpp ../lenet_gold.cpp}}
-set SourceFlags {sc {} c {{} {}}}
+set SourceFiles {sc {} c ../lenet_hls.cpp}
+set SourceFlags {sc {} c {{}}}
 set DirectiveFile D:/Code/UIUC-ECE527/mp4/hls/lenet/solution1/solution1.directive
-set TBFiles {verilog {../params.bin ../lenet_tb.cpp ../labels.bin ../images.bin} bc {../params.bin ../lenet_tb.cpp ../labels.bin ../images.bin} sc {../params.bin ../lenet_tb.cpp ../labels.bin ../images.bin} vhdl {../params.bin ../lenet_tb.cpp ../labels.bin ../images.bin} c {} cas {../params.bin ../lenet_tb.cpp ../labels.bin ../images.bin}}
+set TBFiles {verilog {../params.bin ../lenet_tb.cpp ../lenet_gold.cpp ../labels.bin ../images.bin} bc {../params.bin ../lenet_tb.cpp ../lenet_gold.cpp ../labels.bin ../images.bin} vhdl {../params.bin ../lenet_tb.cpp ../lenet_gold.cpp ../labels.bin ../images.bin} sc {../params.bin ../lenet_tb.cpp ../lenet_gold.cpp ../labels.bin ../images.bin} cas {../params.bin ../lenet_tb.cpp ../lenet_gold.cpp ../labels.bin ../images.bin} c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
-set TBTops {verilog {} bc {} sc {} vhdl {} c {} cas {}}
-set TBInstNames {verilog {} bc {} sc {} vhdl {} c {} cas {}}
+set TBTops {verilog {} bc {} vhdl {} sc {} cas {} c {}}
+set TBInstNames {verilog {} bc {} vhdl {} sc {} cas {} c {}}
 set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}

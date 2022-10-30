@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'ld_weights5'" level="0">
-<item name = "Date">Sun Oct 30 00:20:22 2022
+<item name = "Date">Sun Oct 30 16:23:26 2022
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">lenet</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 6.508, 1.25</column>
+<column name="ap_clk">10.00, 8.750, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">119281, 119281, 119281, 119281, none</column>
+<column name="">186481, 186481, 186481, 186481, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,9 +35,9 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">119280, 119280, 994, -, -, 120, no</column>
-<column name=" + Loop 1.1">992, 992, 62, -, -, 16, no</column>
-<column name="  ++ Loop 1.1.1">60, 60, 12, -, -, 5, no</column>
+<column name="- Loop 1">186480, 186480, 1554, -, -, 120, no</column>
+<column name=" + Loop 1.1">1552, 1552, 97, -, -, 16, no</column>
+<column name="  ++ Loop 1.1.1">95, 95, 19, -, -, 5, no</column>
 <column name="   +++ Loop 1.1.1.1">10, 10, 2, -, -, 5, no</column>
 </table>
 </item>

@@ -7,7 +7,7 @@ use ieee.std_logic_1164.all;
 
 entity lenet_top_fmul_32cud is
     generic (
-        ID         : integer := 8;
+        ID         : integer := 26;
         NUM_STAGE  : integer := 4;
         din0_WIDTH : integer := 32;
         din1_WIDTH : integer := 32;

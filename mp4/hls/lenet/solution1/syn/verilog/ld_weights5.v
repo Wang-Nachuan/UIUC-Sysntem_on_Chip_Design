@@ -14,21 +14,71 @@ module ld_weights5 (
         ap_done,
         ap_idle,
         ap_ready,
-        weights5_address0,
-        weights5_ce0,
-        weights5_q0,
+        m_axi_weights5_AWVALID,
+        m_axi_weights5_AWREADY,
+        m_axi_weights5_AWADDR,
+        m_axi_weights5_AWID,
+        m_axi_weights5_AWLEN,
+        m_axi_weights5_AWSIZE,
+        m_axi_weights5_AWBURST,
+        m_axi_weights5_AWLOCK,
+        m_axi_weights5_AWCACHE,
+        m_axi_weights5_AWPROT,
+        m_axi_weights5_AWQOS,
+        m_axi_weights5_AWREGION,
+        m_axi_weights5_AWUSER,
+        m_axi_weights5_WVALID,
+        m_axi_weights5_WREADY,
+        m_axi_weights5_WDATA,
+        m_axi_weights5_WSTRB,
+        m_axi_weights5_WLAST,
+        m_axi_weights5_WID,
+        m_axi_weights5_WUSER,
+        m_axi_weights5_ARVALID,
+        m_axi_weights5_ARREADY,
+        m_axi_weights5_ARADDR,
+        m_axi_weights5_ARID,
+        m_axi_weights5_ARLEN,
+        m_axi_weights5_ARSIZE,
+        m_axi_weights5_ARBURST,
+        m_axi_weights5_ARLOCK,
+        m_axi_weights5_ARCACHE,
+        m_axi_weights5_ARPROT,
+        m_axi_weights5_ARQOS,
+        m_axi_weights5_ARREGION,
+        m_axi_weights5_ARUSER,
+        m_axi_weights5_RVALID,
+        m_axi_weights5_RREADY,
+        m_axi_weights5_RDATA,
+        m_axi_weights5_RLAST,
+        m_axi_weights5_RID,
+        m_axi_weights5_RUSER,
+        m_axi_weights5_RRESP,
+        m_axi_weights5_BVALID,
+        m_axi_weights5_BREADY,
+        m_axi_weights5_BRESP,
+        m_axi_weights5_BID,
+        m_axi_weights5_BUSER,
+        weights5_offset,
         weights5_buf_address0,
         weights5_buf_ce0,
         weights5_buf_we0,
         weights5_buf_d0
 );
 
-parameter    ap_ST_fsm_state1 = 6'd1;
-parameter    ap_ST_fsm_state2 = 6'd2;
-parameter    ap_ST_fsm_state3 = 6'd4;
-parameter    ap_ST_fsm_state4 = 6'd8;
-parameter    ap_ST_fsm_state5 = 6'd16;
-parameter    ap_ST_fsm_state6 = 6'd32;
+parameter    ap_ST_fsm_state1 = 13'd1;
+parameter    ap_ST_fsm_state2 = 13'd2;
+parameter    ap_ST_fsm_state3 = 13'd4;
+parameter    ap_ST_fsm_state4 = 13'd8;
+parameter    ap_ST_fsm_state5 = 13'd16;
+parameter    ap_ST_fsm_state6 = 13'd32;
+parameter    ap_ST_fsm_state7 = 13'd64;
+parameter    ap_ST_fsm_state8 = 13'd128;
+parameter    ap_ST_fsm_state9 = 13'd256;
+parameter    ap_ST_fsm_state10 = 13'd512;
+parameter    ap_ST_fsm_state11 = 13'd1024;
+parameter    ap_ST_fsm_state12 = 13'd2048;
+parameter    ap_ST_fsm_state13 = 13'd4096;
 
 input   ap_clk;
 input   ap_rst;
@@ -36,9 +86,52 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [15:0] weights5_address0;
-output   weights5_ce0;
-input  [31:0] weights5_q0;
+output   m_axi_weights5_AWVALID;
+input   m_axi_weights5_AWREADY;
+output  [31:0] m_axi_weights5_AWADDR;
+output  [0:0] m_axi_weights5_AWID;
+output  [31:0] m_axi_weights5_AWLEN;
+output  [2:0] m_axi_weights5_AWSIZE;
+output  [1:0] m_axi_weights5_AWBURST;
+output  [1:0] m_axi_weights5_AWLOCK;
+output  [3:0] m_axi_weights5_AWCACHE;
+output  [2:0] m_axi_weights5_AWPROT;
+output  [3:0] m_axi_weights5_AWQOS;
+output  [3:0] m_axi_weights5_AWREGION;
+output  [0:0] m_axi_weights5_AWUSER;
+output   m_axi_weights5_WVALID;
+input   m_axi_weights5_WREADY;
+output  [31:0] m_axi_weights5_WDATA;
+output  [3:0] m_axi_weights5_WSTRB;
+output   m_axi_weights5_WLAST;
+output  [0:0] m_axi_weights5_WID;
+output  [0:0] m_axi_weights5_WUSER;
+output   m_axi_weights5_ARVALID;
+input   m_axi_weights5_ARREADY;
+output  [31:0] m_axi_weights5_ARADDR;
+output  [0:0] m_axi_weights5_ARID;
+output  [31:0] m_axi_weights5_ARLEN;
+output  [2:0] m_axi_weights5_ARSIZE;
+output  [1:0] m_axi_weights5_ARBURST;
+output  [1:0] m_axi_weights5_ARLOCK;
+output  [3:0] m_axi_weights5_ARCACHE;
+output  [2:0] m_axi_weights5_ARPROT;
+output  [3:0] m_axi_weights5_ARQOS;
+output  [3:0] m_axi_weights5_ARREGION;
+output  [0:0] m_axi_weights5_ARUSER;
+input   m_axi_weights5_RVALID;
+output   m_axi_weights5_RREADY;
+input  [31:0] m_axi_weights5_RDATA;
+input   m_axi_weights5_RLAST;
+input  [0:0] m_axi_weights5_RID;
+input  [0:0] m_axi_weights5_RUSER;
+input  [1:0] m_axi_weights5_RRESP;
+input   m_axi_weights5_BVALID;
+output   m_axi_weights5_BREADY;
+input  [1:0] m_axi_weights5_BRESP;
+input  [0:0] m_axi_weights5_BID;
+input  [0:0] m_axi_weights5_BUSER;
+input  [29:0] weights5_offset;
 output  [15:0] weights5_buf_address0;
 output   weights5_buf_ce0;
 output   weights5_buf_we0;
@@ -47,59 +140,67 @@ output  [31:0] weights5_buf_d0;
 reg ap_done;
 reg ap_idle;
 reg ap_ready;
-reg weights5_ce0;
+reg m_axi_weights5_ARVALID;
+reg m_axi_weights5_RREADY;
 reg weights5_buf_ce0;
 reg weights5_buf_we0;
 
-(* fsm_encoding = "none" *) reg   [5:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [12:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-wire   [6:0] i_fu_119_p2;
-reg   [6:0] i_reg_252;
-wire    ap_CS_fsm_state2;
-wire   [11:0] zext_ln202_fu_133_p1;
-reg   [11:0] zext_ln202_reg_257;
-wire   [0:0] icmp_ln201_fu_113_p2;
-wire   [4:0] j_fu_143_p2;
-reg   [4:0] j_reg_265;
-wire    ap_CS_fsm_state3;
-wire   [63:0] add_ln205_1_fu_174_p2;
-reg   [63:0] add_ln205_1_reg_270;
-wire   [0:0] icmp_ln202_fu_137_p2;
-wire   [2:0] k_fu_186_p2;
-reg   [2:0] k_reg_278;
-wire    ap_CS_fsm_state4;
-wire   [16:0] add_ln205_3_fu_217_p2;
-reg   [16:0] add_ln205_3_reg_283;
-wire   [0:0] icmp_ln203_fu_180_p2;
-wire   [2:0] l_fu_229_p2;
-reg   [2:0] l_reg_291;
+reg    weights5_blk_n_AR;
 wire    ap_CS_fsm_state5;
-wire   [63:0] zext_ln205_5_fu_244_p1;
-reg   [63:0] zext_ln205_5_reg_296;
-wire   [0:0] icmp_ln204_fu_223_p2;
-reg   [6:0] i_0_reg_69;
-reg   [4:0] j_0_reg_80;
-reg   [2:0] k_0_reg_91;
-reg   [2:0] l_0_reg_102;
-wire    ap_CS_fsm_state6;
-wire   [10:0] tmp_fu_125_p3;
-wire   [11:0] zext_ln205_fu_149_p1;
-wire   [11:0] add_ln205_fu_153_p2;
-wire   [13:0] tmp_1_fu_162_p3;
-wire   [63:0] zext_ln205_1_fu_158_p1;
-wire   [63:0] zext_ln205_3_fu_170_p1;
-wire   [63:0] zext_ln205_2_fu_192_p1;
-wire   [63:0] add_ln205_2_fu_196_p2;
-wire   [14:0] trunc_ln205_1_fu_205_p1;
-wire   [16:0] trunc_ln205_fu_201_p1;
-wire   [16:0] p_shl1_cast_fu_209_p3;
-wire   [16:0] zext_ln205_4_fu_235_p1;
-wire   [16:0] add_ln205_4_fu_239_p2;
-reg   [5:0] ap_NS_fsm;
+reg    weights5_blk_n_R;
+wire    ap_CS_fsm_state12;
+wire   [0:0] icmp_ln166_fu_258_p2;
+wire   [63:0] zext_ln167_fu_143_p1;
+reg   [63:0] zext_ln167_reg_279;
+wire   [6:0] i_fu_153_p2;
+reg   [6:0] i_reg_287;
+wire    ap_CS_fsm_state2;
+wire   [11:0] zext_ln164_fu_167_p1;
+reg   [11:0] zext_ln164_reg_292;
+wire   [0:0] icmp_ln163_fu_147_p2;
+wire   [4:0] j_fu_177_p2;
+reg   [4:0] j_reg_300;
+wire    ap_CS_fsm_state3;
+wire   [63:0] add_ln167_1_fu_208_p2;
+reg   [63:0] add_ln167_1_reg_305;
+wire   [0:0] icmp_ln164_fu_171_p2;
+wire   [2:0] k_fu_220_p2;
+reg   [2:0] k_reg_313;
+wire    ap_CS_fsm_state4;
+wire   [63:0] add_ln167_3_fu_241_p2;
+reg   [63:0] add_ln167_3_reg_318;
+wire   [0:0] icmp_ln165_fu_214_p2;
+reg   [31:0] weights5_addr_reg_323;
+wire   [2:0] l_fu_264_p2;
+reg   [2:0] l_reg_332;
+reg    ap_block_state12;
+wire   [63:0] add_ln167_4_fu_274_p2;
+reg   [63:0] add_ln167_4_reg_337;
+reg   [31:0] weights5_addr_read_reg_342;
+reg   [6:0] i_0_reg_99;
+reg   [4:0] j_0_reg_110;
+reg   [2:0] k_0_reg_121;
+reg   [2:0] l_0_reg_132;
+wire    ap_CS_fsm_state13;
+wire    ap_CS_fsm_state11;
+wire   [63:0] add_ln167_5_fu_247_p2;
+wire   [10:0] tmp_fu_159_p3;
+wire   [11:0] zext_ln167_1_fu_183_p1;
+wire   [11:0] add_ln167_fu_187_p2;
+wire   [13:0] tmp_1_fu_196_p3;
+wire   [63:0] zext_ln167_4_fu_192_p1;
+wire   [63:0] zext_ln167_5_fu_204_p1;
+wire   [63:0] zext_ln167_2_fu_226_p1;
+wire   [63:0] add_ln167_2_fu_230_p2;
+wire   [63:0] shl_ln167_fu_235_p2;
+wire   [63:0] zext_ln167_3_fu_270_p1;
+reg   [12:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 6'd1;
+#0 ap_CS_fsm = 13'd1;
 end
 
 always @ (posedge ap_clk) begin
@@ -111,87 +212,95 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln202_fu_137_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
-        i_0_reg_69 <= i_reg_252;
+    if (((1'b1 == ap_CS_fsm_state3) & (icmp_ln164_fu_171_p2 == 1'd1))) begin
+        i_0_reg_99 <= i_reg_287;
     end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-        i_0_reg_69 <= 7'd0;
+        i_0_reg_99 <= 7'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln203_fu_180_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
-        j_0_reg_80 <= j_reg_265;
-    end else if (((icmp_ln201_fu_113_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        j_0_reg_80 <= 5'd0;
+    if (((1'b1 == ap_CS_fsm_state4) & (icmp_ln165_fu_214_p2 == 1'd1))) begin
+        j_0_reg_110 <= j_reg_300;
+    end else if (((icmp_ln163_fu_147_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        j_0_reg_110 <= 5'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln204_fu_223_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
-        k_0_reg_91 <= k_reg_278;
-    end else if (((icmp_ln202_fu_137_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        k_0_reg_91 <= 3'd0;
+    if ((~((icmp_ln166_fu_258_p2 == 1'd0) & (m_axi_weights5_RVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state12) & (icmp_ln166_fu_258_p2 == 1'd1))) begin
+        k_0_reg_121 <= k_reg_313;
+    end else if (((icmp_ln164_fu_171_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+        k_0_reg_121 <= 3'd0;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln203_fu_180_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
-        l_0_reg_102 <= 3'd0;
-    end else if ((1'b1 == ap_CS_fsm_state6)) begin
-        l_0_reg_102 <= l_reg_291;
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        l_0_reg_132 <= 3'd0;
+    end else if ((1'b1 == ap_CS_fsm_state13)) begin
+        l_0_reg_132 <= l_reg_332;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln202_fu_137_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
-        add_ln205_1_reg_270 <= add_ln205_1_fu_174_p2;
+    if (((icmp_ln164_fu_171_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+        add_ln167_1_reg_305 <= add_ln167_1_fu_208_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln203_fu_180_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
-        add_ln205_3_reg_283 <= add_ln205_3_fu_217_p2;
+    if (((icmp_ln165_fu_214_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4))) begin
+        add_ln167_3_reg_318 <= add_ln167_3_fu_241_p2;
+        weights5_addr_reg_323 <= add_ln167_5_fu_247_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((~((icmp_ln166_fu_258_p2 == 1'd0) & (m_axi_weights5_RVALID == 1'b0)) & (icmp_ln166_fu_258_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state12))) begin
+        add_ln167_4_reg_337 <= add_ln167_4_fu_274_p2;
+        weights5_addr_read_reg_342 <= m_axi_weights5_RDATA;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        i_reg_252 <= i_fu_119_p2;
+        i_reg_287 <= i_fu_153_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state3)) begin
-        j_reg_265 <= j_fu_143_p2;
+        j_reg_300 <= j_fu_177_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state4)) begin
-        k_reg_278 <= k_fu_186_p2;
+        k_reg_313 <= k_fu_220_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
-        l_reg_291 <= l_fu_229_p2;
+    if ((~((icmp_ln166_fu_258_p2 == 1'd0) & (m_axi_weights5_RVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state12))) begin
+        l_reg_332 <= l_fu_264_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln201_fu_113_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        zext_ln202_reg_257[10 : 4] <= zext_ln202_fu_133_p1[10 : 4];
+    if (((icmp_ln163_fu_147_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        zext_ln164_reg_292[10 : 4] <= zext_ln164_fu_167_p1[10 : 4];
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln204_fu_223_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state5))) begin
-        zext_ln205_5_reg_296[16 : 0] <= zext_ln205_5_fu_244_p1[16 : 0];
+    if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+        zext_ln167_reg_279[29 : 0] <= zext_ln167_fu_143_p1[29 : 0];
     end
 end
 
 always @ (*) begin
-    if ((((icmp_ln201_fu_113_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2)) | ((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if ((((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)) | ((1'b1 == ap_CS_fsm_state2) & (icmp_ln163_fu_147_p2 == 1'd1)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -207,7 +316,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln201_fu_113_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((1'b1 == ap_CS_fsm_state2) & (icmp_ln163_fu_147_p2 == 1'd1))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -215,7 +324,39 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
+    if (((m_axi_weights5_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
+        m_axi_weights5_ARVALID = 1'b1;
+    end else begin
+        m_axi_weights5_ARVALID = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((~((icmp_ln166_fu_258_p2 == 1'd0) & (m_axi_weights5_RVALID == 1'b0)) & (icmp_ln166_fu_258_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state12))) begin
+        m_axi_weights5_RREADY = 1'b1;
+    end else begin
+        m_axi_weights5_RREADY = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
+        weights5_blk_n_AR = m_axi_weights5_ARREADY;
+    end else begin
+        weights5_blk_n_AR = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if (((icmp_ln166_fu_258_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state12))) begin
+        weights5_blk_n_R = m_axi_weights5_RVALID;
+    end else begin
+        weights5_blk_n_R = 1'b1;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state13)) begin
         weights5_buf_ce0 = 1'b1;
     end else begin
         weights5_buf_ce0 = 1'b0;
@@ -223,18 +364,10 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
+    if ((1'b1 == ap_CS_fsm_state13)) begin
         weights5_buf_we0 = 1'b1;
     end else begin
         weights5_buf_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
-        weights5_ce0 = 1'b1;
-    end else begin
-        weights5_ce0 = 1'b0;
     end
 end
 
@@ -248,35 +381,62 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((icmp_ln201_fu_113_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((1'b1 == ap_CS_fsm_state2) & (icmp_ln163_fu_147_p2 == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end
         end
         ap_ST_fsm_state3 : begin
-            if (((icmp_ln202_fu_137_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+            if (((1'b1 == ap_CS_fsm_state3) & (icmp_ln164_fu_171_p2 == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end
         end
         ap_ST_fsm_state4 : begin
-            if (((icmp_ln203_fu_180_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state4))) begin
+            if (((1'b1 == ap_CS_fsm_state4) & (icmp_ln165_fu_214_p2 == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state5;
             end
         end
         ap_ST_fsm_state5 : begin
-            if (((icmp_ln204_fu_223_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
-                ap_NS_fsm = ap_ST_fsm_state4;
-            end else begin
+            if (((m_axi_weights5_ARREADY == 1'b1) & (1'b1 == ap_CS_fsm_state5))) begin
                 ap_NS_fsm = ap_ST_fsm_state6;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state5;
             end
         end
         ap_ST_fsm_state6 : begin
-            ap_NS_fsm = ap_ST_fsm_state5;
+            ap_NS_fsm = ap_ST_fsm_state7;
+        end
+        ap_ST_fsm_state7 : begin
+            ap_NS_fsm = ap_ST_fsm_state8;
+        end
+        ap_ST_fsm_state8 : begin
+            ap_NS_fsm = ap_ST_fsm_state9;
+        end
+        ap_ST_fsm_state9 : begin
+            ap_NS_fsm = ap_ST_fsm_state10;
+        end
+        ap_ST_fsm_state10 : begin
+            ap_NS_fsm = ap_ST_fsm_state11;
+        end
+        ap_ST_fsm_state11 : begin
+            ap_NS_fsm = ap_ST_fsm_state12;
+        end
+        ap_ST_fsm_state12 : begin
+            if ((~((icmp_ln166_fu_258_p2 == 1'd0) & (m_axi_weights5_RVALID == 1'b0)) & (1'b1 == ap_CS_fsm_state12) & (icmp_ln166_fu_258_p2 == 1'd1))) begin
+                ap_NS_fsm = ap_ST_fsm_state4;
+            end else if ((~((icmp_ln166_fu_258_p2 == 1'd0) & (m_axi_weights5_RVALID == 1'b0)) & (icmp_ln166_fu_258_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state12))) begin
+                ap_NS_fsm = ap_ST_fsm_state13;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state12;
+            end
+        end
+        ap_ST_fsm_state13 : begin
+            ap_NS_fsm = ap_ST_fsm_state12;
         end
         default : begin
             ap_NS_fsm = 'bx;
@@ -284,17 +444,25 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln205_1_fu_174_p2 = (zext_ln205_1_fu_158_p1 + zext_ln205_3_fu_170_p1);
+assign add_ln167_1_fu_208_p2 = (zext_ln167_4_fu_192_p1 + zext_ln167_5_fu_204_p1);
 
-assign add_ln205_2_fu_196_p2 = (add_ln205_1_reg_270 + zext_ln205_2_fu_192_p1);
+assign add_ln167_2_fu_230_p2 = (add_ln167_1_reg_305 + zext_ln167_2_fu_226_p1);
 
-assign add_ln205_3_fu_217_p2 = (trunc_ln205_fu_201_p1 + p_shl1_cast_fu_209_p3);
+assign add_ln167_3_fu_241_p2 = (add_ln167_2_fu_230_p2 + shl_ln167_fu_235_p2);
 
-assign add_ln205_4_fu_239_p2 = (add_ln205_3_reg_283 + zext_ln205_4_fu_235_p1);
+assign add_ln167_4_fu_274_p2 = (zext_ln167_3_fu_270_p1 + add_ln167_3_reg_318);
 
-assign add_ln205_fu_153_p2 = (zext_ln202_reg_257 + zext_ln205_fu_149_p1);
+assign add_ln167_5_fu_247_p2 = (zext_ln167_reg_279 + add_ln167_3_fu_241_p2);
+
+assign add_ln167_fu_187_p2 = (zext_ln164_reg_292 + zext_ln167_1_fu_183_p1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
+
+assign ap_CS_fsm_state11 = ap_CS_fsm[32'd10];
+
+assign ap_CS_fsm_state12 = ap_CS_fsm[32'd11];
+
+assign ap_CS_fsm_state13 = ap_CS_fsm[32'd12];
 
 assign ap_CS_fsm_state2 = ap_CS_fsm[32'd1];
 
@@ -304,58 +472,114 @@ assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
 assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
 
-assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
+always @ (*) begin
+    ap_block_state12 = ((icmp_ln166_fu_258_p2 == 1'd0) & (m_axi_weights5_RVALID == 1'b0));
+end
 
-assign i_fu_119_p2 = (i_0_reg_69 + 7'd1);
+assign i_fu_153_p2 = (i_0_reg_99 + 7'd1);
 
-assign icmp_ln201_fu_113_p2 = ((i_0_reg_69 == 7'd120) ? 1'b1 : 1'b0);
+assign icmp_ln163_fu_147_p2 = ((i_0_reg_99 == 7'd120) ? 1'b1 : 1'b0);
 
-assign icmp_ln202_fu_137_p2 = ((j_0_reg_80 == 5'd16) ? 1'b1 : 1'b0);
+assign icmp_ln164_fu_171_p2 = ((j_0_reg_110 == 5'd16) ? 1'b1 : 1'b0);
 
-assign icmp_ln203_fu_180_p2 = ((k_0_reg_91 == 3'd5) ? 1'b1 : 1'b0);
+assign icmp_ln165_fu_214_p2 = ((k_0_reg_121 == 3'd5) ? 1'b1 : 1'b0);
 
-assign icmp_ln204_fu_223_p2 = ((l_0_reg_102 == 3'd5) ? 1'b1 : 1'b0);
+assign icmp_ln166_fu_258_p2 = ((l_0_reg_132 == 3'd5) ? 1'b1 : 1'b0);
 
-assign j_fu_143_p2 = (j_0_reg_80 + 5'd1);
+assign j_fu_177_p2 = (j_0_reg_110 + 5'd1);
 
-assign k_fu_186_p2 = (k_0_reg_91 + 3'd1);
+assign k_fu_220_p2 = (k_0_reg_121 + 3'd1);
 
-assign l_fu_229_p2 = (l_0_reg_102 + 3'd1);
+assign l_fu_264_p2 = (l_0_reg_132 + 3'd1);
 
-assign p_shl1_cast_fu_209_p3 = {{trunc_ln205_1_fu_205_p1}, {2'd0}};
+assign m_axi_weights5_ARADDR = weights5_addr_reg_323;
 
-assign tmp_1_fu_162_p3 = {{add_ln205_fu_153_p2}, {2'd0}};
+assign m_axi_weights5_ARBURST = 2'd0;
 
-assign tmp_fu_125_p3 = {{i_0_reg_69}, {4'd0}};
+assign m_axi_weights5_ARCACHE = 4'd0;
 
-assign trunc_ln205_1_fu_205_p1 = add_ln205_2_fu_196_p2[14:0];
+assign m_axi_weights5_ARID = 1'd0;
 
-assign trunc_ln205_fu_201_p1 = add_ln205_2_fu_196_p2[16:0];
+assign m_axi_weights5_ARLEN = 32'd5;
 
-assign weights5_address0 = zext_ln205_5_fu_244_p1;
+assign m_axi_weights5_ARLOCK = 2'd0;
 
-assign weights5_buf_address0 = zext_ln205_5_reg_296;
+assign m_axi_weights5_ARPROT = 3'd0;
 
-assign weights5_buf_d0 = weights5_q0;
+assign m_axi_weights5_ARQOS = 4'd0;
 
-assign zext_ln202_fu_133_p1 = tmp_fu_125_p3;
+assign m_axi_weights5_ARREGION = 4'd0;
 
-assign zext_ln205_1_fu_158_p1 = add_ln205_fu_153_p2;
+assign m_axi_weights5_ARSIZE = 3'd0;
 
-assign zext_ln205_2_fu_192_p1 = k_0_reg_91;
+assign m_axi_weights5_ARUSER = 1'd0;
 
-assign zext_ln205_3_fu_170_p1 = tmp_1_fu_162_p3;
+assign m_axi_weights5_AWADDR = 32'd0;
 
-assign zext_ln205_4_fu_235_p1 = l_0_reg_102;
+assign m_axi_weights5_AWBURST = 2'd0;
 
-assign zext_ln205_5_fu_244_p1 = add_ln205_4_fu_239_p2;
+assign m_axi_weights5_AWCACHE = 4'd0;
 
-assign zext_ln205_fu_149_p1 = j_0_reg_80;
+assign m_axi_weights5_AWID = 1'd0;
+
+assign m_axi_weights5_AWLEN = 32'd0;
+
+assign m_axi_weights5_AWLOCK = 2'd0;
+
+assign m_axi_weights5_AWPROT = 3'd0;
+
+assign m_axi_weights5_AWQOS = 4'd0;
+
+assign m_axi_weights5_AWREGION = 4'd0;
+
+assign m_axi_weights5_AWSIZE = 3'd0;
+
+assign m_axi_weights5_AWUSER = 1'd0;
+
+assign m_axi_weights5_AWVALID = 1'b0;
+
+assign m_axi_weights5_BREADY = 1'b0;
+
+assign m_axi_weights5_WDATA = 32'd0;
+
+assign m_axi_weights5_WID = 1'd0;
+
+assign m_axi_weights5_WLAST = 1'b0;
+
+assign m_axi_weights5_WSTRB = 4'd0;
+
+assign m_axi_weights5_WUSER = 1'd0;
+
+assign m_axi_weights5_WVALID = 1'b0;
+
+assign shl_ln167_fu_235_p2 = add_ln167_2_fu_230_p2 << 64'd2;
+
+assign tmp_1_fu_196_p3 = {{add_ln167_fu_187_p2}, {2'd0}};
+
+assign tmp_fu_159_p3 = {{i_0_reg_99}, {4'd0}};
+
+assign weights5_buf_address0 = add_ln167_4_reg_337;
+
+assign weights5_buf_d0 = weights5_addr_read_reg_342;
+
+assign zext_ln164_fu_167_p1 = tmp_fu_159_p3;
+
+assign zext_ln167_1_fu_183_p1 = j_0_reg_110;
+
+assign zext_ln167_2_fu_226_p1 = k_0_reg_121;
+
+assign zext_ln167_3_fu_270_p1 = l_0_reg_132;
+
+assign zext_ln167_4_fu_192_p1 = add_ln167_fu_187_p2;
+
+assign zext_ln167_5_fu_204_p1 = tmp_1_fu_196_p3;
+
+assign zext_ln167_fu_143_p1 = weights5_offset;
 
 always @ (posedge ap_clk) begin
-    zext_ln202_reg_257[3:0] <= 4'b0000;
-    zext_ln202_reg_257[11] <= 1'b0;
-    zext_ln205_5_reg_296[63:17] <= 47'b00000000000000000000000000000000000000000000000;
+    zext_ln167_reg_279[63:30] <= 34'b0000000000000000000000000000000000;
+    zext_ln164_reg_292[3:0] <= 4'b0000;
+    zext_ln164_reg_292[11] <= 1'b0;
 end
 
 endmodule //ld_weights5

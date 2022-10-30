@@ -6,8 +6,8 @@
 module lenet_top_weightsibs_ram (addr0, ce0, d0, we0, q0,  clk);
 
 parameter DWIDTH = 32;
-parameter AWIDTH = 11;
-parameter MEM_SIZE = 1200;
+parameter AWIDTH = 16;
+parameter MEM_SIZE = 48000;
 
 input[AWIDTH-1:0] addr0;
 input ce0;
@@ -47,8 +47,8 @@ module lenet_top_weightsibs(
     q0);
 
 parameter DataWidth = 32'd32;
-parameter AddressRange = 32'd1200;
-parameter AddressWidth = 32'd11;
+parameter AddressRange = 32'd48000;
+parameter AddressWidth = 32'd16;
 input reset;
 input clk;
 input[AddressWidth - 1:0] address0;

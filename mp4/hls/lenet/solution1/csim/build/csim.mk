@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../lenet_tb.cpp ../../../lenet_gold.cpp ../../../lenet_hls.cpp
+HLS_SOURCES = ../../../lenet_gold.cpp ../../../lenet_tb.cpp ../../../lenet_hls.cpp
 
 TARGET := csim.exe
 
@@ -55,6 +55,7 @@ IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
 
 IFLAG += -D__DSP48E1__
+IFLAG += -Wno-unknown-pragmas 
 IFLAG += -g
 IFLAG += -DNT
 LFLAG += -Wl,--enable-auto-import 
@@ -70,17 +71,17 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/lenet_tb.o: ../../../lenet_tb.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../lenet_tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/lenet_tb.d
-
 $(ObjDir)/lenet_gold.o: ../../../lenet_gold.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../lenet_gold.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/lenet_gold.d
+
+$(ObjDir)/lenet_tb.o: ../../../lenet_tb.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../lenet_tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/lenet_tb.d
 
 $(ObjDir)/lenet_hls.o: ../../../lenet_hls.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../lenet_hls.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

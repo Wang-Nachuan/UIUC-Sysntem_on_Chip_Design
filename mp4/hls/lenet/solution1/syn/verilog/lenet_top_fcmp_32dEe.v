@@ -7,7 +7,7 @@
 
 module lenet_top_fcmp_32dEe
 #(parameter
-    ID         = 15,
+    ID         = 30,
     NUM_STAGE  = 2,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

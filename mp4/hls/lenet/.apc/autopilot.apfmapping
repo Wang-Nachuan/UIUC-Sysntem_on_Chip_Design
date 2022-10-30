@@ -2,13 +2,13 @@
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
     <originFiles name="lenet.h" path="D:\Code\UIUC-ECE527\mp4\hls\lenet\lenet.h"/>
-    <originFiles name="lenet_gold.cpp" path="D:\Code\UIUC-ECE527\mp4\hls\lenet\lenet_gold.cpp"/>
     <originFiles name="lenet_hls.cpp" path="D:\Code\UIUC-ECE527\mp4\hls\lenet\lenet_hls.cpp"/>
   </source>
   <testbench>
-    <originFiles name="lenet_tb.cpp" path="D:\Code\UIUC-ECE527\mp4\hls\lenet\lenet_tb.cpp"/>
     <originFiles name="images.bin" path="D:\Code\UIUC-ECE527\mp4\hls\lenet\images.bin"/>
     <originFiles name="labels.bin" path="D:\Code\UIUC-ECE527\mp4\hls\lenet\labels.bin"/>
+    <originFiles name="lenet_tb.cpp" path="D:\Code\UIUC-ECE527\mp4\hls\lenet\lenet_tb.cpp"/>
     <originFiles name="params.bin" path="D:\Code\UIUC-ECE527\mp4\hls\lenet\params.bin"/>
+    <originFiles name="lenet_gold.cpp" path="D:\Code\UIUC-ECE527\mp4\hls\lenet\lenet_gold.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -11,26 +11,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 5 \
-    name weights5 \
-    reset_level 1 \
-    sync_rst true \
-    dir I \
-    corename weights5 \
-    op interface \
-    ports { weights5_address0 { O 16 vector } weights5_ce0 { O 1 bit } weights5_q0 { I 32 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'weights5'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6 \
+    id 12 \
     name weights5_buf \
     reset_level 1 \
     sync_rst true \
@@ -44,6 +25,36 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 }
 }
 
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 10 \
+    name weights5 \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_weights5 \
+    op interface \
+    ports { m_axi_weights5_AWVALID { O 1 bit } m_axi_weights5_AWREADY { I 1 bit } m_axi_weights5_AWADDR { O 32 vector } m_axi_weights5_AWID { O 1 vector } m_axi_weights5_AWLEN { O 32 vector } m_axi_weights5_AWSIZE { O 3 vector } m_axi_weights5_AWBURST { O 2 vector } m_axi_weights5_AWLOCK { O 2 vector } m_axi_weights5_AWCACHE { O 4 vector } m_axi_weights5_AWPROT { O 3 vector } m_axi_weights5_AWQOS { O 4 vector } m_axi_weights5_AWREGION { O 4 vector } m_axi_weights5_AWUSER { O 1 vector } m_axi_weights5_WVALID { O 1 bit } m_axi_weights5_WREADY { I 1 bit } m_axi_weights5_WDATA { O 32 vector } m_axi_weights5_WSTRB { O 4 vector } m_axi_weights5_WLAST { O 1 bit } m_axi_weights5_WID { O 1 vector } m_axi_weights5_WUSER { O 1 vector } m_axi_weights5_ARVALID { O 1 bit } m_axi_weights5_ARREADY { I 1 bit } m_axi_weights5_ARADDR { O 32 vector } m_axi_weights5_ARID { O 1 vector } m_axi_weights5_ARLEN { O 32 vector } m_axi_weights5_ARSIZE { O 3 vector } m_axi_weights5_ARBURST { O 2 vector } m_axi_weights5_ARLOCK { O 2 vector } m_axi_weights5_ARCACHE { O 4 vector } m_axi_weights5_ARPROT { O 3 vector } m_axi_weights5_ARQOS { O 4 vector } m_axi_weights5_ARREGION { O 4 vector } m_axi_weights5_ARUSER { O 1 vector } m_axi_weights5_RVALID { I 1 bit } m_axi_weights5_RREADY { O 1 bit } m_axi_weights5_RDATA { I 32 vector } m_axi_weights5_RLAST { I 1 bit } m_axi_weights5_RID { I 1 vector } m_axi_weights5_RUSER { I 1 vector } m_axi_weights5_RRESP { I 2 vector } m_axi_weights5_BVALID { I 1 bit } m_axi_weights5_BREADY { O 1 bit } m_axi_weights5_BRESP { I 2 vector } m_axi_weights5_BID { I 1 vector } m_axi_weights5_BUSER { I 1 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 11 \
+    name weights5_offset \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_weights5_offset \
+    op interface \
+    ports { weights5_offset { I 30 vector } } \
+} "
+}
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {

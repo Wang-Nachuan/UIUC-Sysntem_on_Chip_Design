@@ -47,11 +47,6 @@
 			<location>D:/Code/UIUC-ECE527/mp4/hls/lenet/lenet.h</location>
 		</link>
 		<link>
-			<name>source/lenet_gold.cpp</name>
-			<type>1</type>
-			<location>D:/Code/UIUC-ECE527/mp4/hls/lenet/lenet_gold.cpp</location>
-		</link>
-		<link>
 			<name>source/lenet_hls.cpp</name>
 			<type>1</type>
 			<location>D:/Code/UIUC-ECE527/mp4/hls/lenet/lenet_hls.cpp</location>
@@ -65,6 +60,11 @@
 			<name>testbench/labels.bin</name>
 			<type>1</type>
 			<location>D:/Code/UIUC-ECE527/mp4/hls/lenet/labels.bin</location>
+		</link>
+		<link>
+			<name>testbench/lenet_gold.cpp</name>
+			<type>1</type>
+			<location>D:/Code/UIUC-ECE527/mp4/hls/lenet/lenet_gold.cpp</location>
 		</link>
 		<link>
 			<name>testbench/lenet_tb.cpp</name>

@@ -179,8 +179,6 @@ int lenet_top(
  float output[10]
 );
 # 2 "lenet/lenet_hls.cpp" 2
-
-
 # 1 "D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 1 3
 # 37 "D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 3
 # 37 "D:/Applications/Vivado/Vivado/2019.1/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 3
@@ -15597,7 +15595,7 @@ namespace std {
   static ios_base::Init __ioinit;
 
 }
-# 5 "lenet/lenet_hls.cpp" 2
+# 3 "lenet/lenet_hls.cpp" 2
 
 using namespace std;
 
@@ -15610,24 +15608,19 @@ void i_convolution1(float input[1][32][32], float weights[6][1][5][5], float bia
         for(int h = 0; h < 28; h++)
             for(int w = 0; w < 28; w++)
             {
-                float sum = 0;
-                for(int m = 0; m < 5; m++)
-                {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+_ssdm_Unroll(1, 0, 2, "");
+ float sum = 0;
+                for(int m = 0; m < 5; m++) {
                     for(int n = 0; n < 5; n++)
-                        sum += weights[co][0][m][n] * input[0][h+m][w+n];
+                     sum += weights[co][0][m][n] * input[0][h+m][w+n];
                 }
-                output[co][h][w] = sum + bias[co];
+                sum += bias[co];
+                if (sum < 0)
+                 output[co][h][w] = 0;
+                else
+                 output[co][h][w] = sum;
             }
-}
-
-
-void i_relu1(float input[6][28][28])
-{_ssdm_SpecArrayDimSize(input, 6);
-    for(int i = 0; i < 6; i++)
-        for(int j = 0; j < 28; j++)
-            for(int k = 0; k < 28; k++)
-             if (input[i][j][k] < 0)
-              input[i][j][k] = 0;
 }
 
 
@@ -15637,25 +15630,18 @@ void i_max_pooling2(float input[6][28][28],float output[6][14][14])
         for(int h = 0; h < 14; h++)
             for(int w = 0; w < 14; w++)
             {
+
                 float max_value=-1000000000000.0;
-                for(int i = 0; i < 2; i++)
-                {
+                for(int i = 0; i < 2; i++) {
                     for(int j = 0;j < 2; j++)
-                        max_value = (max_value > input[c][h*2+i][w*2+j]) ? max_value:input[c][h*2+i][w*2+j];
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ max_value = (max_value > input[c][h*2+i][w*2+j]) ? max_value:input[c][h*2+i][w*2+j];
                 }
-                output[c][h][w] = max_value;
-
+                if (max_value > 0)
+                 output[c][h][w] = max_value;
+                else
+                 output[c][h][w] = 0;
             }
-}
-
-
-void i_relu2(float input[6][14][14])
-{_ssdm_SpecArrayDimSize(input, 6);
-    for(int i = 0; i < 6; i++)
-        for(int j = 0; j < 14; j++)
-            for(int k = 0; k < 14; k++)
-             if (input[i][j][k] < 0)
-              input[i][j][k] = 0;
 }
 
 
@@ -15663,27 +15649,22 @@ void i_convolution3(float input[6][14][14], float weights[16][6][5][5], float bi
 {_ssdm_SpecArrayDimSize(input, 6);_ssdm_SpecArrayDimSize(weights, 16);_ssdm_SpecArrayDimSize(bias, 16);_ssdm_SpecArrayDimSize(output, 16);
     for(int co = 0; co < 16; co++)
         for(int h = 0; h < 10; h++)
-            for(int w = 0; w < 10; w++)
-            {
-                    float sum = 0;
-                    for(int m = 0; m < 5; m++)
-                    {
-                        for(int n = 0; n < 5; n++)
-                            for (int ci = 0; ci < 6; ci++)
-                                sum += weights[co][ci][m][n] * input[ci][h+m][w+n];
-                    }
-                    output[co][h][w] = sum + bias[co];
+            for(int w = 0; w < 10; w++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+_ssdm_Unroll(1, 0, 2, "");
+ float sum = 0;
+    for(int m = 0; m < 5; m++) {
+     for(int n = 0; n < 5; n++) {
+      for (int ci = 0; ci < 6; ci++)
+       sum += weights[co][ci][m][n] * input[ci][h+m][w+n];
+     }
+    }
+    sum += bias[co];
+    if (sum < 0)
+     output[co][h][w] = 0;
+    else
+     output[co][h][w] = sum;
             }
-}
-
-
-void i_relu3(float input[16][10][10])
-{_ssdm_SpecArrayDimSize(input, 16);
-    for(int i = 0; i < 16; i++)
-        for(int j = 0; j < 10; j++)
-            for(int k = 0; k < 10; k++)
-             if (input[i][j][k] < 0)
-              input[i][j][k] = 0;
 }
 
 
@@ -15694,23 +15675,16 @@ void i_max_pooling4(float input[16][10][10],float output[16][5][5])
             for(int w = 0; w < 5; w++)
             {
                 float max_value=-1000000000000.0;
-                for(int i = 0; i < 2; i++)
-                {
+                for(int i = 0; i < 2; i++) {
                     for(int j = 0;j < 2; j++)
-                        max_value = (max_value > input[c][h*2+i][w*2+j]) ? max_value:input[c][h*2+i][w*2+j];
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ max_value = (max_value > input[c][h*2+i][w*2+j]) ? max_value:input[c][h*2+i][w*2+j];
                 }
-                output[c][h][w] = max_value;
+                if (max_value > 0)
+     output[c][h][w] = max_value;
+    else
+     output[c][h][w] = 0;
             }
-}
-
-
-void i_relu4(float input[16][5][5])
-{_ssdm_SpecArrayDimSize(input, 16);
-    for(int i = 0; i < 16; i++)
-        for(int j = 0; j < 5; j++)
-            for(int k = 0; k < 5; k++)
-             if (input[i][j][k] < 0)
-              input[i][j][k] = 0;
 }
 
 
@@ -15718,47 +15692,35 @@ void i_convolution5(float input[16][5][5], float weights[120][16][5][5], float b
 {_ssdm_SpecArrayDimSize(input, 16);_ssdm_SpecArrayDimSize(weights, 120);_ssdm_SpecArrayDimSize(bias, 120);_ssdm_SpecArrayDimSize(output, 120);
     for(int co = 0; co < 120; co++)
     {
-        float sum = 0;
-        for(int i = 0, m = 0; i < 5; i++, m++)
-        {
-            for(int j = 0, n = 0; j < 5; j++, n++)
-            {
+     float sum = 0;
+        for(int i = 0, m = 0; i < 5; i++, m++) {
+            for(int j = 0, n = 0; j < 5; j++, n++) {
                 for (int ci = 0; ci < 16; ci++)
-                    sum += weights[co][ci][m][n] * input[ci][i][j];
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ sum += weights[co][ci][m][n] * input[ci][i][j];
             }
         }
-        output[co][0][0] = sum + bias[co];
+        sum += bias[co];
+  if (sum < 0)
+   output[co][0][0] = 0;
+  else
+   output[co][0][0] = sum;
     }
-}
-
-
-void i_relu5(float input[120][1][1])
-{_ssdm_SpecArrayDimSize(input, 120);
-    for(int i = 0; i < 120; i++)
-     if (input[i][0][0] < 0)
-      input[i][0][0] = 0;
 }
 
 
 void i_fc6(const float input[120][1][1], const float weights[10][120][1][1], const float bias[10], float output[10])
 {_ssdm_SpecArrayDimSize(input, 120);_ssdm_SpecArrayDimSize(weights, 10);_ssdm_SpecArrayDimSize(bias, 10);_ssdm_SpecArrayDimSize(output, 10);
-    for(int n = 0; n < 10; n++)
-    {
+    for(int n = 0; n < 10; n++) {
         output[n] = 0;
-        for(int c = 0; c < 120; c++)
-        {
-            output[n] += weights[n][c][0][0] * input[c][0][0];
+        for(int c = 0; c < 120; c++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+ output[n] += weights[n][c][0][0] * input[c][0][0];
         }
-        output[n]+=bias[n];
+        output[n] += bias[n];
+        if (output[n] < 0)
+         output[n] = 0;
     }
-}
-
-
-void i_relu6(float input[10])
-{_ssdm_SpecArrayDimSize(input, 10);
-    for(int i = 0; i < 10; i++)
-     if (input[i] < 0)
-      input[i] = 0;
 }
 
 
@@ -15805,14 +15767,6 @@ void ld_weights5(float weights5[120][16][5][5], float weights5_buf[120][16][5][5
  }
 }
 
-void ld_weights6(float weights6[10][120][1][1], float weights6_buf[10][120][1][1]) {_ssdm_SpecArrayDimSize(weights6, 10);_ssdm_SpecArrayDimSize(weights6_buf, 10);
- for (int i = 0; i < 10; i++) {
-  for (int j = 0; j < 120; j++) {
-   weights6_buf[i][j][0][0] = weights6[i][j][0][0];
-  }
- }
-}
-
 void ld_bias1(float bias1[6], float bias1_buf[6]) {_ssdm_SpecArrayDimSize(bias1, 6);_ssdm_SpecArrayDimSize(bias1_buf, 6);
  for (int i = 0; i < 6; i++) {
   bias1_buf[i] = bias1[i];
@@ -15828,12 +15782,6 @@ void ld_bias3(float bias3[16], float bias3_buf[16]) {_ssdm_SpecArrayDimSize(bias
 void ld_bias5(float bias5[120], float bias5_buf[120]) {_ssdm_SpecArrayDimSize(bias5, 120);_ssdm_SpecArrayDimSize(bias5_buf, 120);
  for (int i = 0; i < 120; i++) {
   bias5_buf[i] = bias5[i];
- }
-}
-
-void ld_bias6(float bias6[10], float bias6_buf[10]) {_ssdm_SpecArrayDimSize(bias6, 10);_ssdm_SpecArrayDimSize(bias6_buf, 10);
- for (int i = 0; i < 10; i++) {
-  bias6_buf[i] = bias6[i];
  }
 }
 
@@ -15855,16 +15803,31 @@ int lenet_top(
  float output[10]
 ) {_ssdm_SpecArrayDimSize(input, 1);_ssdm_SpecArrayDimSize(weights1, 6);_ssdm_SpecArrayDimSize(bias1, 6);_ssdm_SpecArrayDimSize(weights3, 16);_ssdm_SpecArrayDimSize(bias3, 16);_ssdm_SpecArrayDimSize(weights5, 120);_ssdm_SpecArrayDimSize(bias5, 120);_ssdm_SpecArrayDimSize(weights6, 10);_ssdm_SpecArrayDimSize(bias6, 10);_ssdm_SpecArrayDimSize(output, 10);
 
+_ssdm_op_SpecInterface(0, "s_axilite", 1, 1, "", 0, 0, "CTL", "", "", 0, 0, 0, 0, "", "");
+
+_ssdm_op_SpecInterface(input, "m_axi", 0, 0, "", 0, 1024, "DATA_INPUT", "slave", "", 16, 16, 16, 16, "", "");
+
+_ssdm_op_SpecInterface(weights1, "m_axi", 0, 0, "", 0, 150, "DATA_WEIGHT", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(weights3, "m_axi", 0, 0, "", 0, 2400, "DATA_WEIGHT", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(weights5, "m_axi", 0, 0, "", 0, 48000, "DATA_WEIGHT", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(weights6, "m_axi", 0, 0, "", 0, 1200, "DATA_WEIGHT", "slave", "", 16, 16, 16, 16, "", "");
+
+_ssdm_op_SpecInterface(bias1, "m_axi", 0, 0, "", 0, 6, "DATA_BIAS", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(bias3, "m_axi", 0, 0, "", 0, 16, "DATA_BIAS", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(bias5, "m_axi", 0, 0, "", 0, 120, "DATA_BIAS", "slave", "", 16, 16, 16, 16, "", "");
+_ssdm_op_SpecInterface(bias6, "m_axi", 0, 0, "", 0, 10, "DATA_BIAS", "slave", "", 16, 16, 16, 16, "", "");
+
+_ssdm_op_SpecInterface(output, "m_axi", 0, 0, "", 0, 10, "DATA_OUTPUT", "slave", "", 16, 16, 16, 16, "", "");
+
+
+
  float input_buf[1][32][32];
  float weights1_buf[6][1][5][5];
  float weights3_buf[16][6][5][5];
  float weights5_buf[120][16][5][5];
- float weights6_buf[10][120][1][1];
  float bias1_buf[6];
  float bias3_buf[16];
  float bias5_buf[120];
- float bias6_buf[10];
- float output_buf[10];
 
 
  float input2_inter[6][28][28];
@@ -15872,36 +15835,24 @@ int lenet_top(
  float input4_inter[16][10][10];
  float input5_inter[16][5][5];
  float input6_inter[120][1][1];
+ float output_buf[10];
 
 
  ld_input(input, input_buf);
  ld_weights1(weights1, weights1_buf);
  ld_weights3(weights3, weights3_buf);
  ld_weights5(weights5, weights5_buf);
- ld_weights6(weights6, weights6_buf);
  ld_bias1(bias1, bias1_buf);
  ld_bias3(bias3, bias3_buf);
  ld_bias5(bias5, bias5_buf);
- ld_bias6(bias6, bias6_buf);
 
 
  i_convolution1(input_buf, weights1_buf, bias1_buf, input2_inter);
- i_relu1(input2_inter);
-
  i_max_pooling2(input2_inter, input3_inter);
- i_relu2(input3_inter);
-
  i_convolution3(input3_inter, weights3_buf, bias3_buf, input4_inter);
- i_relu3(input4_inter);
-
  i_max_pooling4(input4_inter, input5_inter);
- i_relu4(input5_inter);
-
  i_convolution5(input5_inter, weights5_buf, bias5_buf, input6_inter);
- i_relu5(input6_inter);
-
- i_fc6(input6_inter, weights6_buf, bias6_buf, output_buf);
- i_relu6(output_buf);
+ i_fc6(input6_inter, weights6, bias6, output_buf);
 
 
  st_output(output, output_buf);

@@ -69,13 +69,13 @@ set NewPortList {[
  	{ "name": "output_0_0_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "output_0_0", "role": "d0" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3"],
 		"CDFG" : "i_convolution5",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "584281", "EstimateLatencyMax" : "584281",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "242281", "EstimateLatencyMax" : "242281",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -87,25 +87,27 @@ set RtlHierarchyInfo {[
 			{"Name" : "weights", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "bias", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "output_0_0", "Type" : "Memory", "Direction" : "O"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.lenet_top_fadd_32bkb_U36", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.lenet_top_fmul_32cud_U37", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.lenet_top_fadd_32bkb_U59", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.lenet_top_fmul_32cud_U60", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.lenet_top_fcmp_32dEe_U61", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	i_convolution5 {
-		input_r {Type I LastRead 5 FirstWrite -1}
-		weights {Type I LastRead 5 FirstWrite -1}
-		bias {Type I LastRead 2 FirstWrite -1}
-		output_0_0 {Type O LastRead -1 FirstWrite 9}}}
+		input_r {Type I LastRead 3 FirstWrite -1}
+		weights {Type I LastRead 4 FirstWrite -1}
+		bias {Type I LastRead 3 FirstWrite -1}
+		output_0_0 {Type O LastRead -1 FirstWrite 12}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "584281", "Max" : "584281"}
-	, {"Name" : "Interval", "Min" : "584281", "Max" : "584281"}
+	{"Name" : "Latency", "Min" : "242281", "Max" : "242281"}
+	, {"Name" : "Interval", "Min" : "242281", "Max" : "242281"}
 ]}
 
 set PipelineEnableSignalInfo {[
+	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 
