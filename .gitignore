@@ -2,6 +2,10 @@
 mp2/submit/demo.mp4
 mp2/submit/wang_zhou_mp2.zip
 mp4/hls/lenet/*
+final_project/source_code/embedded_system_c_code_and_data/SV_data.h
+final_project/source_code/FPGA_VHDL_code_and_data/sim/IP_test.vhd
+final_project/source_code/FPGA_VHDL_code_and_data/sim/PU_test.vhd
+final_project/source_code/FPGA_VHDL_code_and_data/sim/SV_test.vhd
 project/source_code/embedded_system_c_code_and_data/SV_data.h
 project/source_code/FPGA_VHDL_code_and_data/sim/IP_test.vhd
 project/source_code/FPGA_VHDL_code_and_data/sim/PU_test.vhd
