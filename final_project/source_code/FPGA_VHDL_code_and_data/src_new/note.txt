@@ -1,0 +1,15 @@
+Top:
+    1. State machine需要新state来load tree table 
+    2. 需要解决多个加速器同时写入的冲突情况
+
+Runtime scheduler:
+    1. 用一个table存所有tree的起始地址和完成情况
+    2. 在任意一个thread完成后更新地址
+
+Class:
+    1. 把内存剥离出来
+        - 取消所有和load相关的state
+    2. 执行完一个tree后不要自动跳到下一个，而是等待新的tree
+    3. 需要保存tree对应的class的id以便把结果写入对应的accumulator
+    4. 把accumulator剥离出来
+
