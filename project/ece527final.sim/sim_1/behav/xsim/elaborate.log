@@ -1,0 +1,33 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 34aa2071f3ff49cf977a93f33d3f30ce --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot image_test_behav xil_defaultlib.image_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package xil_defaultlib.types
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.reg [\reg(bits=13)\]
+Compiling architecture behavioral of entity xil_defaultlib.ram [\ram(address_bits=13,data_length...]
+Compiling architecture behavioral of entity xil_defaultlib.reg [\reg(bits=32)\]
+Compiling architecture behavioral of entity xil_defaultlib.mux [\mux(data_length=16,num_inputs=1...]
+Compiling architecture behavioral of entity xil_defaultlib.reg [\reg(bits=16)\]
+Compiling architecture behavioral of entity xil_defaultlib.reg [\reg(bits=1)\]
+Compiling architecture behavioral of entity xil_defaultlib.class [\class(tree_ram_bits=13,num_feat...]
+Compiling architecture behavioral of entity xil_defaultlib.counter [\counter(bits=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.active_demux [\active_demux(output_length=13)\]
+Compiling architecture behavioral of entity xil_defaultlib.counter [\counter(bits=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.active_demux [\active_demux(output_length=176)...]
+Compiling architecture behavioral of entity xil_defaultlib.comparator_2_32b [comparator_2_32b_default]
+Compiling architecture behavioral of entity xil_defaultlib.comparator_16_32b [comparator_16_32b_default]
+Compiling architecture behavioral of entity xil_defaultlib.image [image_default]
+Compiling architecture behavioral of entity xil_defaultlib.counter [\counter(bits=16)\]
+Compiling architecture behavior of entity xil_defaultlib.image_test
+Built simulation snapshot image_test_behav
