@@ -10,25 +10,35 @@ use work.types.all;
 entity class is
     generic(TREE_RAM_BITS: positive;
             NUM_FEATURES:  positive);
-    port(-- Generic control signals
-         Clk:   in std_logic;
-         Reset: in std_logic;
-         Start: in std_logic;
-         
-         -- Inputs to load the tree structure
-         Load:       in std_logic;
-         Valid_data: in std_logic;
-         Addr:       in std_logic_vector(TREE_RAM_BITS - 1  downto 0);
-         Ram_din:    in std_logic_vector(31 downto 0);
-         
-         -- Consecutive features of the current pixel
-         Features: in std_logic_vector(NUM_FEATURES * 16 - 1 downto 0);
-         
-         -- Output signals
-         --     Finish: finish signal
-         --     Dout:   accumulated prediction value
-         Finish: out std_logic;
-         Dout:   out std_logic_vector(31 downto 0));
+    port(
+        -- Generic signals
+        Clk:   in std_logic;
+        Reset: in std_logic;
+
+        -- Control signals
+        Start: in std_logic;
+        Halt:  in std_logic;
+        T1_addr_len: in std_logic;
+        T2_addr_len: in std_logic;
+        T3_addr_len: in std_logic;
+        T1_addr_data: in std_logic;        
+        T2_addr_data: in std_logic;
+        T3_addr_data: in std_logic;
+        
+        -- RAM access
+        Mem_ren:    out std_logic;   -- read enable
+        Mem_addr:   out std_logic_vector(TREE_RAM_BITS - 1  downto 0);
+        Mem_data:   in std_logic_vector(31 downto 0);
+        
+        -- Consecutive features of the current pixel
+        Features:   in std_logic_vector(NUM_FEATURES * 16 - 1 downto 0);
+        
+        -- Output signals
+        Finish_t1:  out std_logic;  -- thread 1 finished execution 
+        Finish_t2:  out std_logic;  -- thread 2 finished execution 
+        Finish_t3:  out std_logic;  -- thread 3 finished execution 
+        Dout:   out std_logic_vector(31 downto 0)
+    );
 end class;
 
 architecture Behavioral of class is
@@ -51,22 +61,6 @@ architecture Behavioral of class is
              Dout: out std_logic_vector(BITS - 1 downto 0));
     end component;
     
-    component ram is
-        generic(ADDRESS_BITS: positive := 16;
-                DATA_LENGTH:  positive := 32);
-        port(-- Control signals
-             Clk: in std_logic;
-             We:  in std_logic;
-             Re:  in std_logic;
-             
-             -- Input signals
-             Addr: in std_logic_vector(ADDRESS_BITS - 1 downto 0);
-             Din:  in std_logic_vector(DATA_LENGTH - 1 downto 0);
-             
-             -- Output
-             Dout: out std_logic_vector(DATA_LENGTH - 1 downto 0));
-    end component;
-    
     component mux is
         Generic(DATA_LENGTH: natural;
                 NUM_INPUTS:  natural);
@@ -79,11 +73,12 @@ architecture Behavioral of class is
     -- STATES
     ---------------------------------------------------------------------------
     
-    type SMC is (S_IDLE, S_LOAD_1, S_LOAD_2, S_LOAD_3,
-                 S_GET_GROUP_2_ADDRESS, S_GET_GROUP_3_ADDRESS,
-                 S_EXEC_FIRST, S_EXEC_SECOND,
-                 S_TREES_LOADED, S_EXEC_1, S_EXEC_2, S_EXEC_3,
-                 S_EXEC_1_ENDED, S_EXEC_2_ENDED, S_EXEC_3_ENDED);
+    type SMC is (
+        S_IDLE,
+        S_EXEC_FIRST, S_EXEC_SECOND,
+        S_EXEC_1, S_EXEC_2, S_EXEC_3,
+        S_EXEC_1_ENDED, S_EXEC_2_ENDED, S_EXEC_3_ENDED
+    );
     signal STATE, NEXT_STATE: SMC;
     
     ---------------------------------------------------------------------------
@@ -94,21 +89,14 @@ architecture Behavioral of class is
     signal curr_addr: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
     
     -- (c)urr_(a)ddr_reg_(1) control signals
+    signal ca_1_din: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
     signal curr_addr_1: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
     signal ca_1_load, ca_1_reset: std_logic;
-    
-    -- (i)nitial_(a)ddr_reg_(2) control signals
-    signal initial_addr_2: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
-    signal ia_2_load, ia_2_reset: std_logic;
     
     -- (c)urr_(a)ddr_reg_(2) control signals
     signal ca_2_din: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
     signal curr_addr_2: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
     signal ca_2_load, ca_2_reset: std_logic;
-    
-    -- (i)nitial_(a)ddr_reg_(3) control signals
-    signal initial_addr_3: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
-    signal ia_3_load, ia_3_reset: std_logic;
     
     -- (c)urr_(a)ddr_reg_(3) control signals
     signal ca_3_din: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
@@ -125,16 +113,12 @@ architecture Behavioral of class is
     
     -- (t)rees_(d)ata_ram signals
     signal td_addr: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
-    signal td_din: std_logic_vector(31 downto 0);
     signal td_dout: std_logic_vector(31 downto 0);
-    signal td_we, td_re: std_logic;
+    -- signal td_re: std_logic;
     
     -- (td)_dout_(r)eg signals
     signal tdr_dout: std_logic_vector(31 downto 0);
     signal tdr_load, tdr_reset: std_logic;
-    
-    -- [METADATA] Only used when loading the trees
-    signal last_group_node: std_logic;
     
     -- (T)ree (N)ode data
     signal tn_feature: std_logic_vector(7 downto 0);
@@ -159,55 +143,37 @@ architecture Behavioral of class is
     signal res_din, res_dout: std_logic_vector(31 downto 0);
     
     -- (f)inish_(g)roup_(r)eg signals
-    signal fgr_reset, finish_group: std_logic;
+    signal fgr_reset: std_logic;
     signal fgr_load_1, fgr_load_2, fgr_load_3: std_logic;
     signal fgr_din, finish_1, finish_2, finish_3: std_logic_vector(0 downto 0);
 
 begin
-    
+
     -- Register to update addr 1
     curr_addr_reg_1: reg
         generic map(BITS => TREE_RAM_BITS)
         port map(Clk   => Clk,
                  Reset => ca_1_reset,
-                 Load  => ca_1_load,
-                 Din   => curr_addr,
+                 Load  => T1_addr_len or ca_1_load,
+                 Din   => T1_addr_data when T1_addr_len = '1' else ca_1_din,
                  Dout  => curr_addr_1);
-    
-    -- Register to save initial addr 2
-    initial_addr_reg_2: reg
-        generic map(BITS => TREE_RAM_BITS)
-        port map(Clk   => Clk,
-                 Reset => ia_2_reset,
-                 Load  => ia_2_load,
-                 Din   => Addr,
-                 Dout  => initial_addr_2);
     
     -- Register to update addr 2
     curr_addr_reg_2: reg
         generic map(BITS => TREE_RAM_BITS)
         port map(Clk   => Clk,
                  Reset => ca_2_reset,
-                 Load  => ca_2_load,
-                 Din   => ca_2_din,
+                 Load  => T2_addr_len or ca_2_load,
+                 Din   => T2_addr_data when T2_addr_len = '1' else ca_2_din,
                  Dout  => curr_addr_2);
-    
-    -- Register to save initial addr 3
-    initial_addr_reg_3: reg
-        generic map(BITS => TREE_RAM_BITS)
-        port map(Clk   => Clk,
-                 Reset => ia_3_reset,
-                 Load  => ia_3_load,
-                 Din   => Addr,
-                 Dout  => initial_addr_3);
     
     -- Register to update addr 3
     curr_addr_reg_3: reg
         generic map(BITS => TREE_RAM_BITS)
         port map(Clk   => Clk,
                  Reset => ca_3_reset,
-                 Load  => ca_3_load,
-                 Din   => ca_3_din,
+                 Load  => T3_addr_len or ca_3_load,
+                 Din   => T3_addr_data when T3_addr_len = '1' else ca_3_din,
                  Dout  => curr_addr_3);
     
     -- Register to propagate the addr from stage 1 to stage 2
@@ -229,24 +195,9 @@ begin
                  Dout  => last_addr_2);
     
     -- RAM where all the trees of the class are located
-    trees_data_ram: ram
-        generic map(ADDRESS_BITS => TREE_RAM_BITS,
-                    DATA_LENGTH => 32)
-        port map(Clk  => Clk,
-                 We   => td_we,
-                 Re   => td_re,
-                 Addr => td_addr,
-                 Din  => td_din,
-                 Dout => td_dout);
-    
-    -- RAM input
-    td_din <= Ram_din;
-    
-    -- Readding is always possible
-    td_re <= '1';
-    
-    -- [METADATA] Last node of the trees of a thread
-    last_group_node <= td_din(0) and td_din(1) and td_din(2);
+    Mem_ren <= 1;
+    Mem_addr <= td_addr;
+    td_dout <= Mem_data;
     
     -- To get the feature number on stage 2
     tn_feature <= td_dout(31 downto 24) when td_dout(0) = '0'
@@ -342,11 +293,10 @@ begin
     -- To store a '1'
     fgr_din <= "1";
     
-    -- Finish signal
-    finish_group <= finish_1(0) and finish_2(0) and finish_3(0);
-    
     -- Outputs
-    Finish <= finish_group;
+    Finish_t1 <= finish_1(0);
+    Finish_t2 <= finish_1(1);
+    Finish_t3 <= finish_1(2);
     Dout   <= res_dout;
     
     -- PROCESS
@@ -365,23 +315,24 @@ begin
     end process;
     
     -- Main process
-    SM_OUTPUT: process(STATE, Addr, curr_addr, Reset,
-                       Load, Valid_data, Start,
-                       curr_addr_1, curr_addr_2, curr_addr_3,
-                       initial_addr_2, initial_addr_3,
-                       last_group_node, tn_is_leaf,
-                       tn_last_tree, finish_group,
-                       finish_1, finish_2, finish_3)
-    begin
+    SM_OUTPUT: process(
+        all
+        -- STATE, Mem_addr, curr_addr, Reset,
+        -- Start,
+        -- curr_addr_1, curr_addr_2, curr_addr_3,
+        -- tn_is_leaf,
+        -- tn_last_tree,
+        -- finish_1, finish_2, finish_3
+    ) begin
         
         -- To keep current state
         NEXT_STATE <= STATE;
         
         -- RAM address
-        td_we   <= '0';
-        td_addr <= Addr;
+        td_addr <= Mem_addr;    -- TODO: need to modify
         
         -- 'addr Registers' address
+        ca_1_din <= curr_addr;
         ca_2_din <= curr_addr;
         ca_3_din <= curr_addr;
         
@@ -391,9 +342,7 @@ begin
         fr_load     <= '1';
         tdr_load    <= '1';
         ca_1_load   <= '0';
-        ia_2_load   <= '0';
         ca_2_load   <= '0';
-        ia_3_load   <= '0';
         ca_3_load   <= '0';
         res_load    <= '0';
         fgr_load_1  <= '0';
@@ -407,9 +356,7 @@ begin
             la_1_reset <= '1';
             la_2_reset <= '1';
             ca_1_reset <= '1';
-            ia_2_reset <= '1';
             ca_2_reset <= '1';
-            ia_3_reset <= '1';
             ca_3_reset <= '1';
             res_reset  <= '1';
             fgr_reset  <= '1';
@@ -419,9 +366,7 @@ begin
             la_1_reset <= '0';
             la_2_reset <= '0';
             ca_1_reset <= '0';
-            ia_2_reset <= '0';
             ca_2_reset <= '0';
-            ia_3_reset <= '0';
             ca_3_reset <= '0';
             res_reset  <= '0';
             fgr_reset  <= '0';
@@ -429,49 +374,9 @@ begin
         
         case STATE is
             when S_IDLE =>
-                if Load = '1' then
-                    td_we      <= Valid_data;   -- load at same cycle
-                    NEXT_STATE <= S_LOAD_1;
-                end if;
-            when S_LOAD_1 =>    -- write tree nodes to ram
-                td_we <= Valid_data;
-                if Valid_data = '1' and last_group_node = '1' then  -- reach last node of a tree
-                    NEXT_STATE <= S_GET_GROUP_2_ADDRESS;
-                end if;
-            when S_GET_GROUP_2_ADDRESS =>   -- store root address of 2nd tree to initial addr register 2
-                td_we <= Valid_data;
-                if Valid_data = '1' then
-                    ia_2_load  <= '1';
-                    NEXT_STATE <= S_LOAD_2;
-                end if;
-            when S_LOAD_2 =>    -- write tree nodes to ram
-                td_we <= Valid_data;
-                if Valid_data = '1' and last_group_node = '1' then
-                    NEXT_STATE <= S_GET_GROUP_3_ADDRESS;
-                end if;
-            when S_GET_GROUP_3_ADDRESS =>   -- store root address of 3rd tree to initial addr register 3
-                td_we <= Valid_data;
-                if Valid_data = '1' then
-                    ia_3_load  <= '1';
-                    NEXT_STATE <= S_LOAD_3;
-                end if;
-            when S_LOAD_3 =>    -- write tree nodes to ram
-                td_we <= Valid_data;
-                if Valid_data = '1' and last_group_node = '1' then
-                    NEXT_STATE <= S_TREES_LOADED;
-                end if;
-            when S_TREES_LOADED =>      -- all trees loaded, waiting for start signal
-                td_addr <= curr_addr_1;     -- Useless???
                 if Start = '1' then
-                    ca_2_din   <= initial_addr_2;   -- load curr addr register 2 with inital addr 2
-                    ca_2_load  <= '1';
-                    ca_3_din   <= initial_addr_3;   -- load curr addr register 3 with inital addr 3
-                    ca_3_load  <= '1';
-                    ca_1_reset <= '1';
-                    la_1_reset <= '1';
-                    res_reset  <= '1';      -- reset accumulator
-                    fgr_reset  <= '1';      -- reset finish
                     NEXT_STATE <= S_EXEC_FIRST;
+                    -- TODO
                 end if;
             when S_EXEC_FIRST =>    -- Filling in pipeline
                 td_addr    <= curr_addr_1; -- (2) | 1 | (3) | (2)
@@ -489,8 +394,8 @@ begin
                         fgr_load_2 <= '1';  -- load finish flag register
                     end if;
                 end if;
-                if finish_group = '1' then  -- all threads finish execution 
-                    NEXT_STATE <= S_TREES_LOADED;
+                if Halt = '1' then  -- all threads finish execution 
+                    NEXT_STATE <= S_IDLE;
                 else
                     if finish_3 = "1" then  -- there are bubble(s) in pipeline
                         NEXT_STATE <= S_EXEC_2_ENDED;
@@ -508,8 +413,8 @@ begin
                         fgr_load_3 <= '1';
                     end if;
                 end if;
-                if finish_group = '1' then
-                    NEXT_STATE <= S_TREES_LOADED;
+                if Halt = '1' then
+                    NEXT_STATE <= S_IDLE;
                 else
                     if finish_1 = "1" then
                         NEXT_STATE <= S_EXEC_3_ENDED;
@@ -527,8 +432,8 @@ begin
                         fgr_load_1 <= '1';
                     end if;
                 end if;
-                if finish_group = '1' then
-                    NEXT_STATE <= S_TREES_LOADED;
+                if Halt = '1' then
+                    NEXT_STATE <= S_IDLE;
                 else
                     if finish_2 = "1" then
                         NEXT_STATE <= S_EXEC_1_ENDED;
@@ -539,8 +444,8 @@ begin
             when S_EXEC_1_ENDED =>
                 td_addr    <= curr_addr_1; -- (2) | 1 | 3 | END 2
                 ca_2_load  <= '1';         -- Load @ of thread 2
-                if finish_group = '1' then
-                    NEXT_STATE <= S_TREES_LOADED;
+                if Halt = '1' then
+                    NEXT_STATE <= S_IDLE;
                 else
                     if finish_3 = "1" then
                         NEXT_STATE <= S_EXEC_2_ENDED;
@@ -552,8 +457,8 @@ begin
                 td_addr    <= curr_addr_2; -- (3) | 2 | 1 | END 3
                 ca_3_load  <= '1';         -- Load @ of thread 3
                 -- The only difference is that no need to check for is_leaf and update accumulator
-                if finish_group = '1' then
-                    NEXT_STATE <= S_TREES_LOADED;
+                if Halt = '1' then
+                    NEXT_STATE <= S_IDLE;
                 else
                     if finish_1 = "1" then
                         NEXT_STATE <= S_EXEC_3_ENDED;
@@ -564,8 +469,8 @@ begin
             when S_EXEC_3_ENDED =>
                 td_addr    <= curr_addr_3; -- (1) | 3 | 2 | END 1
                 ca_1_load  <= '1';         -- Load @ of thread 1
-                if finish_group = '1' then
-                    NEXT_STATE <= S_TREES_LOADED;
+                if Halt = '1' then
+                    NEXT_STATE <= S_IDLE;
                 else
                     if finish_2 = "1" then
                         NEXT_STATE <= S_EXEC_1_ENDED;
