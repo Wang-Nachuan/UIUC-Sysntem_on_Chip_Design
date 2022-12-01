@@ -18,12 +18,15 @@ entity class is
         -- Control signals
         Start: in std_logic;
         Halt:  in std_logic;
-        T1_addr_len: in std_logic;
-        T2_addr_len: in std_logic;
-        T3_addr_len: in std_logic;
+        T1_addr_ld: in std_logic;
+        T2_addr_ld: in std_logic;
+        T3_addr_ld: in std_logic;
         T1_addr_data: in std_logic;        
         T2_addr_data: in std_logic;
         T3_addr_data: in std_logic;
+        T1_class_id: in std_logic_vector(?);
+        T2_class_id: in std_logic_vector(?);
+        T3_class_id: in std_logic_vector(?);
         
         -- RAM access
         Mem_ren:    out std_logic;   -- read enable
@@ -147,6 +150,20 @@ architecture Behavioral of class is
     signal fgr_load_1, fgr_load_2, fgr_load_3: std_logic;
     signal fgr_din, finish_1, finish_2, finish_3: std_logic_vector(0 downto 0);
 
+    -------------------- Newly added signals --------------------
+
+    -- Address reset flags for three threads
+    signal rsta_flag_1, rsta_flag_2, rsta_flag_3: std_logic;
+    signal rsta_flag_1_n, rsta_flag_2_n, rsta_flag_3_n: std_logic;
+
+    -- Loading address
+    signal ca_1_load_final, ca_2_load_final, ca_3_load_final: std_logic;
+    signal ca_1_din_final, ca_2_din_final, ca_3_din_final: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
+
+    -- Loading finish registers
+    signal fgr_load_1_final, fgr_load_2_final, fgr_load_3_final: std_logic;
+    signal fgr_1_din_final, fgr_2_din_final, fgr_3_din_final: std_logic_vector(0 downto 0);
+
 begin
 
     -- Register to update addr 1
@@ -154,8 +171,8 @@ begin
         generic map(BITS => TREE_RAM_BITS)
         port map(Clk   => Clk,
                  Reset => ca_1_reset,
-                 Load  => T1_addr_len or ca_1_load,
-                 Din   => T1_addr_data when T1_addr_len = '1' else ca_1_din,
+                 Load  => ca_1_load_final,
+                 Din   => ca_1_din_final,
                  Dout  => curr_addr_1);
     
     -- Register to update addr 2
@@ -163,8 +180,8 @@ begin
         generic map(BITS => TREE_RAM_BITS)
         port map(Clk   => Clk,
                  Reset => ca_2_reset,
-                 Load  => T2_addr_len or ca_2_load,
-                 Din   => T2_addr_data when T2_addr_len = '1' else ca_2_din,
+                 Load  => ca_2_load_final,
+                 Din   => ca_2_din_final,
                  Dout  => curr_addr_2);
     
     -- Register to update addr 3
@@ -172,8 +189,8 @@ begin
         generic map(BITS => TREE_RAM_BITS)
         port map(Clk   => Clk,
                  Reset => ca_3_reset,
-                 Load  => T3_addr_len or ca_3_load,
-                 Din   => T3_addr_data when T3_addr_len = '1' else ca_3_din,
+                 Load  => ca_3_load_final,
+                 Din   => ca_3_din_final,
                  Dout  => curr_addr_3);
     
     -- Register to propagate the addr from stage 1 to stage 2
@@ -220,7 +237,7 @@ begin
     -- Leaf node fields
     tn_pred_value <= tdr_dout(31 downto 16);
     tn_next_tree  <= tdr_dout((TREE_RAM_BITS + 2) - 1  downto 2);
-    tn_last_tree  <= tdr_dout(1);
+    -- tn_last_tree  <= tdr_dout(1);
     
     -- Mux to select the corresponding feature
     features_mux: mux
@@ -270,24 +287,24 @@ begin
         generic map(BITS => 1)
         port map(Clk   => Clk,
                  Reset => fgr_reset,
-                 Load  => fgr_load_1,
-                 Din   => fgr_din,
+                 Load  => fgr_load_1_final,
+                 Din   => fgr_1_din_final,
                  Dout  => finish_1);
     
     finish_group_reg_2: reg
         generic map(BITS => 1)
         port map(Clk   => Clk,
                  Reset => fgr_reset,
-                 Load  => fgr_load_2,
-                 Din   => fgr_din,
+                 Load  => fgr_load_2_final,
+                 Din   => fgr_2_din_final,
                  Dout  => finish_2);
     
     finish_group_reg_3: reg
         generic map(BITS => 1)
         port map(Clk   => Clk,
                  Reset => fgr_reset,
-                 Load  => fgr_load_3,
-                 Din   => fgr_din,
+                 Load  => fgr_load_3_final,
+                 Din   => fgr_3_din_final,
                  Dout  => finish_3);
     
     -- To store a '1'
@@ -313,7 +330,108 @@ begin
             end if;
         end if;
     end process;
+
+    -- Reset starting address
+    RST_ADDR: process(clk)
+    begin
+        if rising_edge(Clk) then
+            if Reset = '1' then
+                rsta_flag_1 <= '0';
+                rsta_flag_2 <= '0';
+                rsta_flag_3 <= '0';
+            else
+                rsta_flag_1 <= rsta_flag_1_n;
+                rsta_flag_2 <= rsta_flag_2_n;
+                rsta_flag_3 <= rsta_flag_3_n;
+            end if;
+        end if;
+    end
     
+    -- Update flags
+    RST_ADDR_COMB: process(all)
+    begin
+        rsta_flag_1_n = rsta_flag_1;
+        rsta_flag_2_n = rsta_flag_2;
+        rsta_flag_3_n = rsta_flag_3;
+
+        -- Set flag back to 0 when address is used
+        case STATE is
+            when S_EXEC_FIRST => -- (2) | 1 | (3) | (2)
+                rsta_flag_1_n = '0'
+            when S_EXEC_SECOND => -- (3) | 2 | 1 | (3)
+                rsta_flag_2_n = '0';
+            when S_EXEC_1 | S_EXEC_1_ENDED => -- (2) | 1 | 3 | 2/2 END
+                rsta_flag_1_n = '0';
+            when S_EXEC_2 | S_EXEC_2_ENDED => -- (3) | 2 | 1 | 3/3 END
+                rsta_flag_2_n = '0';
+            when S_EXEC_3 | S_EXEC_3_ENDED => -- (1) | 3 | 2 | 1/3 END
+                rsta_flag_3_n = '0';
+            when OTHERS =>
+        end case;
+
+        -- Load new starting address
+        rsta_flag_1_n = '1' when T1_addr_ld = '1' else rsta_flag_1_n;
+        rsta_flag_2_n = '1' when T2_addr_ld = '1' else rsta_flag_2_n;
+        rsta_flag_3_n = '1' when T3_addr_ld = '1' else rsta_flag_3_n;
+    end
+
+    -- Update address
+    LD_ADDR: process(all)
+    begin
+        -- Loaded by FSM
+        ca_1_load_final <= '0' when rsta_flag_1 = '1' else ca_1_load;
+        ca_2_load_final <= '0' when rsta_flag_2 = '1' else ca_2_load;
+        ca_3_load_final <= '0' when rsta_flag_3 = '1' else ca_3_load;
+        ca_1_din_final <= ca_1_din;
+        ca_2_din_final <= ca_2_din;
+        ca_3_din_final <= ca_3_din;
+
+        -- Loaded by scheduler
+        if T1_addr_ld = '1' then
+            ca_1_load_final = '1';
+            ca_1_din_final <= T1_addr_data;
+        end if;
+
+        if T2_addr_ld = '1' then
+            ca_2_load_final = '1';
+            ca_2_din_final <= T2_addr_data;
+        end if;
+
+        if T3_addr_ld = '1' then
+            ca_3_load_final = '1';
+            ca_3_din_final <= T3_addr_data;
+        end if;
+    end
+
+    -- Update finish register
+    LD_FINISH: process(all)
+    begin
+        -- Loaded by FSM
+        fgr_load_1_final <= fgr_load_1;
+        fgr_load_2_final <= fgr_load_2;
+        fgr_load_3_final <= fgr_load_3;
+        fgr_1_din_final <= fgr_din;
+        fgr_2_din_final <= fgr_din;
+        fgr_3_din_final <= fgr_din;
+
+        -- Refreshed by scheduler
+        if T1_addr_ld = '1' then
+            fgr_load_1_final = '1';
+            fgr_1_din_final = '0';
+        end if;
+
+        if T2_addr_ld = '1' then
+            fgr_load_2_final = '1';
+            fgr_2_din_final = '0';
+        end if;
+
+        if T3_addr_ld = '1' then
+            fgr_load_3_final = '1';
+            fgr_3_din_final = '0';
+        end if;
+    end
+
+
     -- Main process
     SM_OUTPUT: process(
         all
@@ -380,19 +498,25 @@ begin
                 end if;
             when S_EXEC_FIRST =>    -- Filling in pipeline
                 td_addr    <= curr_addr_1; -- (2) | 1 | (3) | (2)
-                NEXT_STATE <= S_EXEC_SECOND;
+                if Halt = '1' then
+                    NEXT_STATE <= S_IDLE;
+                else
+                    NEXT_STATE <= S_EXEC_SECOND;
+                end if;
             when S_EXEC_SECOND =>   -- Filling in pipeline
                 td_addr    <= curr_addr_2; -- (3) | 2 | 1 | (3)
-                NEXT_STATE <= S_EXEC_3;
+                if Halt = '1' then
+                    NEXT_STATE <= S_IDLE;
+                else
+                    NEXT_STATE <= S_EXEC_3;
+                end if;
             when S_EXEC_1 =>
                 td_addr   <= curr_addr_1; -- (2) | 1 | 3 | 2
                 ca_2_load <= '1';         -- Load @ of thread 2
                 if tn_is_leaf = '1' then  -- Test thread 2
                     -- Leaf node of thread 2
                     res_load <= '1';    -- add value to accumulator
-                    if tn_last_tree = '1' then
-                        fgr_load_2 <= '1';  -- load finish flag register
-                    end if;
+                    fgr_load_2 <= '1';  -- load finish flag register
                 end if;
                 if Halt = '1' then  -- all threads finish execution 
                     NEXT_STATE <= S_IDLE;
@@ -409,9 +533,7 @@ begin
                 if tn_is_leaf = '1' then  -- Test thread 3
                     -- Leaf node of thread 3
                     res_load <= '1';
-                    if tn_last_tree = '1' then
-                        fgr_load_3 <= '1';
-                    end if;
+                    fgr_load_3 <= '1';
                 end if;
                 if Halt = '1' then
                     NEXT_STATE <= S_IDLE;
@@ -428,9 +550,7 @@ begin
                 if tn_is_leaf = '1' then  -- Test thread 1
                     -- Leaf node of thread 1
                     res_load <= '1';
-                    if tn_last_tree = '1' then
-                        fgr_load_1 <= '1';
-                    end if;
+                    fgr_load_1 <= '1';
                 end if;
                 if Halt = '1' then
                     NEXT_STATE <= S_IDLE;
