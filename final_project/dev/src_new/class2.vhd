@@ -8,8 +8,11 @@ use IEEE.numeric_std.all;
 use work.types.all;
 
 entity class is
-    generic(TREE_RAM_BITS: positive;
-            NUM_FEATURES:  positive);
+    generic(
+        TREE_RAM_BITS: positive;
+        NUM_FEATURES:  positive;
+        CLASS_ID_SIZE: positive := 1;
+    );
     port(
         -- Generic signals
         Clk:   in std_logic;
@@ -24,9 +27,9 @@ entity class is
         T1_addr_data: in std_logic;        
         T2_addr_data: in std_logic;
         T3_addr_data: in std_logic;
-        T1_class_id: in std_logic_vector(?);
-        T2_class_id: in std_logic_vector(?);
-        T3_class_id: in std_logic_vector(?);
+        T1_class_id: in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
+        T2_class_id: in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
+        T3_class_id: in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
         
         -- RAM access
         Mem_ren:    out std_logic;   -- read enable
@@ -39,8 +42,10 @@ entity class is
         -- Output signals
         Finish_t1:  out std_logic;  -- thread 1 finished execution 
         Finish_t2:  out std_logic;  -- thread 2 finished execution 
-        Finish_t3:  out std_logic;  -- thread 3 finished execution 
-        Dout:   out std_logic_vector(31 downto 0)
+        Finish_t3:  out std_logic;  -- thread 3 finished execution
+        Acc_ld:     out std_logic;  -- Load accumulator
+        Class_id:   in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
+        Dout:       out std_logic_vector(31 downto 0)   -- Dout and Acc_ld will become valid at same cycle
     );
 end class;
 
@@ -141,10 +146,6 @@ architecture Behavioral of class is
     -- Comparator signals
     signal cmp_dout: std_logic;
     
-    -- (res)ult register signals
-    signal res_load, res_reset: std_logic;
-    signal res_din, res_dout: std_logic_vector(31 downto 0);
-    
     -- (f)inish_(g)roup_(r)eg signals
     signal fgr_reset: std_logic;
     signal fgr_load_1, fgr_load_2, fgr_load_3: std_logic;
@@ -163,6 +164,10 @@ architecture Behavioral of class is
     -- Loading finish registers
     signal fgr_load_1_final, fgr_load_2_final, fgr_load_3_final: std_logic;
     signal fgr_1_din_final, fgr_2_din_final, fgr_3_din_final: std_logic_vector(0 downto 0);
+    
+    -- Class ID for each thread
+    signal class_id_1, class_id_2, class_id_3: std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
+    signal class_id_1_n, class_id_2_n, class_id_3_n: std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
 
 begin
 
@@ -269,19 +274,6 @@ begin
     -- Mux to select if we should address the next node or a new tree
     curr_addr <= tn_next_tree when tn_is_leaf = '1' else tn_next_node;
     
-    -- Register to accumulate the result
-    result: reg
-        generic map(BITS => 32)
-        port map(Clk   => Clk,
-                 Reset => res_reset,
-                 Load  => res_load,
-                 Din   => res_din,
-                 Dout  => res_dout);
-    
-    -- The content of the register is accumulated with the next prediction
-    res_din <= std_logic_vector(signed(res_dout)
-                                + resize(signed(tn_pred_value), 32));
-    
     -- Registers to keep the finish signal of each thread
     finish_group_reg_1: reg
         generic map(BITS => 1)
@@ -314,7 +306,7 @@ begin
     Finish_t1 <= finish_1(0);
     Finish_t2 <= finish_1(1);
     Finish_t3 <= finish_1(2);
-    Dout   <= res_dout;
+    Dout <= std_logic_vector(resize(signed(tn_pred_value), 32));
     
     -- PROCESS
     ----------
@@ -330,8 +322,12 @@ begin
             end if;
         end if;
     end process;
+    
+    ---------------------------------------------------------------------
+    ------------------------- New process start -------------------------
+    ---------------------------------------------------------------------
 
-    -- Reset starting address
+    -- Registers
     RST_ADDR: process(clk)
     begin
         if rising_edge(Clk) then
@@ -339,10 +335,16 @@ begin
                 rsta_flag_1 <= '0';
                 rsta_flag_2 <= '0';
                 rsta_flag_3 <= '0';
+                class_id_1 <= (others => '0');
+                class_id_2 <= (others => '0');
+                class_id_3 <= (others => '0');
             else
                 rsta_flag_1 <= rsta_flag_1_n;
                 rsta_flag_2 <= rsta_flag_2_n;
                 rsta_flag_3 <= rsta_flag_3_n;
+                class_id_1 <= class_id_1_n;
+                class_id_2 <= class_id_2_n;
+                class_id_3 <= class_id_3_n;
             end if;
         end if;
     end
@@ -364,7 +366,7 @@ begin
                 rsta_flag_1_n = '0';
             when S_EXEC_2 | S_EXEC_2_ENDED => -- (3) | 2 | 1 | 3/3 END
                 rsta_flag_2_n = '0';
-            when S_EXEC_3 | S_EXEC_3_ENDED => -- (1) | 3 | 2 | 1/3 END
+            when S_EXEC_3 | S_EXEC_3_ENDED => -- (1) | 3 | 2 | 1/1 END
                 rsta_flag_3_n = '0';
             when OTHERS =>
         end case;
@@ -373,6 +375,14 @@ begin
         rsta_flag_1_n = '1' when T1_addr_ld = '1' else rsta_flag_1_n;
         rsta_flag_2_n = '1' when T2_addr_ld = '1' else rsta_flag_2_n;
         rsta_flag_3_n = '1' when T3_addr_ld = '1' else rsta_flag_3_n;
+    end
+
+    -- Update class id
+    LD_CLASS_ID: process (all)
+    begin
+        class_id_1_n <= T1_class_id when T1_addr_ld = '1' else class_id_1;
+        class_id_2_n <= T2_class_id when T2_addr_ld = '1' else class_id_2;
+        class_id_3_n <= T3_class_id when T3_addr_ld = '1' else class_id_3;
     end
 
     -- Update address
@@ -431,6 +441,10 @@ begin
         end if;
     end
 
+    ---------------------------------------------------------------------
+    -------------------------- New process end --------------------------
+    ---------------------------------------------------------------------
+
 
     -- Main process
     SM_OUTPUT: process(
@@ -462,10 +476,13 @@ begin
         ca_1_load   <= '0';
         ca_2_load   <= '0';
         ca_3_load   <= '0';
-        res_load    <= '0';
         fgr_load_1  <= '0';
         fgr_load_2  <= '0';
         fgr_load_3  <= '0';
+
+        -- Output signals
+        Acc_ld <= '0';
+        Class_id <= (others => '0');
         
         -- Reset signals
         if Reset = '1' then
@@ -476,7 +493,6 @@ begin
             ca_1_reset <= '1';
             ca_2_reset <= '1';
             ca_3_reset <= '1';
-            res_reset  <= '1';
             fgr_reset  <= '1';
         else
             fr_reset   <= '0';
@@ -486,7 +502,6 @@ begin
             ca_1_reset <= '0';
             ca_2_reset <= '0';
             ca_3_reset <= '0';
-            res_reset  <= '0';
             fgr_reset  <= '0';
         end if;
         
@@ -515,8 +530,9 @@ begin
                 ca_2_load <= '1';         -- Load @ of thread 2
                 if tn_is_leaf = '1' then  -- Test thread 2
                     -- Leaf node of thread 2
-                    res_load <= '1';    -- add value to accumulator
                     fgr_load_2 <= '1';  -- load finish flag register
+                    Acc_ld <= '1';
+                    Class_id <= class_id_2;
                 end if;
                 if Halt = '1' then  -- all threads finish execution 
                     NEXT_STATE <= S_IDLE;
@@ -532,8 +548,9 @@ begin
                 ca_3_load <= '1';         -- Load @ of thread 3
                 if tn_is_leaf = '1' then  -- Test thread 3
                     -- Leaf node of thread 3
-                    res_load <= '1';
                     fgr_load_3 <= '1';
+                    Acc_ld <= '1';
+                    Class_id <= class_id_3;
                 end if;
                 if Halt = '1' then
                     NEXT_STATE <= S_IDLE;
@@ -549,8 +566,9 @@ begin
                 ca_1_load <= '1';         -- Load @ of thread 1
                 if tn_is_leaf = '1' then  -- Test thread 1
                     -- Leaf node of thread 1
-                    res_load <= '1';
                     fgr_load_1 <= '1';
+                    Acc_ld <= '1';
+                    Class_id <= class_id_1;
                 end if;
                 if Halt = '1' then
                     NEXT_STATE <= S_IDLE;
