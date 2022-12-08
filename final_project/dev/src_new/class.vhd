@@ -11,7 +11,7 @@ entity class is
     generic(
         TREE_RAM_BITS: positive;
         NUM_FEATURES:  positive;
-        CLASS_ID_SIZE: positive := 1;
+        CLASS_ID_SIZE: positive := 1
     );
     port(
         -- Generic signals
@@ -217,7 +217,7 @@ begin
                  Dout  => last_addr_2);
     
     -- RAM where all the trees of the class are located
-    Mem_ren <= 1;
+    Mem_ren <= '1';
     Mem_addr <= td_addr;
     td_dout <= Mem_data;
     
