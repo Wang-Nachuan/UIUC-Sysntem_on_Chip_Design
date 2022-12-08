@@ -347,7 +347,7 @@ begin
                 class_id_3 <= class_id_3_n;
             end if;
         end if;
-    end
+    end process;
     
     -- Update flags
     RST_ADDR_COMB: process(all)
@@ -375,7 +375,7 @@ begin
         rsta_flag_1_n = '1' when T1_addr_ld = '1' else rsta_flag_1_n;
         rsta_flag_2_n = '1' when T2_addr_ld = '1' else rsta_flag_2_n;
         rsta_flag_3_n = '1' when T3_addr_ld = '1' else rsta_flag_3_n;
-    end
+    end process;
 
     -- Update class id
     LD_CLASS_ID: process (all)
@@ -383,7 +383,7 @@ begin
         class_id_1_n <= T1_class_id when T1_addr_ld = '1' else class_id_1;
         class_id_2_n <= T2_class_id when T2_addr_ld = '1' else class_id_2;
         class_id_3_n <= T3_class_id when T3_addr_ld = '1' else class_id_3;
-    end
+    end process;
 
     -- Update address
     LD_ADDR: process(all)
@@ -411,7 +411,7 @@ begin
             ca_3_load_final = '1';
             ca_3_din_final <= T3_addr_data;
         end if;
-    end
+    end process;
 
     -- Update finish register
     LD_FINISH: process(all)
@@ -439,7 +439,7 @@ begin
             fgr_load_3_final = '1';
             fgr_3_din_final = '0';
         end if;
-    end
+    end process;
 
     ---------------------------------------------------------------------
     -------------------------- New process end --------------------------

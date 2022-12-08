@@ -10,7 +10,7 @@ use work.types.all;
 entity image is
     generic(TREE_RAM_BITS: positive := 13;
             NUM_CLASSES:   positive := 2;       -- UNCOMMENT FOR NEW
-            NUM_FEATURES:  positive := 5);      -- UNCOMMENT FOR NEW
+            NUM_FEATURES:  positive := 8);      -- UNCOMMENT FOR NEW
             -- NUM_CLASSES:   positive := 16;   -- UNCOMMENT FOR IP
             -- NUM_FEATURES:  positive := 200); -- UNCOMMENT FOR IP
             -- NUM_CLASSES:   positive := 13;   -- UNCOMMENT FOR KSC
@@ -509,13 +509,14 @@ begin
         case STATE is
             when S_IDLE =>
                 Curr_state <= "000";
-                if Load_trees = '1' then    -- Actual data comes at next cycle
+                if Load_trees = '1' then    
+                    ram_we <= Valid_node;    -- Data becomes valid at same cycle
                     NEXT_STATE <= S_LOAD_TREES;
                 end if;
             when S_LOAD_TREES =>
                 Curr_state <= "001";
                 ram_we <= Valid_node;
-                if Valid_node = '1' and last_node = '1' then
+                if Valid_node = '0' then
                     NEXT_STATE <= S_TREES_LOADED;
                 end if;
             when S_TREES_LOADED =>
