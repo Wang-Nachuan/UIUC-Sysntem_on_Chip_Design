@@ -6,6 +6,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use work.types.all;
+use std.env.stop;
 
 entity image_test is
     generic(TREE_RAM_BITS: positive := 13;
@@ -163,79 +164,79 @@ begin
         Load_trees <= '0';
 
         -- Load starting address
-        Addr <= Addr + 1;
+        Addr <= std_logic_vector(unsigned(Addr) + 1);
         Trees_din <= x"00000009";
         wait for Clk_period;
-        Addr <= Addr + 1;
+        Addr <= std_logic_vector(unsigned(Addr) + 1);
         Trees_din <= x"00002019";
         wait for Clk_period;
-        Addr <= Addr + 1;
+        Addr <= std_logic_vector(unsigned(Addr) + 1);
         Trees_din <= x"00000029";
         wait for Clk_period;
-        Addr <= Addr + 1;
+        Addr <= std_logic_vector(unsigned(Addr) + 1);
         Trees_din <= x"00002039";
         wait for Clk_period;
-        Addr <= Addr + 1;
+        Addr <= std_logic_vector(unsigned(Addr) + 1);
         Trees_din <= x"00000049";
         wait for Clk_period;
-        Addr <= Addr + 1;
+        Addr <= std_logic_vector(unsigned(Addr) + 1);
         Trees_din <= x"00002059";
         wait for Clk_period;
-        Addr <= Addr + 1;
+        Addr <= std_logic_vector(unsigned(Addr) + 1);
         Trees_din <= x"00000069";
         wait for Clk_period;
-        Addr <= Addr + 1;
+        Addr <= std_logic_vector(unsigned(Addr) + 1);
         Trees_din <= x"00002079";
         wait for Clk_period;
 
         -- Load trees
         for i in 0 to 7 loop
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"00000E08";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"01000E08";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"02000E08";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"03000E08";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"04000E08";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"05000E08";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"06000E08";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"07000E08";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"00010001";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"00020001";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"00030001";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"00040001";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"00050001";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"00060001";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"00070001";
             wait for Clk_period;
-            Addr <= Addr + 1;
+            Addr <= std_logic_vector(unsigned(Addr) + 1);
             Trees_din <= x"00080001";
             wait for Clk_period;
         end loop;
@@ -257,7 +258,7 @@ begin
         Load_features <= '1';
         Valid_feature <= '1';
         
-        Features_din <= "0000101111010001";
+        Features_din <= "0000000000000001";
         wait for Clk_period;
         
         -- Reset load flag
@@ -298,6 +299,6 @@ begin
         wait for Clk_period;
         hc_count <= '0';
         
-        finish;
-
+        stop;
     end process;
+end;

@@ -20,3 +20,14 @@ class
 image
 ram
 
+tdr_load
+->
+tdr_dout
+-> tn_is_leaf*
+-> fgr_load_1/2/3
+-> fgr_load_1/2/3_final
+
+tdr_load*
+-> td_dout
+-> tdr_dout
+-> tn_is_leaf*

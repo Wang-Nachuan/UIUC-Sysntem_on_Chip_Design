@@ -24,9 +24,9 @@ entity class is
         T1_addr_ld: in std_logic;
         T2_addr_ld: in std_logic;
         T3_addr_ld: in std_logic;
-        T1_addr_data: in std_logic;        
-        T2_addr_data: in std_logic;
-        T3_addr_data: in std_logic;
+        T1_addr_data: in std_logic_vector(TREE_RAM_BITS - 1  downto 0);        
+        T2_addr_data: in std_logic_vector(TREE_RAM_BITS - 1  downto 0);
+        T3_addr_data: in std_logic_vector(TREE_RAM_BITS - 1  downto 0);
         T1_class_id: in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
         T2_class_id: in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
         T3_class_id: in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
@@ -44,7 +44,7 @@ entity class is
         Finish_t2:  out std_logic;  -- thread 2 finished execution 
         Finish_t3:  out std_logic;  -- thread 3 finished execution
         Acc_ld:     out std_logic;  -- Load accumulator
-        Class_id:   in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
+        Class_id:   out std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
         Dout:       out std_logic_vector(31 downto 0)   -- Dout and Acc_ld will become valid at same cycle
     );
 end class;
@@ -303,9 +303,9 @@ begin
     fgr_din <= "1";
     
     -- Outputs
-    Finish_t1 <= finish_1(0);
-    Finish_t2 <= finish_1(1);
-    Finish_t3 <= finish_1(2);
+    Finish_t1 <= '1' when finish_1 = std_logic_vector(to_unsigned(1, 1)) else '0'; 
+    Finish_t2 <= '1' when finish_2 = std_logic_vector(to_unsigned(1, 1)) else '0';
+    Finish_t3 <= '1' when finish_3 = std_logic_vector(to_unsigned(1, 1)) else '0';
     Dout <= std_logic_vector(resize(signed(tn_pred_value), 32));
     
     -- PROCESS
@@ -352,63 +352,92 @@ begin
     -- Update flags
     RST_ADDR_COMB: process(all)
     begin
-        rsta_flag_1_n = rsta_flag_1;
-        rsta_flag_2_n = rsta_flag_2;
-        rsta_flag_3_n = rsta_flag_3;
+        rsta_flag_1_n <= rsta_flag_1;
+        rsta_flag_2_n <= rsta_flag_2;
+        rsta_flag_3_n <= rsta_flag_3;
 
         -- Set flag back to 0 when address is used
         case STATE is
             when S_EXEC_FIRST => -- (2) | 1 | (3) | (2)
-                rsta_flag_1_n = '0'
+                rsta_flag_1_n <= '0';
             when S_EXEC_SECOND => -- (3) | 2 | 1 | (3)
-                rsta_flag_2_n = '0';
+                rsta_flag_2_n <= '0';
             when S_EXEC_1 | S_EXEC_1_ENDED => -- (2) | 1 | 3 | 2/2 END
-                rsta_flag_1_n = '0';
+                rsta_flag_1_n <= '0';
             when S_EXEC_2 | S_EXEC_2_ENDED => -- (3) | 2 | 1 | 3/3 END
-                rsta_flag_2_n = '0';
+                rsta_flag_2_n <= '0';
             when S_EXEC_3 | S_EXEC_3_ENDED => -- (1) | 3 | 2 | 1/1 END
-                rsta_flag_3_n = '0';
+                rsta_flag_3_n <= '0';
             when OTHERS =>
         end case;
 
         -- Load new starting address
-        rsta_flag_1_n = '1' when T1_addr_ld = '1' else rsta_flag_1_n;
-        rsta_flag_2_n = '1' when T2_addr_ld = '1' else rsta_flag_2_n;
-        rsta_flag_3_n = '1' when T3_addr_ld = '1' else rsta_flag_3_n;
+        -- rsta_flag_1_n <= '1' when T1_addr_ld = '1' else rsta_flag_1_n;
+        -- rsta_flag_2_n <= '1' when T2_addr_ld = '1' else rsta_flag_2_n;
+        -- rsta_flag_3_n <= '1' when T3_addr_ld = '1' else rsta_flag_3_n;
+        if T1_addr_ld = '1' then
+            rsta_flag_1_n <= '1';
+        end if;
+        if T2_addr_ld = '1' then
+            rsta_flag_2_n <= '1';
+        end if;
+        if T3_addr_ld = '1' then
+            rsta_flag_3_n <= '1';
+        end if;
     end process;
 
     -- Update class id
     LD_CLASS_ID: process (all)
     begin
-        class_id_1_n <= T1_class_id when T1_addr_ld = '1' else class_id_1;
-        class_id_2_n <= T2_class_id when T2_addr_ld = '1' else class_id_2;
-        class_id_3_n <= T3_class_id when T3_addr_ld = '1' else class_id_3;
+         class_id_1_n <= class_id_1;
+         class_id_2_n <= class_id_2;
+         class_id_3_n <= class_id_3;
+         
+        if T1_addr_ld = '1'then
+            class_id_1_n <= T1_class_id;
+        end if;
+        if T2_addr_ld = '1'then
+            class_id_2_n <= T2_class_id;
+        end if;
+        if T3_addr_ld = '1'then
+            class_id_3_n <= T3_class_id;
+        end if;
     end process;
 
     -- Update address
     LD_ADDR: process(all)
     begin
         -- Loaded by FSM
-        ca_1_load_final <= '0' when rsta_flag_1 = '1' else ca_1_load;
-        ca_2_load_final <= '0' when rsta_flag_2 = '1' else ca_2_load;
-        ca_3_load_final <= '0' when rsta_flag_3 = '1' else ca_3_load;
-        ca_1_din_final <= ca_1_din;
-        ca_2_din_final <= ca_2_din;
-        ca_3_din_final <= ca_3_din;
+        ca_1_load_final <= ca_1_load;
+        ca_2_load_final <= ca_2_load;
+        ca_3_load_final <= ca_3_load;
+        ca_1_din_final <= curr_addr;
+        ca_2_din_final <= curr_addr;
+        ca_3_din_final <= curr_addr;
+        
+        if (rsta_flag_1 = '1') or (finish_1 = std_logic_vector(to_unsigned(1, 1))) then
+            ca_1_load_final <= '0';
+        end if;
+        if (rsta_flag_2 = '1') or (finish_2 = std_logic_vector(to_unsigned(1, 1))) then
+            ca_2_load_final <= '0';
+        end if;
+        if (rsta_flag_3 = '1') or (finish_3 = std_logic_vector(to_unsigned(1, 1))) then
+            ca_3_load_final <= '0';
+        end if;
 
         -- Loaded by scheduler
         if T1_addr_ld = '1' then
-            ca_1_load_final = '1';
+            ca_1_load_final <= '1';
             ca_1_din_final <= T1_addr_data;
         end if;
 
         if T2_addr_ld = '1' then
-            ca_2_load_final = '1';
+            ca_2_load_final <= '1';
             ca_2_din_final <= T2_addr_data;
         end if;
 
         if T3_addr_ld = '1' then
-            ca_3_load_final = '1';
+            ca_3_load_final <= '1';
             ca_3_din_final <= T3_addr_data;
         end if;
     end process;
@@ -426,47 +455,71 @@ begin
 
         -- Refreshed by scheduler
         if T1_addr_ld = '1' then
-            fgr_load_1_final = '1';
-            fgr_1_din_final = '0';
+            fgr_load_1_final <= '1';
+            fgr_1_din_final <= std_logic_vector(to_unsigned(0, 1));
         end if;
 
         if T2_addr_ld = '1' then
-            fgr_load_2_final = '1';
-            fgr_2_din_final = '0';
+            fgr_load_2_final <= '1';
+            fgr_2_din_final <= std_logic_vector(to_unsigned(0, 1));
         end if;
 
         if T3_addr_ld = '1' then
-            fgr_load_3_final = '1';
-            fgr_3_din_final = '0';
+            fgr_load_3_final <= '1';
+            fgr_3_din_final <= std_logic_vector(to_unsigned(0, 1));
         end if;
+    end process;
+
+    ACC_OUT: process (all)
+    begin
+        fgr_load_1  <= '0';
+        fgr_load_2  <= '0';
+        fgr_load_3  <= '0';
+        Acc_ld <= '0';
+        Class_id <= (others => '0');
+        
+        if Reset = '1' then
+            fgr_load_1  <= '1';
+            fgr_load_2  <= '1';
+            fgr_load_3  <= '1';
+        end if;
+    
+        case STATE is
+            when S_EXEC_1 =>
+                if tn_is_leaf = '1' then
+                    fgr_load_2 <= '1';
+                    Acc_ld <= '1';
+                    Class_id <= class_id_2;
+                end if;
+            when S_EXEC_2 =>
+                if tn_is_leaf = '1' then
+                    fgr_load_3 <= '1';
+                    Acc_ld <= '1';
+                    Class_id <= class_id_3;
+                end if;
+            when S_EXEC_3 =>
+                if tn_is_leaf = '1' then
+                    fgr_load_1 <= '1';
+                    Acc_ld <= '1';
+                    Class_id <= class_id_1;
+                end if;
+            when OTHERS =>
+        end case;
     end process;
 
     ---------------------------------------------------------------------
     -------------------------- New process end --------------------------
     ---------------------------------------------------------------------
 
-
     -- Main process
-    SM_OUTPUT: process(
-        all
-        -- STATE, Mem_addr, curr_addr, Reset,
-        -- Start,
-        -- curr_addr_1, curr_addr_2, curr_addr_3,
-        -- tn_is_leaf,
-        -- tn_last_tree,
-        -- finish_1, finish_2, finish_3
-    ) begin
+    SM_OUTPUT: process(all) 
+    begin
         
         -- To keep current state
         NEXT_STATE <= STATE;
         
         -- RAM address
-        td_addr <= Mem_addr;    -- TODO: need to modify
-        
-        -- 'addr Registers' address
-        ca_1_din <= curr_addr;
-        ca_2_din <= curr_addr;
-        ca_3_din <= curr_addr;
+        td_addr <= (others => '0');    -- TODO: need to modify
         
         -- Load signals
         la_1_load   <= '1';
@@ -476,13 +529,8 @@ begin
         ca_1_load   <= '0';
         ca_2_load   <= '0';
         ca_3_load   <= '0';
-        fgr_load_1  <= '0';
-        fgr_load_2  <= '0';
-        fgr_load_3  <= '0';
-
-        -- Output signals
-        Acc_ld <= '0';
-        Class_id <= (others => '0');
+        
+        fgr_reset  <= '0';
         
         -- Reset signals
         if Reset = '1' then
@@ -493,7 +541,7 @@ begin
             ca_1_reset <= '1';
             ca_2_reset <= '1';
             ca_3_reset <= '1';
-            fgr_reset  <= '1';
+--            fgr_reset  <= '1';
         else
             fr_reset   <= '0';
             tdr_reset  <= '0';
@@ -502,14 +550,13 @@ begin
             ca_1_reset <= '0';
             ca_2_reset <= '0';
             ca_3_reset <= '0';
-            fgr_reset  <= '0';
+--            fgr_reset  <= '0';
         end if;
         
         case STATE is
             when S_IDLE =>
                 if Start = '1' then
                     NEXT_STATE <= S_EXEC_FIRST;
-                    -- TODO
                 end if;
             when S_EXEC_FIRST =>    -- Filling in pipeline
                 td_addr    <= curr_addr_1; -- (2) | 1 | (3) | (2)
@@ -528,12 +575,6 @@ begin
             when S_EXEC_1 =>
                 td_addr   <= curr_addr_1; -- (2) | 1 | 3 | 2
                 ca_2_load <= '1';         -- Load @ of thread 2
-                if tn_is_leaf = '1' then  -- Test thread 2
-                    -- Leaf node of thread 2
-                    fgr_load_2 <= '1';  -- load finish flag register
-                    Acc_ld <= '1';
-                    Class_id <= class_id_2;
-                end if;
                 if Halt = '1' then  -- all threads finish execution 
                     NEXT_STATE <= S_IDLE;
                 else
@@ -546,12 +587,6 @@ begin
             when S_EXEC_2 =>
                 td_addr   <= curr_addr_2; -- (3) | 2 | 1 | 3
                 ca_3_load <= '1';         -- Load @ of thread 3
-                if tn_is_leaf = '1' then  -- Test thread 3
-                    -- Leaf node of thread 3
-                    fgr_load_3 <= '1';
-                    Acc_ld <= '1';
-                    Class_id <= class_id_3;
-                end if;
                 if Halt = '1' then
                     NEXT_STATE <= S_IDLE;
                 else
@@ -564,12 +599,6 @@ begin
             when S_EXEC_3 =>
                 td_addr   <= curr_addr_3; -- (1) | 3 | 2 | 1
                 ca_1_load <= '1';         -- Load @ of thread 1
-                if tn_is_leaf = '1' then  -- Test thread 1
-                    -- Leaf node of thread 1
-                    fgr_load_1 <= '1';
-                    Acc_ld <= '1';
-                    Class_id <= class_id_1;
-                end if;
                 if Halt = '1' then
                     NEXT_STATE <= S_IDLE;
                 else

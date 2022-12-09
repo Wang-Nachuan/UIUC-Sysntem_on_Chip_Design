@@ -5,6 +5,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
 use work.types.all;
 
 entity image is
@@ -69,9 +70,9 @@ architecture Behavioral of image is
             T1_addr_ld: in std_logic;
             T2_addr_ld: in std_logic;
             T3_addr_ld: in std_logic;
-            T1_addr_data: in std_logic;        
-            T2_addr_data: in std_logic;
-            T3_addr_data: in std_logic;
+            T1_addr_data: in std_logic_vector(TREE_RAM_BITS - 1  downto 0);
+            T2_addr_data: in std_logic_vector(TREE_RAM_BITS - 1  downto 0);
+            T3_addr_data: in std_logic_vector(TREE_RAM_BITS - 1  downto 0);
             T1_class_id: in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
             T2_class_id: in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
             T3_class_id: in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
@@ -89,7 +90,7 @@ architecture Behavioral of image is
             Finish_t2:  out std_logic;  -- thread 2 finished execution 
             Finish_t3:  out std_logic;  -- thread 3 finished execution
             Acc_ld:     out std_logic;  -- Load accumulator
-            Class_id:   in std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
+            Class_id:   out std_logic_vector(CLASS_ID_SIZE - 1 downto 0);
             Dout:       out std_logic_vector(31 downto 0)   -- Dout and Acc_ld will become valid at same cycle
         );
     end component;
@@ -162,7 +163,7 @@ architecture Behavioral of image is
     
     -- (c)lass_(m)anager signals
     signal cm_start: std_logic;
-    signal is_finish: std_logic_vector(NUM_CLASSES - 1 downto 0);
+    signal is_finish: std_logic;
     
     -- (c)lass_(c)ounter and (c)lass_(l)oader signals
     signal features: std_logic_vector(NUM_FEATURES * 16 - 1 downto 0);
@@ -194,7 +195,7 @@ architecture Behavioral of image is
     signal cm1_mem_ren, cm2_mem_ren: std_logic;
     signal cm1_addr, cm2_addr: std_logic_vector(TREE_RAM_BITS - 1  downto 0);
     signal cm1_taddr_ld, cm2_taddr_ld: std_logic_vector(2 downto 0);      -- Tread address load signal
-    signal cm1_tfinish, cm1_tfinish: std_logic_vector(2 downto 0);
+    signal cm1_tfinish, cm2_tfinish: std_logic_vector(2 downto 0);
     signal cm1_acc_ld, cm2_acc_ld: std_logic;
     signal cm1_class_id, cm2_class_id: std_logic_vector(log_2(NUM_CLASSES) - 1 downto 0);
     signal cm1_dout, cm2_dout: std_logic_vector(31 downto 0);
@@ -204,7 +205,8 @@ architecture Behavioral of image is
     signal acc_1_n, acc_2_n: std_logic_vector(31 downto 0);
 
     -- Scheduler signals
-    signal sc_tree_count, sc_tree_num, c_tree_count_n, sc_tree_num_n: std_logic_vector(31 downto 0);
+    signal sc_tree_num, sc_tree_num_n: std_logic_vector(31 downto 0);
+    signal sc_tree_count, sc_tree_count_n: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
     signal sc_addr_st: std_logic_vector(TREE_RAM_BITS - 1 downto 0);
     signal sc_is_finish: std_logic;     -- 1 means all classes have been issued
 
@@ -226,6 +228,7 @@ begin
             Reset => Reset,
             -- Control signals
             Start => cm_start,
+--            Start => '1',
             Halt => cm_halt,
             T1_addr_ld => cm1_taddr_ld(0),
             T2_addr_ld => cm1_taddr_ld(1),
@@ -263,6 +266,7 @@ begin
             Reset => Reset,
             -- Control signals
             Start => cm_start,
+--            Start => '1',
             Halt => cm_halt,
             T1_addr_ld => cm2_taddr_ld(0),
             T2_addr_ld => cm2_taddr_ld(1),
@@ -289,12 +293,12 @@ begin
         );
     
     -- Unified ram
-    ram: ram
+    uram: ram
         generic map(
             ADDRESS_BITS => TREE_RAM_BITS,
             DATA_LENGTH => 32
-        );
-        port(
+        )
+        port map(
             -- Control signals
             Clk     => Clk,
             We      => ram_we,
@@ -306,15 +310,20 @@ begin
             Addr_rs => sc_addr_st,
             Dout_s  => ram_data_s,
             -- Read data
-            Addr_r1 => ram_addr_r1,
+            Addr_r1 => cm1_addr,
             Dout_1  => ram_data_r1,
-            Addr_r2 => ram_addr_r2,
+            Addr_r2 => cm2_addr,
             Dout_2  => ram_data_r2
         );
 
-    is_finish <= cm1_tfinish(0) and cm1_tfinish(1) and cm1_tfinish(2) 
-        and cm2_tfinish(0) and cm2_tfinish(1) and cm2_tfinish(2) 
-        and sc_is_finish;
+    is_finish <= '1' when (cm1_tfinish(0) = '1' and 
+        cm1_tfinish(1) = '1' and 
+        cm1_tfinish(2) = '1' and 
+        cm2_tfinish(0) = '1' and 
+        cm2_tfinish(1) = '1' and 
+        cm2_tfinish(2) = '1' and 
+        sc_is_finish = '1') else
+        '0';
     
     -- FEATURES
     -----------
@@ -352,7 +361,8 @@ begin
     last_node <= Trees_din(0) and Trees_din(1);
     
     -- Final output
-    Dout <= ; -- TODO
+    Dout <= std_logic_vector(to_unsigned(0, 1)) when acc_1 >= acc_2 else std_logic_vector(to_unsigned(1, 1));
+    Greater <= acc_1 when acc_1 >= acc_2 else acc_2;
     
     -- PROCESSES
     ------------
@@ -380,20 +390,32 @@ begin
         acc_1_n <= acc_1;
         acc_2_n <= acc_2;
 
-        if cm1_acc_ld = '1' then
-            if cm1_class_id = '0' then
-                acc_1_n <= acc_1_n + cm1_dout;
+        if (cm1_acc_ld = '1') and (cm1_class_id = std_logic_vector(to_unsigned(0, 1))) then
+            if (cm2_acc_ld = '1') and (cm2_class_id = std_logic_vector(to_unsigned(0, 1))) then
+                acc_1_n <= acc_1 + cm1_dout + cm2_dout;
             else
-                acc_2_n <= acc_2_n + cm1_dout;
+                acc_1_n <= acc_1 + cm1_dout;
             end if;
+        else
+             if (cm2_acc_ld = '1') and (cm2_class_id = std_logic_vector(to_unsigned(0, 1))) then
+                acc_1_n <= acc_1 + cm2_dout;
+             else
+                acc_1_n <= acc_1;
+             end if;        
         end if;
 
-        if cm2_acc_ld = '1' then
-            if cm2_class_id = '0' then
-                acc_1_n <= acc_1_n + cm2_dout;
+        if (cm1_acc_ld = '1') and (cm1_class_id = std_logic_vector(to_unsigned(1, 1))) then
+            if (cm2_acc_ld = '1') and (cm2_class_id = std_logic_vector(to_unsigned(1, 1))) then
+                acc_2_n <= acc_2 + cm1_dout + cm2_dout;
             else
-                acc_2_n <= acc_2_n + cm2_dout;
+                acc_2_n <= acc_2 + cm1_dout;
             end if;
+        else
+             if (cm2_acc_ld = '1') and (cm2_class_id = std_logic_vector(to_unsigned(1, 1))) then
+                acc_2_n <= acc_2 + cm2_dout;
+             else
+                acc_2_n <= acc_2;
+             end if;        
         end if;
     end process;
 
@@ -402,7 +424,7 @@ begin
     begin
         if rising_edge(Clk) then
             if Reset = '1' then
-                sc_tree_count <= (others => '0');
+                sc_tree_count <= (0 => '1', others => '0');
                 sc_tree_num <= (others => '0');
             else
                 sc_tree_count <= sc_tree_count_n;
@@ -423,30 +445,37 @@ begin
         case STATE is
             when S_LOAD_TREES =>
                 sc_addr_st <= (others => '0');
-                sc_tree_count_n <= sc_tree_count + 1;
                 sc_tree_num_n <= ram_data_s;
+            when S_LOAD_FEATURES =>
+                if Last_feature = '1' then
+                    sc_addr_st <= sc_tree_count;
+                    sc_tree_count_n <= sc_tree_count + 1;
+                end if;
             when S_EXEC =>
-                sc_is_finish <= '1' when sc_tree_count = sc_tree_num + 1 else '0';
                 sc_addr_st <= sc_tree_count;
-                if cm1_tfinish(0) = '1' then
-                    cm1_taddr_ld(0) <= '1';
-                    sc_tree_count_n <= sc_tree_count + 1;
-                elsif cm1_tfinish(1) = '1' then
-                    cm1_taddr_ld(1) <= '1';
-                    sc_tree_count_n <= sc_tree_count + 1;
-                elsif cm1_tfinish(2) = '1' then
-                    cm1_taddr_ld(2) <= '1';
-                    sc_tree_count_n <= sc_tree_count + 1;
-                elsif cm2_tfinish(0) = '1' then
-                    cm2_taddr_ld(0) <= '1';    
-                    sc_tree_count_n <= sc_tree_count + 1;
-                elsif cm2_tfinish(1) = '1' then
-                    cm2_taddr_ld(1) <= '1';
-                    sc_tree_count_n <= sc_tree_count + 1;
-                elsif cm2_tfinish(2) = '1' then
-                    cm2_taddr_ld(2) <= '1';
-                    sc_tree_count_n <= sc_tree_count + 1;
+                if sc_tree_count = sc_tree_num + 2 then
+                    sc_is_finish <= '1';
                 else
+                    if cm1_tfinish(0) = '1' then
+                        cm1_taddr_ld(0) <= '1';
+                        sc_tree_count_n <= sc_tree_count + 1;
+                    elsif cm1_tfinish(1) = '1' then
+                        cm1_taddr_ld(1) <= '1';
+                        sc_tree_count_n <= sc_tree_count + 1;
+                    elsif cm1_tfinish(2) = '1' then
+                        cm1_taddr_ld(2) <= '1';
+                        sc_tree_count_n <= sc_tree_count + 1;
+                    elsif cm2_tfinish(0) = '1' then
+                        cm2_taddr_ld(0) <= '1';    
+                        sc_tree_count_n <= sc_tree_count + 1;
+                    elsif cm2_tfinish(1) = '1' then
+                        cm2_taddr_ld(1) <= '1';
+                        sc_tree_count_n <= sc_tree_count + 1;
+                    elsif cm2_tfinish(2) = '1' then
+                        cm2_taddr_ld(2) <= '1';
+                        sc_tree_count_n <= sc_tree_count + 1;
+                    -- else
+                    end if;
                 end if;
             when OTHERS =>
         end case;
@@ -472,11 +501,11 @@ begin
     -- Main process
     SM_OUTPUT: process(
         all
-        -- STATE, Reset,
-        -- Load_trees, Load_features,
-        -- Valid_feature, Valid_node,
-        -- last_node,
-        -- Last_feature, is_finish,
+--         STATE, Reset,
+--         Load_trees, Load_features,
+--         Valid_feature, Valid_node,
+--         last_node,
+--         Last_feature, is_finish
     )
     begin
         
@@ -548,7 +577,7 @@ begin
                 Curr_state <= "101";
                 Finish     <= '1';
                 fc_reset   <= '1';
-                -- NEXT_STATE <= S_TREES_LOADED;
+                NEXT_STATE <= S_IDLE;
             when OTHERS =>
                 Curr_state <= "111";
         end case;
