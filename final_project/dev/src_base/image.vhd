@@ -9,8 +9,11 @@ use work.types.all;
 
 entity image is
     generic(TREE_RAM_BITS: positive := 13;
-            NUM_CLASSES:   positive := 16;   -- UNCOMMENT FOR IP
-            NUM_FEATURES:  positive := 200); -- UNCOMMENT FOR IP
+            NUM_CLASSES:   positive := 2;
+            NUM_FEATURES:  positive := 8);
+            -- NUM_FEATURES:  positive := 200); -- UNCOMMENT FOR IP
+            -- NUM_CLASSES:   positive := 16;   -- UNCOMMENT FOR IP
+            -- NUM_FEATURES:  positive := 200); -- UNCOMMENT FOR IP
             -- NUM_CLASSES:   positive := 13;   -- UNCOMMENT FOR KSC
             -- NUM_FEATURES:  positive := 176); -- UNCOMMENT FOR KSC
             -- NUM_CLASSES:   positive := 9;   -- UNCOMMENT FOR PU
@@ -105,38 +108,22 @@ architecture Behavioral of image is
              -- Output
              Dout: out std_logic_vector(BITS - 1 downto 0));
     end component;
-    
-    component comparator_16_32b is
+
+    component comparator_2_32b is
         port(-- Control signals
-             Clk:   in   std_logic;
-             Reset: in   std_logic;
-             Start: in   std_logic;
-             
-             -- Inputs to compare
-             Input0:  in   std_logic_vector(31 downto 0);
-             Input1:  in   std_logic_vector(31 downto 0);
-             Input2:  in   std_logic_vector(31 downto 0);
-             Input3:  in   std_logic_vector(31 downto 0);
-             Input4:  in   std_logic_vector(31 downto 0);
-             Input5:  in   std_logic_vector(31 downto 0);
-             Input6:  in   std_logic_vector(31 downto 0);
-             Input7:  in   std_logic_vector(31 downto 0);
-             Input8:  in   std_logic_vector(31 downto 0);
-             Input9:  in   std_logic_vector(31 downto 0);
-             Input10: in   std_logic_vector(31 downto 0);
-             Input11: in   std_logic_vector(31 downto 0);
-             Input12: in   std_logic_vector(31 downto 0);
-             Input13: in   std_logic_vector(31 downto 0);
-             Input14: in   std_logic_vector(31 downto 0);
-             Input15: in   std_logic_vector(31 downto 0);
-             
-             -- Output signals
-             --     Done:      finish signal
-             --     Greater:   the value of the selected input
-             --     Selection: the selected input
-             Done:      out  std_logic;
-             Greater:   out  std_logic_vector(31 downto 0);
-             Selection: out  std_logic_vector(3 downto 0));
+         Clk:   in std_logic;
+         Reset: in std_logic;
+         Load:  in std_logic;
+         
+         -- Inputs to compare
+         Input1: in std_logic_vector (31 downto 0);
+         Input0: in std_logic_vector (31 downto 0);
+         
+         -- Output signals
+         --     Greater:      the value of the selected input
+         --     Bit_selected: the selected input
+         Greater:      out std_logic_vector (31 downto 0);
+         Bit_selected: out std_logic);
     end component;
     
     ---------------------------------------------------------------------------
@@ -161,15 +148,8 @@ architecture Behavioral of image is
     --     This initialization allows to use argmax module as a 'generic'
     --     module, no matter the number of classes.
     -- 
-    signal class_dout: std_logic_vector(16 * 32 - 1 downto 0)
-               := ((16 * 32 - 1) => '1', (15 * 32 - 1) => '1',
-                   (14 * 32 - 1) => '1', (13 * 32 - 1) => '1',
-                   (12 * 32 - 1) => '1', (11 * 32 - 1) => '1',
-                   (10 * 32 - 1) => '1', (9 * 32 - 1)  => '1',
-                   (8 * 32 - 1)  => '1', (7 * 32 - 1)  => '1',
-                   (6 * 32 - 1)  => '1', (5 * 32 - 1)  => '1',
-                   (4 * 32 - 1)  => '1', (3 * 32 - 1)  => '1',
-                   (2 * 32 - 1)  => '1', (1 * 32 - 1)  => '1', others => '0');
+    signal class_dout: std_logic_vector(2 * 32 - 1 downto 0)
+               := ((2 * 32 - 1)  => '1', (1 * 32 - 1)  => '1', others => '0');
     
     -- (c)lass_(c)ounter and (c)lass_(l)oader signals
     signal features: std_logic_vector(NUM_FEATURES * 16 - 1 downto 0);
@@ -194,7 +174,7 @@ architecture Behavioral of image is
     --     argmax module extra inputs, avoiding the oversized 'class_dout'.
     -- 
     signal empty: std_logic_vector(31 downto 0) := (31 => '1', others => '0');
-    signal selection_dout: std_logic_vector(3 downto 0);
+    signal selection_dout: std_logic_vector(0 downto 0);
     signal finish_state: std_logic_vector(NUM_CLASSES - 1 downto 0)
                              := (others => '1');
 
@@ -268,33 +248,20 @@ begin
     ---------
     
     -- To select the class with the higher accumulated prediction value
-    argmax_module: comparator_16_32b 
+    argmax_module: comparator_2_32b 
         port map(Clk       => Clk,
                  Reset     => am_reset,
-                 Start     => am_start,
+                 Load     => am_start,
                  Input0    => class_dout(1 * 32 - 1 downto 0 * 32),
                  Input1    => class_dout(2 * 32 - 1 downto 1 * 32),
-                 Input2    => class_dout(3 * 32 - 1 downto 2 * 32),
-                 Input3    => class_dout(4 * 32 - 1 downto 3 * 32),
-                 Input4    => class_dout(5 * 32 - 1 downto 4 * 32),
-                 Input5    => class_dout(6 * 32 - 1 downto 5 * 32),
-                 Input6    => class_dout(7 * 32 - 1 downto 6 * 32),
-                 Input7    => class_dout(8 * 32 - 1 downto 7 * 32),
-                 Input8    => class_dout(9 * 32 - 1 downto 8 * 32),
-                 Input9    => class_dout(10 * 32 - 1 downto 9 * 32),
-                 Input10   => class_dout(11 * 32 - 1 downto 10 * 32),
-                 Input11   => class_dout(12 * 32 - 1 downto 11 * 32),
-                 Input12   => class_dout(13 * 32 - 1 downto 12 * 32),
-                 Input13   => class_dout(14 * 32 - 1 downto 13 * 32),
-                 Input14   => class_dout(15 * 32 - 1 downto 14 * 32),
-                 Input15   => class_dout(16 * 32 - 1 downto 15 * 32),
-                 Done      => am_done,
                  Greater   => Greater,
-                 Selection => selection_dout);
+                 Bit_selected => selection_dout(0));
+    
+    am_done <= '1';
     
     -- [METADATA] Only used when loading the trees
-    last_class_node <= Trees_din(0) and Trees_din(1) and Trees_din(3);
-    last_node       <= Trees_din(4);
+    last_class_node <= Trees_din(0) and Trees_din(1) and Trees_din(2);
+    last_node       <= Trees_din(0) and Trees_din(1) and Trees_din(2) and Trees_din(3);
     
     -- Final output
     Dout <= selection_dout(log_2(NUM_CLASSES) - 1 downto 0);

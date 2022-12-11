@@ -15,19 +15,5 @@ Class:
     4. 把accumulator剥离出来
 
 
-Modified:
-class
-image
-ram
-
-tdr_load
-->
-tdr_dout
--> tn_is_leaf*
--> fgr_load_1/2/3
--> fgr_load_1/2/3_final
-
-tdr_load*
--> td_dout
--> tdr_dout
--> tn_is_leaf*
+旧版脚本
+    1. 每个class起始地址都是0
