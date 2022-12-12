@@ -449,11 +449,9 @@ begin
             when S_LOAD_FEATURES =>
                 if Last_feature = '1' then
                     sc_addr_st <= sc_tree_count;
-                    sc_tree_count_n <= sc_tree_count + 1;
                 end if;
             when S_EXEC =>
-                sc_addr_st <= sc_tree_count;
-                if sc_tree_count = sc_tree_num + 2 then
+                if sc_tree_count = sc_tree_num + 1 then
                     sc_is_finish <= '1';
                 else
                     if cm1_tfinish(0) = '1' then
@@ -477,6 +475,7 @@ begin
                     -- else
                     end if;
                 end if;
+                sc_addr_st <= sc_tree_count_n;
             when OTHERS =>
         end case;
         
