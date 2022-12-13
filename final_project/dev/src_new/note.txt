@@ -17,3 +17,26 @@ Class:
 
 旧版脚本
     1. 每个class起始地址都是0
+
+Leave node: [0]
+Leave node of last tree: [1] & [0]
+End node of thread: [2] & [1] & [0]
+End node of class: [3] & [2] & [1] & [0] (因为end of class必定是end of thread, 所以[2]也算在内)
+End node of all: [4] & [3] & [2] & [1] & [0]
+
+0: 01101
+1: 11111
+2: 01111
+
+3: 11001
+4: 01111
+
+5: 00111
+6: 01111
+
+7: 11111
+
+230003
+
+
+175000

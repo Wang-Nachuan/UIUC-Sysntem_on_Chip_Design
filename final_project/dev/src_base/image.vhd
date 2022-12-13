@@ -260,8 +260,8 @@ begin
     am_done <= '1';
     
     -- [METADATA] Only used when loading the trees
-    last_class_node <= Trees_din(0) and Trees_din(1) and Trees_din(2);
-    last_node       <= Trees_din(0) and Trees_din(1) and Trees_din(2) and Trees_din(3);
+    last_class_node <= Trees_din(0) and Trees_din(1) and Trees_din(3);
+    last_node       <= Trees_din(4);
     
     -- Final output
     Dout <= selection_dout(log_2(NUM_CLASSES) - 1 downto 0);
