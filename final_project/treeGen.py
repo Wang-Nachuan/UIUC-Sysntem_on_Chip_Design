@@ -3,10 +3,11 @@ import numpy as np
 import math
 
 # parameters
-tree_number = 13
+tree_number = 60
 class_number = 2
 maxDepth = 7
 minDepth = 7
+classRatio = 3.0
 
 base_path = "D:\\Code\\UIUC-ECE527\\final_project\\dev\\sim_base\\base_test.vhd"
 new_path = "D:\\Code\\UIUC-ECE527\\final_project\\dev\\sim_new\\new_test.vhd"
@@ -17,7 +18,7 @@ leaves = []
 tree_data = [[] for i in range(tree_number)]
 tree_addr = []
 index = 1
-t = (tree_number-1)//2
+t = int((tree_number-1)*classRatio/(classRatio+1))
 t1 = t // 3
 t2 = math.floor(2 * t / 3)
 t3 = (tree_number - t) // 3 + t
